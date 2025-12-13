@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ReactNode } from "react";
 import Stepper, { Step } from "./Stepper";
 import { openOnboarding, subscribeOnboarding } from "../lib/onboardingEvents";
 
