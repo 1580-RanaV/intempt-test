@@ -1,0 +1,270 @@
+export type NavItem = { label: string; href: string };
+
+export const siteContent = {
+  brand: "Intempt",
+  nav: {
+    items: [
+      { label: "GrowthOS™", href: "#growthos" },
+      { label: "Solutions", href: "#solutions" },
+      { label: "Resources", href: "#resources" },
+      { label: "Partners", href: "#partners" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "Product Tour", href: "#product-tour" },
+    ] satisfies NavItem[],
+    actions: [
+      { label: "Log in", href: "#login" },
+      { label: "Book a demo", href: "#book-demo" },
+      { label: "Get started", href: "/onboarding" },
+    ] satisfies NavItem[],
+  },
+  hero: {
+    headline: "Build a growth engine that drives revenue.",
+    subhead:
+      "Intempt is an all‑in‑one GrowthOS to acquire, convert, retain, and expand customers — powered by data, AI, and agent automation.",
+    primaryCta: { label: "Start Free Trial", href: "/onboarding" },
+    secondaryCta: { label: "Book a 15-min demo", href: "#book-demo" },
+    mediaLabel: "Product explainer video: Intempt GrowthOS",
+  },
+  blu: {
+    ask: {
+      title: "Ask Blu.",
+      subtitle: "From leads to lifecycle: Blu drives growth, not just outreach.",
+      prompts: [
+        "How are my campaigns performing?",
+        "Who are my best customers?",
+        "What’s the best way to segment users?",
+        "How do I track conversion rates?",
+        "Which accounts are at risk of churning?",
+        "What’s my customer lifetime value?",
+      ],
+    },
+    do: {
+      title: "Do.",
+      subtitle: "Blu elevates your GTM process.",
+      workspace: {
+        title: "Set up your workspace",
+        subtitle: "Customize as you go.",
+      },
+      modules: [
+        "Agentic CRM",
+        "Journeys",
+        "Analytics",
+        "Personalizations",
+        "Recommendations",
+        "Experiments",
+      ],
+      primaryCta: { label: "Get started", href: "/onboarding" },
+    },
+    everywhere: {
+      title: "From idea to execution, instantly.",
+      subtitle:
+        "Blu turns plain-language prompts into working campaigns, segments, and events — no rules, no syntax, no waiting on ops.",
+      actions: [
+        "Set up a new journey",
+        "Generate A/B test for homepage",
+        "Build a welcome email sequence",
+        "Find at-risk accounts",
+        "Create a segment of VIP users",
+      ],
+    },
+  },
+  grow: {
+    title: "Grow.",
+    subtitle:
+      "Orchestrate acquisition, qualification, activation, retention, and expansion — with always-on feedback loops.",
+    metrics: [
+      "Average Order Value",
+      "Customer Lifetime Value",
+      "Retention %",
+      "Conversion %",
+      "Growth %",
+    ],
+  },
+  proof: {
+    title: "GrowthOS automates and orchestrates GTM workflows for modern teams.",
+    impact: [
+      { value: "35M", label: "user lifecycles optimized" },
+      { value: "5M", label: "accounts optimized" },
+      { value: "350M", label: "events tracked" },
+      { value: "20+", label: "integrations configured" },
+    ],
+    teams: ["Sales Reps", "Product Analysts", "Merchandisers"],
+  },
+  integrations: {
+    title: "Connect trusted sources to GrowthOS",
+    items: [
+      "Twilio",
+      "Shopify",
+      "iOS",
+      "Node.js",
+      "SendGrid",
+      "HubSpot",
+      "Stripe",
+      "Slack",
+    ],
+  },
+  why: {
+    title: "Growth is BROKEN.",
+    subtitle:
+      "Disconnected and fragmented tools block your growth across teams. Intempt replaces the stitched GTM stack with a single GrowthOS built on data and powered by AI agents.",
+    stacks: [
+      { category: "Marketing", tools: ["Braze", "Klaviyo", "Customer.io"] },
+      { category: "Product", tools: ["Mixpanel", "Amplitude", "VWO"] },
+      { category: "Sales", tools: ["Salesloft", "Outreach", "Reply"] },
+    ],
+    fix: {
+      title: "Fix it with GrowthOS.",
+      subtitle:
+        "Built on data → powered by AI & agent automation → used by modern teams.",
+    },
+  },
+  roles: {
+    title: "Built for every GTM role.",
+    items: [
+      {
+        role: "Lifecycle Marketers",
+        value: "Increase engagement",
+        bullets: ["Email", "SMS", "Push"],
+      },
+      {
+        role: "Experience Marketers",
+        value: "Optimize conversions",
+        bullets: ["A/B testing", "Visual editor", "AI targeting"],
+      },
+      {
+        role: "Sales Reps",
+        value: "Prospect & close faster",
+        bullets: ["Accounts", "Tasks", "Deals"],
+      },
+      {
+        role: "Analysts",
+        value: "Understand performance",
+        bullets: ["Insights", "Funnel", "Retention"],
+      },
+      {
+        role: "Merchandisers",
+        value: "Personalize catalog",
+        bullets: ["Affinity", "Popularity", "Similarity"],
+      },
+    ],
+  },
+  platform: {
+    title: "All-in-one GrowthOS to 10× your GTM",
+    subtitle:
+      "Replace fragmented tools with one unified platform — plus Blu, your AI co‑marketer.",
+    highlights: [
+      "Unified customer profiles",
+      "Sales CRM",
+      "Personalization",
+      "Journeys",
+      "Agents",
+    ],
+    sections: [
+      {
+        title: "Unified customer view",
+        subtitle:
+          "Create rich, real-time profiles of every user and account — and activate them across all channels.",
+        chips: [
+          "Next best offer",
+          "Churn likelihood",
+          "Likelihood to buy",
+          "Segments: At-risk, Price-sensitive",
+        ],
+      },
+      {
+        title: "Measure what matters, instantly",
+        subtitle:
+          "Track how users engage, convert, and retain — and feed insights back into your campaigns automatically.",
+        chips: ["Insights", "Funnels", "Retention", "Attribution-ready"],
+      },
+    ],
+  },
+  finalCtas: {
+    items: [
+      {
+        title: "Growth Plays",
+        description:
+          "Browse ready-to-use plays tailored to every step of the customer journey.",
+        cta: { label: "View Growth Plays", href: "#growth-plays" },
+      },
+      {
+        title: "Help & Support",
+        description:
+          "Guides and documentation packed with practical tips to put growth into action.",
+        cta: { label: "Go to Docs", href: "#docs" },
+      },
+    ],
+  },
+  footer: {
+    contact: {
+      title: "Contact Us",
+      locations: [
+        {
+          region: "United States",
+          lines: [
+            "268 Bush St, #2824",
+            "San Francisco, CA 94104",
+            "1101 W 34th St, #595",
+            "Austin, TX 78705",
+          ],
+        },
+        {
+          region: "Europe",
+          lines: ["Odminių g. 11-4", "Vilnius, LT-01122", "Lithuania (EU)"],
+        },
+      ],
+    },
+    columns: [
+      {
+        title: "GrowthOS™",
+        links: [
+          "Sales CRM",
+          "Experiment",
+          "Personalization",
+          "Recommendations",
+          "Journeys",
+          "Analytics",
+          "Agents",
+          "Blu: AI Co-Marketer",
+          "Integrations",
+          "Privacy",
+          "Pricing",
+        ],
+      },
+      {
+        title: "Solutions",
+        links: [
+          "CX Marketers",
+          "Sales Reps",
+          "Product Analysts",
+          "Lifecycle Marketers",
+          "Merchandisers",
+        ],
+      },
+      {
+        title: "Learn",
+        links: [
+          "Growth Plays",
+          "Blog",
+          "Product Tour",
+          "Growth Grader",
+          "Calculate ROI",
+          "Help & Support",
+        ],
+      },
+      { title: "Company", links: ["About us", "Employee Handbook", "Jobs"] },
+      { title: "Partners", links: ["Affiliates", "Agencies"] },
+      {
+        title: "Socials",
+        links: [
+          "YouTube",
+          "Twitter",
+          "LinkedIn",
+          "Slack",
+          "Instagram",
+          "Reddit",
+        ],
+      },
+    ],
+  },
+} as const;
