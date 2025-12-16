@@ -582,7 +582,7 @@ export function HeaderSection({
                           </button>
                           {isExpanded && (
                             <div className="px-4 pb-2 space-y-1">
-                              {item.subItems.map((subItem) => {
+                              {item.subItems?.map((subItem) => {
                                 const isExternal = subItem.href.startsWith("http");
                                 return (
                                   <a
