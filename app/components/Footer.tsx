@@ -60,16 +60,22 @@ export function Footer({
                   {col.title}
                 </div>
                 <ul className="mt-3 space-y-2 text-sm text-zinc-600">
-                  {col.links.map((link) => (
-                    <li key={link}>
-                      <a
-                        href="#"
-                        className="transition-colors hover:text-zinc-900"
-                      >
-                        {link}
-                      </a>
-                    </li>
-                  ))}
+                  {col.links.map((link) => {
+                    const href = link === "Help & Support" || link === "Help and Support" 
+                      ? "https://help.intempt.com" 
+                      : "#";
+                    return (
+                      <li key={link}>
+                        <a
+                          href={href}
+                          className="transition-colors hover:text-zinc-900"
+                          {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                        >
+                          {link}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

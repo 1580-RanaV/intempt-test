@@ -1,15 +1,57 @@
-export type NavItem = { label: string; href: string };
+export type NavItem = { label: string; href: string; subItems?: NavItem[] };
 
 export const siteContent = {
   brand: "Intempt",
   nav: {
     items: [
-      { label: "GrowthOS™", href: "#growthos" },
-      { label: "Solutions", href: "#solutions" },
-      { label: "Resources", href: "#resources" },
-      { label: "Partners", href: "#partners" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "Product Tour", href: "#product-tour" },
+      { 
+        label: "GrowthOS™", 
+        href: "#growthos",
+        subItems: [
+          { label: "Sales CRM", href: "/sales-crm" },
+          { label: "Journeys", href: "/journeys" },
+          { label: "Blu: AI", href: "/blu-ai" },
+          { label: "Experiment", href: "/experiment" },
+          { label: "Analytics", href: "/analytics" },
+          { label: "Agents", href: "#agents" },
+          { label: "Personalisation", href: "#personalisation" },
+          { label: "Recommendations", href: "#recommendations" },
+          { label: "Privacy", href: "#privacy" },
+        ]
+      },
+      { 
+        label: "Solutions", 
+        href: "#solutions",
+        subItems: [
+          { label: "Sales Teams", href: "/sales-teams" },
+          { label: "Agentic CRM", href: "/agentic-crm" },
+          { label: "LTV eCommerce", href: "/ltv-ecommerce" },
+          { label: "AOV eCommerce", href: "/aov-ecommerce" },
+          { label: "Analytics PLG SaaS", href: "/analytics-plg-saas" },
+          { label: "Analytics eCommerce", href: "/analytics-ecommerce" },
+          { label: "CRO eCommerce", href: "/cro-ecommerce" },
+        ]
+      },
+      { 
+        label: "Resources", 
+        href: "#resources",
+        subItems: [
+          { label: "Help and Support", href: "https://help.intempt.com" },
+          { label: "Growth Plays", href: "#growth-plays" },
+          { label: "Academy", href: "#academy" },
+          { label: "Blogs", href: "#blogs" },
+        ]
+      },
+      { 
+        label: "Partners", 
+        href: "#partners",
+        subItems: [
+          { label: "Affiliates", href: "/affiliates" },
+          { label: "Agencies", href: "/agencies" },
+        ]
+      },
+        { label: "Pricing", href: "#pricing" },
+        { label: "Product Tour", href: "/product-tour" },
     ] satisfies NavItem[],
     actions: [
       { label: "Log in", href: "#login" },
@@ -210,7 +252,12 @@ export const siteContent = {
         },
         {
           region: "Europe",
-          lines: ["Odminių g. 11-4", "Vilnius, LT-01122", "Lithuania (EU)"],
+          lines: [
+            "Odminiu 11-4",
+            "Vilnius, LT-01122",
+            "Lithuania",
+            "European Union",
+          ],
         },
       ],
     },
@@ -234,11 +281,13 @@ export const siteContent = {
       {
         title: "Solutions",
         links: [
-          "CX Marketers",
-          "Sales Reps",
-          "Product Analysts",
-          "Lifecycle Marketers",
-          "Merchandisers",
+          "Sales Teams",
+          "Agentic CRM",
+          "LTV eCommerce",
+          "AOV eCommerce",
+          "Analytics PLG SaaS",
+          "Analytics eCommerce",
+          "CRO eCommerce",
         ],
       },
       {

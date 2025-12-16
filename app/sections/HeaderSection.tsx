@@ -121,7 +121,13 @@ export function HeaderSection({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [hoveredNavItem, setHoveredNavItem] = useState<string | null>(null);
+  const [clickedNavItem, setClickedNavItem] = useState<string | null>(null);
+  const [expandedMobileItems, setExpandedMobileItems] = useState<Set<string>>(new Set());
+  const [dropdownPosition, setDropdownPosition] = useState<{ left: number; width: number } | null>(null);
   const searchRef = useRef<HTMLInputElement | null>(null);
+  const navItemRefs = useRef<Map<string, HTMLDivElement>>(new Map());
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const allLinks = useMemo(() => {
     return [
@@ -154,10 +160,108 @@ export function HeaderSection({
   }, [isOpen]);
 
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen) {
+      // Reset expanded items when menu closes
+      setExpandedMobileItems(new Set());
+      return;
+    }
     setQuery("");
     requestAnimationFrame(() => searchRef.current?.focus());
   }, [isOpen]);
+
+  // Handle dropdown positioning
+  useEffect(() => {
+    const activeNavItem = hoveredNavItem || clickedNavItem;
+    if (!activeNavItem) {
+      setDropdownPosition(null);
+      return;
+    }
+
+    const navItemEl = navItemRefs.current.get(activeNavItem);
+    if (!navItemEl) return;
+
+    const rect = navItemEl.getBoundingClientRect();
+    setDropdownPosition({
+      left: rect.left,
+      width: Math.max(rect.width, 240),
+    });
+  }, [hoveredNavItem, clickedNavItem]);
+
+  // Clear timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleMouseEnter = (itemLabel: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    const item = navItems.find((nav) => nav.label === itemLabel);
+    if (item?.subItems && item.subItems.length > 0) {
+      setHoveredNavItem(itemLabel);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    // Only close on mouse leave if not clicked
+    if (!clickedNavItem) {
+      timeoutRef.current = setTimeout(() => {
+        setHoveredNavItem(null);
+      }, 150);
+    }
+  };
+
+  const handleNavItemClick = (e: React.MouseEvent, itemLabel: string) => {
+    const item = navItems.find((nav) => nav.label === itemLabel);
+    if (item?.subItems && item.subItems.length > 0) {
+      e.preventDefault();
+      // Toggle clicked state
+      if (clickedNavItem === itemLabel) {
+        setClickedNavItem(null);
+        setHoveredNavItem(null);
+      } else {
+        setClickedNavItem(itemLabel);
+        setHoveredNavItem(itemLabel);
+      }
+    }
+  };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (!target.closest('[data-nav-dropdown]') && !target.closest('[data-nav-item]')) {
+        setClickedNavItem(null);
+        setHoveredNavItem(null);
+      }
+    };
+
+    if (clickedNavItem) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [clickedNavItem]);
+
+  const activeNavItem = hoveredNavItem || clickedNavItem;
+  const activeItem = activeNavItem
+    ? navItems.find((item) => item.label === activeNavItem)
+    : null;
+
+  const toggleMobileItem = (itemLabel: string) => {
+    setExpandedMobileItems((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(itemLabel)) {
+        newSet.delete(itemLabel);
+      } else {
+        newSet.add(itemLabel);
+      }
+      return newSet;
+    });
+  };
 
   return (
     <>
@@ -178,17 +282,104 @@ export function HeaderSection({
               </span>
             </a>
 
-            <div className="hidden items-center gap-7 lg:flex">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-sm font-medium text-black/60 transition-colors hover:text-black"
-                >
-                  {item.label}
-                </a>
-              ))}
+            <div 
+              className="hidden items-center gap-7 lg:flex relative"
+              onMouseLeave={handleMouseLeave}
+              data-nav-dropdown
+            >
+              {navItems.map((item) => {
+                const hasSubItems = item.subItems && item.subItems.length > 0;
+                const isActive = activeNavItem === item.label;
+                
+                return (
+                  <div
+                    key={item.label}
+                    ref={(el) => {
+                      if (el) navItemRefs.current.set(item.label, el);
+                    }}
+                    onMouseEnter={() => handleMouseEnter(item.label)}
+                    className="relative"
+                    data-nav-item
+                  >
+                    <a
+                      href={item.href}
+                      onClick={(e) => handleNavItemClick(e, item.label)}
+                      className={[
+                        "text-sm font-medium transition-all duration-200 ease-out relative flex items-center gap-1.5",
+                        isActive
+                          ? "text-[#0382ff]"
+                          : "text-black/60 hover:text-black",
+                      ].join(" ")}
+                    >
+                      {item.label}
+                      {hasSubItems && (
+                        <svg
+                          className={[
+                            "h-3.5 w-3.5 transition-transform duration-200 ease-out",
+                            isActive ? "rotate-180" : "",
+                          ].join(" ")}
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      )}
+                      {isActive && (
+                        <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[#0382ff] rounded-full" />
+                      )}
+                    </a>
+                  </div>
+                );
+              })}
             </div>
+
+            {/* Dropdown menu */}
+            {activeNavItem && activeItem?.subItems && dropdownPosition && (
+              <div
+                className="fixed z-40 rounded-2xl backdrop-blur-xl border border-black/10 shadow-xl overflow-hidden transition-all duration-300 ease-out"
+                style={{
+                  top: "73px",
+                  left: `${dropdownPosition.left}px`,
+                  width: `${dropdownPosition.width}px`,
+                  backgroundColor: "#fffff3",
+                  opacity: activeNavItem ? 1 : 0,
+                  transform: activeNavItem ? "translateY(0)" : "translateY(-8px)",
+                  pointerEvents: activeNavItem ? "auto" : "none",
+                }}
+                onMouseEnter={() => {
+                  if (timeoutRef.current) {
+                    clearTimeout(timeoutRef.current);
+                  }
+                }}
+                onMouseLeave={handleMouseLeave}
+                data-nav-dropdown
+              >
+                <div className="p-2">
+                  {activeItem.subItems.map((subItem) => {
+                    const isExternal = subItem.href.startsWith("http");
+                    return (
+                      <a
+                        key={subItem.label}
+                        href={subItem.href}
+                        onClick={() => {
+                          // Close dropdown when sub-item is clicked
+                          setClickedNavItem(null);
+                          setHoveredNavItem(null);
+                        }}
+                        className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black/70 transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
+                        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      >
+                        {subItem.label}
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             <div className="hidden items-center gap-2 lg:flex">
               <a
@@ -354,29 +545,87 @@ export function HeaderSection({
                   Navigate
                 </div>
                 <div className="mt-3 grid gap-2">
-                  {filteredLinks.map((item) => (
-                    <a
-                      key={item.label}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
-                      className="group flex items-center justify-between rounded-2xl bg-[#fffff3]/75 px-4 py-4 shadow-[0_1px_0_rgba(0,0,0,0.04)] transition-all hover:-translate-y-0.5 hover:bg-[#fffff3]"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-[#0382ff]/16 to-violet-500/10 text-[#0382ff]">
-                          <NavIcon label={item.label} />
+                  {filteredLinks.map((item) => {
+                    const hasSubItems = item.subItems && item.subItems.length > 0;
+                    const isExpanded = expandedMobileItems.has(item.label);
+                    
+                    if (hasSubItems) {
+                      return (
+                        <div key={item.label} className="rounded-2xl bg-[#fffff3]/75 shadow-[0_1px_0_rgba(0,0,0,0.04)] overflow-hidden">
+                          <button
+                            type="button"
+                            onClick={() => toggleMobileItem(item.label)}
+                            className="w-full group flex items-center justify-between px-4 py-4 transition-all hover:bg-[#fffff3]"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-[#0382ff]/16 to-violet-500/10 text-[#0382ff]">
+                                <NavIcon label={item.label} />
+                              </div>
+                              <div className="text-sm font-semibold text-black">
+                                {item.label}
+                              </div>
+                            </div>
+                            <svg
+                              className={[
+                                "h-4 w-4 text-black/35 transition-transform duration-200 ease-out",
+                                isExpanded ? "rotate-180" : "",
+                              ].join(" ")}
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <path d="m6 9 6 6 6-6" />
+                            </svg>
+                          </button>
+                          {isExpanded && (
+                            <div className="px-4 pb-2 space-y-1">
+                              {item.subItems.map((subItem) => {
+                                const isExternal = subItem.href.startsWith("http");
+                                return (
+                                  <a
+                                    key={subItem.label}
+                                    href={subItem.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black/70 transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
+                                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                                  >
+                                    {subItem.label}
+                                  </a>
+                                );
+                              })}
+                            </div>
+                          )}
                         </div>
-                        <div className="text-sm font-semibold text-black">
-                          {item.label}
+                      );
+                    }
+                    
+                    return (
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        onClick={() => setIsOpen(false)}
+                        className="group flex items-center justify-between rounded-2xl bg-[#fffff3]/75 px-4 py-4 shadow-[0_1px_0_rgba(0,0,0,0.04)] transition-all hover:-translate-y-0.5 hover:bg-[#fffff3]"
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-[#0382ff]/16 to-violet-500/10 text-[#0382ff]">
+                            <NavIcon label={item.label} />
+                          </div>
+                          <div className="text-sm font-semibold text-black">
+                            {item.label}
+                          </div>
                         </div>
-                      </div>
-                      <div className="text-black/35 transition-transform group-hover:translate-x-0.5">
-                        →
-                      </div>
-                    </a>
-                  ))}
+                        <div className="text-black/35 transition-transform group-hover:translate-x-0.5">
+                          →
+                        </div>
+                      </a>
+                    );
+                  })}
                   {filteredLinks.length === 0 ? (
                     <div className="rounded-2xl bg-black/[0.03] px-4 py-4 text-sm font-semibold text-black/55">
-                      No matches for “{query.trim()}”.
+                      No matches for "{query.trim()}".
                     </div>
                   ) : null}
                 </div>
