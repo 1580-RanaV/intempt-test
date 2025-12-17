@@ -65,15 +65,15 @@ export function Footer({
                       ? "https://help.intempt.com" 
                       : "#";
                     return (
-                      <li key={link}>
-                        <a
+                    <li key={link}>
+                      <a
                           href={href}
-                          className="transition-colors hover:text-zinc-900"
+                        className="transition-colors hover:text-zinc-900"
                           {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                        >
-                          {link}
-                        </a>
-                      </li>
+                      >
+                        {link}
+                      </a>
+                    </li>
                     );
                   })}
                 </ul>

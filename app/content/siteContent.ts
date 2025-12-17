@@ -37,9 +37,9 @@ export const siteContent = {
         href: "#resources",
         subItems: [
           { label: "Help and Support", href: "https://help.intempt.com" },
-          { label: "Growth Plays", href: "#growth-plays" },
+          { label: "Growth Plays", href: "/growthplays" },
           { label: "Academy", href: "#academy" },
-          { label: "Blogs", href: "#blogs" },
+          { label: "Blogs", href: "/blog" },
         ]
       },
       { 
@@ -50,7 +50,7 @@ export const siteContent = {
           { label: "Agencies", href: "/agencies" },
         ]
       },
-        { label: "Pricing", href: "#pricing" },
+        { label: "Pricing", href: "/pricing" },
         { label: "Product Tour", href: "/product-tour" },
     ] satisfies NavItem[],
     actions: [

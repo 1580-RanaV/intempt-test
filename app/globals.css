@@ -1,19 +1,12 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Hoves";
-  src: url("/font/hoves.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
-  --background: #fffff3;
+  --background: #ffffff;
   --foreground: #171717;
   color-scheme: light;
   --brand: #0382ff;
-  --font-sans: "Hoves";
+  --font-sans: var(--font-inter), system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
@@ -25,21 +18,40 @@
   --font-mono: var(--font-mono);
 }
 
+/* Force #fffff3 to #ffffff globally */
+/* Target Tailwind arbitrary value classes - escaped version */
+[class*="bg-\\[\\#fffff3\\]"] {
+  background-color: #ffffff !important;
+}
+
+/* Target Tailwind arbitrary value classes - unescaped version */
+[class*="bg-[#fffff3]"] {
+  background-color: #ffffff !important;
+}
+
+/* Target inline styles with #fffff3 */
+[style*="#fffff3"] {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
+
+/* Override body and html backgrounds */
 html,
 body {
-  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif;
+  background: #ffffff !important;
+  font-family: var(--font-sans);
   width: 100%;
   overflow-x: hidden;
+  letter-spacing: -0.05em;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
 }
 
 * {
   text-rendering: geometricPrecision;
+  letter-spacing: -0.05em;
 }
 
 /* Custom scrollbar */

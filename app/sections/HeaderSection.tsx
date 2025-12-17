@@ -265,7 +265,7 @@ export function HeaderSection({
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-black/10 bg-[#fffff3]/70 backdrop-blur">
+      <header className="sticky top-0 z-50 border-b border-black/10 bg-white/70 backdrop-blur">
         <Container className="py-4">
           <nav className="flex items-center justify-between gap-6">
             <a href="/" className="flex items-center gap-3">
@@ -293,7 +293,7 @@ export function HeaderSection({
                 
                 return (
                   <div
-                    key={item.label}
+                  key={item.label}
                     ref={(el) => {
                       if (el) navItemRefs.current.set(item.label, el);
                     }}
@@ -302,7 +302,7 @@ export function HeaderSection({
                     data-nav-item
                   >
                     <a
-                      href={item.href}
+                  href={item.href}
                       onClick={(e) => handleNavItemClick(e, item.label)}
                       className={[
                         "text-sm font-medium transition-all duration-200 ease-out relative flex items-center gap-1.5",
@@ -310,8 +310,8 @@ export function HeaderSection({
                           ? "text-[#0382ff]"
                           : "text-black/60 hover:text-black",
                       ].join(" ")}
-                    >
-                      {item.label}
+                >
+                  {item.label}
                       {hasSubItems && (
                         <svg
                           className={[
@@ -345,7 +345,7 @@ export function HeaderSection({
                   top: "73px",
                   left: `${dropdownPosition.left}px`,
                   width: `${dropdownPosition.width}px`,
-                  backgroundColor: "#fffff3",
+                  backgroundColor: "#ffffff",
                   opacity: activeNavItem ? 1 : 0,
                   transform: activeNavItem ? "translateY(0)" : "translateY(-8px)",
                   pointerEvents: activeNavItem ? "auto" : "none",
@@ -449,7 +449,7 @@ export function HeaderSection({
 
         <div
           className={[
-            "absolute right-0 top-0 h-[100dvh] w-full max-w-md bg-[#fffff3]/85 backdrop-blur-xl",
+            "absolute right-0 top-0 h-[100dvh] w-full max-w-md bg-white/85 backdrop-blur-xl",
             "transition-all duration-300 ease-out",
             isOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6",
           ].join(" ")}
@@ -490,7 +490,7 @@ export function HeaderSection({
               </div>
 
               <div className="mt-6 rounded-2xl bg-black/[0.03] p-1.5 shadow-[0_1px_0_rgba(0,0,0,0.04)]">
-                <div className="flex items-center gap-2 rounded-xl bg-[#fffff3]/75 px-3 py-3">
+                <div className="flex items-center gap-2 rounded-xl bg-white/75 px-3 py-3">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -551,19 +551,14 @@ export function HeaderSection({
                     
                     if (hasSubItems) {
                       return (
-                        <div key={item.label} className="rounded-2xl bg-[#fffff3]/75 shadow-[0_1px_0_rgba(0,0,0,0.04)] overflow-hidden">
+                        <div key={item.label} className="rounded-2xl bg-white/75 shadow-[0_1px_0_rgba(0,0,0,0.04)] overflow-hidden">
                           <button
                             type="button"
                             onClick={() => toggleMobileItem(item.label)}
-                            className="w-full group flex items-center justify-between px-4 py-4 transition-all hover:bg-[#fffff3]"
+                            className="w-full group flex items-center justify-between px-4 py-4 transition-all hover:bg-white"
                           >
-                            <div className="flex items-center gap-3">
-                              <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-[#0382ff]/16 to-violet-500/10 text-[#0382ff]">
-                                <NavIcon label={item.label} />
-                              </div>
-                              <div className="text-sm font-semibold text-black">
-                                {item.label}
-                              </div>
+                            <div className="text-sm font-semibold text-black">
+                              {item.label}
                             </div>
                             <svg
                               className={[
@@ -603,24 +598,19 @@ export function HeaderSection({
                     }
                     
                     return (
-                      <a
-                        key={item.label}
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="group flex items-center justify-between rounded-2xl bg-[#fffff3]/75 px-4 py-4 shadow-[0_1px_0_rgba(0,0,0,0.04)] transition-all hover:-translate-y-0.5 hover:bg-[#fffff3]"
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-[#0382ff]/16 to-violet-500/10 text-[#0382ff]">
-                            <NavIcon label={item.label} />
-                          </div>
-                          <div className="text-sm font-semibold text-black">
-                            {item.label}
-                          </div>
-                        </div>
-                        <div className="text-black/35 transition-transform group-hover:translate-x-0.5">
-                          →
-                        </div>
-                      </a>
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => setIsOpen(false)}
+                        className="group flex items-center justify-between rounded-2xl bg-white/75 px-4 py-4 shadow-[0_1px_0_rgba(0,0,0,0.04)] transition-all hover:-translate-y-0.5 hover:bg-white"
+                    >
+                        <div className="text-sm font-semibold text-black">
+                          {item.label}
+                      </div>
+                      <div className="text-black/35 transition-transform group-hover:translate-x-0.5">
+                        →
+                      </div>
+                    </a>
                     );
                   })}
                   {filteredLinks.length === 0 ? (
