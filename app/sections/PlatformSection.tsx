@@ -140,35 +140,29 @@ export function PlatformSection({
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_55%_at_50%_0%,rgba(3,130,255,0.18)_0%,rgba(3,130,255,0)_60%),radial-gradient(45%_40%_at_0%_35%,rgba(124,58,237,0.12)_0%,rgba(124,58,237,0)_65%),radial-gradient(45%_40%_at_100%_40%,rgba(3,130,255,0.10)_0%,rgba(3,130,255,0)_60%)]"
       />
       <Container>
-        <div className="mx-auto max-w-5xl text-center">
-          <AnimateIn>
-            <div className="space-y-6">
-              <div className="inline-flex items-center rounded-full bg-black/[0.03] px-4 py-2 text-xs font-semibold tracking-wide text-black/70">
-                GROWTHOS™
-              </div>
-
-              <div className="space-y-4 sm:space-y-5">
-                <h2 className="mx-auto max-w-4xl text-4xl font-semibold tracking-tight text-black sm:text-6xl">
-                  <AccentTitle title={platform.title} />
-                </h2>
-                <p className="mx-auto max-w-3xl text-lg leading-8 text-black/65 sm:text-xl">
-                  {platform.subtitle}
-                </p>
-              </div>
-
-              <div className="mx-auto max-w-3xl space-y-2">
-                <div className="text-sm font-semibold text-black">
-                  One platform. One customer view. One growth loop.
+        <div className="mx-auto max-w-7xl">
+          {/* Header Section */}
+          <div className="text-center">
+            <AnimateIn>
+              <div className="space-y-6">
+                <div className="inline-flex items-center rounded-full bg-black/[0.03] px-4 py-2 text-xs font-semibold tracking-wide text-black/70">
+                  GROWTHOS™
                 </div>
-                <div className="text-sm leading-6 text-black/60">
-                  Replace stitched tools with a unified system that turns
-                  insights into automated actions across your lifecycle.
+
+                <div className="space-y-4 sm:space-y-5">
+                  <h2 className="mx-auto max-w-4xl text-4xl font-semibold tracking-tight text-black sm:text-6xl">
+                    <AccentTitle title={platform.title} />
+                  </h2>
+                  <p className="mx-auto max-w-3xl text-lg leading-8 text-black/65 sm:text-xl">
+                    {platform.subtitle}
+                  </p>
                 </div>
               </div>
-            </div>
-          </AnimateIn>
+            </AnimateIn>
+          </div>
 
-          <div className="mx-auto mt-10 flex max-w-4xl flex-wrap justify-center gap-2">
+          {/* Highlight Chips - Floating Pills */}
+          <div className="mx-auto mt-12 flex max-w-4xl flex-wrap justify-center gap-2">
             {platform.highlights.slice(0, 8).map((h, idx) => (
               <AnimateIn key={h} delayMs={80 + idx * 45}>
                 <HighlightChip label={h} />
@@ -176,35 +170,126 @@ export function PlatformSection({
             ))}
           </div>
 
-          <div className="mt-14 grid gap-12 sm:grid-cols-2">
-            <AnimateIn delayMs={120}>
-              <IconTile
-                title="Unified profiles"
-                description="Live user + account profiles with signals, segments, and next-best actions — ready to activate."
-                icon={<UsersIcon />}
-              />
-            </AnimateIn>
-            <AnimateIn delayMs={160}>
-              <IconTile
-                title="Journeys + Experiments"
-                description="Ship lifecycle campaigns and A/B tests without waiting on ops — iterate fast and learn faster."
-                icon={<FlowIcon />}
-              />
-            </AnimateIn>
-            <AnimateIn delayMs={200}>
-              <IconTile
-                title="Personalization"
-                description="Target experiences in real time with AI assistance — across channels and onsite."
-                icon={<SparkIcon />}
-              />
-            </AnimateIn>
-            <AnimateIn delayMs={240}>
-              <IconTile
-                title="Analytics that triggers action"
-                description="See what matters, then automate what to do next — insights feed directly back into GTM."
-                icon={<ChartIcon />}
-              />
-            </AnimateIn>
+          {/* Centerpiece Text Block */}
+          <AnimateIn delayMs={100}>
+            <div className="mx-auto mt-16 max-w-3xl rounded-sm border border-black/[0.06] bg-gradient-to-br from-[#f5f5f5]/90 to-[#f5f5f5]/50 p-8 text-center backdrop-blur-sm sm:p-10">
+              <div className="text-sm font-semibold text-black">
+                One platform. One customer view. One growth loop.
+              </div>
+              <div className="mt-3 text-sm leading-6 text-black/60">
+                Replace stitched tools with a unified system that turns
+                insights into automated actions across your lifecycle.
+              </div>
+            </div>
+          </AnimateIn>
+
+          {/* Feature Grid - Creative Asymmetric Layout */}
+          <div className="mx-auto mt-20 max-w-6xl">
+            {/* Top Row - 2 Cards */}
+            <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
+              <AnimateIn delayMs={120}>
+                <div className="group relative">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-4 -z-10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                    style={{
+                      background: 'radial-gradient(circle at 30% 30%, rgba(3,130,255,0.15), rgba(124,58,237,0.08), transparent 70%)'
+                    }}
+                  />
+                  <div className="relative h-full rounded-sm border border-black/[0.06] bg-gradient-to-br from-[#f5f5f5] to-[#f5f5f5]/80 p-8 backdrop-blur-sm transition-all duration-300 hover:border-[#0382ff]/20 hover:shadow-lg">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="grid h-12 w-12 place-items-center rounded-sm bg-gradient-to-br from-[#0382ff]/18 to-violet-500/10 text-[#0382ff]">
+                        <UsersIcon />
+                      </div>
+                      <div className="mt-4 text-base font-semibold text-black">
+                        Unified profiles
+                      </div>
+                      <div className="mt-2 text-sm leading-6 text-black/65">
+                        Live user + account profiles with signals, segments, and next-best actions — ready to activate.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+
+              <AnimateIn delayMs={160}>
+                <div className="group relative">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-4 -z-10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                    style={{
+                      background: 'radial-gradient(circle at 70% 30%, rgba(124,58,237,0.15), rgba(3,130,255,0.08), transparent 70%)'
+                    }}
+                  />
+                  <div className="relative h-full rounded-sm border border-black/[0.06] bg-gradient-to-br from-[#f5f5f5] to-[#f5f5f5]/80 p-8 backdrop-blur-sm transition-all duration-300 hover:border-violet-500/20 hover:shadow-lg">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="grid h-12 w-12 place-items-center rounded-sm bg-gradient-to-br from-[#0382ff]/18 to-violet-500/10 text-[#0382ff]">
+                        <FlowIcon />
+                      </div>
+                      <div className="mt-4 text-base font-semibold text-black">
+                        Journeys + Experiments
+                      </div>
+                      <div className="mt-2 text-sm leading-6 text-black/65">
+                        Ship lifecycle campaigns and A/B tests without waiting on ops — iterate fast and learn faster.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+            </div>
+
+            {/* Bottom Row - 2 Cards with offset on larger screens */}
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:gap-8">
+              <AnimateIn delayMs={200}>
+                <div className="group relative">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-4 -z-10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                    style={{
+                      background: 'radial-gradient(circle at 30% 70%, rgba(3,130,255,0.15), rgba(124,58,237,0.08), transparent 70%)'
+                    }}
+                  />
+                  <div className="relative h-full rounded-sm border border-black/[0.06] bg-gradient-to-br from-[#f5f5f5] to-[#f5f5f5]/80 p-8 backdrop-blur-sm transition-all duration-300 hover:border-[#0382ff]/20 hover:shadow-lg">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="grid h-12 w-12 place-items-center rounded-sm bg-gradient-to-br from-[#0382ff]/18 to-violet-500/10 text-[#0382ff]">
+                        <SparkIcon />
+                      </div>
+                      <div className="mt-4 text-base font-semibold text-black">
+                        Personalization
+                      </div>
+                      <div className="mt-2 text-sm leading-6 text-black/65">
+                        Target experiences in real time with AI assistance — across channels and onsite.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+
+              <AnimateIn delayMs={240}>
+                <div className="group relative">
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -inset-4 -z-10 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100"
+                    style={{
+                      background: 'radial-gradient(circle at 70% 70%, rgba(124,58,237,0.15), rgba(3,130,255,0.08), transparent 70%)'
+                    }}
+                  />
+                  <div className="relative h-full rounded-sm border border-black/[0.06] bg-gradient-to-br from-[#f5f5f5] to-[#f5f5f5]/80 p-8 backdrop-blur-sm transition-all duration-300 hover:border-violet-500/20 hover:shadow-lg">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="grid h-12 w-12 place-items-center rounded-sm bg-gradient-to-br from-[#0382ff]/18 to-violet-500/10 text-[#0382ff]">
+                        <ChartIcon />
+                      </div>
+                      <div className="mt-4 text-base font-semibold text-black">
+                        Analytics that triggers action
+                      </div>
+                      <div className="mt-2 text-sm leading-6 text-black/65">
+                        See what matters, then automate what to do next — insights feed directly back into GTM.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </AnimateIn>
+            </div>
           </div>
         </div>
       </Container>

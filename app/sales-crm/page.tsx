@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function SalesCRMPage() {
   return (
-    <div className="bg-[#fffff3] text-black">
+    <div className="bg-[#f5f5f5] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -713,7 +713,7 @@ export default function SalesCRMPage() {
                   <ButtonLink
                     href="#templates"
                     variant="secondary"
-                    className="bg-[#fffff3] text-black hover:bg-[#fffff3]/95"
+                    className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95"
                   >
                     View Templates
                     <svg

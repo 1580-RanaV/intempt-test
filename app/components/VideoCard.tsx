@@ -52,7 +52,7 @@ export function VideoCard({
   img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;}
   .overlay{position:absolute;inset:0;background:rgba(0,0,0,.20);}
   .btn{position:absolute;inset:0;display:grid;place-items:center;}
-  .pill{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:12px 18px;background:rgba(255,255,243,.92);color:#111;font:600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.12);}
+  .pill{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:12px 18px;background:rgba(245,245,245,.92);color:#111;font:600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.12);}
   .play{display:grid;place-items:center;height:36px;width:36px;border-radius:999px;background:#0382ff;color:#fff;font-weight:800;}
 </style></head><body>
 <a href="${safeEmbed}">
@@ -63,7 +63,7 @@ export function VideoCard({
 </body></html>`;
 
   return (
-    <div className="mx-auto mt-10 max-w-4xl rounded-3xl border border-black/10 bg-[#fffff3]/80 p-6 text-left shadow-sm backdrop-blur">
+    <div className="mx-auto mt-10 max-w-4xl rounded-3xl border border-black/10 bg-[#f5f5f5]/80 p-6 text-left shadow-sm backdrop-blur">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold text-black">{label}</div>

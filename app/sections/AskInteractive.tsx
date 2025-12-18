@@ -26,7 +26,7 @@ export function AskInteractive({
   };
 
   return (
-    <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-[32px] border border-black/10 bg-[#fffff3] shadow-sm">
+    <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden bg-[#f5f5f5]">
       <div className="relative p-6 sm:p-8">
         <div
           className={[
@@ -35,12 +35,12 @@ export function AskInteractive({
           ].join(" ")}
           aria-hidden={submitted}
         >
-          <div className="mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-2xl border border-black/10 bg-white/60 px-4 py-3 backdrop-blur">
+          <div className="mx-auto flex max-w-4xl items-center justify-between gap-3 rounded-sm border border-black/10 bg-white/60 px-4 py-3 backdrop-blur">
             <div className="flex items-center gap-2">
-              <span className="rounded-xl bg-[#0382ff] px-3 py-1.5 text-xs font-semibold text-white">
+              <span className="rounded-sm bg-[#0382ff] px-3 py-1.5 text-xs font-semibold text-white">
                 Ask
               </span>
-              <span className="rounded-xl bg-black/[0.03] px-3 py-1.5 text-xs font-semibold text-black/60 ring-1 ring-inset ring-black/10">
+              <span className="rounded-sm bg-black/[0.03] px-3 py-1.5 text-xs font-semibold text-black/60 ring-1 ring-inset ring-black/10">
                 Do
               </span>
             </div>
@@ -64,10 +64,10 @@ export function AskInteractive({
             <button
               type="button"
               onClick={submit}
-              className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#0382ff]/10 text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 transition-all duration-200 ease-out hover:bg-[#0382ff]/15 hover:-translate-y-0.5 active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0382ff]"
+              className="group grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-[#0382ff]/10 text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 transition-colors duration-200 ease-out hover:bg-[#0382ff]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0382ff]"
               aria-label="Ask Blu"
             >
-              <span className="text-lg leading-none">➤</span>
+              <span className="text-lg leading-none inline-block group-hover:animate-[slideOut_1.5s_ease-in-out]">➤</span>
             </button>
           </div>
 
@@ -80,7 +80,7 @@ export function AskInteractive({
                 type="button"
                 onClick={() => setValue(prompt)}
                 className={[
-                  "rounded-2xl px-4 py-3 text-sm font-semibold ring-1 ring-inset transition-all duration-200 ease-out",
+                  "rounded-sm px-4 py-3 text-sm font-semibold ring-1 ring-inset transition-all duration-200 ease-out",
                   "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-sm",
                   isSelected
                     ? "bg-[#0382ff] text-white ring-[#0382ff]/30"

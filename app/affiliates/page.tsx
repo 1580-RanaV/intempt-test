@@ -31,7 +31,7 @@ export default function AffiliatesPage() {
   ];
 
   return (
-    <div className="bg-[#fffff3] text-black">
+    <div className="bg-[#f5f5f5] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -417,7 +417,7 @@ export default function AffiliatesPage() {
                   Earn 20% recurring revenue on every referral purchase for the first year. Sharing the word about Intempt
                 </p>
                 <div className="mt-10">
-                  <ButtonLink href="#apply" variant="secondary" className="bg-[#fffff3] text-black hover:bg-[#fffff3]/95">
+                  <ButtonLink href="#apply" variant="secondary" className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95">
                     Apply now
                   </ButtonLink>
                 </div>

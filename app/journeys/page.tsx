@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function JourneysPage() {
   return (
-    <div className="bg-[#fffff3] text-black">
+    <div className="bg-[#f5f5f5] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}

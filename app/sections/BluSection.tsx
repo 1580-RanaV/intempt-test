@@ -55,7 +55,7 @@ export function BluSection({
           </AnimateIn>
 
           <AnimateIn delayMs={180}>
-            <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-[32px] border border-black/10 bg-[#fffff3] shadow-sm">
+            <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-[32px] border border-black/10 bg-[#f5f5f5] shadow-sm">
               <div className="relative p-3 sm:p-4">
                 <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] ring-1 ring-inset ring-black/10">
                   <Image

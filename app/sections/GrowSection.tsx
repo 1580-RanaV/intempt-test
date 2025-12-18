@@ -15,7 +15,7 @@ function StatCard({
   return (
     <div
       className={[
-        "rounded-3xl border border-black/10 bg-[#fffff3]/90 p-6 shadow-sm backdrop-blur",
+        "rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-6 shadow-sm backdrop-blur",
         className,
       ]
         .filter(Boolean)
@@ -121,8 +121,8 @@ function CenterMark() {
                 "radial-gradient(transparent 55%, #000 56%), repeating-conic-gradient(#000 0 18deg, transparent 18deg 26deg)",
             }}
           />
-          <div className="absolute inset-10 rounded-full bg-[#fffff3] ring-1 ring-inset ring-black/10" />
-          <div className="relative grid h-24 w-24 place-items-center rounded-3xl bg-[#fffff3] ring-1 ring-inset ring-black/10 shadow-sm">
+          <div className="absolute inset-10 rounded-full bg-[#f5f5f5] ring-1 ring-inset ring-black/10" />
+          <div className="relative grid h-24 w-24 place-items-center rounded-3xl bg-[#f5f5f5] ring-1 ring-inset ring-black/10 shadow-sm">
             <Image
               src="/logo.png"
               alt="Intempt"
@@ -189,7 +189,7 @@ export function GrowSection({
             </AnimateIn>
 
             <AnimateIn className="md:col-span-1" delayMs={160}>
-              <div className="grid h-full place-items-center rounded-3xl border border-black/10 bg-[#fffff3]/90 p-6 shadow-sm backdrop-blur">
+              <div className="grid h-full place-items-center rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-6 shadow-sm backdrop-blur">
                 <CenterMark />
               </div>
             </AnimateIn>
@@ -230,7 +230,7 @@ export function GrowSection({
             </AnimateIn>
 
             <AnimateIn className="md:col-span-2" delayMs={220}>
-              <div className="rounded-3xl border border-black/10 bg-[#fffff3]/90 p-8 shadow-sm backdrop-blur">
+              <div className="rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-8 shadow-sm backdrop-blur">
                 <div className="text-sm font-semibold text-black/80">
                   Key metrics that compound growth
                 </div>

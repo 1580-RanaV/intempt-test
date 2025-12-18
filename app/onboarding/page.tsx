@@ -70,7 +70,7 @@ export default function OnboardingPage() {
   const markTouched = (key: string) => setTouched((prev) => ({ ...prev, [key]: true }));
 
   return (
-    <div className="min-h-screen bg-[#fffff3] text-black">
+    <div className="min-h-screen bg-[#f5f5f5] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -288,7 +288,7 @@ export default function OnboardingPage() {
                   />
                   <div className="grid gap-2">
                     <label className="text-sm font-semibold text-black">Workspace slug</label>
-                    <div className="flex items-center rounded-2xl border border-black/15 bg-[#fffff3] px-3 py-2 text-sm font-semibold text-black/70 focus-within:ring-2 focus-within:ring-[#0382ff]/40">
+                    <div className="flex items-center rounded-2xl border border-black/15 bg-[#f5f5f5] px-3 py-2 text-sm font-semibold text-black/70 focus-within:ring-2 focus-within:ring-[#0382ff]/40">
                       <span className="text-black/40">app.intempt.com/</span>
                       <input
                         value={workspaceSlug}
@@ -311,7 +311,7 @@ export default function OnboardingPage() {
                   <div className="space-y-3">
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-black">Workspace logo</label>
-                      <div className="flex items-center justify-between rounded-2xl border border-dashed border-black/15 bg-[#fffff3] px-4 py-3">
+                      <div className="flex items-center justify-between rounded-2xl border border-dashed border-black/15 bg-[#f5f5f5] px-4 py-3">
                         <div>
                           <div className="text-sm font-semibold text-black/70">Upload image</div>
                           <p className="text-xs font-semibold text-black/45">
@@ -328,7 +328,7 @@ export default function OnboardingPage() {
                       <label className="text-sm font-semibold text-black">
                         Primary contact number (optional)
                       </label>
-                      <div className="grid grid-cols-[110px_1fr] gap-2 rounded-2xl border border-black/15 bg-[#fffff3] px-3 py-2 text-sm font-semibold text-black/70 focus-within:ring-2 focus-within:ring-[#0382ff]/40">
+                      <div className="grid grid-cols-[110px_1fr] gap-2 rounded-2xl border border-black/15 bg-[#f5f5f5] px-3 py-2 text-sm font-semibold text-black/70 focus-within:ring-2 focus-within:ring-[#0382ff]/40">
                         <input
                           value="+1"
                           readOnly
@@ -409,7 +409,7 @@ export default function OnboardingPage() {
                   </p>
                 </div>
 
-                <div className="mt-4 rounded-2xl border border-black/15 bg-[#fffff3] p-4">
+                <div className="mt-4 rounded-2xl border border-black/15 bg-[#f5f5f5] p-4">
                   <div className="flex items-center justify-between text-sm font-semibold text-black/65">
                     <span>Analyzing your website…</span>
                     <span>68%</span>
@@ -440,8 +440,8 @@ export default function OnboardingPage() {
                         className={[
                           "flex items-center justify-between rounded-2xl border px-4 py-3 text-left transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
                           isSelected
-                            ? "border-[#0382ff] bg-[#fffff3]"
-                            : "border-black/15 bg-[#fffff3] hover:-translate-y-0.5 hover:shadow-sm",
+                            ? "border-[#0382ff] bg-[#f5f5f5]"
+                            : "border-black/15 bg-[#f5f5f5] hover:-translate-y-0.5 hover:shadow-sm",
                         ].join(" ")}
                       >
                         <div className="space-y-1">
@@ -496,14 +496,14 @@ export default function OnboardingPage() {
 
                 <div className="mt-6 grid gap-3 lg:grid-cols-2">
                   {selectedToolList.length === 0 ? (
-                    <div className="rounded-2xl border border-dashed border-black/15 bg-[#fffff3] px-4 py-6 text-center text-sm font-semibold text-black/60">
+                    <div className="rounded-2xl border border-dashed border-black/15 bg-[#f5f5f5] px-4 py-6 text-center text-sm font-semibold text-black/60">
                       Select at least one tool to connect.
                     </div>
                   ) : (
                     selectedToolList.map((tool) => (
                       <div
                         key={tool}
-                        className="flex items-start justify-between gap-4 rounded-2xl border border-black/15 bg-[#fffff3] px-4 py-3"
+                        className="flex items-start justify-between gap-4 rounded-2xl border border-black/15 bg-[#f5f5f5] px-4 py-3"
                       >
                         <div className="space-y-1">
                           <div className="text-sm font-semibold text-black">
@@ -526,7 +526,7 @@ export default function OnboardingPage() {
                   )}
                 </div>
 
-                <div className="mt-6 flex items-center gap-3 rounded-2xl border border-black/15 bg-[#fffff3] px-4 py-3">
+                <div className="mt-6 flex items-center gap-3 rounded-2xl border border-black/15 bg-[#f5f5f5] px-4 py-3">
                   <LockIcon />
                   <div className="text-sm font-semibold text-black/70">
                     Your data is encrypted and secure. We never share your credentials with third
@@ -587,7 +587,7 @@ function Field({
         placeholder={placeholder}
         readOnly={readOnly}
         className={[
-          "w-full rounded-sm border border-black/15 bg-[#fffff3] px-3 py-3 text-sm font-semibold text-black/80 outline-none transition focus:ring-2 focus:ring-[#0382ff]/40",
+          "w-full rounded-sm border border-black/15 bg-[#f5f5f5] px-3 py-3 text-sm font-semibold text-black/80 outline-none transition focus:ring-2 focus:ring-[#0382ff]/40",
           readOnly ? "cursor-not-allowed text-black/40" : "",
           error ? "border-red-500 focus:ring-red-200" : "",
         ].join(" ")}
@@ -600,7 +600,7 @@ function Field({
 
 function GhostButton({ label, icon }: { label: string; icon: string }) {
   return (
-    <button className="flex items-center justify-center gap-3 rounded-sm border border-black/15 bg-[#fffff3] px-4 py-3 text-sm font-semibold text-black/80 transition hover:-translate-y-0.5 hover:shadow-sm">
+    <button className="flex items-center justify-center gap-3 rounded-sm border border-black/15 bg-[#f5f5f5] px-4 py-3 text-sm font-semibold text-black/80 transition hover:-translate-y-0.5 hover:shadow-sm">
       <span className="grid h-8 w-8 place-items-center rounded-full bg-black/5 text-sm font-bold text-black/70">
         {icon}
       </span>
@@ -639,8 +639,8 @@ function RoleCard({
       className={[
         "flex h-full flex-col items-start gap-3 rounded-2xl border px-4 py-4 text-left transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
         active
-          ? "border-[#0382ff] bg-[#fffff3] shadow-sm"
-          : "border-black/15 bg-[#fffff3] hover:-translate-y-0.5 hover:shadow-sm",
+          ? "border-[#0382ff] bg-[#f5f5f5] shadow-sm"
+          : "border-black/15 bg-[#f5f5f5] hover:-translate-y-0.5 hover:shadow-sm",
       ].join(" ")}
     >
       <div className="flex items-center gap-2">

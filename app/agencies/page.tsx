@@ -43,7 +43,7 @@ export default function AgenciesPage() {
   ];
 
   return (
-    <div className="bg-[#fffff3] text-black">
+    <div className="bg-[#f5f5f5] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -741,7 +741,7 @@ export default function AgenciesPage() {
                   Become our partner to learn cutting-edge strategies for acquiring, converting, and retaining Users via implementing Intempt on behalf of eCommerce, SaaS, and Apps companies.
                 </p>
                 <div className="mt-10">
-                  <ButtonLink href="#apply" variant="secondary" className="bg-[#fffff3] text-black hover:bg-[#fffff3]/95">
+                  <ButtonLink href="#apply" variant="secondary" className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95">
                     Apply now
                   </ButtonLink>
                 </div>

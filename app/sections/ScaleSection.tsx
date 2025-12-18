@@ -95,7 +95,7 @@ export function ScaleSection({
                 hoverSpeed={15}
                 scaleOnHover
                 fadeOut
-                fadeOutColor="#fffff3"
+                fadeOutColor="#f5f5f5"
                 ariaLabel="Integration partner logos"
                 className="h-full"
               />
