@@ -33,8 +33,8 @@ export default function AgenticCRMPage() {
                   Bring together real-time user signals from product, marketing, and sales tools into a single, actionable, agentic CRM.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo">
+                  <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
                     Book a 15-min demo
                   </ButtonLink>
                 </div>
@@ -509,8 +509,8 @@ export default function AgenticCRMPage() {
                   Start building better relationships with clean, reliable data that drives growth.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo" className="bg-white text-black hover:bg-white/95">
+                  <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12" className="bg-white text-black hover:bg-white/95">
                     Book a 15-min demo
                   </ButtonLink>
                 </div>

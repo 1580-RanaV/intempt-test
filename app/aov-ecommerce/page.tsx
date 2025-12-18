@@ -33,8 +33,8 @@ export default function AOVeCommercePage() {
                   Increase average order value by using one recommendations system that understands your catalog, your shoppers, and their behavior across site, apps and channels.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo">
+                  <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
                     Book a 15-min demo
                   </ButtonLink>
                 </div>
@@ -409,8 +409,8 @@ export default function AOVeCommercePage() {
                   Let Blu orchestrate your product discovery across every touchpoint.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo">
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
                     Book a demo
                   </ButtonLink>
                 </div>

@@ -34,7 +34,7 @@ export default function SalesCRMPage() {
                   Real-time AI‑powered CRM that closes the gap between marketers, sellers and customer success. Get full visibility on users/accounts, automatically run tasks & deals, and let AI agents research, qualify and enrich leads continuously
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
                   <ButtonLink variant="secondary" href="#product-tour">
                     Product tour
                   </ButtonLink>

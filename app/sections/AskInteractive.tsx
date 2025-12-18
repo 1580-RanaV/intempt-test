@@ -108,7 +108,7 @@ export function AskInteractive({
               Nice prompt. Want Blu to do it for real?
             </div>
             <div className="mt-6 flex justify-center">
-              <ButtonLink href="/onboarding">Try Intempt</ButtonLink>
+              <ButtonLink href="https://app.intempt.com/">Try Intempt</ButtonLink>
             </div>
           </div>
         </div>

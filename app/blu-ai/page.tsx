@@ -34,7 +34,7 @@ export default function BluAIPage() {
                   With Blu you elevate your GTM Model: intelligent triggers, adaptive experiences, continuous optimization
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
                   <ButtonLink variant="secondary" href="#product-tour">
                     Product tour
                   </ButtonLink>

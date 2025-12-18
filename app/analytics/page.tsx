@@ -34,7 +34,7 @@ export default function AnalyticsPage() {
                   Access real-time analytics and create visualizations to make decisions that drive growth.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
                   <ButtonLink variant="secondary" href="#product-tour">
                     Product tour
                   </ButtonLink>

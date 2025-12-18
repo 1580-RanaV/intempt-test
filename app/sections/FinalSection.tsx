@@ -33,9 +33,9 @@ export function FinalSection({
                 className="mt-10 flex flex-col justify-center gap-4 sm:flex-row"
                 id="book-demo"
               >
-                <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
+                <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
                 <ButtonLink
-                  href="#book-demo"
+                  href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12"
                   variant="secondary"
                   className="bg-[#fffff3] text-black hover:bg-[#fffff3]/95"
                 >

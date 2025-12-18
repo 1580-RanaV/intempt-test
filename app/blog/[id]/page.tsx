@@ -4,6 +4,8 @@ import { Footer } from "../../components/Footer";
 import { Container } from "../../components/Container";
 import { AnimateIn } from "../../components/AnimateIn";
 import { notFound } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
 
 const blogPosts: Record<
   string,
@@ -15,7 +17,7 @@ const blogPosts: Record<
 > = {
   "intempt-vs-customerio": {
     title: "Intempt vs Customer.io (2025): In-Depth Comparison",
-    image: "/blog/customerio.jpg",
+    image: "/Blog/customerio.jpg",
     content: `Customer journeys are most effective when they evolve with user behavior. But most automation tools still rely on static flows that remain unchanged until a marketer updates them manually. Customer.io delivers strong messaging automation and excellent segmentation. It can move users in and out of segments in real time based on events, attributes, and behavior, which makes targeting very powerful. Intempt takes a different approach. It uses AI to orchestrate journeys that adjust themselves in real time, predict user intent, and connect every step to analytics and revenue attribution, turning your lifecycle into a system that learns and improves automatically. In this comparison, we break down Intempt vs. Customer.io so you can understand which platform delivers truly adaptive lifecycle orchestration in 2025.
 
 ## Why Compare Intempt and Customer.io?
@@ -4610,8 +4612,26 @@ export default async function BlogPostPage({
         actions={siteContent.nav.actions}
       />
       <main>
+        {/* Breadcrumb */}
+        <section className="pt-8 pb-4">
+          <Container>
+            <div className="mx-auto max-w-4xl">
+              <nav className="flex items-center gap-2 text-sm text-black/60">
+                <Link
+                  href="/blog"
+                  className="hover:text-[#0382ff] transition-colors"
+                >
+                  blog
+                </Link>
+                <span>/</span>
+                <span className="text-black/80">{post.title}</span>
+              </nav>
+            </div>
+          </Container>
+        </section>
+
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-24 pb-12 sm:pt-32 sm:pb-16">
+        <section className="relative overflow-hidden pt-8 pb-12 sm:pt-12 sm:pb-16">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(70%_55%_at_50%_0%,rgba(3,130,255,0.10)_0%,rgba(3,130,255,0)_60%)]"
@@ -4626,8 +4646,13 @@ export default async function BlogPostPage({
                 {/* Author and Share */}
                 <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0382ff]/10 text-[#0382ff] text-lg font-semibold">
-                      SC
+                    <div className="relative h-12 w-12 rounded-full overflow-hidden bg-[#0382ff]/10">
+                      <Image
+                        src="/founder-photo.jpg"
+                        alt="Sid Chaudhary"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <div>
                       <h3 className="text-base font-semibold text-black">
@@ -4680,60 +4705,95 @@ export default async function BlogPostPage({
         </article>
 
         {/* CTA Section */}
-        <section className="py-16 bg-black/5">
+        <section className="py-12 bg-gradient-to-b from-black/5 to-transparent">
           <Container>
             <AnimateIn>
-              <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
+              <div className="mx-auto max-w-4xl">
+                <h2 className="text-2xl font-semibold tracking-tight text-black mb-8 text-center sm:text-3xl">
                   Thanks for reading till the end. Here are 3 ways we can help
                   you grow your business:
                 </h2>
-                <div className="mt-12 grid gap-6 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-black/10 bg-white p-6">
-                    <h3 className="text-lg font-semibold text-black mb-2">
-                      1. Boost growth with proven growth plays
-                    </h3>
-                    <p className="text-sm text-black/70 mb-4">
-                      Explore our Growth Play Library, filled with actionable
-                      growth tactics and step-by-step guides to unlock your
-                      app's potential.
-                    </p>
-                    <a
-                      href="#growth-plays"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#0382ff] hover:text-[#0382ff]/80"
-                    >
-                      Check out Growth Play Library
-                    </a>
+                <div className="space-y-0 divide-y divide-black/10">
+                  {/* Option 1 */}
+                  <div className="py-6 group hover:bg-black/5 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-[#0382ff]/10 text-[#0382ff] text-sm font-semibold">
+                        1
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-[#0382ff] transition-colors">
+                          Boost growth with proven growth plays
+                        </h3>
+                        <p className="text-sm text-black/70 mb-3 leading-relaxed">
+                          Explore our Growth Play Library, filled with actionable
+                          growth tactics and step-by-step guides to unlock your
+                          app's potential.
+                        </p>
+                        <a
+                          href="#growth-plays"
+                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0382ff] hover:gap-2 transition-all group/link"
+                        >
+                          Check out Growth Play Library
+                          <svg className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div className="rounded-2xl border border-black/10 bg-white p-6">
-                    <h3 className="text-lg font-semibold text-black mb-2">
-                      2. Create a free GrowthOS account
-                    </h3>
-                    <p className="text-sm text-black/70 mb-4">
-                      Create a free GrowthOS account and get started on the
-                      journey to grow your app.
-                    </p>
-                    <a
-                      href="/onboarding"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#0382ff] hover:text-[#0382ff]/80"
-                    >
-                      Get started free on GrowthOS
-                    </a>
+
+                  {/* Option 2 */}
+                  <div className="py-6 group hover:bg-black/5 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-[#0382ff]/10 text-[#0382ff] text-sm font-semibold">
+                        2
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-[#0382ff] transition-colors">
+                          Create a free GrowthOS account
+                        </h3>
+                        <p className="text-sm text-black/70 mb-3 leading-relaxed">
+                          Create a free GrowthOS account and get started on the
+                          journey to grow your app.
+                        </p>
+                        <a
+                          href="https://app.intempt.com/"
+                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0382ff] hover:gap-2 transition-all group/link"
+                        >
+                          Get started free on GrowthOS
+                          <svg className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <div className="rounded-2xl border border-black/10 bg-white p-6">
-                    <h3 className="text-lg font-semibold text-black mb-2">
-                      3. Get advice from a Growth expert
-                    </h3>
-                    <p className="text-sm text-black/70 mb-4">
-                      Schedule a personalized discovery call with our founder to
-                      explore how GrowthOS can help you grow your business.
-                    </p>
-                    <a
-                      href="#book-demo"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#0382ff] hover:text-[#0382ff]/80"
-                    >
-                      Book a growth call
-                    </a>
+
+                  {/* Option 3 */}
+                  <div className="py-6 group hover:bg-black/5 transition-colors">
+                    <div className="flex items-start gap-4">
+                      <span className="shrink-0 flex h-8 w-8 items-center justify-center rounded-full bg-[#0382ff]/10 text-[#0382ff] text-sm font-semibold">
+                        3
+                      </span>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-[#0382ff] transition-colors">
+                          Get advice from a Growth expert
+                        </h3>
+                        <p className="text-sm text-black/70 mb-3 leading-relaxed">
+                          Schedule a personalized discovery call with our founder to
+                          explore how GrowthOS can help you grow your business.
+                        </p>
+                        <a
+                          href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12"
+                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#0382ff] hover:gap-2 transition-all group/link"
+                        >
+                          Book a growth call
+                          <svg className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4757,11 +4817,11 @@ export default async function BlogPostPage({
                   <input
                     type="email"
                     placeholder="Your email address"
-                    className="flex-1 rounded-xl border border-black/10 bg-white px-4 py-3 text-black placeholder:text-black/40 focus:ring-2 focus:ring-[#0382ff]/50 focus:outline-none"
+                    className="flex-1 rounded-sm border border-black/10 bg-white px-4 py-3 text-black placeholder:text-black/40 focus:ring-2 focus:ring-[#0382ff]/50 focus:outline-none"
                   />
                   <button
                     type="submit"
-                    className="rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-[#0382ff]/50"
+                    className="rounded-sm bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-[#0382ff]/50"
                   >
                     Subscribe
                   </button>

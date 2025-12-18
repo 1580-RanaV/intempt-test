@@ -34,7 +34,7 @@ export default function JourneysPage() {
                   With AI Coach, build omnichannel journeys on the fly. From onboarding to re-engagement, design and launch adaptive campaigns that personalize in real time and drive conversions.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
                   <ButtonLink variant="secondary" href="#product-tour">
                     Product tour
                   </ButtonLink>

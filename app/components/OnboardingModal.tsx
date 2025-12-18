@@ -322,7 +322,7 @@ export function OnboardingModal() {
                             Recommended size: 160×160px
                           </p>
                         </div>
-                        <button className="rounded-full bg-black/80 px-3 py-2 text-xs font-semibold text-white transition hover:bg-black">
+                        <button className="rounded-sm bg-black/80 px-3 py-2 text-xs font-semibold text-white transition hover:bg-black">
                           Choose file
                         </button>
                       </div>
@@ -513,10 +513,10 @@ export function OnboardingModal() {
                           </p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <button className="rounded-full bg-[#0382ff]/10 px-3 py-2 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/30 transition hover:bg-[#0382ff]/15">
+                          <button className="rounded-sm bg-[#0382ff]/10 px-3 py-2 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/30 transition hover:bg-[#0382ff]/15">
                             Ask teammate
                           </button>
-                          <button className="rounded-full bg-black text-xs font-semibold text-white px-3 py-2 transition hover:bg-black/80">
+                          <button className="rounded-sm bg-black text-xs font-semibold text-white px-3 py-2 transition hover:bg-black/80">
                             Connect
                           </button>
                         </div>
@@ -576,7 +576,7 @@ function Field({
         placeholder={placeholder}
         readOnly={readOnly}
         className={[
-          "w-full rounded-2xl border border-black/10 bg-white/80 px-3 py-3 text-sm font-semibold text-black/80 shadow-sm outline-none transition focus:ring-2 focus:ring-[#0382ff]/40",
+          "w-full rounded-sm border border-black/10 bg-white/80 px-3 py-3 text-sm font-semibold text-black/80 shadow-sm outline-none transition focus:ring-2 focus:ring-[#0382ff]/40",
           readOnly ? "cursor-not-allowed bg-black/5 text-black/40" : "",
         ].join(" ")}
       />
@@ -587,7 +587,7 @@ function Field({
 
 function GhostButton({ label, icon }: { label: string; icon: string }) {
   return (
-    <button className="flex items-center justify-center gap-3 rounded-full border border-black/10 bg-white/80 px-4 py-3 text-sm font-semibold text-black/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow">
+    <button className="flex items-center justify-center gap-3 rounded-sm border border-black/10 bg-white/80 px-4 py-3 text-sm font-semibold text-black/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow">
       <span className="grid h-8 w-8 place-items-center rounded-full bg-black/5 text-sm font-bold text-black/70">
         {icon}
       </span>

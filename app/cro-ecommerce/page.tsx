@@ -33,8 +33,8 @@ export default function CROeCommercePage() {
                   Run website, product recommendations, and messaging experiments from one place so every shopper sees a consistent, better-performing experience.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo">
+                  <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
                     Book a 15-min demo
                   </ButtonLink>
                 </div>
@@ -380,8 +380,8 @@ export default function CROeCommercePage() {
                   Test smarter, move faster, and grow with confidence.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo" className="bg-white text-black hover:bg-white/95">
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12" className="bg-white text-black hover:bg-white/95">
                     Book a demo
                   </ButtonLink>
                 </div>

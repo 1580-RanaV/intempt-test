@@ -92,7 +92,7 @@ export default function ProductTourPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full rounded-xl border-0 bg-white px-4 py-3 text-black placeholder:text-black/40 focus:ring-2 focus:ring-white/50 focus:outline-none"
+                        className="w-full rounded-sm border-0 bg-white px-4 py-3 text-black placeholder:text-black/40 focus:ring-2 focus:ring-white/50 focus:outline-none"
                         placeholder="Enter your name"
                       />
                     </div>
@@ -112,7 +112,7 @@ export default function ProductTourPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, email: e.target.value })
                         }
-                        className="w-full rounded-xl border-0 bg-white px-4 py-3 text-black placeholder:text-black/40 focus:ring-2 focus:ring-white/50 focus:outline-none"
+                        className="w-full rounded-sm border-0 bg-white px-4 py-3 text-black placeholder:text-black/40 focus:ring-2 focus:ring-white/50 focus:outline-none"
                         placeholder="your.email@company.com"
                       />
                     </div>
@@ -166,7 +166,7 @@ export default function ProductTourPage() {
 
                     <button
                       type="submit"
-                      className="w-full rounded-xl bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-white/50"
+                      className="w-full rounded-sm bg-black px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-black/90 focus:outline-none focus:ring-2 focus:ring-white/50"
                     >
                       Request a demo
                     </button>

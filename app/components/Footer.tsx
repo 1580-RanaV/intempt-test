@@ -61,9 +61,12 @@ export function Footer({
                 </div>
                 <ul className="mt-3 space-y-2 text-sm text-zinc-600">
                   {col.links.map((link) => {
-                    const href = link === "Help & Support" || link === "Help and Support" 
-                      ? "https://help.intempt.com" 
-                      : "#";
+                    let href = "#";
+                    if (link === "Help & Support" || link === "Help and Support") {
+                      href = "https://help.intempt.com";
+                    } else if (link === "Privacy") {
+                      href = "/privacy";
+                    }
                     return (
                     <li key={link}>
                       <a
@@ -85,7 +88,7 @@ export function Footer({
         <div className="mt-12 flex flex-col gap-2 border-t border-black/10 pt-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} {brand}. All rights reserved.</div>
           <div className="flex gap-4">
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/privacy" className="transition-colors hover:text-zinc-900">
               Privacy
             </a>
             <a href="#" className="transition-colors hover:text-zinc-900">

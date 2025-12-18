@@ -38,7 +38,7 @@ export const siteContent = {
         subItems: [
           { label: "Help and Support", href: "https://help.intempt.com" },
           { label: "Growth Plays", href: "/growthplays" },
-          { label: "Academy", href: "#academy" },
+          { label: "Academy", href: "/academy" },
           { label: "Blogs", href: "/blog" },
         ]
       },
@@ -55,16 +55,16 @@ export const siteContent = {
     ] satisfies NavItem[],
     actions: [
       { label: "Log in", href: "#login" },
-      { label: "Book a demo", href: "#book-demo" },
-      { label: "Get started", href: "/onboarding" },
+      { label: "Book a demo", href: "https://calendly.com/sidchaudhary/meet-sid?month=2025-12" },
+      { label: "Get started", href: "https://app.intempt.com/" },
     ] satisfies NavItem[],
   },
   hero: {
     headline: "Build a growth engine that drives revenue.",
     subhead:
       "Intempt is an all‑in‑one GrowthOS to acquire, convert, retain, and expand customers — powered by data, AI, and agent automation.",
-    primaryCta: { label: "Start Free Trial", href: "/onboarding" },
-    secondaryCta: { label: "Book a 15-min demo", href: "#book-demo" },
+    primaryCta: { label: "Start Free Trial", href: "https://app.intempt.com/" },
+    secondaryCta: { label: "Book a 15-min demo", href: "https://calendly.com/sidchaudhary/meet-sid?month=2025-12" },
     mediaLabel: "Product explainer video: Intempt GrowthOS",
   },
   blu: {
@@ -95,7 +95,7 @@ export const siteContent = {
         "Recommendations",
         "Experiments",
       ],
-      primaryCta: { label: "Get started", href: "/onboarding" },
+      primaryCta: { label: "Get started", href: "https://app.intempt.com/" },
     },
     everywhere: {
       title: "From idea to execution, instantly.",

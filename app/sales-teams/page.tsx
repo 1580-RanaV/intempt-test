@@ -33,8 +33,8 @@ export default function SalesTeamsPage() {
                   Unify inbound, outbound, and product signals in one system so your team knows who to reach, when to reach them, and when to back off.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo">
+                  <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
                     Book a 15-min demo
                   </ButtonLink>
                 </div>
@@ -534,8 +534,8 @@ export default function SalesTeamsPage() {
                   Stop chasing every lead. Start focusing on what matters.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get started</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo" className="bg-white text-black hover:bg-white/95">
+                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12" className="bg-white text-black hover:bg-white/95">
                     Book a demo
                   </ButtonLink>
                 </div>

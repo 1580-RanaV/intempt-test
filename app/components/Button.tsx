@@ -23,7 +23,7 @@ export function ButtonLink({
   return (
     <a
       className={[
-        "inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition-all duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm",
+        "inline-flex h-12 items-center justify-center gap-2 rounded-sm px-6 text-sm font-semibold transition-all duration-200 ease-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 active:shadow-sm",
         variantClasses[variant],
         className,
       ]

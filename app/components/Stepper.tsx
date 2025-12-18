@@ -188,7 +188,7 @@ export default function Stepper({
               <button
                 onClick={isLastStep ? handleComplete : handleNext}
                 className={[
-                  "duration-350 flex items-center justify-center rounded-full bg-[#0382ff] py-2 px-5 text-sm font-semibold tracking-tight text-white transition hover:bg-[#0273e6] active:bg-[#0261c4]",
+                  "duration-350 flex items-center justify-center rounded-sm bg-[#0382ff] py-2 px-5 text-sm font-semibold tracking-tight text-white transition hover:bg-[#0273e6] active:bg-[#0261c4]",
                   nextDisabled ? "opacity-60 cursor-not-allowed hover:translate-y-0" : "",
                 ].join(" ")}
                 disabled={nextDisabled}

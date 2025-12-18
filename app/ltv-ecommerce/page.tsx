@@ -33,8 +33,8 @@ export default function LTVeCommercePage() {
                   So every message reflects what each shopper just did.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Start Free Trial</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo">
+                  <ButtonLink href="https://app.intempt.com/">Start Free Trial</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
                     Book a 15-min demo
                   </ButtonLink>
                 </div>
@@ -406,8 +406,8 @@ export default function LTVeCommercePage() {
                   Let Blu orchestrate your retention strategy across every channel.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="/onboarding">Get Started</ButtonLink>
-                  <ButtonLink variant="secondary" href="#book-demo" className="bg-white text-black hover:bg-white/95">
+                  <ButtonLink href="https://app.intempt.com/">Get Started</ButtonLink>
+                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12" className="bg-white text-black hover:bg-white/95">
                     Book a Demo
                   </ButtonLink>
                 </div>
