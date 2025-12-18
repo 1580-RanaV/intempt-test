@@ -62,11 +62,41 @@ export function Footer({
                 <ul className="mt-3 space-y-2 text-sm text-zinc-600">
                   {col.links.map((link) => {
                     let href = "#";
-                    if (link === "Help & Support" || link === "Help and Support") {
-                      href = "https://help.intempt.com";
-                    } else if (link === "Privacy") {
-                      href = "/privacy";
-                    }
+                    
+                    // Map links to their corresponding routes
+                    const linkMap: Record<string, string> = {
+                      // GrowthOS™
+                      "Sales CRM": "/sales-crm",
+                      "Experiment": "/experiment",
+                      "Personalization": "/personalization",
+                      "Recommendations": "/recommendations",
+                      "Journeys": "/journeys",
+                      "Analytics": "/analytics",
+                      "Agents": "/agents",
+                      "Blu: AI Co-Marketer": "/blu-ai",
+                      "Privacy": "/privacy",
+                      "Pricing": "/pricing",
+                      // Solutions
+                      "Sales Teams": "/sales-teams",
+                      "Agentic CRM": "/agentic-crm",
+                      "LTV eCommerce": "/ltv-ecommerce",
+                      "AOV eCommerce": "/aov-ecommerce",
+                      "Analytics PLG SaaS": "/analytics-plg-saas",
+                      "Analytics eCommerce": "/analytics-ecommerce",
+                      "CRO eCommerce": "/cro-ecommerce",
+                      // Learn
+                      "Growth Plays": "/growthplays",
+                      "Blog": "/blog",
+                      "Product Tour": "/product-tour",
+                      "Help & Support": "https://help.intempt.com",
+                      "Help and Support": "https://help.intempt.com",
+                      // Partners
+                      "Affiliates": "/affiliates",
+                      "Agencies": "/agencies",
+                    };
+                    
+                    href = linkMap[link] || href;
+                    
                     return (
                     <li key={link}>
                       <a
@@ -86,13 +116,41 @@ export function Footer({
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-black/10 pt-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} {brand}. All rights reserved.</div>
-          <div className="flex gap-4">
+          <div>© {new Date().getFullYear()} {brand}</div>
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-green-500"></div>
+              <span>System status</span>
+            </div>
+            <a href="#" className="transition-colors hover:text-zinc-900">
+              Terms of service
+            </a>
             <a href="/privacy" className="transition-colors hover:text-zinc-900">
-              Privacy
+              Privacy policy
             </a>
             <a href="#" className="transition-colors hover:text-zinc-900">
-              Terms
+              SLA
+            </a>
+            <a href="#" className="transition-colors hover:text-zinc-900">
+              DPA
+            </a>
+            <a href="#" className="transition-colors hover:text-zinc-900">
+              SubProcessors
+            </a>
+            <a href="#" className="transition-colors hover:text-zinc-900">
+              AUP
+            </a>
+            <a href="#" className="transition-colors hover:text-zinc-900">
+              Security
+            </a>
+            <a href="#" className="transition-colors hover:text-zinc-900">
+              Trust portal
+            </a>
+            <a href="/affiliates" className="transition-colors hover:text-zinc-900">
+              Affiliate terms
+            </a>
+            <a href="/agencies" className="transition-colors hover:text-zinc-900">
+              Agency terms
             </a>
           </div>
         </div>

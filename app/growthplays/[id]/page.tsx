@@ -28,135 +28,187 @@ This use case effectively leverages Intempt's lifecycle agent and automated enga
 
 ## Benefits
 
-- **Early identification of at-risk users**: Predict which users will likely churn before they disengage completely.
-- **Targeted retention strategies**: Implement personalized campaigns to re-engage at-risk users.
-- **Increased customer lifetime value**: Retaining users longer by addressing their needs and concerns promptly.
-- **Improved user experience**: Enhance satisfaction by providing timely and relevant interactions.
-- **Data-driven decision making**: Utilize insights from predictive models to make informed marketing and product decisions.
+- Early identification of at-risk users: Predict which users will likely churn before they disengage completely.
+- Targeted retention strategies: Implement personalized campaigns to re-engage at-risk users.
+- Increased customer lifetime value: Retaining users longer by addressing their needs and concerns promptly.
+- Improved user experience: Enhance satisfaction by providing timely and relevant interactions.
+- Data-driven decision making: Utilize insights from predictive models to make informed marketing and product decisions.
 
 ## How it works
 
 ### Step 1: Set up data collection
 
-1. Ensure you have at least 21 days of data collection with a minimum of 10,000 daily events.
-2. Verify that the goal event (e.g., churn) has at least 200 true and 200 false occurrences over 30 days.
-3. Examples of events that can represent churn:
-   - User cancels subscription.
-   - User has not logged in for 30 days.
-   - User reduces usage significantly (e.g., logging in less frequently, using fewer features).
-   - User submits a negative feedback or support ticket indicating dissatisfaction.
+Ensure you have at least 21 days of data collection with a minimum of 10,000 daily events.
+
+Verify that the goal event (e.g., churn) has at least 200 true and 200 false occurrences over 30 days.
+
+Examples of events that can represent churn:
+User cancels subscription.
+User has not logged in for 30 days.
+User reduces usage significantly (e.g., logging in less frequently, using fewer features).
+User submits a negative feedback or support ticket indicating dissatisfaction.
 
 ### Step 2: Create a lifecycle agent
 
-1. Navigate to the Agents section in Intempt
-2. Select "Create agent" and choose the target goal event representing user churn.
-3. Configure the Agent.
-   - If necessary, filter out unnecessary users based on login date, feature usage frequency, subscription status, or support ticket submissions.
-   - Train the model using historical data to predict the likelihood of churn.
-4. Intempt will create an output attribute that stores prediction values for each user.
+Navigate to the Agents section in Intempt
+
+Select "Create agent" and choose the target goal event representing user churn.
+
+Configure the Agent.
+If necessary, filter out unnecessary users based on login date, feature usage frequency, subscription status, or support ticket submissions.
+Train the model using historical data to predict the likelihood of churn.
+
+Intempt will create an output attribute that stores prediction values for each user.
+
+![Step 2 output attribute](/gp/article1/1-min.png)
 
 ### Step 3: Segment users based on lifecycle scores
-
 Once trained, the model categorizes users into Champion, Regulars, promising, Needs attention, At risk
 
 ### Step 4: Design and implement retention strategies
 
 #### For high-risk users:
 
-1. **Create a journey:**
-   - Go to the Journeys section and create a new journey.
-   - Name the journey (e.g., "High-Risk User Retention Journey").
+**Create a journey:**
+Go to the Journeys section and create a new journey.
+Name the journey (e.g., "High-Risk User Retention Journey").
 
-2. **Set a trigger:**
-   - Choose a trigger based on the likelihood score (e.g., users with a high likelihood of churning).
+![Create journey](/gp/article1/2-min.png)
 
-3. **Add actions:**
-   - **Send personalized re-engagement emails:**
-     - Use the "Send Email" action to create an email campaign offering exclusive discounts or features. Customize the email content using user attributes like first name and recent activity. Example:
-       - Subject: "We miss you! Here's 20% off your next month"
-       - Body: "Hi [First Name], we noticed you haven't logged in recently. As a valued customer, we're offering you a 20% discount on your next month. Use code STAY20 at checkout. We'd love to hear any feedback you have to help us improve your experience."
-   - **Schedule follow-up calls:**
-     - Use the "Send SMS" or "Webhook" action to notify customer success teams to call high-risk users.
-     - Provide them a script to discuss the user's experience and offer assistance.
+**Set a trigger:**
+Choose a trigger based on the likelihood score (e.g., users with a high likelihood of churning).
 
-4. **Add conditions:**
-   - **Check email engagement:**
-     - Use the "Condition" block to check if users have opened the email or clicked on links.
-     - If not, send a follow-up email after a few days.
-   - **Check follow-up call status:**
-     - Ensure that follow-up calls were made and track the outcome.
-     - If a user remains unresponsive, escalate to a higher support tier.
+![Set trigger](/gp/article1/3-min.png)
 
-5. **Implement personalizations:**
-   - **Create a personalized dashboard message:**
-     - Go to the Personalizations section and create a new personalization.
-     - Set the target audience to high-risk users.
-     - Design a message or offer that appears on the user dashboard when they log in. Example:
-       - Message: "Welcome back, [First Name]! We've missed you. Enjoy a 20% discount on your next month with code STAY20."
+**Add actions:**
+Send personalized re-engagement emails:
+Use the "Send Email" action to create an email campaign offering exclusive discounts or features. Customize the email content using user attributes like first name and recent activity. Example:
+Subject: "We miss you! Here's 20% off your next month"
+Body: "Hi [First Name], we noticed you haven't logged in recently. As a valued customer, we're offering you a 20% discount on your next month. Use code STAY20 at checkout. We'd love to hear any feedback you have to help us improve your experience."
+
+![Email body example](/gp/article1/4-min.png)
+
+Schedule follow-up calls:
+Use the "Send SMS" or "Webhook" action to notify customer success teams to call high-risk users.
+Provide them a script to discuss the user's experience and offer assistance.
+
+![Follow-up calls](/gp/article1/5-min.png)
+
+**Add conditions:**
+Check email engagement:
+Use the "Condition" block to check if users have opened the email or clicked on links.
+If not, send a follow-up email after a few days.
+
+![Check email engagement](/gp/article1/6-min.png)
+
+![Email engagement condition](/gp/article1/7-min.png)
+
+Check follow-up call status:
+Ensure that follow-up calls were made and track the outcome.
+If a user remains unresponsive, escalate to a higher support tier.
+
+**Implement personalizations:**
+Create a personalized dashboard message:
+Go to the Personalizations section and create a new personalization.
+Set the target audience to high-risk users.
+Design a message or offer that appears on the user dashboard when they log in. Example:
+Message: "Welcome back, [First Name]! We've missed you. Enjoy a 20% discount on your next month with code STAY20."
+
+![Dashboard message](/gp/article1/8-min.png)
 
 #### For medium-risk users:
 
-1. **Create a journey:**
-   - Go to the Journeys section and create a new journey for medium-risk users
-   - Name the journey (e.g., "Medium-Risk User Engagement Journey").
+**Create a journey:**
+Go to the Journeys section and create a new journey for medium-risk users
+Name the journey (e.g., "Medium-Risk User Engagement Journey").
 
-2. **Set a trigger:**
-   - Choose a trigger based on the medium likelihood score.
+![Medium-risk journey](/gp/article1/9-min.png)
 
-3. **Add actions:**
-   - **Send feature promotion emails:**
-     - Use the "Send Email" action to create emails that promote new or underutilized features. Example:
-       - Email Subject: "Discover new features to enhance your experience"
-       - Email Body: "Hi [First Name], did you know about our new feature [Feature Name]? Click here to learn more!"
-   - **Offer loyalty rewards:**
-     - Send emails with loyalty rewards or incentives. Example:
-       - Subject: "Unlock exclusive rewards!"
-       - Body: "Hi [First Name], as a thank you for being with us, we're offering you exclusive rewards. Log in to your account to see what's available and keep enjoying our services."
+**Set a trigger:**
+Choose a trigger based on the medium likelihood score.
 
-4. **Add conditions:**
-   - **Monitor email engagement:**
-     - Check if users interact with the emails
-     - Follow up with additional tips and offers to deepen their engagement.
+![Medium-risk trigger](/gp/article1/10-min.png)
 
-5. **Implement personalizations:**
-   - **Create feature highlight banners:**
-     - Create personalizations to display banners highlighting new features on the user dashboard.
-     - Target medium-risk users to encourage feature adoption.
+**Add actions:**
+Send feature promotion emails:
+Use the "Send Email" action to create emails that promote new or underutilized features. Example:
+Email Subject: "Discover new features to enhance your experience"
+Email Body: "Hi [First Name], did you know about our new feature [Feature Name]? Click here to learn more!"
+
+![Feature promotion email](/gp/article1/11-min.png)
+
+Offer loyalty rewards:
+Send emails with loyalty rewards or incentives. Example:
+Subject: "Unlock exclusive rewards!"
+Body: "Hi [First Name], as a thank you for being with us, we're offering you exclusive rewards. Log in to your account to see what's available and keep enjoying our services."
+
+![Loyalty rewards email](/gp/article1/12-min.png)
+
+**Add conditions:**
+Monitor email engagement:
+Check if users interact with the emails
+Follow up with additional tips and offers to deepen their engagement.
+
+![Monitor email engagement](/gp/article1/13-min.png)
+
+![Email engagement follow-up](/gp/article1/14-min.png)
+
+**Implement personalizations:**
+Create feature highlight banners:
+Create personalizations to display banners highlighting new features on the user dashboard.
+Target medium-risk users to encourage feature adoption.
+
+![Feature highlight banners](/gp/article1/15-min.png)
 
 #### For low-risk users:
 
-1. **Create a journey:**
-   - Go to the Journeys section and create a journey for low-risk users.
-   - Name the journey (e.g., "Low-Risk User Engagement Journey").
+**Create a journey:**
+Go to the Journeys section and create a journey for low-risk users.
+Name the journey (e.g., "Low-Risk User Engagement Journey").
 
-2. **Set a trigger:**
-   - Target users with a low likelihood of churning.
+![Low-risk journey](/gp/article1/16-min.png)
 
-3. **Add actions:**
-   - **Send regular engagement emails:**
-     - Use "Email" actions to maintain regular contact with content updates and check-ins. Example:
-       - Email Subject: "Stay updated with the latest features!"
-       - Email Body: "Hi [First Name], we're excited to share some new features and updates with you. Stay tuned for more great updates to enhance your experience with us."
-   - **Promote advanced features:**
-     - Send emails highlighting advanced features. Example:
-       - Email Subject: "Explore advanced features to get the most out of our service"
-       - Email Body: "Hi [First Name], did you know about our advanced features like [Feature 1] and [Feature 2]? These tools can help you achieve more with our service. Log in now to explore!"
+**Set a trigger:**
+Target users with a low likelihood of churning.
 
-4. **Add conditions:**
-   - **Track engagement:**
-     - Ensure users remain engaged by monitoring their activity.
-     - Move them to other journeys if they show signs of becoming at risk.
+![Low-risk trigger](/gp/article1/17-min.png)
 
-5. **Implement personalizations:**
-   - **Create an onboarding checklist:**
-     - Create personalizations to display an onboarding checklist for new features on the user dashboard.
-     - Target low-risk users to encourage deeper engagement with the platform.
+**Add actions:**
+Send regular engagement emails:
+Use "Email" actions to maintain regular contact with content updates and check-ins. Example:
+Email Subject: "Stay updated with the latest features!"
+Email Body: "Hi [First Name], we're excited to share some new features and updates with you. Stay tuned for more great updates to enhance your experience with us."
+
+![Regular engagement email](/gp/article1/18-min.png)
+
+Promote advanced features:
+Send emails highlighting advanced features. Example:
+Email Subject: "Explore advanced features to get the most out of our service"
+Email Body: "Hi [First Name], did you know about our advanced features like [Feature 1] and [Feature 2]? These tools can help you achieve more with our service. Log in now to explore!"
+
+![Advanced features email](/gp/article1/19-min.png)
+
+**Add conditions:**
+Track engagement:
+Ensure users remain engaged by monitoring their activity.
+Move them to other journeys if they show signs of becoming at risk.
+
+![Track engagement](/gp/article1/20-min.png)
+
+**Implement personalizations:**
+Create an onboarding checklist:
+Create personalizations to display an onboarding checklist for new features on the user dashboard.
+Target low-risk users to encourage deeper engagement with the platform.
+
+![Onboarding checklist](/gp/article1/21-min.png)
 
 ### Step 5: Monitor and adjust strategies
 
-1. Regularly review the effectiveness of your retention campaigns using Intempt's journey analytics.
-2. Track user responses and adjust strategies based on the analytics data.
-3. Continuously retrain your model with new data to maintain accuracy and relevance.
+Regularly review the effectiveness of your retention campaigns using Intempt's journey analytics.
+
+Track user responses and adjust strategies based on the analytics data.
+
+Continuously retrain your model with new data to maintain accuracy and relevance.
 
 ## FAQs
 
@@ -192,95 +244,155 @@ Intempt offers native integrations with popular platforms, including HubSpot, Sh
 ## About the Growth Play
 
 Converting browsers into buyers is crucial for balancing your acquisition funnel. This use case addresses the challenge of predicting the likelihood of user purchases and intervening when there is a high risk of cart abandonment.
-
 With Intempt's ML likelihood model, you can accurately predict purchase propensity in real-time and automate interventions with on-page experiences and messaging actions in journeys.
 
 ## Benefits
 
-- **Increase sales**: Predict and target potential buyers effectively to convert more browsers into customers.
-- **Reduce cart abandonment**: Implement timely interventions to prevent users from abandoning their carts.
-- **Enhance customer experience**: Personalize user interactions based on their behavior and preferences.
-- **Data-driven insights**: Utilize advanced analytics to understand user behavior and optimize marketing strategies.
-- **Integration capabilities**: Seamlessly integrate with various data sources to create comprehensive user profiles.
+- Increase sales: Predict and target potential buyers effectively to convert more browsers into customers.
+
+- Reduce cart abandonment: Implement timely interventions to prevent users from abandoning their carts.
+
+- Enhance customer experience: Personalize user interactions based on their behavior and preferences.
+
+- Data-driven insights: Utilize advanced analytics to understand user behavior and optimize marketing strategies.
+
+- Integration capabilities: Seamlessly integrate with various data sources to create comprehensive user profiles.
 
 ## How it works
 
 ### Step 1: Track key events
 
-1. **Identify purchase behaviors:**
-   - Common purchase indicators include frequent product views, adding items to the cart, and long browsing time.
-   - Implement tracking for these events using the Javascript SDK or iOS SDK
+Identify purchase behaviors:
+
+Common purchase indicators include frequent product views, adding items to the cart, and long browsing time.
+
+Implement tracking for these events using the Javascript SDK or iOS SDK
 
 ### Step 2: Create the lifecycle agent
 
-1. **Create lifecycle agent:**
-   - Navigate to the Agents section in Intempt
+Create lifecycle agent:
 
-2. **Initiate Agent Creation:**
-   - Select the conversion as the goal event - such as "Purchase."
+Navigate to the Agents section in Intempt
 
-3. **Filter Training Data:**
-   - Filter out users you don't want to include in the model training data. This might involve excluding inactive users or users with incomplete data profiles.
+Initiate Agent Creation:
 
-4. **Real-Time Scoring:**
-   - Deploy the model to start scoring users in real time. Intempt ensures that the likelihood model operates in real time, constantly updating as new data is collected.
-   - Once the model is trained and deployed, it will output an attribute with values indicating purchase propensity (low, medium, high).
+Select the conversion as the goal event - such as "Purchase."
+
+![Initiate Agent Creation](/gp/article2/1-min.png)
+
+Filter Training Data:
+
+Filter out users you don't want to include in the model training data. This might involve excluding inactive users or users with incomplete data profiles.
+
+![Filter Training Data](/gp/article2/2-min.png)
+
+Real-Time Scoring:
+
+Deploy the model to start scoring users in real time. Intempt ensures that the likelihood model operates in real time, constantly updating as new data is collected.
+
+Once the model is trained and deployed, it will output an attribute with values indicating purchase propensity (low, medium, high).
 
 ### Step 3: Create user segments
 
-1. **Create user segments:**
-   - Based on the lifecycle agent, create Segments such as "High Purchase Propensity" and "At Risk of Abandonment."
-   - "High Purchase Propensity" should have a "High" value for the "Purchase likelihood" model.
-   - "At Risk of Abandonment" will have a "Low" value for the "Purchase likelihood" model
+Create user segments:
+
+Based on the lifecycle agent, create Segments such as "High Purchase Propensity" and "At Risk of Abandonment."
+
+"High Purchase Propensity" should have a "High" value for the "Purchase likelihood" model.
+
+![High Purchase Propensity segment](/gp/article2/3-min.png)
+
+"At Risk of Abandonment" will have a "Low" value for the "Purchase likelihood" model
+
+![At Risk of Abandonment segment](/gp/article2/4-min.png)
 
 ### Step 4: Design personalized journeys
 
-1. **Create a journey for high purchase propensity:**
-   - Go to the "Journeys" section and click "Create Journey."
-   - Define triggers such as "Product Viewed" or "Added to Cart."
-   - Add conditions to target users in the "High Purchase Propensity" segment.
-   - Configure actions like sending personalized emails with product recommendations or exclusive discounts. Example email:
-     - Subject: "Special Offer Just for You! 10% Off on Your Next Purchase"
-     - Body: "Hi [First Name], we noticed you were looking at [Product Name]. As a thank you, we're offering you a 10% discount on your next purchase. Use code SAVE10 at checkout. Don't miss out on this exclusive offer!"
+Create a journey for high purchase propensity:
 
-2. **Create a journey for at-risk users:**
-   - Define triggers such as "Cart Abandoned."
-   - Add conditions to target users in the "At Risk of Abandonment" segment.
-   - Configure actions like sending reminder emails or offering limited-time discounts. Example email:
-     - Subject: "You Left Something Behind!"
-     - Body: "Hi [First Name], it looks like you left [Product Name] in your cart. Complete your purchase now and get an extra 5% off! Use code CART5 at checkout. Hurry, this offer is for a limited time only!"
+Go to the "Journeys" section and click "Create Journey."
+
+Define triggers such as "Product Viewed" or "Added to Cart."
+
+Add conditions to target users in the "High Purchase Propensity" segment.
+
+Configure actions like sending personalized emails with product recommendations or exclusive discounts. Example email:
+
+Subject: "Special Offer Just for You! 10% Off on Your Next Purchase"
+
+Body: "Hi [First Name], we noticed you were looking at [Product Name]. As a thank you, we're offering you a 10% discount on your next purchase. Use code SAVE10 at checkout. Don't miss out on this exclusive offer!"
+
+![High purchase propensity email](/gp/article2/5-min.png)
+
+Create a journey for at-risk users:
+
+Define triggers such as "Cart Abandoned."
+
+Add conditions to target users in the "At Risk of Abandonment" segment.
+
+Configure actions like sending reminder emails or offering limited-time discounts. Example email:
+
+Subject: "You Left Something Behind!"
+
+Body: "Hi [First Name], it looks like you left [Product Name] in your cart. Complete your purchase now and get an extra 5% off! Use code CART5 at checkout. Hurry, this offer is for a limited time only!"
+
+![At-risk user email](/gp/article2/6-min.png)
 
 ### Step 5: Implement personalizations
 
-1. **Set up personalized experiences for high purchase propensity:**
-   - Go to the "Experiences" section and click "Create Experience"
-   - Choose the target audience based on the "High Purchase Propensity" segment.
-   - Design experiences such as tailored product suggestions or special promotions.
-   - Example personalization:
-     - On Home Page: Display a banner with a personalized message like, "Welcome back, [First Name]! Check out our new arrivals just for you!"
-     - On Product Page: Show a sidebar with related products and a message, "Based on your interest in [Product Name], you might like these items too!"
+Set up personalized experiences for high purchase propensity:
 
-2. **Set up personalized experiences for at-risk users:**
-   - Go to the "Personalizations" section and click "Create Personalization."
-   - Choose the target audience based on the "At Risk of Abandonment" segment.
-   - Design experiences such as tailored reminders and special incentives to complete the purchase.
-   - Example personalization:
-     - On Cart Page: Display a pop-up with a personalized message like, "Don't leave yet, [First Name]! Complete your purchase now and enjoy an extra 5% off with code CART5."
-     - On Checkout Page: Show a message encouraging users to finalize their purchase, "Almost there, [First Name]! Your items are waiting. Complete your purchase and get 5% off with code CART5."
+Go to the "Experiences" section and click "Create Experience"
 
-3. **Configure display rules:**
-   - Set rules to display personalized content on specific pages, such as the home page, product page, cart page, or checkout page.
-   - Ensure the personalized content is visible to users in the relevant segments
+Choose the target audience based on the "High Purchase Propensity" segment.
+
+Design experiences such as tailored product suggestions or special promotions.
+
+Example personalization:
+
+On Home Page: Display a banner with a personalized message like, "Welcome back, [First Name]! Check out our new arrivals just for you!"
+
+On Product Page: Show a sidebar with related products and a message, "Based on your interest in [Product Name], you might like these items too!"
+
+![Product page personalization](/gp/article2/7-min.png)
+
+Set up personalized experiences for at-risk users:
+
+Go to the "Personalizations" section and click "Create Personalization."
+
+Choose the target audience based on the "At Risk of Abandonment" segment.
+
+Design experiences such as tailored reminders and special incentives to complete the purchase.
+
+Example personalization:
+
+On Cart Page: Display a pop-up with a personalized message like, "Don't leave yet, [First Name]! Complete your purchase now and enjoy an extra 5% off with code CART5."
+
+On Checkout Page: Show a message encouraging users to finalize their purchase, "Almost there, [First Name]! Your items are waiting. Complete your purchase and get 5% off with code CART5."
+
+![Checkout page personalization](/gp/article2/8-min.png)
+
+Configure display rules:
+
+Set rules to display personalized content on specific pages, such as the home page, product page, cart page, or checkout page.
+
+Ensure the personalized content is visible to users in the relevant segments
+
+![Configure display rules](/gp/article2/9-min.png)
 
 ### Step 6: Monitor and optimize
 
-1. **Analyze performance:**
-   - Use Intempt's analytics dashboard to monitor the effectiveness of your journeys and personalizations.
-   - Track key metrics such as conversion rates, cart abandonment rates, and overall sales.
+Analyze performance:
 
-2. **Optimize strategies:**
-   - Based on the performance data, make adjustments to your journeys and personalizations.
-   - Continuously test and refine your strategies to maximize effectiveness.
+Use Intempt's analytics dashboard to monitor the effectiveness of your journeys and personalizations.
+
+Track key metrics such as conversion rates, cart abandonment rates, and overall sales.
+
+Optimize strategies:
+
+Based on the performance data, make adjustments to your journeys and personalizations.
+
+Continuously test and refine your strategies to maximize effectiveness.
 
 ## FAQs
 
@@ -321,10 +433,13 @@ Using Lifecycle agent combined with personalizations, you can build an ultimate 
 
 ## Benefits
 
-- **Increases user engagement** by highlighting relevant features based on user behavior.
-- **Reduces churn** by keeping users engaged and satisfied with personalized experiences.
-- **Enhances feature adoption** through targeted recommendations.
-- **Boosts ROI**: by leveraging machine learning without the need for extensive resources.
+- Increases user engagement by highlighting relevant features based on user behavior.
+
+- Reduces churn by keeping users engaged and satisfied with personalized experiences.
+
+- Enhances feature adoption through targeted recommendations.
+
+- Boosts ROI: by leveraging machine learning without the need for extensive resources.
 
 ## How it works
 
@@ -332,72 +447,141 @@ Let's take an example of a SaaS app, "Otto," which offers features like Task Man
 
 ### Step 1: Create the Lifecycle Agent
 
-1. **Data preparation:**
-   - Ensure you have at least 21 days of data collection and a minimum of 10,000 average daily events.
-   - Collect events related to feature usage, such as:
-     - Tasks created
-     - Time entries logged
-     - Messages sent in team collaboration
-   - Ensure your goal event, such as "Feature Adoption," has a minimum daily average of 200 true and 200 false users over 30 days.
+Data preparation:
 
-2. **Agent creation:**
-   - Choose the target goal representing the behavior you want to predict, such as "Becomes a Product Qualified Lead."
-   - Select the actions (events) you want to choose between, such as "Task Created," "Time Entry Logged," and "Message Sent."
-   - Filter out training data for better results by filtering users that would skew the results (e.g. users that did not login for the last 30 days)
+Ensure you have at least 21 days of data collection and a minimum of 10,000 average daily events.
 
-3. **Training the agent:**
-   - After the model is created, it starts the training and generating predictions. Intempt will create an output attribute to store prediction values.
-   - Review the agent's prediction quality by checking the "Results" tab.
-   - Wait to collect more data if necessary to improve prediction quality.
+Collect events related to feature usage, such as:
+
+Tasks created
+
+Time entries logged
+
+Messages sent in team collaboration
+
+Ensure your goal event, such as "Feature Adoption," has a minimum daily average of 200 true and 200 false users over 30 days.
+
+![Goal event requirements](/gp/article3/1-min.png)
+
+Agent creation:
+
+Choose the target goal representing the behavior you want to predict, such as "Becomes a Product Qualified Lead."
+
+![Choose target goal](/gp/article3/2-min.png)
+
+Select the actions (events) you want to choose between, such as "Task Created," "Time Entry Logged," and "Message Sent."
+
+![Select actions](/gp/article3/3-min.png)
+
+Filter out training data for better results by filtering users that would skew the results (e.g. users that did not login for the last 30 days)
+
+![Filter training data](/gp/article3/4-min.png)
+
+Training the agent:
+
+After the model is created, it starts the training and generating predictions. Intempt will create an output attribute to store prediction values.
+
+Review the agent's prediction quality by checking the "Results" tab.
+
+Wait to collect more data if necessary to improve prediction quality.
 
 ### Step 2: Create segments
 
-1. **Create segments based on the agent output.** Each user will have a predicted next best action, such as:
-   - "task_created" for users likely to adopt Task Management
-   - "time_entry_logged" for users likely to adopt Time Tracking
-   - "message_sent" for users likely to adopt Team Collaboration
+Create segments based on the agent output. Each user will have a predicted next best action, such as:
 
-2. **Segment creation details:**
-   - For Task Management, create a segment where the NBA attribute value is "task_created."
-   - For Time Tracking, create a segment where the NBA attribute value is "time_entry_logged."
-   - For Team Collaboration, create a segment where the NBA attribute value is "message_sent."
+"task_created" for users likely to adopt Task Management
+
+"time_entry_logged" for users likely to adopt Time Tracking
+
+"message_sent" for users likely to adopt Team Collaboration
+
+![Create segments based on agent output](/gp/article3/5-min.png)
+
+Segment creation details:
+
+For Task Management, create a segment where the NBA attribute value is "task_created."
+
+![Task Management segment](/gp/article3/6-min.png)
+
+For Time Tracking, create a segment where the NBA attribute value is "time_entry_logged."
+
+![Time Tracking segment](/gp/article3/7-min.png)
+
+For Team Collaboration, create a segment where the NBA attribute value is "message_sent."
+
+![Team Collaboration segment](/gp/article3/8-min.png)
 
 ### Step 3: Set up personalizations
 
-1. **Create experiences:**
-   - Navigate to the Experiences section and select "Create Experience"
-   - **For users with the next best action of "task_created":**
-     - Design a visual experience showcasing the advanced task management features. Use an engaging banner at the top of the dashboard highlighting "Did you know? You can now create recurring tasks and set task dependencies for better project management!" Include a call-to-action (CTA) button "Learn More" that directs users to a detailed guide or tutorial.
-   - **For users with a next best action of "time_entry_logged":**
-     - Create an experience with a pop-up modal that appears when the user logs time. The modal should have a message like "Maximize your productivity! Integrate your calendar and track your time seamlessly." Include a CTA button "Get Started" leading to the integration setup page.
-   - **For users with a next best action of "message_sent":**
-     - Develop a sidebar notification that highlights new collaboration tools. Use text such as "Enhance your team's communication with our new real-time document editing and video conferencing features." Add a CTA button "Try Now" that takes users to the feature setup page.
+Create experiences:
 
-2. **Configure targeting:**
-   - Use the segments created from the NBA model as the targeting criteria.
-   - Assign the relevant experiences to each segment:
-     - Segment: NBA attribute value "task_created" → Experience: Advanced Task Management Features
-     - Segment: NBA attribute value "time_entry_logged" → Experience: Time-Saving Tips and Integrations
-     - Segment: NBA attribute value "message_sent" → Experience: New Collaboration Tools
+Navigate to the Experiences section and select "Create Experience"
 
-3. **Start personalization:**
-   - Review the configured experiences and their targeting settings.
-   - Start the personalization campaign.
+For users with the next best action of "task_created":
+
+Design a visual experience showcasing the advanced task management features. Use an engaging banner at the top of the dashboard highlighting "Did you know? You can now create recurring tasks and set task dependencies for better project management!" Include a call-to-action (CTA) button "Learn More" that directs users to a detailed guide or tutorial.
+
+![Task created experience](/gp/article3/9-min.png)
+
+For users with a next best action of "time_entry_logged":
+
+Create an experience with a pop-up modal that appears when the user logs time. The modal should have a message like "Maximize your productivity! Integrate your calendar and track your time seamlessly." Include a CTA button "Get Started" leading to the integration setup page.
+
+![Time entry logged experience](/gp/article3/10-min.png)
+
+For users with a next best action of "message_sent":
+
+Develop a sidebar notification that highlights new collaboration tools. Use text such as "Enhance your team's communication with our new real-time document editing and video conferencing features." Add a CTA button "Try Now" that takes users to the feature setup page.
+
+![Message sent experience](/gp/article3/11-min.png)
+
+Configure targeting:
+
+Use the segments created from the NBA model as the targeting criteria.
+
+Assign the relevant experiences to each segment:
+
+Segment: NBA attribute value "task_created" → Experience: Advanced Task Management Features
+
+![Assign task_created experience](/gp/article3/12-min.png)
+
+Segment: NBA attribute value "time_entry_logged" → Experience: Time-Saving Tips and Integrations
+
+![Assign time_entry_logged experience](/gp/article3/13-min.png)
+
+Segment: NBA attribute value "message_sent" → Experience: New Collaboration Tools
+
+![Assign message_sent experience](/gp/article3/14-min.png)
+
+Start personalization:
+
+Review the configured experiences and their targeting settings.
+
+Start the personalization campaign.
 
 ### Step 4: Monitor and optimize
 
-1. **Analyze results:**
-   - Regularly check the performance metrics in the Personalizations analytics section.
-   - Key personalization metrics to monitor:
-     - Unique Views: Number of users who viewed the personalized experience.
-     - Conversions: Number of users who triggered the desired action.
-     - Conversion Percentage: Percentage of users who triggered the desired action.
-     - Lift: Improvement in conversion rate compared to the control group.
+Analyze results:
 
-2. **Adjust and refine:**
-   - Based on the analysis, tweak the segments and experiences to optimize recommendations.
-   - Implement A/B tests to compare different approaches. For example, test different messaging for promoting Task Management features.
-   - Continuously refine the NBA model and personalizations based on user feedback and performance data.
+Regularly check the performance metrics in the Personalizations analytics section.
+
+Key personalization metrics to monitor:
+
+Unique Views: Number of users who viewed the personalized experience.
+
+Conversions: Number of users who triggered the desired action.
+
+Conversion Percentage: Percentage of users who triggered the desired action.
+
+Lift: Improvement in conversion rate compared to the control group.
+
+Adjust and refine:
+
+Based on the analysis, tweak the segments and experiences to optimize recommendations.
+
+Implement A/B tests to compare different approaches. For example, test different messaging for promoting Task Management features.
+
+Continuously refine the NBA model and personalizations based on user feedback and performance data.
 
 ## FAQs
 
@@ -436,173 +620,291 @@ Drive more revenue with tailored upsells leverage customer data to predict and r
 
 ## Benefits
 
-- **Increased average order value (AOV)**. Customers are more likely to add more items to their cart by recommending additional relevant product categories.
-- **Enhanced customer experience**. Personalized recommendations make shopping more enjoyable and relevant for customers.
-- **Higher conversion rates**. Targeted upsells are more likely to convert than generic promotions.
-- **Improved customer retention**. Satisfied customers are more likely to return, boosting long-term loyalty.
-- **Operational efficiency**. Automated recommendations reduce the need for manual intervention, saving time and resources.
+- Increased average order value (AOV). Customers are more likely to add more items to their cart by recommending additional relevant product categories.
+
+- Enhanced customer experience. Personalized recommendations make shopping more enjoyable and relevant for customers.
+
+- Higher conversion rates. Targeted upsells are more likely to convert than generic promotions.
+
+- Improved customer retention. Satisfied customers are more likely to return, boosting long-term loyalty.
+
+- Operational efficiency. Automated recommendations reduce the need for manual intervention, saving time and resources.
 
 ## How it works
 
 ### Step 1: Define and create events for each category
 
-1. **Create category-specific events:**
-   - Identify the product categories you want to track (e.g., dresses, shoes, accessories, outerwear).
-   - For each category, create an event. For example:
-     - "Visited dresses category"
-     - "Visited accessories category"
-     - "Visited outerwear category"
-   - Use the event type "Page view" and include the category's URL parameters to track these events accurately. For instance, track page views with URLs containing /category/dresses, /category/shoes, etc.
+1. Create category-specific events:
+
+Identify the product categories you want to track (e.g., dresses, shoes, accessories, outerwear).
+
+For each category, create an event. For example:
+
+"Visited dresses category"
+
+"Visited accessories category"
+
+"Visited outerwear category"
+
+Use the event type "Page view" and include the category's URL parameters to track these events accurately. For instance, track page views with URLs containing /category/dresses, /category/shoes, etc.
+
+![Page view event tracking](/gp/article4/1-min.png)
 
 ### Step 2: Build the lifecycle agent
 
-1. **Set the goal event:**
-   - Define "Purchase" as the prediction agent's goal event. This can be tracked by setting up a "Purchase" event that triggers when a transaction is completed.
+1. Set the goal event:
 
-2. **Add category events to the agent:**
-   - Include all the category-specific events created in Step 1 as potential actions for the model to choose from. Each category event should be associated with the goal event "Purchase".
+Define "Purchase" as the prediction agent's goal event. This can be tracked by setting up a "Purchase" event that triggers when a transaction is completed.
 
-3. **Filter training data:**
-   - To ensure the agent is trained on relevant data, exclude users who do not fit your desired criteria. For example, exclude users who have not purchased in the last year.
+![Set goal event](/gp/article4/2-min.png)
 
-4. **Train the agent:**
-   - Allow the agent to analyze past data to identify patterns and predict which category visit will most likely lead to a purchase. This involves feeding historical data of customer interactions and purchase history into the model.
+2. Add category events to the agent:
 
-5. **Agent output:**
-   - The model will output an attribute with a value reflecting the category that has the highest likelihood of leading to a purchase for each customer. For instance, if the model predicts a high likelihood for "Visited shoes," it will output an attribute like shoes_category.
+Include all the category-specific events created in Step 1 as potential actions for the model to choose from. Each category event should be associated with the goal event "Purchase".
+
+![Add category events](/gp/article4/3-min.png)
+
+3. Filter training data:
+
+To ensure the agent is trained on relevant data, exclude users who do not fit your desired criteria. For example, exclude users who have not purchased in the last year.
+
+![Filter training data](/gp/article4/4-min.png)
+
+4. Train the agent:
+
+Allow the agent to analyze past data to identify patterns and predict which category visit will most likely lead to a purchase. This involves feeding historical data of customer interactions and purchase history into the model.
+
+5. Agent output:
+
+The model will output an attribute with a value reflecting the category that has the highest likelihood of leading to a purchase for each customer. For instance, if the model predicts a high likelihood for "Visited shoes," it will output an attribute like shoes_category.
+
+![Agent output](/gp/article4/5-min.png)
 
 ### Step 3: Create segments based on model output
 
-1. **Create a new segment:**
-   - Navigate to the Segments section in Intempt and create a new segment.
+1. Create a new segment:
 
-2. **Define segment conditions:**
-   - Use the attribute generated by the next best action model to define the segment. For example:
-     - Segment: Users with the attribute value shoes_category.
-     - Condition: Attribute next_best_action equals shoes_category.
+Navigate to the Segments section in Intempt and create a new segment.
 
-3. **Examples of configuring segments:**
-   - **High likelihood to purchase dresses:**
-     - Segment name: "High likelihood to purchase dresses"
-     - Condition: Attribute next_best_action equals dresses_category
-   - **High likelihood to purchase accessories:**
-     - Segment name: "High likelihood to purchase accessories"
-     - Condition: Attribute next_best_action equals accessories_category
-   - **High likelihood to purchase outerwear:**
-     - Segment name: "High likelihood to purchase outerwear"
-     - Condition: Attribute next_best_action equals outerwear_category
+2. Define segment conditions:
 
-4. **Combine with other conditions:**
-   - You can further refine these segments by adding additional conditions. For example:
-     - **High likelihood to purchase dresses and recent activity:**
-       - Segment name: "High likelihood to purchase dresses and active in last 30 days"
-       - Conditions:
-         - Attribute next_best_action equals dresses_category
-         - Last activity date is within the last 30 days
-     - **High likelihood to purchase shoes with high average order value:**
-       - Segment name: "High likelihood to purchase shoes and high AOV"
-       - Conditions:
-         - Attribute next_best_action equals shoes_category
-         - Average order value greater than $100
+Use the attribute generated by the next best action model to define the segment. For example:
+
+Segment: Users with the attribute value shoes_category.
+
+Condition: Attribute next_best_action equals shoes_category.
+
+3. Examples of configuring segments:
+
+High likelihood to purchase dresses
+
+Segment name: "High likelihood to purchase dresses"
+
+Condition: Attribute next_best_action equals dresses_category
+
+High likelihood to purchase accessories:
+
+Segment name: "High likelihood to purchase accessories"
+
+Condition: Attribute next_best_action equals accessories_category
+
+High likelihood to purchase outerwear:
+
+Segment name: "High likelihood to purchase outerwear"
+
+Condition: Attribute next_best_action equals outerwear_category
+
+4. Combine with other conditions:
+
+You can further refine these segments by adding additional conditions. For example:
+
+High likelihood to purchase dresses and recent activity:
+
+Segment name: "High likelihood to purchase dresses and active in last 30 days"
+
+Conditions:
+
+Attribute next_best_action equals dresses_category
+
+Last activity date is within the last 30 days
+
+High likelihood to purchase shoes with high average order value:
+
+Segment name: "High likelihood to purchase shoes and high AOV"
+
+Conditions:
+
+Attribute next_best_action equals shoes_category
+
+Average order value greater than $100
+
+![Segment conditions](/gp/article4/6-min.png)
 
 ### Step 4: Set up personalized journeys
 
-1. **Create a new journey:**
-   - Navigate to the Journeys section in Intempt and create a new journey.
+1. Create a new journey:
 
-2. **Define the journey trigger:**
-   - Set the trigger for the journey based on the segment created in Step 3. For example:
-     - Trigger: When a user enters the "High likelihood to purchase shoes" segment.
+Navigate to the Journeys section in Intempt and create a new journey.
 
-3. **Add actions to the journey:**
-   - **Example nurture flow for High Likelihood to Purchase Shoes:**
-     - **Step 1: Initial Email:**
-       - Action: Send a personalized email featuring the shoes category.
-       - Example:
-         - Subject: Discover Our Latest Shoe Collection!
-         - Content: Hi [Name],We noticed you are keen on our shoe collection. Check out our latest arrivals and find the perfect pair to complete your look.[Shop Now Link]Best,The Thread.ly Team
-     - **Step 2: Follow-up Email:**
-       - Action: Send a follow-up email with a special offer.
-       - Example:
-         - Subject: Special Offer on Shoes Just for You!
-         - Content: Dear [Name],We're offering you an exclusive discount on our shoe collection to show our appreciation. Don't miss out on this limited-time offer![Get Your Discount Link]Happy Shopping,The Thread.ly Team
-     - **Step 3: Reminder Email:**
-       - Action: Send a reminder email if no purchase is made.
-       - Example:
-         - Subject: Last Chance to Save on Your Favorite Shoes!
-         - Content: Hello [Name],This is your last chance to take advantage of our exclusive discount on shoes. Hurry, the offer ends soon![Shop Now Link]Best,The Thread.ly Team
+2. Define the journey trigger:
 
-4. **Add decision points:**
-   - Incorporate decision points to refine the journey further. For example:
-     - Decision: If the user clicks on the email link, proceed to show a special discount offer.
-     - Decision: If the user does not engage with the email, send a follow-up reminder after a few days.
+Set the trigger for the journey based on the segment created in Step 3. For example:
 
-5. **Activate the journey:**
-   - Review the journey steps and activate it to start the automation process.
+Trigger: When a user enters the "High likelihood to purchase shoes" segment.
 
-6. **Multiple journeys for different categories:**
-   - For each category, create a separate journey trigger and associated actions. For example:
-     - If you have 30 categories, set up 30 journey triggers and corresponding actions.
+![Define journey trigger](/gp/article4/7-min.png)
+
+3. Add actions to the journey:
+
+Example nurture flow for High Likelihood to Purchase Shoes:
+
+Step 1: Initial Email:
+
+Action: Send a personalized email featuring the shoes category.
+
+Example:Subject: Discover Our Latest Shoe Collection!
+
+Content: Hi [Name],We noticed you are keen on our shoe collection. Check out our latest arrivals and find the perfect pair to complete your look.[Shop Now Link]Best,The Thread.ly Team
+
+![Initial email](/gp/article4/8-min.png)
+
+Step 2: Follow-up Email:
+
+Action: Send a follow-up email with a special offer.
+
+Example: Subject: Special Offer on Shoes Just for You!
+
+Content: Dear [Name],We're offering you an exclusive discount on our shoe collection to show our appreciation. Don't miss out on this limited-time offer![Get Your Discount Link]Happy Shopping,The Thread.ly Team
+
+![Follow-up email](/gp/article4/9-min.png)
+
+Step 3: Reminder Email:
+
+Action: Send a reminder email if no purchase is made.
+
+Example: Subject: Last Chance to Save on Your Favorite Shoes!
+
+Content: Hello [Name],This is your last chance to take advantage of our exclusive discount on shoes. Hurry, the offer ends soon![Shop Now Link]Best,The Thread.ly Team
+
+![Reminder email](/gp/article4/10-min.png)
+
+4. Add decision points:
+
+Incorporate decision points to refine the journey further. For example:
+
+Decision: If the user clicks on the email link, proceed to show a special discount offer.
+
+Decision: If the user does not engage with the email, send a follow-up reminder after a few days.
+
+![Decision points](/gp/article4/11-min.png)
+
+5. Activate the journey:
+
+Review the journey steps and activate it to start the automation process.
+
+6. Multiple journeys for different categories:
+
+For each category, create a separate journey trigger and associated actions. For example:
+
+If you have 30 categories, set up 30 journey triggers and corresponding actions.
 
 ### Step 5: Deploy personalizations
 
-1. **Create a new personalization campaign:**
-   - Navigate to the Personalizations section in Intempt and create a new campaign.
+1. Create a new personalization campaign:
 
-2. **Create multiple experiences within the campaign:**
-   - For each category segment, create a separate experience within the personalization campaign.
+Navigate to the Personalizations section in Intempt and create a new campaign.
 
-3. **Set up the personalization content for each experience:**
-   - **Experience for Shoes Category:**
-     - Homepage Banner: Display a banner featuring the latest shoes collection.
-     - Sticky Top Bar: "Check out our newest shoe arrivals, [Name]!"
-     - Recommended Product Section: Recommend popular and new shoe arrivals.
-     - Offer section: "Exclusive Offer: 10% off all shoes for a limited time!"
-   - **Experience for Dresses Category:**
-     - Homepage Banner: Display a banner featuring the latest dresses collection.
-     - Sticky Top Bar: "Discover our stunning new dresses, [Name]!"
-     - Recommended Product Section: Recommend popular and new dress arrivals.
-     - Offer section: "Special discount: 15% off on new dresses!"
-   - **Experience for Accessories Category:**
-     - Homepage Banner: Display a banner featuring the latest accessories collection.
-     - Sticky Top Bar: "Complete your look with our new accessories, [Name]!"
-     - Recommended Product Section: Recommend popular and new accessory arrivals.
-     - Offer section: "Limited Time Offer: 20% off all accessories!"
+2. Create multiple experiences within the campaign:
 
-4. **Set the targeting conditions for each experience:**
-   - Define rules to ensure the personalized content is shown to the right users. For example:
-     - Experience for Shoes Category: Target users where the attribute next_best_action equals shoes_category.
-     - Experience for Dresses Category: Target users where the attribute next_best_action equals dresses_category.
-     - Experience for Accessories Category: Target users where the attribute next_best_action equals accessories_category.
+For each category segment, create a separate experience within the personalization campaign.
 
-5. **Activate the personalization campaign:**
-   - Review the personalization setup and activate the campaign to start delivering personalized experiences.
+3. Set up the personalization content for each experience:
+
+Experience for Shoes Category:
+
+Homepage Banner: Display a banner featuring the latest shoes collection.
+
+Sticky Top Bar: "Check out our newest shoe arrivals, [Name]!"
+
+Recommended Product Section: Recommend popular and new shoe arrivals.
+
+Offer section: "Exclusive Offer: 10% off all shoes for a limited time!"
+
+Experience for Dresses Category:
+
+Homepage Banner: Display a banner featuring the latest dresses collection.
+
+Sticky Top Bar: "Discover our stunning new dresses, [Name]!"
+
+Recommended Product Section: Recommend popular and new dress arrivals.
+
+Offer section: "Special discount: 15% off on new dresses!"
+
+Experience for Accessories Category:
+
+Homepage Banner: Display a banner featuring the latest accessories collection.
+
+Sticky Top Bar: "Complete your look with our new accessories, [Name]!"
+
+Recommended Product Section: Recommend popular and new accessory arrivals.
+
+Offer section: "Limited Time Offer: 20% off all accessories!"
+
+4. Set the targeting conditions for each experience:
+
+Define rules to ensure the personalized content is shown to the right users. For example:
+
+Experience for Shoes Category: Target users where the attribute next_best_action equals shoes_category.
+
+Experience for Dresses Category: Target users where the attribute next_best_action equals dresses_category.
+
+Experience for Accessories Category: Target users where the attribute next_best_action equals accessories_category.
+
+5. Activate the personalization campaign:
+
+Review the personalization setup and activate the campaign to start delivering personalized experiences.
 
 ### Step 6: Monitor and optimize
 
-1. **Track performance with journey analytics:**
-   - Navigate to the Journey Analytics section in Intempt to analyze the performance of your journeys.
-   - **Key metrics to monitor:**
-     - Triggered journey: Number of users who have triggered the journey.
-     - Converted: Number of users who completed the conversion event set for the journey.
-     - Conversion rate: Percentage of users who converted out of those who triggered the journey.
-     - Days to convert (Avg): Average number of days it took for users to convert after triggering the journey.
-   - Use this metrics to evaluate initial engagement, optimize timing, and identify areas for improvement. For example, if the conversion rate is lower than expected, consider adjusting your emails' and SMS messages' content or timing.
+1. Track performance with journey analytics:
 
-2. **Track performance with personalization analytics:**
-   - Navigate to the Personalization analytics section in Intempt to analyze the performance of your personalization campaigns.
-   - **Key metrics to monitor:**
-     - Control group: Represents the group of subjects that are set aside and do not receive the modified content.
-     - Unique views: Measures the number of customers that viewed the personalized experience.
-     - Conversion: Specifies the number of users that triggered the conversion metric.
-     - Conversion %: Percentage of users across the audience that triggered the conversion metric.
-     - Conversion value: Displayed if the conversion event includes the value of an event property.
-     - Lift: Shows the improvement in the conversion rate percentage for the variants compared to the control group.
-   - Use this metrics to assess the effectiveness of your personalized content. For instance, if the lift is significant, it indicates that the personalized content is performing well compared to the control group. Conversely, if the conversion rate is low, you may need to refine your personalization strategy or content.
+Navigate to the Journey Analytics section in Intempt to analyze the performance of your journeys.
 
-3. **Refine the model:**
-   - Regularly update and refine the next best action model based on new data to improve its accuracy and effectiveness.
-   - Adjust the categories and events tracked to ensure the recommendations remain relevant and impactful.
+Key metrics to monitor:
+
+Triggered journey: Number of users who have triggered the journey.
+
+Converted: Number of users who completed the conversion event set for the journey.
+
+Conversion rate: Percentage of users who converted out of those who triggered the journey.
+
+Days to convert (Avg): Average number of days it took for users to convert after triggering the journey.
+
+Use this metrics to evaluate initial engagement, optimize timing, and identify areas for improvement. For example, if the conversion rate is lower than expected, consider adjusting your emails' and SMS messages' content or timing.
+
+2. Track performance with personalization analytics:
+
+Navigate to the Personalization analytics section in Intempt to analyze the performance of your personalization campaigns.
+
+Key metrics to monitor:
+
+Control group: Represents the group of subjects that are set aside and do not receive the modified content.
+
+Unique views: Measures the number of customers that viewed the personalized experience.
+
+Conversion: Specifies the number of users that triggered the conversion metric.
+
+Conversion %: Percentage of users across the audience that triggered the conversion metric.
+
+Conversion value: Displayed if the conversion event includes the value of an event property.
+
+Lift: Shows the improvement in the conversion rate percentage for the variants compared to the control group.
+
+Use this metrics to assess the effectiveness of your personalized content. For instance, if the lift is significant, it indicates that the personalized content is performing well compared to the control group. Conversely, if the conversion rate is low, you may need to refine your personalization strategy or content.
+
+3. Refine the model:
+
+Regularly update and refine the next best action model based on new data to improve its accuracy and effectiveness.
 
 ## FAQs
 
@@ -638,15 +940,17 @@ Intempt offers native integrations with popular platforms, including HubSpot, Sh
 ## About the Growth Play
 
 Presenting personalized in-app offers is crucial for maximizing user engagement and conversion rates in mobile apps
-
 This use case guides you through steps to enable in-app personalization, encouraging users to explore new features, share content, and subscribe to paid plans.
 
 ## Benefits
 
-- **Increased user engagement**. Personalized offers keep users engaged by presenting relevant content and promotions.
-- **Higher conversion rates**. Tailoring in-app offers to individual user behavior and preferences increases the likelihood of feature adoption and subscriptions.
-- **Enhanced user satisfaction**. Users are more likely to have a positive experience when presented with offers that match their interests and needs.
-- **Improved revenue growth**. Effective in-app offers can drive subscriptions and feature adoption, leading to increased revenue.
+- Increased user engagement. Personalized offers keep users engaged by presenting relevant content and promotions.
+
+- Higher conversion rates. Tailoring in-app offers to individual user behavior and preferences increases the likelihood of feature adoption and subscriptions.
+
+- Enhanced user satisfaction. Users are more likely to have a positive experience when presented with offers that match their interests and needs.
+
+- Improved revenue growth. Effective in-app offers can drive subscriptions and feature adoption, leading to increased revenue.
 
 ## How it works
 
@@ -654,89 +958,139 @@ To illustrate the use case, we will use a made-up music streaming app called Mus
 
 ### Step 1: Set up tracking, define events & create segments
 
-1. **Install Intempt's iOS SDK:**
-   - Integrate Intempt's iOS SDK into your mobile app to start tracking user activities. Follow the iOS SDK integration guide to ensure proper setup.
+1. Install Intempt's iOS SDK:
 
-2. **Identify key events:**
-   - Determine which user activities you want to track, such as playing, liking, sharing, and visiting the subscription page.
+Integrate Intempt's iOS SDK into your mobile app to start tracking user activities. Follow the iOS SDK integration guide to ensure proper setup.
 
-3. **Set up event tracking:**
-   - Configure these events in Intempt's dashboard. For example:
-     - played_song: Triggered when a user plays a song.
-     - liked_song: Triggered when a user likes a song.
-     - shared_song: Triggered when a user shares a song.
-     - visited_subscription_page: Triggered when a user visits the subscription page.
+2. Identify key events:
 
-4. **Create segments in Intempt:**
-   - Navigate to the Segments section and create new segments based on the tracked events. For instance:
-     - Listened to 5 songs but not liked: Users who have played at least 5 songs but have not used the "Like" functionality.
-     - Listened to 10 songs but not shared: Users who have played at least 10 songs but have not used the "Share" functionality.
-     - Visited subscription page multiple times: Users who have visited the subscription page at least 5 times but have not subscribed.
+Determine which user activities you want to track, such as playing, liking, sharing, and visiting the subscription page.
+
+Set up event tracking:
+
+Configure these events in Intempt's dashboard. For example:
+
+played_song: Triggered when a user plays a song.
+
+liked_song: Triggered when a user likes a song.
+
+shared_song: Triggered when a user shares a song.
+
+visited_subscription_page: Triggered when a user visits the subscription page.
+
+4. Create segments in Intempt:
+
+Navigate to the Segments section and create new segments based on the tracked events. For instance:
+
+Listened to 5 songs but not liked: Users who have played at least 5 songs but have not used the "Like" functionality.
+
+Listened to 10 songs but not shared: Users who have played at least 10 songs but have not used the "Share" functionality.
+
+Visited subscription page multiple times: Users who have visited the subscription page at least 5 times but have not subscribed.
 
 ### Step 2: Set up personalizations
 
-1. **Create a new server-side personalization campaign:**
-   - Go to the Personalizations section and create a new server-side personalization campaign
+1. Create a new server-side personalization campaign:
 
-2. **Create experiences and add content using the code editor:**
-   - Each campaign will require multiple experiences to be set; each will contain the content you want to display for the use
-   - Use the code editor to create and style the in-app messages or popups.
+Go to the Personalizations section and create a new server-side personalization campaign
 
-**Good to know**
+2. Create experiences and add content using the code editor:
+
+Each campaign will require multiple experiences to be set; each will contain the content you want to display for the use
+
+Use the code editor to create and style the in-app messages or popups.
+
+Good to know
 
 Refer to Server-side personalizations for a complete guide on creating server-side personalizations.
 
-**Personalization: Feature Adoption Prompts**
+Personalization: Feature Adoption Prompts
 
-1. **Experience for Like Feature Adoption:**
-   - Target segment: Listened to 5 songs but not liked
-   - Changes:
-     - In-App Message:
-       - Show a feature adoption screen encouraging the use of the "Like" functionality.
-       - Content:
-         - Message: "Ready to share your favorite songs? Can't stop listening to your beat? Share it with your friends so they can get the same experience!"
+1. Experience for Like Feature Adoption:
 
-2. **Experience for Share Feature Adoption:**
-   - Target segment: Listened to 10 songs but not shared
-   - Changes:
-     - In-App Message:
-       - Show a feature adoption screen encouraging the "Share" functionality.
-       - Content:
-         - Message: "Ready to share your favorite songs? Can't stop listening to your beat? Share it with your friends so they can get the same experience!"
+Target segment: Listened to 5 songs but not liked
 
-**Personalization: Subscription Offers**
+Changes:
 
-1. **Experience for Subscription Trial Offer:**
-   - Target segment: Visited subscription page multiple times
-   - Changes:
-     - In-App Popup:
-       - Show a 3-day trial offer to users who frequently visit the subscription page but have not subscribed.
-       - Content:
-         - Message: "Enjoy a 3-day free trial of our Premium plan! Explore all the features we have to offer and elevate your music experience."
+In-App Message:
+
+Show a feature adoption screen encouraging the use of the "Like" functionality.
+
+Content:
+
+Message: "Ready to share your favorite songs? Can't stop listening to your beat? Share it with your friends so they can get the same experience!"
+
+![Like feature adoption message](/gp/article5/1-min.png)
+
+2. Experience for Share Feature Adoption:
+
+Target segment: Listened to 10 songs but not shared
+
+Changes:
+
+In-App Message:
+
+Show a feature adoption screen encouraging the "Share" functionality.
+
+Content:
+
+Message: "Ready to share your favorite songs? Can't stop listening to your beat? Share it with your friends so they can get the same experience!"
+
+![Share feature adoption message](/gp/article5/2-min.png)
+
+Personalization: Subscription Offers
+
+1. Experience for Subscription Trial Offer:
+
+Target segment: Visited subscription page multiple times
+
+Changes:
+
+In-App Popup:
+
+Show a 3-day trial offer to users who frequently visit the subscription page but have not subscribed.
+
+Content:
+
+Message: "Enjoy a 3-day free trial of our Premium plan! Explore all the features we have to offer and elevate your music experience."
+
+![Subscription trial offer message](/gp/article5/3-min.png)
 
 ### Step 3: Configure targeting and display settings
 
-1. **Set targeting conditions:**
-   - For each experience, configure the audience targeting based on the relevant segments. Ensure that the conditions match the segments created in Step 3.
+1. Set targeting conditions:
 
-2. **Define display rules:**
-   - Specify the conditions under which the personalized experiences will be displayed, such as when a user plays a song or visits the subscription page.
-   - Set the display frequency to ensure the personalized content is shown consistently to the targeted users.
+For each experience, configure the audience targeting based on the relevant segments. Ensure that the conditions match the segments created in Step 3.
+
+2. Define display rules:
+
+Specify the conditions under which the personalized experiences will be displayed, such as when a user plays a song or visits the subscription page.
+
+Set the display frequency to ensure the personalized content is shown consistently to the targeted users.
+
+![Define display rules](/gp/article5/4-min.png)
 
 ### Step 4: Launch and monitor the personalization campaign
 
-1. **Start the personalization campaign:**
-   - Once all experiences are set up and configured, start the personalization campaign in Intempt.
+1. Start the personalization campaign:
 
-2. **Monitor performance:**
-   - Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include:
-     - Unique views: Number of users who viewed the personalized content.
-     - Conversion: Number of users who completed a desired action, such as liking a song or subscribing to a plan.
-     - Conversion %: Percentage of users who converted based on the total audience targeted.
-     - Lift: Improvement in conversion rate compared to the control group.
+Once all experiences are set up and configured, start the personalization campaign in Intempt.
 
-3. **Adjust and optimize:**
-   - Based on the analytics data, make adjustments to the experiences to improve performance. For instance, if the conversion rate for the Listened to 5 songs but not liked segment is low; consider refining the content or targeting criteria.
+2. Monitor performance:
+
+Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include:
+
+Unique views: Number of users who viewed the personalized content.
+
+Conversion: Number of users who completed a desired action, such as liking a song or subscribing to a plan.
+
+Conversion %: Percentage of users who converted based on the total audience targeted.
+
+Lift: Improvement in conversion rate compared to the control group.
+
+3. Adjust and optimize:
+
+Based on the analytics data, make adjustments to the experiences to improve performance. For instance, if the conversion rate for the Listened to 5 songs but not liked segment is low; consider refining the content or targeting criteria.
 
 ## FAQs
 
@@ -772,160 +1126,246 @@ Intempt offers native integrations with popular platforms, including HubSpot, Sh
 ## About the Growth Play
 
 Most SaaS websites are designed to be generic and safe, showing the same content to each user. Users encounter the same content regardless of the lifecycle stage, industry, or position. Generic content leads to high dropoffs and, eventually, poor conversion rates.
-
 With Intempt, you can segment users in real time and adjust the website experience based on their signals. The more behavioral data you gather, the more content you can progressively personalize, including your home page, feature, pricing pages, and navigation bar.
 
 ## Benefits
 
-- **Increased user engagement**. Personalized content and navigation keep users engaged by showing them the most relevant information.
-- **Higher conversion rates**. Tailoring the user experience to individual preferences increases the likelihood of trial sign-ups and subscriptions.
-- **Enhanced user satisfaction**. Users are more likely to have a positive experience when they can easily find and interact with the content they are interested in.
-- **Improved customer retention**. Personalized experiences can help retain customers by continually adapting to their evolving interests and needs.
+- Increased user engagement. Personalized content and navigation keep users engaged by showing them the most relevant information.
+
+- Higher conversion rates. Tailoring the user experience to individual preferences increases the likelihood of trial sign-ups and subscriptions.
+
+- Enhanced user satisfaction. Users are more likely to have a positive experience when they can easily find and interact with the content they are interested in.
+
+- Improved customer retention. Personalized experiences can help retain customers by continually adapting to their evolving interests and needs.
 
 ## How It Works
 
 ### Step 1. Set up tracking, define events & create segments
 
+![Step 1 setup tracking](/gp/article6/1-min.png)
+
 1. Install Intempt's Javascript SDK:
 
 Embed the JavaScript SDK into your website to start tracking user activities. This will allow you to capture various events, such as page views, clicks, and form submissions.
 
-2. Identify key events:
+Identify key events:
 
 Determine which user activities you want to track, such as viewing specific industry pages, booking a demo, or navigating the pricing page.
 
 Set up event tracking:
+
 Configure these events in Intempt's dashboard. For example:
+
 viewed_industry_page: Triggered when a user visits a specific industry page.
+
 booked_demo: Triggered when a user submits the "Book a demo" form.
+
 viewed_pricing_page: Triggered when a user visits the pricing page.
 
 Good to know
 
 Refer to Events for a complete guide on setting your events.
 
-3. Create segments in Intempt:
+Create segments in Intempt:
 
 Navigate to the Segments section and create new segments based on the tracked events. For instance:
+
 Interested in Industry A: Users who viewed the Industry A page.
+
 Interested in Industry B: Users who viewed the Industry B page.
+
 Demo Booked: Users who have booked a demo.
+
 No Demo Booked: Users who have not booked a demo.
+
 Enterprise: Users from large companies (500+ employees)
+
 Mid-market: Users from medium-sized companies (100-499 employees)
+
 SMB: Users from small companies (1-99 employees)
 
 ### Step 2. Set up personalizations
 
+![Step 2 set up personalizations](/gp/article6/2-min.png)
+
 Create a new personalization campaign:
+
 Go to the Personalizations section and create personalizations for different website sections.
 
 Personalization: Homepage Hero Section
 
 Experience for Industry A:
+
 Target segment: Interested in Industry A
+
 Changes:
+
 Homepage Hero Image and Title:
+
 Change the hero image to one that represents Industry A.
+
 Update the homepage title and subtext to reflect Industry A.
+
 Example:
+
 Hero Image: Image showing a business scenario specific to Industry A.
+
 Title: "Empowering Industry A with Cutting-Edge SaaS Solutions"
+
 Subtext: "Tailored tools and features to elevate your business in Industry A."
 
 Experience for Industry B:
+
 Target segment: Interested in Industry B
+
 Changes:
+
 Homepage Hero Image and Title:
+
 Change the hero image to one that represents Industry B.
+
 Update the homepage title and subtext to reflect Industry B.
+
 Example:
+
 Hero Image: Image showing a business scenario specific to Industry B.
+
 Title: "Empowering Industry B with Cutting-Edge SaaS Solutions"
+
 Subtext: "Tailored tools and features to elevate your business in Industry B."
 
 Personalization: Feature Pages
 
 Experience for Industry A:
+
 Target segment: Interested in Industry A
+
 Changes:
+
 Feature Pages:
+
 Customize the content on feature pages to highlight the benefits and use cases relevant to Industry A.
+
 Example:
+
 Feature Page Header: "Unlock the Full Potential of Industry A with Our Solutions"
+
 Content Sections: Include case studies, testimonials, and feature descriptions that are specific to Industry A.
 
 Experience for Industry B:
+
 Target segment: Interested in Industry B
+
 Changes:
+
 Feature Pages:
+
 Customize the content on feature pages to highlight the benefits and use cases relevant to Industry B.
+
 Example:
+
 Feature Page Header: "Unlock the Full Potential of Industry B with Our Solutions"
+
 Content Sections: Include case studies, testimonials, and feature descriptions that are specific to Industry B.
 
 Personalization: Pricing Page
 
 Experience for Enterprise:
+
 Target segment: Enterprise
+
 Changes:
+
 Pricing Page Focus:
+
 Highlight the Premium plan for enterprise users.
+
 Example:
+
 Highlighted Plan: Premium Plan
+
 Callout: "Our Premium Plan is designed to meet the needs of large enterprises, offering advanced features and dedicated support."
 
 Experience for Small Company:
+
 Target segment: Small Company
+
 Changes:
+
 Pricing Page Focus:
+
 Highlight the Entry plan for small companies.
+
 Example:
+
 Highlighted Plan: Entry Plan
+
 Callout: "Our Entry Plan provides all the essential features needed by small businesses at an affordable price."
 
 Personalization: Navigation CTA Buttons
 
 Experience for No Demo Booked:
+
 Target segment: No Demo Booked
+
 Changes:
+
 CTA Buttons on Nav Bar:
+
 Highlight the "Book a demo" button to encourage users to schedule a demo.
+
 Example:
+
 Button Text: "Book a Demo"
+
 Highlight Style: Make the button more prominent with a contrasting color.
 
 Experience for Demo Booked:
+
 Target segment: Demo Booked
+
 Changes:
+
 CTA Buttons on Nav Bar:
+
 Highlight the "Sign up" button for users who have already booked a demo.
+
 Example:
+
 Button Text: "Sign Up"
+
 Highlight Style: Make the button more prominent with a contrasting color.
 
-2. Set targeting conditions:
+Set targeting conditions:
 
 For each experience, configure the audience targeting based on the relevant segments. Ensure that the conditions match the segments created in Step 3.
 
-3. Define display rules:
+Define display rules:
 
 Specify the pages where the personalized experiences will be displayed, such as the homepage, feature pages, and pricing page.
+
 Set the display frequency to ensure the personalized content is shown consistently to the targeted users.
 
 ### Step 3: Launch and monitor the personalization campaign
 
 Start the personalization campaign:
+
 Once all experiences are set up and configured, start the personalization campaign in Intempt.
 
 Monitor performance:
+
 Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include:
+
 Unique views: Number of users who viewed the personalized content.
+
 Conversion: Number of users who completed a desired action, such as booking a demo or signing up.
+
 Conversion %: Percentage of users who converted based on the total audience targeted.
+
 Lift: Improvement in conversion rate compared to the control group.
 
 Adjust and optimize:
+
 Based on the analytics data, make adjustments to the experiences to improve performance. For instance, if the conversion rate for the Interested in Industry A segment is low; consider refining the content or targeting criteria.
 
 ## FAQs
@@ -961,128 +1401,172 @@ An effective onboarding process is crucial for improving user conversion and act
 
 ## Benefits
 
-- **Increased user engagement**: Personalized onboarding keeps users engaged by presenting relevant steps based on their interactions.
-- **Higher feature adoption**: Tailoring the onboarding process to individual user behavior increases the likelihood of feature adoption.
-- **Enhanced user satisfaction**: Users are more likely to have a positive experience when guided through the app in a personalized manner.
-- **Improved retention rates**: Effective onboarding helps users understand the app's value, leading to higher long-term retention.
+- Increased user engagement: Personalized onboarding keeps users engaged by presenting relevant steps based on their interactions.
+
+- Higher feature adoption: Tailoring the onboarding process to individual user behavior increases the likelihood of feature adoption.
+
+- Enhanced user satisfaction: Users are more likely to have a positive experience when guided through the app in a personalized manner.
+
+- Improved retention rates: Effective onboarding helps users understand the app's value, leading to higher long-term retention.
 
 ## How It Works
 
 To illustrate the use case, we will refer to a made-up project management app, "Otto."
 
-### Step 1. Set up tracking for user activity,define events & segment users
+### Step 1. Set up tracking for user activity, define events & segment users
 
-1. Install Intempt's SDK:
+![Step 1 setup tracking](/gp/article7/1-min.png)
+
+Install Intempt's SDK:
 
 Integrate Intempt's JS SDK into your app to start tracking user activities. Follow the Javascript SDK integration guide to ensure proper setup.
 
-2. Identify key events:
+Identify key events:
 
--Determine which user activities you want to track during the onboarding process. For example, creating a project, creating a task, inviting a team member, creating an AI prediction, and viewing the dashboard.
--Add event tracking script to your application:
+Determine which user activities you want to track during the onboarding process. For example, creating a project, creating a task, inviting a team member, creating an AI prediction, and viewing the dashboard.
+
+Add event tracking script to your application:
+
 Configure event tracking in your application. For example:
+
 created_project: Triggered when a user creates their first project.
+
 created_task: Triggered when a user creates and edits their first task.
+
 invited_team_member: Triggered when a user invites their first team member.
+
 created_ai_prediction: Triggered when a user creates their first AI prediction.
+
 viewed_dashboard: Triggered when a user views the dashboard.
 
-3. Create segments in Intempt:
+Create segments in Intempt:
+
 Navigate to the Segments section and create new segments based on the tracked events. For instance:
+
 New User: Users who have just signed up.
+
 Created Project: Users who have created their first project.
+
 Created Task: Users who have created and edited their first task.
+
 Invited Team Member: Users who have invited their first team member.
+
 Created AI Prediction: Users who have created their first AI prediction.
 
 Good to know
 
-Refer to Javascript SDK on how to track custom events in your app. Using a single page application (SPA)? Refer to this guide: Event tracking on Single Page Applications (SPA)
+Refer to Javascript SDK on how to track custom events in your app. Using a single page application (SPA)? Refer to the Event tracking on Single Page Applications (SPA) guide.
 
-### Step 2. Set up personalizations
+![Step 2 set up personalizations](/gp/article7/2-min.png)
+
+### Step 2: Set up server-side personalizations
 
 Personalization allows you to deliver targeted content to users based on their behavior. In this case, we will create multiple onboarding experiences tailored to the user's progress.
 
-1. Create a new personalization campaign:
+Create a new personalization campaign:
 
 Go to the Personalizations section and create a new server-side personalization campaign named "Onboarding Steps".
 
-2. Add experiences for each onboarding step:
+Add experiences for each onboarding step:
 
 Create multiple variants within the campaign, each targeting a different segment.
 
-3. Define the in-app message content:
+Define the in-app message content:
 
 Use the code editor to create and style the in-app messages or popups. Example for the "Create the First Project" experience:
 
-4. Define the experience logic and content:
+{
+  "message": {
+    "title": "Welcome to Otto!",
+    "body": "Start by creating your first project to organize your tasks and collaborate with your team.",
+    "cta": {
+      "text": "Create Project",
+      "action": "openCreateProjectDialog"
+    }
+  }
+}
 
 Experiences:
 
 Creating the First Project:
+
 Target audience: Users who have just signed up and have not created a project yet (New User)
+
 Changes:
-In-App Message:
-Guide the user to create their first project.
-Content:
-Message: "Welcome to Otto! Start by creating your first project to organize your tasks and collaborate with your team."
+
+In-App Message: Guide the user to create their first project.
+
+Content: Message: "Welcome to Otto! Start by creating your first project to organize your tasks and collaborate with your team."
 
 Creating and Editing the First Task:
+
 Target audience: Users who have created their first project but have not created a task (Created Project)
+
 Changes:
-In-App Message:
-Guide the user to create and edit their first task.
-Content:
-Message: "Great! Now let's create your first task. Add details and assign it to a team member to get started."
+
+In-App Message: Guide the user to create and edit their first task.
+
+Content: Message: "Great! Now let's create your first task. Add details and assign it to a team member to get started."
 
 Inviting a Team Member:
+
 Target audience: Users who have created and edited their first task but have not invited a team member (Created Task)
+
 Changes:
-In-App Message:
-Guide the user to invite their first team member.
-Content:
-Message: "You're doing great! Next, invite your team members to collaborate on your project."
+
+In-App Message: Guide the user to invite their first team member.
+
+Content: Message: "You're doing great! Next, invite your team members to collaborate on your project."
 
 Creating an AI Prediction:
+
 Target audience: Users who have invited their first team member but have not created an AI prediction (Invited Team Member)
+
 Changes:
-In-App Message:
-Guide the user to create their first AI prediction.
-Content:
-Message: "Enhance your project management with AI predictions. Create your first prediction to see how AI can help you plan better."
+
+In-App Message: Guide the user to create their first AI prediction.
+
+Content: Message: "Enhance your project management with AI predictions. Create your first prediction to see how AI can help you plan better."
 
 Viewing the Dashboard:
-Target audience: Users who have created their first AI prediction but have not viewed the dashboard (Created AI Prediction)
-Changes:
-In-App Message:
-Guide the user to view the dashboard.
-Content:
-Message: "Finally, view your project dashboard to get an overview of your tasks and progress."
 
-5. Set targeting conditions:
+Target audience: Users who have created their first AI prediction but have not viewed the dashboard (Created AI Prediction)
+
+Changes:
+
+In-App Message: Guide the user to view the dashboard.
+
+Content: Message: "Finally, view your project dashboard to get an overview of your tasks and progress."
+
+Set targeting conditions:
 
 For each experience, configure the audience targeting based on the relevant segments. Ensure that the conditions match the segments created in Step 3 and are mutually exclusive.
 
-6. Define display rules:
+Define display rules:
 
 Specify the conditions under which the personalized experiences will be displayed, such as when a user signs up or completes a specific action.
+
 Set the display frequency to ensure the personalized content is shown consistently to the targeted users.
 
 ### Step 3: Launch and monitor the personalization campaign
 
-1. Start the personalization campaign:
+Start the personalization campaign:
 
 Once all experiences are set up and configured, start the personalization campaign in Intempt.
 
-2. Monitor performance:
+Monitor performance:
 
 Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include:
+
 Unique views: Number of users who viewed the personalized content.
+
 Conversion: Number of users who completed the guided action, such as creating a project or inviting a team member.
+
 Conversion %: Percentage of users who converted based on the total audience targeted.
+
 Lift: Improvement in conversion rate compared to the control group.
 
-3. Adjust and optimize:
+Adjust and optimize:
 
 Based on the analytics data, make necessary adjustments to the experiences to improve performance. For instance, if the conversion rate for the Created Project segment is low, consider refining the content or targeting criteria.
 
@@ -1119,165 +1603,163 @@ An effective onboarding process is crucial for improving user conversion and act
 
 ## Benefits
 
-* Increased user engagement: Personalized onboarding keeps users engaged by presenting relevant steps based on their interactions.
-* Higher feature adoption: Tailoring the onboarding process to individual user behavior increases the likelihood of feature adoption.
-* Enhanced user satisfaction: Users are more likely to have a positive experience when guided through the app in a personalized manner.
-* Improved retention rates: Effective onboarding helps users understand the app's value, leading to higher long-term retention.
+- Increased user engagement: Personalized onboarding keeps users engaged by presenting relevant steps based on their interactions.
+
+- Higher feature adoption: Tailoring the onboarding process to individual user behavior increases the likelihood of feature adoption.
+
+- Enhanced user satisfaction: Users are more likely to have a positive experience when guided through the app in a personalized manner.
+
+- Improved retention rates: Effective onboarding helps users understand the app's value, leading to higher long-term retention.
 
 ## How It Works
 
 To illustrate the use case, we will refer to a made-up project management app, "Otto."
 
----
+### Step 1. Set up tracking for user activity
 
-## Step 1. Set up tracking for user activity
-
-### Install Intempt's SDK:
+Install Intempt's SDK:
 
 Integrate Intempt's JS SDK into your app to start tracking user activities. Follow the Javascript SDK integration guide to ensure proper setup.
 
----
+![Step 1 setup tracking](/gp/article7/1-min.png)
 
-## Step 2. Set up client-side personalization
+### Step 2. Set up client-side personalization
 
-### 1. Create a new personalization campaign:
-
+Create a new personalization campaign:
 Go to the Personalizations section and create a new client-side personalization campaign named "Landing Page Optimization".
 
-### 2. Add variants for each UTM source:
+Add variants for each UTM source:
 
 Create multiple variants within the campaign, each targeting a different UTM source using the visual editor. Ensure that targeting conditions are based on the utm_source parameter.
 
-### 3. Set targeting conditions:
-
+Set targeting conditions:
 For each experience, configure the audience targeting based on the relevant UTM parameters. Ensure that the conditions match the specified URL contains parameters.
 
-* Google Ads: URL contains utm_source=google
-* Facebook Ads: URL contains utm_source=facebook
-* Twitter Ads: URL contains utm_source=twitter
-* LinkedIn Ads: URL contains utm_source=linkedin
+Google Ads: URL contains utm_source=google
 
----
+Facebook Ads: URL contains utm_source=facebook
 
-## Experiences:
+Twitter Ads: URL contains utm_source=twitter
 
-### Google Ads:
+LinkedIn Ads: URL contains utm_source=linkedin
 
-**URL contains:** utm_source=google
+Experiences:
 
-**Changes:**
+Google Ads:
 
-* Headline: "Streamline Your Projects with Otto"
-* Subtext: "Boost Team Productivity with Otto's Advanced Tools. Free Trial Available - Try Otto Today!"
-* CTA: "Get Started"
-* Visuals: Show screenshots of the interface and key features.
-* Extensions: Highlight specific features and customer testimonials and provide a direct contact option.
+URL contains: utm_source=google
 
-**Steps to configure:**
+Changes:
 
-* Open Visual Editor: Select the experience for Google Ads and open the visual editor.
-* Edit Headline: Change the headline to "Streamline Your Projects with Otto".
-* Edit Subtext: Change the subtext to "Boost Team Productivity with Otto's Advanced Tools. Free Trial Available - Try Otto Today!".
-* Edit CTA: Change the call-to-action button text to "Get Started" and link it to the signup page.
-* Add Visuals: Include screenshots of the interface and key features.
+Headline: "Streamline Your Projects with Otto"
 
-**Explanation:** This experience is designed to appeal to users coming from high-intent search and display ads on Google. The focus is on showcasing the key features and benefits of the app, encouraging users to take advantage of a free trial.
+Subtext: "Boost Team Productivity with Otto's Advanced Tools. Free Trial Available - Try Otto Today!"
 
----
+CTA: "Get Started"
 
-### Facebook Ads:
+Visuals: Show screenshots of the interface and key features.
 
-**URL contains:** utm_source=facebook
+Extensions: Highlight specific features and customer testimonials and provide a direct contact option.
 
-**Changes:**
+Steps to configure:
 
-* Headline: "Join Our Community and Enhance Productivity"
-* Subtext: "Discover Otto's powerful tools for task management, team collaboration, and time tracking. Exclusive deal for Facebook users!"
-* CTA: "Join Now"
-* Carousel Ads: Showcase different features of the app, such as task management and team collaboration, using carousel ads with screenshots and user testimonials.
-* Video Ads: Embed a short demo video showing how Otto simplifies project management.
+Open Visual Editor: Select the experience for Google Ads and open the visual editor.
 
-**Steps to configure:**
+Edit Headline: Change the headline to "Streamline Your Projects with Otto".
 
-* Open Visual Editor: Select the experience for Facebook Ads and open the visual editor.
-* Edit Headline: Change the headline to "Join Our Community and Enhance Productivity".
-* Edit Subtext: Change the subtext to "Discover Otto's powerful tools for task management, team collaboration, and time tracking. Exclusive deal for Facebook users!".
-* Edit CTA: Change the call-to-action button text to "Join Now" and link it to the signup page.
-* Add Carousel Ads: Include carousel ads showcasing different features of the app with screenshots and user testimonials.
-* Add Video Ads: Embed a short demo video showing how the app simplifies project management.
+Edit Subtext: Change the subtext to "Boost Team Productivity with Otto's Advanced Tools. Free Trial Available - Try Otto Today!".
 
-**Explanation:** This experience is crafted for users arriving from Facebook ads, emphasizing community engagement and the interactive features of Otto. Using carousel and video ads enhances the visual appeal and provides a comprehensive view of the app's capabilities.
+Edit CTA: Change the call-to-action button text to "Get Started" and link it to the signup page.
 
----
+Add Visuals: Include screenshots of the interface and key features.
 
-### Twitter Ads:
+Explanation: This experience is designed to appeal to users coming from high-intent search and display ads on Google. The focus is on showcasing the key features and benefits of the app, encouraging users to take advantage of a free trial.
 
-**URL contains:** utm_source=twitter
+![Google Ads explanation](/gp/article7/2-min.png)
 
-**Changes:**
+Facebook Ads:
 
-* Headline: "Take Your Project Management to the Next Level"
-* Subtext: "Use Otto to manage your projects efficiently. Start your free trial today!"
-* CTA: "Try for Free"
-* Promoted Tweets: Use short, impactful messages that highlight app's benefits.
-* Hashtag Campaigns: Create a branded hashtag like #OttoOrganizes and encourage users to share their experiences.
+URL contains: utm_source=facebook
 
-**Steps to configure:**
+Changes:
 
-* Open Visual Editor: Select the experience for Twitter Ads and open the visual editor.
-* Edit Headline: Change the headline to "Take Your Project Management to the Next Level".
-* Edit Subtext: Change the subtext to "Use Otto to manage your projects efficiently. Start your free trial today!".
-* Edit CTA: Change the call-to-action button text to "Try for Free" and link it to the signup page.
-* Add Promoted Tweets: Include short, impactful messages highlighting the app's benefits.
-* Add Hashtag Campaigns: Create a branded hashtag like #OttoOrganizes and encourage users to share their experiences.
+Headline: "Join Our Community and Enhance Productivity"
 
-**Explanation:** This experience targets Twitter users who prefer concise and impactful messaging. The inclusion of promoted tweets and hashtag campaigns engages users in real-time, encouraging them to share their experiences and join the conversation around the app.
+Subtext: "Discover Otto's powerful tools for task management, team collaboration, and time tracking. Exclusive deal for Facebook users!"
 
----
+CTA: "Join Now"
 
-### LinkedIn Ads:
+Carousel Ads: Showcase different features of the app, such as task management and team collaboration, using carousel ads with screenshots and user testimonials.
 
-**URL contains:** utm_source=linkedin
+Video Ads: Embed a short demo video showing how Otto simplifies project management.
 
-**Changes:**
+Steps to configure:
 
-* Headline: "Boost Your Business Efficiency with Otto"
-* Subtext: "Enhance your project management workflows with our comprehensive SaaS solutions. Exclusive offer for LinkedIn professionals!"
-* CTA: "Learn More"
-* Sponsored Content: Share articles, case studies, and whitepapers that demonstrate Otto's value.
-* InMail Campaigns: Highlight how Otto can address specific pain points and offer exclusive deals.
+Open Visual Editor: Select the experience for Facebook Ads and open the visual editor.
 
-**Steps to configure:**
+Edit Headline: Change the headline to "Join Our Community and Enhance Productivity".
 
-* Open Visual Editor: Select the experience for LinkedIn Ads and open the visual editor.
-* Edit Headline: Change the headline to "Boost Your Business Efficiency with Otto".
-* Edit Subtext: Change the subtext to "Enhance your project management workflows with our comprehensive SaaS solutions. Exclusive offer for LinkedIn professionals!".
-* Edit CTA: Change the call-to-action button text to "Learn More" and link it to the signup page.
-* Add Sponsored Content: Include articles, case studies, and whitepapers that demonstrate the app's value.
-* Add InMail Campaigns: Highlight how Otto can address specific pain points and offer exclusive deals.
+Edit Subtext: Change the subtext to "Discover Otto's powerful tools for task management, team collaboration, and time tracking. Exclusive deal for Facebook users!".
 
-**Explanation:** This experience is tailored for LinkedIn users, focusing on professional networking and B2B marketing. The content highlights thought leadership, showcases success stories, and offers exclusive deals to attract decision-makers and professionals.
+Edit CTA: Change the call-to-action button text to "Join Now" and link it to the signup page.
 
----
+Add Carousel Ads: Include carousel ads showcasing different features of the app with screenshots and user testimonials.
 
-## Step 3. Launch and monitor the personalization campaign
+Add Video Ads: Embed a short demo video showing how the app simplifies project management.
 
-### Start the personalization campaign:
+Explanation: This experience is crafted for users arriving from Facebook ads, emphasizing community engagement and the interactive features of Otto. Using carousel and video ads enhances the visual appeal and provides a comprehensive view of the app's capabilities.
 
-Once all experiences are set up and configured, start the personalization campaign in Intempt.
+![Facebook Ads explanation](/gp/article7/3-min.png)
 
-### Monitor performance:
+Twitter Ads:
 
-Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include:
+URL contains: utm_source=twitter
 
-* Unique views: Number of users who viewed the personalized content.
-* Conversion: Number of users who completed the desired action, such as signing up or making a purchase.
-* Conversion %: Percentage of users who converted based on the total audience targeted.
-* Lift: Improvement in conversion rate compared to the control group.
+Changes:
 
-### Adjust and optimize:
+Headline: "Take Your Project Management to the Next Level"
 
-Based on the analytics data, adjust the experiences to improve performance. For instance, if the conversion rate for the Facebook Ads segment is low, consider refining the content or targeting criteria.
+Subtext: "Use Otto to manage your projects efficiently. Start your free trial today!"
+
+CTA: "Try for Free"
+
+Promoted Tweets: Use short, impactful messages that highlight app's benefits.
+
+Hashtag Campaigns: Create a branded hashtag like #OttoOrganizes and encourage users to share their experiences.
+
+Steps to configure: (and so on)
+
+Explanation: This experience targets Twitter users who prefer concise and impactful messaging. The inclusion of promoted tweets and hashtag campaigns engages users in real-time, encouraging them to share their experiences and join the conversation around the app.
+
+![Twitter Ads explanation](/gp/article7/4-min.png)
+
+LinkedIn Ads:
+
+URL contains: utm_source=linkedin
+
+Changes:
+
+Headline: "Boost Your Business Efficiency with Otto"
+
+Subtext: "Enhance your project management workflows with our comprehensive SaaS solutions. Exclusive offer for LinkedIn professionals!"
+
+CTA: "Learn More"
+
+Sponsored Content: Share articles, case studies, and whitepapers that demonstrate the app's value.
+
+InMail Campaigns: Highlight how Otto can address specific pain points and offer exclusive deals.
+
+Explanation: This experience is tailored for LinkedIn users, focusing on professional networking and B2B marketing. The content highlights thought leadership, showcases success stories, and offers exclusive deals to attract decision-makers and professionals.
+
+![LinkedIn Ads explanation](/gp/article7/5-min.png)
+
+### Step 3. Launch and monitor the personalization campaign
+
+Start the personalization campaign: Once all experiences are set up and configured, start the personalization campaign in Intempt.
+
+Monitor performance: Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include: Unique views, Conversion, Conversion %, and Lift.
+
+Adjust and optimize: Based on the analytics data, adjust the experiences to improve performance.
 
 ## FAQs
 
@@ -1308,28 +1790,27 @@ Based on the analytics data, adjust the experiences to improve performance. For 
 
 ## About the Growth Play
 
-Building trust and demonstrating value to potential customers is crucial for driving conversions. One effective way to achieve this is by showcasing relevant case studies or testimonials that resonate with the user's industry or use case. By dynamically displaying testimonials tailored to the user's industry, you can provide a personalized experience that builds trust and highlights the app's value. This use case focuses on creating personalized experiences that display industry-specific testimonials to users.
+Building trust and demonstrating value to potential customers is crucial for driving conversions. One effective way to achieve this is by showcasing relevant case studies or testimonials that resonate with the user's industry or use case. By dynamically displaying testimonials tailored to the user's industry, you can provide a personalized experience that builds trust and highlights the app's value.
 
 ## Benefits
 
-* Increased trust. Showcasing relevant testimonials builds credibility and trust with potential customers.
-* Enhanced user experience. Tailoring content based on the user's industry provides a more personalized and engaging experience.
-* Higher conversion rates. Relevant testimonials can help demonstrate value and persuade users to convert.
-* Efficiency in content management. Eliminates the need to create multiple static pages for different industries.
+Increased trust. Showcasing relevant testimonials builds credibility and trust with potential customers.
+
+Enhanced user experience. Tailoring content based on the user's industry provides a more personalized and engaging experience.
+
+Higher conversion rates. Relevant testimonials can help demonstrate value and persuade users to convert.
+
+Efficiency in content management. Eliminates the need to create multiple static pages for different industries.
 
 ## How It Works
 
 To illustrate the use case, we will refer to a made-up project management app, "Otto."
-
----
 
 ## Step 1. Set up tracking for user activity
 
 ### Install Intempt's SDK:
 
 Integrate Intempt's SDK into your website to track user activities and attributes. Follow the Javascript SDK guide to ensure proper setup.
-
----
 
 ## Step 2. Create an event to track the user's industry
 
@@ -1352,7 +1833,7 @@ Add an industry field to the "Book a demo" page. This step is unnecessary if you
 
 ### Track the industry selection:
 
-To track the event, use the "track" or "record" method via Javascript SDK. Ensure that you add "Industry" as a user attribute.
+To track the event, use the track or record method via Intempt's Javascript SDK. Ensure that you add "Industry" as a user attribute.
 
 \`\`\`javascript
 document.getElementById('book-demo-form').addEventListener('submit', function(event) {
@@ -1367,32 +1848,17 @@ document.getElementById('book-demo-form').addEventListener('submit', function(ev
 });
 \`\`\`
 
----
-
 ## Step 3. Set up client-side personalizations
 
 Personalization allows you to deliver targeted content to users based on their industry. In this case, we will create multiple experiences tailored to different industries.
 
 ### Create a new personalization campaign:
 
-Go to the Experiences section and create a new experience campaign.
+Go to the Personalizations section and create a new client-side personalization campaign named "Dynamic Testimonials".
 
-Create multiple variants within the campaign, each targeting a different industry using the visual editor. Ensure that targeting conditions are based on the industry attribute.
+### Add experiences for each industry:
 
-### Set targeting conditions:
-
-For each variant, configure the audience targeting based on the relevant industry attribute. Ensure that the conditions match the specified industry.
-
-* SaaS Industry: Target users with industry=SaaS
-* Retail Industry: Target users with industry=Retail
-
-### Define display rules:
-
-Specify the conditions under which the personalized experiences will be displayed, such as when a user visits the landing page with a specific industry attribute.
-
-Set the display frequency to ensure the personalized content is shown consistently to the targeted users.
-
----
+Create multiple experiences within the campaign, each targeting a different industry using the visual editor. Ensure that targeting conditions are based on the industry attribute.
 
 ## Experiences
 
@@ -1404,21 +1870,16 @@ Set the display frequency to ensure the personalized content is shown consistent
 
 **Testimonial:**
 
-**Content:**
+**Headline:** "Trusted by Leading SaaS Companies"
 
-* Headline: "Trusted by Leading SaaS Companies"
-* Quote: "Otto has revolutionized our project management process. The ability to collaborate in real-time has significantly increased our team's productivity." - John Doe, CEO of Tech Innovators
+**Quote:** "Otto has revolutionized our project management process. The ability to collaborate in real-time has significantly increased our team's productivity." – John Doe, CEO of Tech Innovators
 
 **Steps to configure:**
 
 * Open Visual Editor: Select the experience for the SaaS industry and open the visual editor.
 * Edit Headline: Change the headline to "Trusted by Leading SaaS Companies".
-* Edit Quote: Change the quote to "Otto has revolutionized our project management process. The ability to collaborate in real-time has significantly increased our team's productivity." - John Doe, CEO of Tech Innovators.
+* Edit Quote: Change the quote to the SaaS testimonial.
 * Set Targeting: Set the targeting condition to industry=SaaS.
-
-**Explanation:** This experience is designed to resonate with users from the SaaS industry by showcasing a testimonial from a leading SaaS company. It highlights the benefits of real-time collaboration and increased productivity, which are key selling points for SaaS users.
-
----
 
 ### Retail industry:
 
@@ -1428,21 +1889,16 @@ Set the display frequency to ensure the personalized content is shown consistent
 
 **Testimonial:**
 
-**Content:**
+**Headline:** "Empowering Retail Teams"
 
-* Headline: "Empowering Retail Teams"
-* Quote: "With Otto, we have streamlined our inventory management and improved our coordination across multiple stores. It's been a game-changer for our retail operations." - Jane Smith, Operations Manager at Retail Hub
+**Quote:** "With Otto, we have streamlined our inventory management and improved our coordination across multiple stores. It's been a game-changer for our retail operations." – Jane Smith, Operations Manager at Retail Hub
 
 **Steps to configure:**
 
 * Open Visual Editor: Select the experience for the Retail industry and open the visual editor.
 * Edit Headline: Change the headline to "Empowering Retail Teams".
-* Edit Quote: Change the quote to "With Otto, we have streamlined our inventory management and improved our coordination across multiple stores. It's been a game-changer for our retail operations." - Jane Smith, Operations Manager at Retail Hub.
+* Edit Quote: Change the quote to the Retail testimonial.
 * Set Targeting: Set the targeting condition to industry=Retail.
-
-**Explanation:** This experience is crafted for users from the retail industry, highlighting a testimonial that speaks to improved inventory management and coordination. It emphasizes the operational benefits that Otto brings to retail businesses.
-
----
 
 ### Financial services industry:
 
@@ -1452,49 +1908,52 @@ Set the display frequency to ensure the personalized content is shown consistent
 
 **Testimonial:**
 
-**Content:**
+**Headline:** "Transforming Financial Services"
 
-* Headline: "Transforming Financial Services"
-* Quote: "Otto's robust project management features have enabled us to manage complex projects with ease and maintain compliance standards. It's an invaluable tool for our firm." - Michael Johnson, Project Lead at Finance Pros
+**Quote:** "Otto's robust project management features have enabled us to manage complex projects with ease and maintain compliance standards. It's an invaluable tool for our firm." – Michael Johnson, Project Lead at Finance Pros
 
 **Steps to configure:**
 
 * Open Visual Editor: Select the experience for the Financial services industry and open the visual editor.
 * Edit Headline: Change the headline to "Transforming Financial Services".
-* Edit Quote: Change the quote to "Otto's robust project management features have enabled us to manage complex projects with ease and maintain compliance standards. It's an invaluable tool for our firm." - Michael Johnson, Project Lead at Finance Pros.
+* Edit Quote: Change the quote to the Financial Services testimonial.
 * Add Image: Include the logo of Finance Pros.
 * Set Targeting: Set the targeting condition to industry=Financial services.
 
-**Explanation:** This experience targets users from the financial services industry, featuring a testimonial that highlights Otto's ability to manage complex projects and maintain compliance standards. It addresses the specific needs and challenges faced by financial services firms.
+## Step 4. Configure targeting and display settings
 
----
+### Set targeting conditions:
 
-## Step 4. Launch and monitor the personalization campaign
+For each experience, configure the audience targeting based on the relevant industry attribute:
+
+* SaaS Industry: Target users with industry=SaaS
+* Retail Industry: Target users with industry=Retail
+* Financial Services: Target users with industry=Financial services
+
+### Define display rules:
+
+Specify when and where the personalized testimonials will show (e.g., landing page visits with a specific industry attribute).
+
+Set display frequency to ensure personalized content is shown consistently to targeted users.
+
+## Step 5. Launch and monitor the personalization campaign
 
 ### Start the personalization campaign:
 
-Once all experiences are set up and configured, start the personalization campaign in Intempt.
+Once all experiences are configured, start the personalization campaign in Intempt.
 
 ### Monitor performance:
 
-Use Intempt's Experience Analytics to track the performance of each experience. Key metrics to monitor include:
+Use Intempt's Personalization Analytics to track key metrics:
 
 * Unique views: Number of users who viewed the personalized content.
-* Conversion: Number of users who completed the desired action, such as signing up or making a purchase.
-* Conversion %: Percentage of users who converted based on the total audience targeted.
+* Conversion: Number of users who completed a desired action (e.g., signup or purchase).
+* Conversion %: Percentage of targeted users who converted.
 * Lift: Improvement in conversion rate compared to the control group.
 
 ### Adjust and optimize:
 
-Based on the analytics data, make necessary adjustments to the experiences to improve performance. For example:
-
-* Refine targeting criteria: If a specific industry segment is not converting well, consider adjusting the targeting criteria to better match user behavior patterns and industry specifics.
-* Test different testimonials: Experiment with different testimonials and case studies to find the most impactful ones. Consider using A/B testing to compare different versions.
-* Enhance visuals: Improve the design and visual appeal of the testimonial sections to capture user attention more effectively. This could include adding video testimonials or interactive elements.
-* Personalized follow-ups: Implement personalized follow-up messages for users who viewed the testimonials but did not convert, offering them additional case studies or success stories relevant to their industry.
-* Analyze user feedback: Collect and analyze feedback from users who interacted with the testimonials to understand their perceptions and identify areas for improvement.
-* Optimize content placement: Test different placements of the testimonial content on the landing page to see which position drives the most engagement and conversions.
-* Monitor engagement metrics: Track additional engagement metrics such as time spent on the page and scroll depth to understand how users interact with the testimonials and adjust content accordingly.
+Based on analytics, refine experiences, adjust targeting criteria, or test different testimonials to improve performance.
 
 ## FAQs
 
@@ -1517,32 +1976,33 @@ A reverse trial means that if the user does not upgrade, it reverts to the Free 
 
 ## Benefits
 
-* Increased conversion rates. Offering targeted trial experiences can effectively nudge power users to subscribe to the Premium plan.
-* Enhanced user experience. Tailoring the trial experience based on user behavior provides a more personalized and engaging experience.
-* Higher user retention. Providing a taste of the Premium features can help build user habits and increase long-term retention.
-* Data-driven optimization. Leveraging user behavior data to optimize trial offers ensures a more effective conversion strategy.
+Increased conversion rates. Offering targeted trial experiences can effectively nudge power users to subscribe to the Premium plan.
+
+Enhanced user experience. Tailoring the trial experience based on user behavior provides a more personalized and engaging experience.
+
+Higher user retention. Providing a taste of the Premium features can help build user habits and increase long-term retention.
+
+Data-driven optimization. Leveraging user behavior data to optimize trial offers ensures a more effective conversion strategy.
 
 ## How It Works
 
----
+## Step 1. Set up tracking for user activity
 
-## Step 1. Set up tracking for user activity and define key user events
-
-### 1. Install Intempt's iOS SDK:
+### Install Intempt's iOS SDK:
 
 Integrate Intempt's iOS SDK into your mobile app to start tracking user activities. Follow the iOS SDK integration guide to ensure proper setup.
 
-### 2. Identify key events:
+## Step 2. Define key user events
+
+### Identify key events:
 
 Track user activities such as listening to songs and visiting the subscription page. For example, song_listened and subscription_page_viewed.
 
-Set up event tracking:
+### Set up event tracking:
 
-Configure these events by adding the "track" or "record" methods in your iOS app. Refer tp iOS SDK for a complete event tracking guide.
+Configure these events by adding the "track" or "record" methods in your iOS app. Refer to the iOS SDK guide for a complete event tracking guide.
 
----
-
-## Step 2. Create segments based on user behavior
+## Step 3. Create segments based on user behavior
 
 ### Create segments in Intempt:
 
@@ -1551,23 +2011,25 @@ Navigate to the Segments section and create new segments based on the tracked ev
 * Power Users - High Interest: Users who signed up in the last 7 days, listened to more than 100 songs, and visited the subscription page more than 5 times.
 * Power Users - Moderate Interest: Users who signed up in the last 7 days, listened to more than 100 songs, and visited the subscription page less than 5 times.
 
----
+![Create segments in Intempt](/gp/article10/1-min.png)
 
-## Step 3. Set up mobile personalization
+## Step 4. Set up server-side personalization
 
 Personalization allows you to deliver targeted content to users based on their behavior. We will create multiple experiences tailored to different user segments in this case.
 
 ### Create a new personalization campaign:
 
-Go to the Experiences section and create a new mobile personalization campaign named "Dynamic add-on suggestion".
+Go to the Personalizations section and create a new server-side personalization campaign named "Reverse Trials & Paywalls".
 
-### 2. Add experiences for each user segment:
+![Create a new personalization campaign](/gp/article10/2-min.png)
+
+### Add experiences for each user segment:
 
 Create experiences within the campaign, each targeting a different segment using the code editor. Ensure that targeting conditions are based on the user behavior attributes.
 
----
+![Add experiences for each user segment](/gp/article10/3-min.png)
 
-## Experiences:
+## Experiences
 
 ### 3-day Premium Trial:
 
@@ -1605,9 +2067,7 @@ Create experiences within the campaign, each targeting a different segment using
 
 **Explanation:** This experience targets users who have shown high interest in subscribing by frequently visiting the subscription page. Offering a shorter 3-day trial leverages their high intent to convert them quickly.
 
----
-
-### 2. Experience for 5-day Premium Trial:
+### Experience for 5-day Premium Trial:
 
 **Targeting:** Users that belong to Power Users - Moderate Interest segment.
 
@@ -1643,24 +2103,24 @@ Create experiences within the campaign, each targeting a different segment using
 
 **Explanation:** This experience targets users who have shown moderate interest in subscribing by visiting the subscription page fewer times. Offering a longer 5-day trial provides more time to experience the Premium features and incentivizes them to subscribe.
 
----
-
-## Step 4. Configure targeting and display settings
+## Step 5. Configure targeting and display settings
 
 ### Set targeting conditions:
 
 For each experience, configure the audience targeting based on the relevant behavior. Ensure that the conditions match the specified criteria for each segment.
 
-* 3-day Premium Trial: Users who belong to Power Users - High Interest segment (signed up in the last 7 days, listened to more than 100 songs, and visited the subscription page more than 5 times.
+* 3-day Premium Trial: Users who belong to Power Users - High Interest segment (signed up in the last 7 days, listened to more than 100 songs, and visited the subscription page more than 5 times).
 * 5-day Premium Trial: Users who belong to Power Users - Moderate Interest segment (signed up in the last 7 days, listened to more than 100 songs, and visited the subscription page less than 5 times).
 
-### 2. Define display rules:
+![Set targeting conditions](/gp/article10/4-min.png)
+
+### Define display rules:
 
 Set the display frequency to ensure the personalized content is shown only once per session.
 
----
+![Define display rules](/gp/article10/5-min.png)
 
-## Step 5. Launch and monitor the personalization campaign
+## Step 6. Launch and monitor the personalization campaign
 
 ### Start the personalization campaign:
 
@@ -1677,14 +2137,7 @@ Use Intempt's Personalization Analytics to track the performance of each experie
 
 ### Adjust and optimize:
 
-Based on the analytics data, make necessary adjustments to the experiences to improve performance. For example:
-
-* Refine targeting criteria: If a specific segment is not converting well, consider adjusting the targeting criteria to match user behavior patterns better.
-* Test different trial durations: Experiment with different trial durations to find the optimal length that maximizes conversions. For instance, try a 7-day trial for users who are less engaged.
-* Enhance trial features: If users are not converting after the trial, consider adding more compelling features to the trial experience, such as exclusive content or additional perks.
-* A/B Testing: Conduct A/B tests with Experiments to compare different trial versions and determine which version performs better in conversion rates.
-* Personalized follow-ups: Implement personalized follow-up messages for users who did not convert after the trial, offering them another chance to try Premium or highlighting different features that may interest them.
-* Analyze user feedback: Collect and analyze feedback from users who participated in the trial to identify pain points and areas for improvement in the trial experience.
+Based on the analytics data, make necessary adjustments to the experiences to improve performance. For example: refine targeting criteria, test different trial durations (e.g., 7-day trial), enhance trial features, run A/B tests, or add personalized follow-ups.
 
 ## FAQs
 
@@ -1703,169 +2156,160 @@ This use case reduces manual tasks and enhances targeting precision by ensuring 
 
 ## Benefits
 
-* Efficient Lead Sourcing and Enrichment: Precise targeting and data enrichment save time and improve the quality of leads.
-* Personalized and Automated Email Flows: Automating email journeys with personalized content boosts engagement and reduces manual effort.
-* Improved Targeting Precision: Enhanced lead qualification ensures outreach is focused on high-value prospects, increasing conversion chances.
-* Automated Follow-Up Management: Automatically managing follow-ups keeps your team focused on engaged leads, improving efficiency.
-* Actionable Insights and Analytics: Real-time data on open rates, replies, and conversions allows for ongoing optimization of ABM campaigns.
+Efficient Lead Sourcing and Enrichment: Precise targeting and data enrichment save time and improve the quality of leads.
+
+Personalized and Automated Email Flows: Automating email journeys with personalized content boosts engagement and reduces manual effort.
+
+Improved Targeting Precision: Enhanced lead qualification ensures outreach is focused on high-value prospects, increasing conversion chances.
+
+Automated Follow-Up Management: Automatically managing follow-ups keeps your team focused on engaged leads, improving efficiency.
+
+Actionable Insights and Analytics: Real-time data on open rates, replies, and conversions allows for ongoing optimization of ABM campaigns.
 
 ## How It Works
 
-### Step 1. Source the leads
+## Step 1. Source the leads
 
-Create a targeted list of high-value companies that match your Ideal Customer Profile (ICP). Using Apollo.io, you can filter and identify potential leads based on specific criteria, ensuring our outreach focuses on high-fit leads.
+Create a targeted list of high-value companies that match your Ideal Customer Profile (ICP). Using Apollo.io, you can filter and identify potential leads based on specific criteria, ensuring your outreach focuses on high-fit leads.
 
-Filter the leads via Apollo.io::
+### Filter the leads via Apollo.io:
 
 Go to Apollo.io and use the search feature to find relevant accounts. Apply filters based on your specific criteria, such as industry, revenue, employee count, or region.
 
-Good to know
+![Filter the leads via Apollo.io](/gp/article11/1.jpeg)
+
+### Good to know
 
 Here are some "cheat codes" for targeting criteria that can help you get fast, high-quality results when building lead lists:
 
-Industry + Job Title:
-Cheat Code: Narrowing down by industry AND targeting decision-makers like VPs or C-level executives accelerates outreach.
-Example: SaaS + VP of Sales → Directly targets the decision-maker for quick response.
+Industry + Job Title: Narrow by industry AND decision-maker titles such as VPs or C-level executives.
 
-Revenue + Employee Count:
-Cheat Code: Target companies with mid-sized revenue and employee count (e.g., 50-200 employees, $10M-$100M revenue) to find fast-growing companies.
-Example: 51-200 employees + $10M-$50M revenue → Sweet spot for companies big enough to invest but small enough to be flexible in decision-making.
+Revenue + Employee Count: Target mid-sized companies (e.g., 50-200 employees, $10M-$100M revenue).
 
-Funding Stage:
-Cheat Code: Focus on companies in Series A or Series B to target those in high-growth phases looking to scale and adopt new solutions.
-Example: Series A → Often ready to scale, invest in technology, and implement growth strategies.
+Funding Stage: Focus on companies in Series A or B for high growth and tech adoption.
 
-Technologies Used:
-Cheat Code:** Target companies using specific tech stacks that align with your product. This saves time by pre-qualifying prospects who are more likely to need your solution.**
-Example: Companies using Salesforce → If your product integrates with Salesforce, you're more likely to get interest quickly.
+Technologies Used: Target stacks that align with your product (e.g., Salesforce users).
 
-Geography + Revenue:
-Cheat Code: Combine geographical region with revenue targeting to quickly filter for larger enterprises in specific regions.
-Example: US + $50M-$100M revenue → Targets mid-sized US companies with budgets for investments.
+Geography + Revenue: Combine region and revenue to filter for larger budgets.
 
-Recent Growth Indicators:
-Cheat Code: Look for companies with recent growth (e.g., headcount expansion or funding received) to catch leads who are in rapid decision-making mode.
-Example: High-growth companies → They need fast solutions and are more likely to engage.
+Recent Growth Indicators: Seek companies with recent expansion or funding.
 
-Inbound + Outbound Lead Sources:
-Cheat Code: Target companies that are actively seeking new solutions by identifying those that have engaged in recent inbound lead behaviors (e.g., downloading content, and attending webinars).
-Example: Outbound leads from companies attending events → They are already in a research phase.
+Inbound + Outbound Lead Sources: Combine activities like downloads or event attendance with outbound leads for higher intent.
 
-Save and export companies to a CSV file:
+Save and export companies to a CSV file.
 
-### Step 2: Enrich the data
+![Save and export companies to CSV](/gp/article11/2.jpeg)
 
-Enhance the data to make our outreach more effective. By using Clay, we can enrich our lead data with additional information, such as contact details and relevant job titles, making it easier to connect with key decision-makers.
+## Step 2: Enrich the data
 
-Import the leads:
-Sign up to Clay.com and create a new table and import the CSV file downloaded from Apollo.io. The data will populate into Clay's table format.
+Enhance the data to make your outreach more effective. By using Clay, you can enrich your lead data with information such as contact details and job titles, making it easier to connect with key decision-makers.
 
-Choose Enrichment Types:
-Select the type of enrichment you need, such as job titles, email addresses, LinkedIn profiles, or company information (like revenue or employee count).
+### Import the leads:
+
+Sign up to Clay.com and create a new table; import the CSV file downloaded from Apollo.io.
+
+![Import the leads](/gp/article11/3.jpeg)
+
+### Choose enrichment types:
+
+Select what you want to enrich (e.g., email addresses, LinkedIn profiles, company details).
+
 For example, to add email addresses: Choose "Find email addresses by domain and job title."
 
-Configure Fields:
-Map the appropriate fields from your table to ensure Clay can properly search for the data.
-Map the Company Domain: This ensures the enrichment tool can search for emails or social profiles related to the right company.
+![Choose enrichment types](/gp/article11/4.jpeg)
+
+### Configure fields:
+
+Map fields such as company domain and job titles so Clay can find accurate matches.
+
 Map the Job Titles: To locate the specific contacts within the company.
+
+![Map the Job Titles](/gp/article11/5.jpeg)
 
 Select the Email field and run the enrichment.
 
-Review Results
+![Select the Email field and run enrichment](/gp/article11/6.jpeg)
+
+### Run the enrichment and review results:
+
 Once the enrichment process is complete, review the new data that's been added to your table. Verify the accuracy of key fields like email addresses, job titles, and company info.
 
 Export Data: After reviewing, you can export the enriched data:
+
 Click "Export" and choose the format you need (e.g., CSV).
 
-### Step 3: Choose an engagement strategy
+![Review results and export data](/gp/article11/7.jpeg)
 
-This step is crucial because choosing the right engagement strategy can make or break your outreach efforts. Tailoring your emails based on the recipient's pain points, industry insights, or unique challenges significantly increases the chances of capturing their attention and prompting a responseSelect from one of three highly effective email strategies for engaging prospects: addressing industry-specific pain points, sharing exclusive research, and offering personalized solutions. Each approach helps tailor your outreach for maximum impact and relevance to your leads.
+## Step 3: Choose an engagement strategy
 
-Strategy 1: Industry-Specific Pain Point Email
-Address a key challenge in the recipient's industry and present your solution as a way to solve that problem. This approach shows your understanding of their pain points and how your product can help.
+Choose the right engagement strategy to tailor email messaging such as pain-point focused emails, exclusive research insights, or curated solution offers. Each approach improves relevance and response rates.
 
-Subject: Struggling with [Pain Point]? Here's How We Can Help
+### Strategy 1: Industry-Specific Pain Point Email – Address a key challenge in the recipient's industry and present your solution as the answer.
 
-Hi [Recipient's Name],
+### Strategy 2: Exclusive Research Findings Email – Share data or studies demonstrating industry success.
 
-I noticed many [industry] companies are struggling with [specific pain point, e.g., reducing churn rates]. At [Company Name], we've developed a solution that has helped companies like [Client Name] reduce their churn by 20% within three months.
+### Strategy 3: Curated Solution Email – Make personalized recommendations based on unique business challenges.
 
-I would love to share more about how this could apply to your business—would you be open to a quick call?
+## Step 4: Create lead nurturing email flows
 
-Strategy 2: Exclusive Research Findings Email
-Share relevant research or data that demonstrates how companies in their industry are achieving success using specific strategies. This positions you as a thought leader and provides valuable insights.
+Develop automated email sequences via Intempt to nurture leads over time using personalized and strategic messaging.
 
-Subject: How [Industry] Leaders Are Increasing ROI by 30%
+### Set up your data source:
 
-Hi [Recipient's Name],
+Create a new data source in Intempt and import the enriched CSV with attributes like first name, company size, email, industry, and role.
 
-We recently conducted an exclusive study on [relevant topic, e.g., the state of digital marketing for SaaS companies] and found that companies using [specific strategy] are seeing a 30% increase in ROI. I thought you might find this research helpful.
+### Create a journey:
 
-Would you be interested in a brief call to discuss how these strategies could benefit [Recipient's Company]?
+In the Journeys section, select "Create journey."
 
-Strategy 3: Curated Solution Email
-Offer a tailored recommendation based on the recipient's unique business challenge. Highlight how your product has helped similar companies overcome these challenges to create a personalized, solution-focused outreach.
-
-Subject: Solving [Specific Challenge] at [Recipient's Company]: Here's How
-
-Hi [Recipient's Name],
-
-Based on what I know about [Recipient's Company], you might be dealing with [specific challenge, e.g., managing customer onboarding processes efficiently].
-
-We've helped companies like [Client Name] streamline their onboarding and improve customer satisfaction by 40%.
-
-I'd love to show you how we can do the same for you. Let me know if you have a few minutes for a quick chat.
-
-### Step 4: Create lead nurturing email flows
-
-Develop automated email sequences via Intempt to nurture your leads over time. By using personalized and strategic messaging, such as addressing industry pain points, sharing valuable insights, or offering tailored solutions, you can guide prospects through the sales journey.
-
-Set up your data source:
-Go to the "Source" section in Intempt and create a new data source using the CSV import feature.
-Example: Import the enriched CSV list from Clay, tracking attributes such as first name, company size, email, industry, and role.
-
-Create a journey:
-Navigate to the Journeys section and select "Create journey."
 Set a journey trigger based on the CSV lead list imported. All users imported from CSV will enter the journey.
 
-Set up email flows:
+![Set journey trigger](/gp/article11/8.jpeg)
+
+### Set up email flows:
+
 Use the "Send Email" action within the journey to create personalized outreach emails.
+
+![Set up email flows](/gp/article11/9.jpeg)
+
 Create emails based on the selected engagement strategy (refer to Step 3).
 
-Good to know
+![Create emails based on engagement strategy](/gp/article11/10.png)
 
-Refer to Destinations for a complete guide to connecting your email account.
+### Good to know
 
-Automate engagement and follow-ups:
+Refer to Destinations for a full guide on connecting your email account.
+
+### Automate engagement and follow-ups:
+
 Enable the option to automatically unenroll users from the journey if they respond to your email to remove leads from the sequence once they respond, ensuring your follow-up efforts focus on the right contacts.
 
-Good to know
-
-Why use unenroll? Let's say you're selling a SaaS tool that helps marketing teams automate their workflows. You've set up an automated email flow targeting heads of marketing at mid-sized SaaS companies. One of your emails is about a case study showing how your tool helped a similar company increase its lead generation by 30%.
-
-Scenario: After sending the second follow-up email in the sequence, one of your recipients responds requesting more information and schedules a demo. At this point, they have shown interest and are actively engaging.
-
-Action: By enabling the option to automatically unenroll users who respond, that lead is immediately removed from the rest of the email sequence. This prevents the awkward situation where they would continue to receive automated follow-ups, such as a generic "Did you see my last email?" message, which could damage their perception of your brand.
-
-Outcome: Now, your sales team can focus on nurturing this lead through a personalized 1:1 conversation, improving the chances of closing the deal, while the automated flow continues for those who haven't yet responded. This approach keeps the engagement personalized and relevant, while freeing up time to focus on leads that are further along in the sales cycle.
+![Automate engagement and follow-ups](/gp/article11/11.jpeg)
 
 Use the "Delay" control to schedule follow-up emails at appropriate intervals, such as sending the next email after a 1-day delay.
 
+![Use Delay control](/gp/article11/12.jpeg)
+
+![Delay control settings](/gp/article11/13.png)
+
 Before starting the journey, set a conversion goal by aiming for replies or booking a meeting.
 
-### Step 5: Launch and monitor the campaign
+![Set conversion goal](/gp/article11/14.jpeg)
 
-Launch your journey:
-Once all configurations are complete, launch the journey to automate the email sequence..
+## Step 5: Launch and monitor the campaign
 
-Monitor campaign performance:
-Track the progress of your ABM campaigns using Intempt's journey analytics. Monitor specific metrics such as:
-Email Open Rates: Monitor which emails are being opened by recipients to understand which subject lines are effective.
-Replies and Engagement: Monitor the reply rates to assess how well your outreach is driving conversations.
-Journey Conversion Rates: Measure how many leads successfully move from one stage of the journey to the next.
-Funnel Drop-Offs: Identify at which point leads drop off within the journey funnel.
+Launch your journey once all settings are configured.
 
-Use the insights from the analytics to adjust your targeting or email content to improve engagement and conversion rates.
+Monitor campaign performance with Intempt's journey analytics. Track:
+
+* Email Open Rates
+* Replies and Engagement
+* Journey Conversion Rates
+* Funnel Drop-Offs: Identify at which point leads drop off within the journey funnel.
+
+![Funnel Drop-Offs](/gp/article11/15.png)
+
+Use insights to improve targeting and email content.
 
 ## FAQs
 
@@ -1884,39 +2328,46 @@ This use case focuses on creating a personalized journey that sends a series of 
 
 ## Benefits
 
-* Increased user engagement: Welcome messages and educational content help new users get started quickly and stay engaged.
-* Higher feature adoption: Educating users about key features increases the likelihood of them using and benefiting from those features.
-* Enhanced user satisfaction: Providing timely and relevant information improves the overall user experience.
-* Improved retention rates: Engaged users who understand the app's value are more likely to continue using it.
+Increased user engagement: Welcome messages and educational content help new users get started quickly and stay engaged.
+
+Higher feature adoption: Educating users about key features increases the likelihood of them using and benefiting from those features.
+
+Enhanced user satisfaction: Providing timely and relevant information improves the overall user experience.
+
+Improved retention rates: Engaged users who understand the app's value are more likely to continue using it.
 
 ## How It Works
 
 To illustrate the use case, we will refer to a made-up project management app, "Otto."
 
-### Step 1. Track, define, and segment users
+## Step 1. Track, define, and segment users
 
-Start by installing Intempt's JavaScript SDK for web or iOS SDK for mobile to begin capturing user activity. Once integrated, identify and track key events like user_signup, feature_used, create_project, create_task, invite_team_member, create_prediction, and view_dashboard—making sure to include the user's email attribute for future communication.
+Start by installing Intempt's JavaScript SDK for web or iOS SDK for mobile to begin capturing user activity. Once integrated, identify and track key events like user_signup, feature_used, create_project, create_task, invite_team_member, create_prediction, and view_dashboard — making sure to include the user's email attribute for future communication.
 
 Then, go to the Segments section to create behavioral segments such as:
 
-• New Users – those who just signed up
-• Activated Users – those who completed all key actions
+* New Users – those who just signed up
+* Activated Users – those who completed all key actions
 
-### Step 2: Set up the journey for welcome and feature adoption
+## Step 2. Set up the journey for welcome and feature adoption
 
 Journeys allow you to automate the sending of emails based on user behavior. In this case, we will create a journey that sends new users a series of welcome and educational emails.
 
-Create a new journey:
-Go to the Journeys section and create a new journey named "Welcome and Feature Adoption".
+### Create a new journey:
 
-Add the trigger:
+Go to the Journeys section and create a new journey named "Welcome and Feature Adoption."
+
+### Add the trigger:
+
 Trigger: User enters the New users segment.
 
-Add email actions:
+### Add email actions:
 
-Email 1: Welcome Email
-Subject: Welcome to Otto!
-Body:
+### Email 1: Welcome Email
+
+**Subject:** Welcome to Otto!
+
+**Body:**
 
 Hi [User Name],
 
@@ -1929,19 +2380,21 @@ To get started, here's a quick guide to creating your first project.
 Best,
 The Otto Team
 
-Email 2: Introduction to Key Features
-Subject: Discover Otto's Powerful Features
-Body:
+### Email 2: Introduction to Key Features
+
+**Subject:** Discover Otto's Powerful Features
+
+**Body:**
 
 Hi [User Name],
 
 Now that you've signed up, it's time to explore Otto's powerful features.
 
-Here are a few things you can do:-
+Here are a few things you can do:
 
 Create and manage tasks: Keep track of your tasks and deadlines.
 
-Invite team members: Collaborate with your team in real-time
+Invite team members: Collaborate with your team in real-time.
 
 Use AI predictions: Optimize your project planning with AI insights.
 
@@ -1950,9 +2403,11 @@ Use AI predictions: Optimize your project planning with AI insights.
 Happy exploring,
 The Otto Team
 
-Email 3: Encouraging First Action
-Subject: Get Started with Your First Project
-Body:
+### Email 3: Encouraging First Action
+
+**Subject:** Get Started with Your First Project
+
+**Body:**
 
 Hi [User Name],
 
@@ -1967,9 +2422,11 @@ Remember, we're here to help you every step of the way.
 Best,
 The Otto Team
 
-Email 4: Invite Team Members
-Subject: Collaborate with Your Team
-Body:
+### Email 4: Invite Team Members
+
+**Subject:** Collaborate with Your Team
+
+**Body:**
 
 Hi [User Name],
 
@@ -1980,9 +2437,11 @@ Teamwork makes the dream work! Invite your team members to Otto and start collab
 Best,
 The Otto Team
 
-Email 5: Create and Manage Tasks
-Subject: Organize Your Tasks Efficiently
-Body:
+### Email 5: Create and Manage Tasks
+
+**Subject:** Organize Your Tasks Efficiently
+
+**Body:**
 
 Hi [User Name],
 
@@ -1995,9 +2454,11 @@ It's simple and effective.
 We're here to support you,
 The Otto Team
 
-Email 6: Explore AI-Based Predictions
-Subject: Leverage AI for Better Planning
-Body:
+### Email 6: Explore AI-Based Predictions
+
+**Subject:** Leverage AI for Better Planning
+
+**Body:**
 
 Hi [User Name],
 
@@ -2008,9 +2469,11 @@ Discover how Otto's AI-based predictions can help you optimize your project plan
 Happy planning,
 The Otto Team
 
-Email 7: View and Analyze Your Dashboard
-Subject: Gain Insights with Your Dashboard
-Body:
+### Email 7: View and Analyze Your Dashboard
+
+**Subject:** Gain Insights with Your Dashboard
+
+**Body:**
 
 Hi [User Name],
 
@@ -2023,90 +2486,85 @@ Check it out now.
 Best,
 The Otto Team
 
-Add controls:
-Delay: Add delays between emails to space out the communication. For example, delay 2 days after the first email, then delay 3 days after the second email.
-Condition: Use conditions to check if the user has performed specific actions, such as creating a project or inviting team members. Adjust the journey flow based on these actions.
+### Add controls:
 
-Example Journey Flow
+**Delay:** Add delays between emails to space out the communication (e.g., 2 days after Email 1, then 3 days after Email 2, etc.).
+
+**Conditions:** Use conditions to check if the user has performed specific actions (e.g., created a project, invited team members) and adjust the journey flow based on these actions.
+
+## Example Journey Flow
+
 Trigger: User enters the New users segment.
+
 Send Email: Welcome Email.
+
 Delay: 2 days.
+
 Send Email: Introduction to Key Features.
+
 Delay: 3 days.
+
 Condition: Has the user created a project?
+
 Yes: Proceed to next step.
-No: Send Email - Encouraging First Action.
+
+No: Send Email – Encouraging First Action.
+
 Delay: 3 days.
+
 Condition: Has the user invited team members?
+
 Yes: Proceed to next step.
-No: Send Email - Invite Team Members.
+
+No: Send Email – Invite Team Members.
+
 Delay: 3 days.
+
 Condition: Has the user created and managed tasks?
+
 Yes: Proceed to next step.
-No: Send Email - Create and Manage Tasks.
+
+No: Send Email – Create and Manage Tasks.
+
 Delay: 3 days.
+
 Condition: Has the user explored AI-based predictions?
+
 Yes: Proceed to next step.
-No: Send Email - Explore AI-Based Predictions.
+
+No: Send Email – Explore AI-Based Predictions.
+
 Delay: 3 days.
+
 Condition: Has the user viewed and analyzed the dashboard?
+
 Yes: End journey.
-No: Send Email - View and Analyze Your Dashboard.
+
+No: Send Email – View and Analyze Your Dashboard.
+
 End Journey: Complete the journey.
 
-### Step 5. Set a conversion goal
+### Set a conversion goal:
 
-Before starting the journey, set a conversion goal to measure the effectiveness of the journey. The goal should be for users to enter the Activated Users segment, indicating they have completed all key actions.
+Before starting the journey, set a conversion goal to measure effectiveness (e.g., for users to enter the Activated Users segment, indicating they completed all key actions).
 
-Define exit criteria:
-Decide whether users should exit the campaign once they achieve the goal. This ensures that users who have completed the desired actions do not continue to receive onboarding emails.
+Define exit criteria so users who achieve the goal stop receiving onboarding emails.
 
-### Step 3: Monitor and optimize the journey
+## Step 3: Monitor and optimize the journey
 
-Start the journey:
-Once the journey is set up and configured, start the journey in Intempt.
+### Start the journey:
 
-Monitor performance:
-Use Intempt's Journey Analytics to track the performance of each email and the overall journey. Key metrics to monitor include:
+Once configured, start the journey in Intempt.
 
-Triggered journey: This metric indicates the initial engagement level, showing how many users have started the journey.
-Converted: This metric shows the number of users who completed the conversion event set for the journey.
-Conversion rate: This percentage indicates how effective the journey is at converting users.
-Days to convert (Avg): This metric shows the average time it takes for users to convert after entering the journey.
-Entered: The number of users who started the journey.
-In Progress: The number of users currently in a journey block but haven't moved to the next step.
-Completed: The number of users who completed the journey.
-Failed: Instances where a journey action failed.
-Delivered: The number of successful deliveries of communications like emails or notifications.
+### Monitor performance:
 
-Adjust and optimize:
-Based on the analytics data, make necessary adjustments to the journey to improve performance. For example:
+Use Intempt's Journey Analytics to track key metrics such as triggered journeys, conversions, conversion rate, days to convert, and engagement breakdowns.
 
-Refine Email Content: If open rates are low, consider updating the subject lines.
-Test Different Timings: Experiment with different wait times between emails.
-Personalize Messages: Use personalization tokens.
-Analyze User Feedback: Collect feedback from users.
-Monitor Engagement: Track additional engagement metrics.
+### Adjust and optimize:
+
+Based on analytics, refine email content, test timing, personalize messages, analyze feedback, and monitor engagement to improve performance.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -2123,44 +2581,46 @@ With Intempt, you can go several steps further by creating multistep conditional
 
 ## Benefits
 
-* Increased revenue recovery. Tailored messaging can effectively re-engage customers and encourage them to complete their purchases, recovering lost revenue.
-* Enhanced customer experience. Personalized follow-up messages based on browsing behavior and cart contents provide a more relevant and engaging experience.
-* Higher conversion rates. Targeted recovery campaigns can lead to higher conversion rates and improved sales performance.
-* Data-driven optimization. Leveraging user behavior data allows for continuous optimization of recovery strategies.
+Increased revenue recovery. Tailored messaging can effectively re-engage customers and encourage them to complete their purchases, recovering lost revenue.
+
+Enhanced customer experience. Personalized follow-up messages based on browsing behavior and cart contents provide a more relevant and engaging experience.
+
+Higher conversion rates. Targeted recovery campaigns can lead to higher conversion rates and improved sales performance.
+
+Data-driven optimization. Leveraging user behavior data allows for continuous optimization of recovery strategies.
 
 ## How It Works
 
-To illustrate the use case, we will refer to a made-up project management app, "Otto."
+## Step 1. Set up tracking for new user activity and define key user events
 
-### Step 1. Set up tracking for new user activity and define key user events
+Integrate Intempt's SDK into your e-commerce website to start tracking user activities. Follow the Javascript SDK or Shopify integration guide to ensure proper setup. Track user activities such as browsing products, adding items to the cart, starting checkout, and completing a purchase (e.g., page_view, add_to_cart, checkout_start, purchase).
 
-Integrate Intempt's SDK into your e-commerce website to start tracking user activities. Follow Javascript SDK or Shopify integration guide to ensure proper setup. Track user activities such as browsing products, adding items to the cart, starting checkout, and completing a purchase. For example, page_view, add_to_cart, checkout_start, and purchase.
-
-Good to know
+### Good to know
 
 Ensure that you track users' email attribute so you can send emails to them. This can be done by a separate popup for newsletter subscriptions or by incentivizing users to sign up before starting the checkout process.
 
-### Step 2: Create segments and Journeys based on user behaviour
+## Step 2. Create segments and Journeys based on user behavior
 
-Create segments in Intempt:
-Navigate to the Segments section and create new segments based on the tracked events. For instance:
+### Create segments in Intempt:
 
-Cart Abandoners: Users who added items to their cart but did not complete the purchase within 1 hour.
-Frequent Browsers: Users who frequently browse products but rarely add items to their cart.
+* Cart Abandoners: Users who added items to their cart but did not complete the purchase within 1 hour.
+* Frequent Browsers: Users who frequently browse products but rarely add items to their cart.
 
-Journeys allow you to automate the sending of emails based on user behavior. In this case, we will create a journey that sends a series of tailored recovery emails to users who abandoned their carts.
+### Create a new journey:
 
-Create a new journey:
 Go to the Journeys section and create a new journey named "Abandonment Recovery".
 
-Trigger:
+### Trigger:
+
 Cart abandonment (add_to_cart event without a corresponding purchase event within 1 hour).
 
-Add email actions:
+### Add email actions:
 
-Email 1: Friendly Reminder
-Subject: Did you forget something?
-Body:
+### Email 1: Friendly Reminder
+
+**Subject:** Did you forget something?
+
+**Body:**
 
 Hi [User Name],
 
@@ -2173,26 +2633,28 @@ Don't miss out on these great products!
 Best,
 The [Your Store] Team
 
-Email 2: Special Offer
-Subject: Here's a special offer for you!
-Body:
+### Email 2: Special Offer
+
+**Subject:** Here's a special offer for you!
+
+**Body:**
 
 Hi [User Name],
 
 We noticed you left some items in your cart.
 
-As a thank you for shopping with us, here's a special offer just for you.
-
-Use code SAVE10 at checkout to get 10% off your purchase.
+As a thank you for shopping with us, here's a special offer just for you. Use code SAVE10 at checkout to get 10% off your purchase.
 
 [View Your Cart Link]
 
 Happy shopping,
 The [Your Store] Team
 
-Email 3: Last Chance
-Subject: Last chance to complete your purchase!
-Body:
+### Email 3: Last Chance
+
+**Subject:** Last chance to complete your purchase!
+
+**Body:**
 
 Hi [User Name],
 
@@ -2209,29 +2671,39 @@ Offer expires in 24 hours.
 Best,
 The [Your Store] Team
 
-Add controls:
-Delay: Add delays between emails to space out the communication. For example, delay 1 hour after the first email and 1 day after the second email.
-Condition: Use conditions to check if the user has completed the purchase. Adjust the journey flow based on these actions.
+### Add controls:
 
-Example Journey Flow
+**Delay:** Add delays between emails to space out the communication (e.g., 1 hour after the first email and 1 day after the second).
 
-Trigger: Users that enter the Cart abandoners segment.
+**Condition:** Use conditions to check if the user has completed the purchase. Adjust the journey flow based on these actions.
+
+## Example Journey Flow
+
+Trigger: Users that enter the Cart Abandoners segment.
+
 Send Email: Friendly Reminder.
+
 Delay: 1 day.
+
 Condition: Has the user completed the purchase?
+
 Yes: End journey.
-No: Check if the user is a Frequent Browser.
+
+No: Add a condition to check if the user is a Frequent Browser:
 
 Frequent Browser: Send Email with 20% Discount
-Subject: Here's a special offer for you!
+
+**Email: Special Offer**
+
+**Subject:** Here's a special offer for you!
+
+**Body:**
 
 Hi [User Name],
 
 We noticed you left some items in your cart.
 
-As a thank you for shopping with us, here's a special offer just for you.
-
-Use code SAVE20 at checkout to get 20% off your purchase.
+As a thank you for your interest, here's a 20% discount at checkout.
 
 [View Your Cart Link]
 
@@ -2239,15 +2711,18 @@ Happy shopping,
 The [Your Store] Team
 
 Not Frequent Browser: Send Email with 10% Discount
-Subject: Here's a special offer for you!
+
+**Email: Special Offer**
+
+**Subject:** Here's a special offer for you!
+
+**Body:**
 
 Hi [User Name],
 
 We noticed you left some items in your cart.
 
-As a thank you for shopping with us, here's a special offer just for you.
-
-Use code SAVE10 at checkout to get 10% off your purchase.
+Here's a 10% discount at checkout just for you.
 
 [View Your Cart Link]
 
@@ -2255,89 +2730,74 @@ Happy shopping,
 The [Your Store] Team
 
 Delay: 1 day.
+
 Condition: Has the user completed the purchase?
+
 Yes: End journey.
-No: Send Email - Last Chance.
 
-### Step 3: Set up an advanced journey with lifecycle agent
+No: Send Email – Last Chance.
 
-Create the lifecycle agent:
-Navigate to the agent section in Intempt and create a new Lifecycle agent.
+## Step 3: Set up an advanced journey with lifecycle agent
+
+### Create the lifecycle agent:
+
+Navigate to the Agents section in Intempt and create a new Lifecycle agent.
+
 Select "Purchase" as the goal event.
-Under "User inclusion," select only users that performed the event add_to_cart to train data and create a prediction.
-Wait until the model is trained to predict the likelihood of users completing a purchase.
 
-Create a new journey:
+Under User inclusion, select only users that performed the add_to_cart event to train data and create a purchase likelihood prediction.
+
+### Create a new journey:
+
 Go to the Journeys section and create a new journey named "Advanced Abandonment Recovery".
 
-Trigger:
-Users that enter the Cart abandoners segment.
+### Add the trigger:
 
-Add condition based on likelihood prediction:
-Use Intempt's Lifecycle agent to create a "Purchase Prediction" score. Create conditions to segment users into high, medium, and low likelihood to purchase.
+Trigger: Users that enter the Cart Abandoners segment.
 
-High likelihood segment:
-Send Friendly Reminder email.
+### Add condition based on likelihood prediction:
 
-Medium likelihood segment:
-Send Special Offer (10% discount) email, followed by a reminder if no purchase occurs.
+Use Intempt's Lifecycle agent to score purchase likelihood. Create conditions to segment users into high, medium, and low likelihood to purchase.
 
-Low likelihood segment:
-Send Last Chance email with a bigger discount (20%), followed by a reminder if no purchase occurs.
+### Add email actions for each likelihood segment:
 
-Add controls:
-Delay emails appropriately and check purchase completion after each step.
+* High Likelihood: Friendly Reminder → Last Chance.
+* Medium Likelihood: Special Offer (10% discount) → Follow-Up Email.
+* Low Likelihood: Last Chance with Bigger Discount (20% discount) → Follow-Up Email.
 
-### Step 4: Set goals and exit rules
+### Add controls (delays, conditions to check for purchase completion).
 
-Set a conversion goal:
-Before starting the journey, set a conversion goal. Select the "Purchase" event.
+## Step 4: Set goals and exit rules
 
-Define exit criteria:
-Ensure users exit the campaign once they complete a purchase to avoid unnecessary follow-ups.
+### Set a conversion goal:
 
-### Step 5: Monitor and optimize the journey
+Before starting the journey, set a conversion goal to measure its effectiveness. We recommend selecting the "Purchase" (or "Placed an order" if named differently) event to track your conversions.
 
-Start the journey:
+### Define exit criteria:
+
+Decide whether users should exit the campaign once they achieve the goal. This ensures that users who have completed the purchase do not continue to receive recovery emails. You can select the same "Purchase" event as an exit criteria.
+
+![Set goals and exit rules](/gp/article13/1.jpeg)
+
+## Step 5: Monitor and optimize the journey
+
+### Start the journey:
+
 Once configured, start the journey in Intempt.
 
-Monitor performance using Journey Analytics:
-Triggered journey
-Converted
-Conversion rate
-Days to convert (Avg)
-Entered
-In Progress
-Completed
-Failed
-Delivered
+### Monitor performance:
 
-Adjust and optimize:
-Refine email content
-Test different timings
-Personalize messages
-Analyze user feedback
-Monitor engagement metrics
+Use Intempt's Journey Analytics to track metrics like triggered journeys, conversions, conversion rate, days to convert, and engagement breakdowns.
+
+Delivered: The number of successful deliveries of communications like emails or notifications as part of the journey. This metric helps gauge the reach of your communications and the effectiveness of the delivery process.
+
+![Delivered metric](/gp/article13/2.png)
+
+### Adjust and optimize:
+
+Refine email content, test timing, personalize messages, and monitor engagement to improve performance.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -2359,144 +2819,125 @@ Trigger multi-step, personalized journeys designed to acquire and retain at-risk
 
 ## Benefits
 
-* Detect churn before it happens
-Use behavioral signals to catch signs of disengagement early, before users go cold.
+Detect churn before it happens: Use behavioral signals to catch signs of disengagement early, before users go cold.
 
-* Boost repeat purchase rates
-Automatically re-engage customers who haven't logged in or slowed down their usage.
+Boost repeat purchase rates: Automatically re-engage customers who haven't logged in or slowed down their usage.
 
-* Increase LTV
-Deliver timely nudges that keep your best users active and loyal.
+Increase LTV: Deliver timely nudges that keep your best users active and loyal.
 
-* Automate retention
-Replace one-off win-back emails with always-on journeys that adapt in real time.
+Automate retention: Replace one-off win-back emails with always-on journeys that adapt in real time.
 
 ## How It Works
 
-To illustrate the use case, we will refer to a made-up project management app, similar to Asana, called "Otto."
+To illustrate the use case, we will refer to a made-up project management app, similar to Asana called "Otto."
 
-### Step 1: Set Up Tracking for User Activity
+## Step 1: Set Up Tracking for User Activity
 
 To start, install the Intempt JavaScript SDK. This will enable GrowthOS to track actions like logins and session frequency, page and feature usage, sign-ups and trial starts, and completed tasks or missed milestones.
 
-### Step 2: Create a Qualification Agent
+## Step 2: Create a Qualification Agent
 
-In a pre-monetization flow, our qualification agent can be used to qualify and route leads based on their Fit and Activity.
+In a pre-monetization flow, our qualification agent can be used to qualify and route leads based on their 'Fit' and 'Activity'.
 
-In GrowthOS, head to Agents and create a new Qualification Agent named "Churn Risk Agent."
-Set up Fit Criteria to define your ideal user (e.g., location, company size, industry) and Activity Criteria to track meaningful behaviors (e.g., sign up, task creation, email clicks).
+In GrowthOS, head to Agents and create a new Qualification Agent named 'Churn Risk Agent'. Set up Fit Criteria — to define your ideal user (e.g., location, company size, industry) and Activity Criteria — to track meaningful behaviors (e.g., sign up, task creation, email clicks)
 
-This agent will assign each user:
+![Create Qualification Agent](/gp/article14/1-min.png)
 
-Fit Score: How well they match your ideal persona
+![Set up Fit Criteria](/gp/article14/2-min.png)
 
-Activity Score: How engaged they are, based on behavior
+![Set up Activity Criteria](/gp/article14/3-min.png)
+
+![Configure Criteria](/gp/article14/4-min.png)
+
+This agent will assign each user a Fit Score — how well they match your ideal persona — and an Activity Score — how engaged they are, based on behavior.
 
 Use weight to prioritize high-intent actions, and decay to reduce the value or impact of an activity over time.
 
-### Step 3: Build Real-Time Segments
+![Use weight and decay](/gp/article14/5-min.png)
 
-Post-monetization flow
-Qualification isn't necessary—your users are already customers. Use Segments to define activity-based criteria that reflect how they engage with your product.
+## Step 3: Build Real-Time Segments
 
-Pre-monetization flow
-Head to the Segments tab and create new segments using combinations of Fit Score and Activity Score.
+In a post-monetization flow, qualification isn't necessary — your users are already customers. Instead, use Segments to define activity-based criteria that reflect how they engage with your product. This gives you a direct way to build tailored journeys for both power users and those showing early signs of churn.
 
-Example segments for pre-monetization flow:
+For pre-monetization flow, head to the Segments tab and create new segments using combinations of Fit Score (how well a user matches your ideal customer profile) and Activity Score (how engaged they are).
 
-At Risk
-High Fit Score and low Activity Score. These users match your ICP but aren't engaging. Reach them with personalized reactivation journeys.
+![Create segments for pre-monetization](/gp/article14/6-min.png)
 
-High Potential
-High Fit Score and high Activity Score. Ideal customers actively engaging right now. Perfect for feature expansion, plan upgrades, or exclusive offers.
+Create a new Segment called 'At Risk' with high Fit Score and low Activity Score. These users match your ICP but aren't engaging. Reach them with personalized reactivation journeys.
 
-Curious Visitors
-Low Fit Score and high Activity Score. Exploring actively but may not be a great long-term fit. Use light-touch journeys to qualify further.
+Next, create a new Segment called 'High Potential' with high Fit Score and high Activity Score. These are your ideal customers actively engaging right now — perfect for feature expansion, upgrades, or exclusive offers to boost LTV.
 
-These segments auto-update based on real-time behavior—no manual tagging needed.
+Next, create a new Segment called 'Curious Visitors' with low Fit Score and high Activity Score. They're exploring actively but may not be a great long-term fit yet. Consider light-touch journeys to qualify further or convert if relevant.
 
-Post-monetization segment example:
-Create a segment called "Slipping Users" using behavioral data such as completed onboarding, created ML task, visited a feature page more than twice in the past 14 days, and logged in once in the past 10 days.
+These segments auto-update based on real-time behavior — no manual tagging needed.
 
-### Step 4: Multi-Step Retention Journeys
+For post-monetization flow, head to the Segments and create a new segment for users called 'Slipping Users' using actual behavioral data. Select events like 'completed onboarding', 'created ml task', 'visited a feature page' more than twice in the past 14 days and 'login' once in the past 10 days.
 
-In Journeys, build a personalized flow for each segment. Journeys trigger in real time based on Fit and Activity changes.
+![Create Slipping Users segment](/gp/article14/7-min.png)
 
-Pre-monetization journeys:
+## Step 4: Multi-Step Retention Journeys
 
-At Risk Journey
-Trigger: At Risk segment
-Example flow:
-Day 0: Reminder of the last feature or page visited
-Day 2: Email with curated use cases tailored to role or company size
-Day 4: Invite to live onboarding or async walkthrough
-Day 6: Friendly check-in from success manager or founder
+In Journeys, build a personalized flow for each segment. Each journey is triggered by real-time changes in Fit + Activity Score, so the moment someone starts slipping — the right touchpoint kicks in.
 
-High Potential Journey
-Trigger: High Potential segment
-Example flow:
-Day 0: Thank-you message with next best step CTA
+For pre-monetization flow, create a new journey named 'At Risk Journey' and select the 'At Risk' segment as the trigger. These users are a great match — but they've gone cold.
+
+![Create At Risk Journey](/gp/article14/8-min.png)
+
+### Journey Example:
+
+Day 0: Reminder of the last feature or page visited ("Still exploring Smart Dashboards?")
+
+Day 2: Email with curated use cases tailored to their role or company size
+
+Day 4: Invite to a live onboarding session or async walkthrough
+
+Day 6: Friendly check-in from a success manager or founder ("Need help getting value from [Feature X]?")
+
+Next, create 'High Potential Journey' and select the 'High Potential' segment as the trigger:
+
+Day 0: Thank-you message + "Next best step" CTA (e.g., explore advanced features)
+
 Day 2: Early access to a new feature or roadmap preview
+
 Day 5: Invite to community, referral program, or customer panel
-Day 7: Pro tip email with advanced use cases
 
-Curious Visitors Journey
-Trigger: Curious Visitors segment
-Example flow:
-Day 0: "Is Otto right for you?" interactive guide or quiz
-Day 2: Role-specific use case spotlight
+Day 7: Pro-tip email with advanced use cases they haven't tried yet
+
+Next, create 'Curious Visitors Journey' and select the 'Curious Visitors' segment:
+
+Day 0: "Is Otto right for you?" interactive guide or onboarding quiz
+
+Day 2: Role-specific use case spotlight or video
+
 Day 5: Offer a quick 1:1 session or group demo
-Day 7: Light-touch "Still exploring?" email
 
-Post-monetization journey:
+Day 7: "Still exploring?" email with a light-touch CTA (download checklist, save progress, etc.)
 
-Slipping Users Journey
-Trigger: Slipping Users segment
-Example flow:
-Day 0: Check-in email noticing drop in usage
-Day 2: Recommend underused or new features
-Day 4: Offer priority support or beta access
-Day 6: Invite to feedback call or roundtable
+For post-monetization, create a new journey named 'Slipping Users' and select that segment as the trigger. Their usage is slowing — proactive action is needed.
 
-Pro Tip
+### Journey Example:
 
-Use Branch Conditions in GrowthOS Journeys to dynamically adjust flows based on opens, clicks, or conversions.
+Day 0: Check-in email: "We noticed a drop — anything we can help with?"
 
-### Step 5: Track and Optimize
+Day 2: Recommend underused or new features they haven't tried
 
-Monitor these metrics:
+Day 4: Offer priority support or beta access to an upcoming feature
 
-Entered
+Day 6: Invite to feedback call or customer roundtable
 
-Messaged
+![Journey flow example](/gp/article14/9-min.png)
 
-In Progress
+## Pro Tip
 
-Completed
+Use Branch Conditions in GrowthOS Journeys to dynamically adjust flows based on actions like opens, clicks, or conversions — keeping your messaging relevant without extra setup.
 
-Exited Early
+## Step 5: Track & Optimize
 
-Converted
+Open your journey and monitor the following metrics — Entered: Users who qualified and entered journey, Messaged: How many received the message, In Progress: Users still progressing through steps, Completed: Finished full journey, Exited Early: Dropped out before completion, Converted: Took desired action (Subscribed to basic/ premium plan, sign up, invite team members)
+
+![Track and optimize metrics](/gp/article14/10-min.png)
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -2509,159 +2950,123 @@ Converted
 
 This Growbook walks you through building a checkout flow optimization framework using GrowthOS. Rather than relying on assumptions, you'll test how users interact with different checkout experiences and personalize interventions based on their drop-off behavior.
 
-With GrowthOS, you can track key drop-off points across single-page vs. multi-step flows, segment users based on where they exited, launch personalized journeys based on real-time segments, and experiment with checkout flow variations using GrowthOS Experiences.
+With GrowthOS, you can track key drop-off points across single-page vs. multi-step flows, segment users based on where they exited, launch personalized journeys based on real-time segments and experiment with checkout flow variations using GrowthOS Experiences.
 
 ## Benefits
 
-* Validate what works
-A/B test single-page vs. multi-step checkout to identify the best-performing flow.
+Validate what works. A/B test single-page vs. multi-step checkout to identify the best-performing flow.
 
-* Recover drop-offs
-Trigger personalized interventions based on where and when users leave.
+Recover drop-offs. Trigger personalized interventions based on where and when users leave.
 
-* Optimize UX
-Spot friction, educate users, and smooth out final purchase steps.
+Optimize UX. Spot friction, educate users, and smooth out final purchase steps.
 
-* Increase conversions
-Convert more checkouts by aligning flow, messaging, and follow-ups in real time.
+Increase conversions. Convert more checkouts by aligning flow, messaging, and follow-ups in real time.
 
 ## How It Works
 
 To illustrate the use case, we will refer to an ecommerce store, "Threadly".
 
-### Step 1: Set up tracking for new user activity and define key user events
+## Step 1: Set up tracking for new user activity and define key user events
 
-Integrate Intempt's SDK into your e-commerce website to start tracking user activities. Follow the Javascript SDK or Shopify integration guide to ensure proper setup. Track user activities such as browsing products, adding items to the cart, starting checkout, and completing a purchase. For example: page_view, add_to_cart, checkout_start, and purchase.
+Integrate Intempt's SDK into your e-commerce website to start tracking user activities. Follow the JavaScript SDK or Shopify integration guide to ensure proper setup. Track user activities such as browsing products, adding items to the cart, starting checkout, and completing a purchase (e.g., page_view, add_to_cart, checkout_start, and purchase).
 
-Since we need to track specific steps in the checkout process, we also need to create some custom events. To do this, go to Create Event, for example "Reached payment page," select the source "ThreadLY Shopify," and then select the appropriate attribute "URL."
+Since we need to track specific steps in the checkout process, we also need to create some custom events. To do this, go to Create Event for example "Reached payment page" and select the source: "ThreadLY shopify" then select the appropriate attribute "URL".
 
-Good to know
+![Create custom events](/gp/article15/1-min.png)
 
-Ensure that you track the user's email attribute so you can send emails to them. This can be done using a separate popup for newsletter subscriptions or by incentivizing users to sign up before starting the checkout process.
+### Good to know:
 
-### Step 2: Create Behavioral Segments Based on Drop-Off Patterns
+Ensure that you track the user's email attribute so you can send emails to them. This can be done by a newsletter signup popup or by incentivizing users to sign up before starting checkout.
+
+## Step 2: Create Behavioral Segments Based on Drop-Off Patterns
 
 Navigate to the Segments section and create new segments based on the tracked events. For instance:
 
-Cart Abandoners
-Users who added items to their cart but did not complete the purchase within 1 hour.
+Cart Abandoners: Users who added items to their cart but did not complete the purchase within 1 hour.
 
-Checkout Drop-offs
-Users who initiated checkout but did not complete the purchase within 1 hour.
+Checkout Drop-offs: Users who initiated checkout but did not complete the purchase within 1 hour.
 
-Payment Incomplete
-Users who placed a draft order but did not complete the purchase within 1 hour.
+Payment Incomplete: Users who placed draft order but did not complete the purchase within 1 hour.
 
-We also create additional segments based on how far users reach in specific checkout steps. This helps create branch conditions in journeys and target specific flows.
+![Create behavioral segments](/gp/article15/2-min.png)
 
-Completed 1st step (clicked on Checkout)
-Users who clicked on checkout but did not complete the purchase within 1 hour.
+## Step 3: Personalize Checkout Flow Using Experiences
 
-Completed 2nd step (clicked register account)
-Users who clicked on register account after checkout but did not complete the purchase within 1 hour.
+Navigate to the Experiences tab and in the experiment setting, run an A/B test for Single-page checkout (fast, minimal steps) and Multi-step checkout (guided, simpler layout per screen)
 
-### Step 3: Personalize Checkout Flow Using Experiences
+Go to New Experience
 
-Navigate to the Experiences tab and, in the experiment setting, run an A/B test for:
+Click the toggle switch to the right for experiment
 
-Single-page checkout (fast, minimal steps)
-Multi-step checkout (guided, simpler layout per screen)
+![Create A/B test experience](/gp/article15/3-min.png)
 
-Go to New Experience and click the toggle switch to the right to enable experiments.
+This will help determine which checkout style performs better with different audiences.
 
-Target users using segments or behavioral attributes (events).
-Modify layouts for each variant using the Visual Editor.
-Track users' step completion rates across both versions.
+![Checkout style performance](/gp/article15/4-min.png)
 
-This helps determine which checkout style performs better with different audiences.
+## Step 4: Launch Recovery Journeys for Each Segment
 
-### Step 4: Launch Recovery Journeys for Each Segment
+Each segment should trigger a customized multi-step journey based on user behavior and friction point.
 
-Each segment should trigger a customized, multi-step journey based on user behavior and friction point.
+### Create a new Journey named "Cart Abandoners".
 
-Cart Abandoners Journey
-Trigger: Cart Abandoners segment
+**Trigger:** Cart Abandoners segment.
 
-Email actions:
-Email 1: Reminder email — "You left something behind"
-Email 2: Urgency-based nudge — "Popular items sell fast!"
-Email 3: Incentive — free shipping or discount
+**Email 1:** Reminder — "You left something behind".
 
-Branch conditions:
-Opened but didn't click → Send SMS
-Clicked but didn't convert → Show timer-based urgency banner on-site
+**Email 2:** Urgency nudge — "Popular items sell fast!".
 
-Checkout Drop-off Journey
-Trigger: Checkout Drop-offs segment
+**Email 3:** Incentive (free shipping or discount).
 
-Email actions:
-Email 1: Email explaining return policies and secure checkout
-Email 2: Educational content — "Still have questions?"
-Email 3: Invite to live chat or support call
+**Branch condition:**
 
-Branch conditions:
-Visited FAQ but didn't convert → Offer help via SMS
-Ignored email → Retargeting ad with testimonial
+Opened but didn't click → Send SMS.
 
-Payment Incomplete Journey
-Trigger: Payment Incomplete segment
+Clicked but didn't convert → Show a timer urgency banner on site.
 
-Email actions:
-Email 1: Nudge — "Ready to complete your purchase?"
-Email 2: Saved cart link + social proof
-Email 3: Offer help — "Have questions before buying?"
+### Create a Checkout Drop-off Journey.
 
-Branch conditions:
-Visited FAQ but didn't convert → Offer help via SMS
-Clicked saved cart but didn't convert → Trigger time-limited offer
+**Trigger:** Checkout Drop-offs segment.
 
-### Step 5: Track and Optimize
+**Email 1:** Explain return policies / secure checkout.
 
-Open your journey and monitor the following metrics:
+**Email 2:** Educational content — "Still have questions?".
 
-Entered
-Users who qualified and entered the journey.
+**Email 3:** Invite to live chat or support call.
 
-Messaged
-How many users received a message.
+**Branch conditions:**
 
-In Progress
-Users still progressing through steps.
+Visited FAQ but didn't convert → Offer help via SMS.
 
-Completed
-Users who finished the full journey.
+Ignored email → Try retargeting ad with testimonial.
 
-Exited Early
-Users who dropped out before completion.
+### Create a Payment Incomplete Journey.
 
-Converted
-Users who completed the desired action (ordered product).
+**Trigger:** Payment Incomplete segment.
 
-Test and iterate on:
-Time delays
-Incentives vs. education
-Multi-step vs. single-page outcomes
-Messaging channels such as email, SMS, and push notifications
+**Email 1:** Nudge — "Ready to complete your purchase?".
+
+**Email 2:** Saved cart link + social proof ("10,000+ shoppers love Threadly").
+
+**Email 3:** Offer help — "Have questions before buying?".
+
+**Branch conditions:**
+
+Visited FAQ but didn't convert → Offer help via SMS.
+
+Clicked saved cart but didn't convert → Trigger time-limited offer.
+
+![Branch conditions](/gp/article15/5-min.png)
+
+## Step 5: Track & Optimize
+
+Open your journey and monitor the following metrics- Entered: Users who qualified and entered journey, Messaged: How many received the message, In Progress: Users still progressing through steps, Completed: Finished full journey, Exited Early: Dropped out before completion, Converted: Took desired action (Ordered Product).
+
+![Track and optimize metrics](/gp/article15/6-min.png)
+
+Test and iterate on timing, incentives vs. education, multi-step vs. single-page performance, and messaging channels like email, SMS, and push notifications.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -2672,141 +3077,149 @@ Messaging channels such as email, SMS, and push notifications
 
 ## About the Growth Play
 
-Managing renewals and recognizing your most loyal customers shouldn't be an afterthought, but too often they are. Many teams rely on last-minute renewal emails or one-size-fits-all loyalty programs. The result is higher churn, reduced loyalty, and missed opportunities to turn great customers into lifelong advocates.
+Managing renewals and recognizing your most loyal customers shouldn't be an afterthought but too often, they are. Many teams rely on last-minute renewal emails or one-size-fits-all loyalty programs. The result? Higher churn, reduced loyalty, and missed opportunities to turn great customers into lifelong advocates.
 
-This Growbook shows you how to use GrowthOS to unify your renewal, retention, and VIP recognition strategies into one connected system. You'll track engagement signals, build dynamic segments for at-risk and high-value users, and trigger tailored journeys so that every user feels seen, supported, and rewarded.
+This Growbook shows you how to use GrowthOS to unify your renewal, retention, and VIP recognition strategies into one connected system. You'll track engagement signals, build dynamic segments for at-risk and high-value users, and trigger tailored journeys — so that every user feels seen, supported, and rewarded.
 
 We'll use Otto, a demo SaaS platform, as an example.
 
-TL;DR
+## TL;DR
+
 Track user activity and behavioral signals to identify accounts nearing renewal, disengaging users, and high-value VIPs.
+
 Build dynamic segments like "Renewal Approaching," "Slipping Users," and "VIP Users" that update in real time.
-Trigger tailored journeys for each group, from renewal reminders to feature nudges to VIP recognition emails.
-Personalize in-product experiences by showing different CTAs, dashboards, or banners based on engagement or plan.
+
+Trigger tailored journeys for each group — from renewal reminders to feature nudges to VIP recognition emails.
+
+Personalize in-product experiences: show different CTAs, dashboards, or banners based on engagement or plan.
+
 Use unified Journey and Experience analytics to monitor performance and optimize over time.
+
 Result: A system that renews proactively, retains intelligently, and rewards loyalty at scale.
 
 ## Benefits
 
-* Drive timely renewals
-Identify accounts approaching renewal dates and nudge them with personalized, well-timed campaigns.
+Drive timely renewals: Identify accounts approaching renewal dates and nudge them with personalized, well-timed campaigns.
 
-* Prevent churn before it starts
-Detect early signs of disengagement and automate proactive retention journeys.
+Prevent churn before it starts: Detect early signs of disengagement and automate proactive retention journeys.
 
-* Recognize your best customers
-Deliver exclusive perks, offers, or recognition to high-value accounts based on behavior, not just spend.
+Recognize your best customers: Deliver exclusive perks, offers, or recognition to high-value accounts based on behavior, not just spend.
 
-* Build long-term loyalty
-Use automated journeys to keep users engaged and appreciated throughout their lifecycle.
+Build long-term loyalty: Use automated journeys to keep users engaged and appreciated throughout their lifecycle.
 
 ## How It Works
 
-### Step 1: Track user engagement
+## Step 1: Track user engagement
 
-Install Intempt's JavaScript SDK to begin tracking user and account activity across your app or site.
+Install Intempt's JavaScript SDK: Begin tracking user and account activity across your app or site.
 
-Check or define key events such as 'login', 'created an object', 'created ml task', and 'invite team members'.
+Check or define key Events: 'login', 'created an object', 'created ml task' and 'invite team members' — along with others you define — representing meaningful actions across levels to provide the behavioral and lifecycle signals needed for renewal and VIP segmentation.
 
-The above events, along with other events that are listed or created by you, represent meaningful actions across different levels and will serve as the core signals needed for renewal and VIP segmentation.
+![Check or define key events](/gp/article16/1-min.png)
 
-### Step 2: Create real-time segments
+## Step 2: Create real-time segments
 
-Navigate to Segments and define the following:
+Navigate to segments and define the following:
 
-Renewal Approaching
-'Subscribed to a basic plan' has been performed in the last 27 days and 'subscribed to premium plan' has not been performed in the last 5 days.
+"Renewal Approaching": 'Subscribed to a basic plan' has been performed in the last 27 days and 'subscribed to premium plan' has not been performed in the last 5 days.
 
-Slipping Users
-'Login' has not been performed in the last 14 days and 'created an object' and 'created ml task' have not been performed in the last 10 days.
+"Slipping Users": 'Login' has not been performed in the last 14 days and 'created an object' and 'created ml task' has not been performed in the last 10 days.
 
-VIP Users
-'Login' has been performed at least 10 times in the past 30 days and 'subscribed to premium plan' has been performed in the last 1 month.
+"VIP Users": 'Login' has been performed at least 10 times in the past 30 days and 'subscribed to premium plan' has been performed in the last 1 month.
+
+![VIP Users segment](/gp/article16/2-min.png)
 
 These segments update dynamically based on real-time user and account behavior.
 
-### Step 3: Build multi-branch journeys
+## Step 3: Build multi-branch journeys
 
-Go to Journeys and build three separate flows.
+Go to Journeys, and build three separate flows:
 
-Renewal Journey
-Trigger: Segment "Renewal Approaching"
+### a. Renewal Journey
+
+**Trigger:** Segment — "Renewal Approaching"
 
 Day 0: Reminder email with renewal CTA
-Day 2: Feature highlights or value recap
-Day 5: Personalized message and offers
-Optional branch: Additional incentive if there is no response
 
-Retention Journey
-Trigger: Segment "Slipping Accounts"
+Day 2: Feature highlights or value recap
+
+Day 5: Personalized message and offers
+
+Optional branch: Additional offer incentive if no response
+
+### b. Retention Journey
+
+**Trigger:** Segment — "Slipping Accounts"
 
 Day 0: Friendly check-in ("Need help getting value from Otto?")
-Day 2: Suggested feature not yet used
-Day 4: Link to async product walkthrough or quick call
-Exit if the user re-engages with a core feature
 
-VIP Recognition Journey
-Trigger: Segment "VIP Accounts"
+Day 2: Suggested feature not yet used
+
+Day 4: Link to async product walkthrough or quick call
+
+Exit if user re-engages with core feature
+
+### c. VIP Recognition Journey
+
+**Trigger:** Segment — "VIP Accounts"
 
 Day 0: "Thanks for being a valued customer" email with badge or gift
+
 Day 3: Invite to roadmap preview or customer advisory panel
+
 Day 7: Early access to a new feature or beta program
 
-### Step 4: Personalize site content for VIPs and Slipping Users
+![VIP Recognition Journey](/gp/article16/3-min.png)
+
+## Step 4: Personalize site content for VIPs and Slipping Users
 
 In Experiences, create personalized experiences for the "VIP Accounts" segment:
 
 Homepage header: "Welcome back! You're one of our top customers, here's what's new."
+
 Pricing page: Highlight premium features unlocked
-Dashboard: Display a badge or loyalty streak tracker
 
-Create an experience for the "Slipping Users" segment:
+Dashboard: Display badge or loyalty streak tracker
 
-Homepage banner: "We haven't seen you in a while. Need help finding what's valuable to you?"
-Dashboard CTA: Suggest a feature they haven't used yet, such as "Try automating your first project — it's just a 3-minute setup."
-Navigation bar: Add a "Get Help" or "Restart Onboarding" shortcut for quick reactivation
+Create an Experience for the "Slipping Users" segment:
 
-### Step 5: Monitor journey and experience performance
+Homepage banner → "We haven't seen you in a while. Need help finding what's valuable to you?"
+
+Dashboard CTA → Suggest a feature they haven't used yet: "Try automating your first project — it's just a 3-minute setup."
+
+Navigation bar → Add a "Get Help" or "Restart Onboarding" shortcut for quick reactivation
+
+![Slipping Users experience](/gp/article16/4-min.png)
+
+## Step 5: Monitor journey and experiences performance
 
 Use Journey Analytics to track:
 
 Entered
+
 Messaged
-Converted (renewal completed, core feature used, VIP invite accepted)
+
+Converted (e.g., renewal completed, core feature used, VIP invite accepted)
+
 Exited
 
-Use Experience Analytics to track:
+![Journey Analytics](/gp/article16/5-min.png)
 
-Conversion rate
-Lift
+Use Experience Analytics to track: Conversion rate, Lift.
 
-Create a dashboard in Analytics and add both Journey and Experience metrics to get a unified analytics view.
+Create Dashboard in Analytics and add the Journey and Experience Metrics to get a unified analytics view.
 
-Iterate and scale
+![Create Dashboard](/gp/article16/6-min.png)
 
-Add branches for different renewal plans such as monthly versus annual.
+## Iterate and scale
+
+Add branches for different renewal plans (monthly vs annual).
+
 Expand VIP criteria to include product usage depth or NPS.
+
 Layer in A/B tests to optimize message timing, copy, and offer type.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -2823,115 +3236,123 @@ This Growbook shows you how to uncover the features your best users adopt and ho
 
 We'll use Otto, a demo project management SaaS platform, as our example.
 
-TL;DR
-Track and define core feature usage events ('created ml task', 'invite team members', 'created an object', and 'visited dashboard').
-Build Insights reports to measure adoption across cohorts.
-Break down behavior by subscription, company size, or region to spot trends.
-Create real-time segments like "Dashboard Adopters" or "Inactive Users".
-Launch onboarding journeys tailored to feature usage or lack of it.
+## TL;DR
+
+Track and define core feature usage events ('created ml task', 'invite team members, 'created an object' and 'visited dashboard')
+
+Build Insights reports to measure adoption across cohorts
+
+Break down behavior by 'subscription', 'company size', or 'region' to spot trends
+
+Create real-time segments like "Dashboard Adopters" or "Inactive Users"
+
+Launch onboarding journeys tailored to feature usage (or lack of it)
 
 ## Benefits
 
-* Map adoption by cohort
-See which features are used by your most engaged and valuable users.
+Map adoption by cohort: See which features are used by your most engaged and valuable users.
 
-* Spot activation bottlenecks
-Identify features that are not activated by users who stall or churn.
+Spot activation bottlenecks: Identify features that are not activated by users that stall or churn.
 
-* Personalize onboarding
-Trigger nudges based on what users have or haven't tried.
+Personalize onboarding: Trigger nudges based on what users have or haven't tried.
 
-* Align teams around real usage
-Give product, marketing, and success teams a shared view of what users actually do, so everyone works from the same source of truth.
+Align teams around real usage: Give product, marketing, and success a shared view of what users actually do — so everyone works from the same source of truth.
 
 ## How It Works
 
-### Step 1: Set up tracking for user activity
+## Step 1: Set up tracking for user activity
 
-Install Intempt's JavaScript SDK and integrate it into your product to begin capturing behavioral events.
+### Install Intempt's JavaScript SDK:
+
+Integrate Intempt's JavaScript SDK into your product to begin capturing behavioral events.
+
 Follow the JavaScript SDK integration guide to ensure proper setup.
 
-### Step 2: Define the events you want to track
+## Step 2: Define the events you want to track
 
-In GrowthOS, go to Events and verify that the following key feature events are being tracked: 'created ml task', 'invite team members', 'created an object', and 'visited dashboard'.
+In GrowthOS, go to Events and verify that the following key feature events are being tracked: 'created ml task', 'invite team members', 'created an object' and 'visited dashboard'.
 
 These represent meaningful actions across different levels of product adoption.
 
-You can also define new events if needed, such as 'scheduled sprint', 'joined workspace', or 'exported report'.
+You can also define new events if needed like 'scheduled sprint', 'joined workspace' and 'exported report'.
 
-### Step 3: Build your Insights report
+## Step 3: Build your Insights report
 
-Navigate to Analytics → Insights and create a new report.
+Navigate to Analytics- 'Insights' and create a new report.
 
-Choose a feature usage event to analyze, for example 'visited dashboard'.
+![Build Insights report](/gp/article17/1-min.png)
+
+Choose a feature usage event to analyze for example, 'visited dashboard'.
+
+![Choose feature usage event](/gp/article17/2-min.png)
 
 Select a metric such as:
-Count of users who triggered the event
-Average frequency per user
-Percentage of active users performing the action
 
-### Step 4: Break down usage by user attributes
+* Count of users who triggered the event
+* Average frequency per user
+* % of active users performing the action
 
-Use the breakdown field to compare behavior across:
-Plan tier (for example, Free vs Pro)
-Company size
-Industry
+![Select metric](/gp/article17/3-min.png)
+
+## Step 4: Break down usage by user attributes
+
+Use the 'breakdown' field to compare behavior across:
+
+* Plan tier (e.g., Free vs Pro)
+* Company size
+* Industry
+
+![Break down usage by user attributes](/gp/article17/4-min.png)
 
 Apply filters to narrow your scope:
-Date range (such as the last 30 days)
-Region (for example, North America)
-Account type (trial vs paid)
 
-Spot behavior patterns
+* Date range (e.g., last 30 days)
+* Region (e.g., North America)
+* Account type (e.g., trial vs paid)
 
-You might notice patterns like:
-Dashboard usage is five times higher among Premium plan users.
+### Spot behavior patterns
+
+You might notice:
+
+Dashboard usage is 5x higher among Premium plan users.
+
 Smaller teams rely heavily on 'invite team members', while larger teams don't.
+
 Healthcare companies engage early with ML task creation.
 
-These behavioral patterns help you identify cohorts not based on who users are, but on what they actually do.
+These behavioral patterns help you identify cohorts not based on who they are, but what they actually do.
 
-### Step 5: Turn insights into segments
+## Step 5: Turn insights into segments
 
-Based on what you discover, create real-time segments such as:
-"Dashboard Adopters": users who visited the dashboard three or more times in the first seven days
-"High Value Onboarders": users who triggered three or more product features in week one
-"Inactive Users": users who signed up but didn't trigger 'exported report'
+Based on what you discover, create real-time segments like:
 
-### Step 6: Trigger targeted journeys
+* "Dashboard Adopters": users who visited the dashboard 3+ times in the first 7 days
+* "High Value Onboarders": users who triggered 3+ product features in week one
+* "Inactive Users": users who signed up but didn't trigger 'exported report'
+
+![Turn insights into segments](/gp/article17/5-min.png)
+
+## Step 6: Trigger targeted journeys
 
 Use these segments to trigger targeted journeys:
-Encourage "High Value Onboarders" to explore automation features.
-Re-engage "Inactive Users" with reminders or walkthroughs.
-Offer additional features to "Dashboard Adopters" to drive deeper activation.
 
-Note: For a detailed walkthrough on creating a journey, check out the Growbook on Personalized Category Upsell.
+* Encourage "High Value Onboarders" to explore automation features
+* Re-engage "Inactive Users" with reminders or walkthroughs
+* Offer additional features to "Dashboard Adopters" for more activation
 
-### Step 7: Measure and optimize
+![Trigger targeted journeys](/gp/article17/6-min.png)
 
-Continue tracking feature usage over time using updated Insights reports.
+Note: for detailed walkthrough about creating a Journey, check out the Growbook on Personalized Category Upsell
+
+## Step 7: Measure and optimize
+
+Continue tracking feature usage over time using updated Insights Reports.
+
 Compare adoption before and after journeys are launched.
+
 Identify which cohorts respond best and evolve your strategy based on what actually works.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -2948,146 +3369,139 @@ This Growbook shows you how to use GrowthOS Funnel Analytics to map your checkou
 
 We'll use Threadly, a demo fashion ecommerce site, as our example.
 
-TL;DR
+## TL;DR
 
-Problem
-Cart abandonment isn't the only issue. Users often drop off during checkout, but most ecommerce teams don't know where or why.
+Problem: Cart abandonment isn't the only issue — users often drop off during checkout, but most ecommerce teams don't know where or why.
 
-Solution
-Use GrowthOS Funnel Analytics to visualize every step of your checkout flow, identify where users exit, and trigger real-time recovery campaigns to bring them back.
+Solution: Use GrowthOS Funnel Analytics to visualize every step of your checkout flow, identify where users exit, and trigger real-time recovery campaigns to bring them back.
 
-You'll learn how to:
+You'll Learn How To:
+
 Track key events from "added to cart" to "placed order"
+
 Build funnel reports to map each step of checkout
+
 Break down performance by device, geography, or segment
+
 Create segments like "Dropped at Payment Info" to trigger journeys
+
 Personalize next-session experiences for returning abandoners
+
 Measure lift and conversion improvements over time
 
-End result
-A clear picture of checkout friction points, automated recovery flows, and a faster path to more completed orders, all powered by real behavior.
+End Result: A clear picture of checkout friction points, automated recovery flows, and a faster path to more completed orders—all powered by real behavior.
 
 ## Benefits
 
-* Visualize dropoff in your checkout flow
-See exactly where users abandon the process, from cart to payment to confirmation.
+Visualize dropoff in your checkout flow: See exactly where users abandon the process, from cart to payment to confirmation.
 
-* Segment by user intent
-Break down funnel performance using metrics such as new vs returning users, device type, location, or campaign source.
+Segment by user intent: Break down funnel performance using relevant metrics for example: new vs returning users, device type, location, or campaign source.
 
-* Trigger recovery journeys instantly
-Send personalized emails, SMS, or in-app nudges the moment someone drops off.
+Trigger recovery journeys instantly: Send emails, SMS, or app personalized nudges the moment someone drops off.
 
-* Optimize your UX and content
-Use real data to improve specific checkout steps instead of guessing what's broken.
+Optimize your UX and content: Use real data to improve specific steps in the checkout, not just guess what's broken.
 
 ## How It Works
 
-### Step 1: Set up tracking for ecommerce behavior
+## Step 1: Set up tracking for ecommerce behavior
 
-Install Intempt's JavaScript SDK.
-Integrate the SDK to track in-session user activity across your storefront. Refer to the JavaScript SDK guide for full setup.
+### Install Intempt's JavaScript SDK:
 
-Define key funnel events
-In the Events section of GrowthOS, confirm or create the following events:
-'viewed product page'
-'added to cart'
-'started checkout'
-'entered shipping info'
-'entered payment info'
-'placed order'
+Start by integrating the SDK to track in-session user activity across your storefront. Refer to the JavaScript SDK guide for full setup.
 
-These events represent meaningful actions across different levels of checkout and serve as the core steps for funnel analysis.
+### Define key funnel events:
 
-### Step 2: Create a funnel report
+In the Events section of GrowthOS, confirm or create the following: 'viewed product page', 'added to cart', 'started checkout', 'entered shipping info', 'entered payment info' and 'placed order'.
 
-Navigate to Analytics → Funnels and create a new report.
+![Define key funnel events](/gp/article18/1-min.png)
+
+The above stated events along with other events that are listed or created by you represent meaningful actions across different levels and will serve as the core steps of your funnel analysis.
+
+## Step 2: Create a Funnel report
+
+Navigate to Analytics- 'Funnels' and create a new report.
+
+![Create Funnel report](/gp/article18/2-min.png)
 
 Define your funnel steps in sequence:
+
 Step 1: added to cart
+
 Step 2: started checkout
+
 Step 3: added delivery address
+
 Step 4: entered payment info
+
 Step 5: placed order
 
-Set your conversion window. For ecommerce, 30 minutes to 24 hours works well depending on your purchase cycle.
+Set your conversion criteria: for ecommerce, 30 minutes to 24 hours is ideal depending on your purchase cycle.
 
-### Step 3: Apply breakdowns and filters
+![Set conversion criteria](/gp/article18/3-min.png)
 
-Use Breakdown to compare funnel performance across:
-User attributes such as country
-Device type such as desktop vs mobile
+## Step 3: Apply breakdowns and filters
 
-Apply Filters to narrow your focus:
-High-intent users (visited two or more product pages before checkout)
-Users from a specific geography or acquisition channel
-Users in a segment like "Abandoned Checkout in the last 7 days"
+Use 'Breakdown' to compare funnel performance across for example: User attributes: Country and Device: desktop vs mobile
 
-Identify dropoff points
-Review the funnel report to see where dropoff is highest.
+Apply 'Filters' to narrow your focus: High-intent users (visited 2+ product pages before checkout), Users from a specific geography or acquisition channel and Users in a segment like "Abandoned Checkout in last 7 days"
 
-For example:
-If users bounce at the shipping step, the form may be too long.
-If they disappear at payment, the issue could be trust, speed, or limited payment options.
+![Apply filters](/gp/article18/4-min.png)
 
-Quantify the impact. A 20 percent drop at the payment step means one in five potential buyers never completes the purchase.
+### Identify dropoff points
 
-### Step 4: Create real-time segments
+Review the funnel report to identify where dropoff is highest:
 
-Build segments based on where users exit the funnel:
+Are users bouncing at the shipping info step? — Maybe the form is too long.
 
-"Dropped at Shipping Info"
-Triggered when 'entered shipping info' is not performed within 15 minutes of 'started checkout'.
+Are they disappearing at payment? — Could be trust, speed, or lack of options.
 
-"Dropped at Payment Info"
-Triggered when 'entered payment info' is not performed within 10 minutes of 'entered shipping info'.
+Quantify the impact: A 20% drop at payment step means 1 in 5 potential buyers never make it through.
 
-### Step 5: Trigger recovery journeys
+## Step 4: Create real time segments
 
-In Journeys, build personalized flows to re-engage these segments.
+Build real-time segments based on funnel exits:
 
-Examples include:
-Email or SMS with a message like "Still thinking it over? Your cart's waiting."
-Dynamic product reminders or time-limited incentives.
+"Dropped at Shipping Info": "entered shipping info" NOT triggered within 15 minutes of started checkout
 
-Note: For a detailed walkthrough on creating journeys, see the Growbook on Personalized Category Upsell.
+"Dropped at Payment Info": "entered payment info" NOT triggered within 10 minutes of "entered shipping info"
 
-### Step 6: Personalize the next session
+![Dropped at Payment Info segment](/gp/article18/5-min.png)
 
-In Experiences, personalize site content for drop-off segments.
+## Step 5: Trigger recovery journeys
 
-Examples:
-Homepage banner for "Dropped at Payment" users: "Still interested? Finish your order and get 10% off."
-Product pages that show urgency badges or adjusted CTAs for returning abandoners.
+In Journeys, build a personalized flow to re-engage these segments:
 
-Note: For a detailed walkthrough on personalized experiences, see the Growbook on Website Navigation and Content Display.
+Email or SMS with a message like: "Still thinking it over? Your cart's waiting."
 
-### Step 7: Track and optimize
+Include dynamic product recommendations or time-limited incentives.
 
-Use Funnel Analytics to compare conversion rates before and after changes.
-Monitor Journey performance, including entry rate, message delivery, and conversion lift.
+Note: for detailed walkthrough about creating Journey, check out the Growbook on Personalized Category Upsell
 
-Iterate on copy, timing, and touchpoints based on segment-specific results.
+![Trigger recovery journeys](/gp/article18/6-min.png)
+
+## Step 5: Personalize the next session
+
+In Experiences, create experience and use personalization to adapt site content for drop-off segments:
+
+Homepage banner for "Dropped at Payment" users → "Still interested? Finish your order and get 10% off."
+
+Product pages → Show urgency badges or CTA changes for returning abandoners.
+
+![Personalize product pages](/gp/article18/7-min.png)
+
+Note: for a detailed walkthrough about creating Personalized Experiences, check out the Growbook on Website navigation & content display.
+
+## Step 6: Track & optimize
+
+Use Funnel Analytics to compare conversion before and after these changes.
+
+Monitor Journey performance: entry rate, message delivery, and conversion lift.
+
+![Monitor Journey performance](/gp/article18/8-min.png)
+
+Iterate on copy, timing, and touchpoint logic based on segment-specific results.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -3104,167 +3518,179 @@ This Growbook shows you how to use GrowthOS to track those behaviors, segment us
 
 We'll use Otto, a demo SaaS platform for project management, to illustrate the approach.
 
-TL;DR
+## TL;DR
 
 Track real product behaviors like views, logins, and feature usage to identify upgrade intent.
+
 Create real-time segments such as "Upgrade Curious" or "Low Usage Paid Users."
-Adapt website and in-app CTAs and banners to each user's lifecycle stage using Experiences.
+
+Adapt website and in-app CTAs and Banners to each user's lifecycle stage using Experiences.
+
 Trigger expansion journeys with personalized messages, offers, or walkthroughs.
+
 Measure conversion and lift using Experience and Journey Analytics to optimize over time.
 
-Result
-A dynamic upgrade system that adjusts to user behavior and increases expansion revenue.
+Result: A dynamic upgrade system that adjusts to user behavior and increases expansion revenue.
 
 ## Benefits
 
-* Expand revenue without adding friction
-Encourage upgrades and usage nudges right inside the product.
+Expand revenue without adding friction: Encourage upgrades and usage nudges right inside the product.
 
-* Show the right CTA to the right user
-No more one-size-fits-all upsell banners.
+Show the right CTA to the right user: No more one-size-fits-all upsell banners.
 
-* Use real behavior as a trigger
-Target users based on what they do, not assumptions.
+Use real behavior as a trigger: Target based on what users do, not who you think they are.
 
-* Boost retention through deeper usage
-Expansion and engagement reinforce each other.
+Boost retention through deeper usage: Expansion and engagement go hand in hand.
 
 ## How It Works
 
-### Step 1: Track product user engagement
+## Step 1: Track product user engagement
 
-Install Intempt's JavaScript SDK.
+### Install Intempt's JavaScript SDK:
+
 Begin tracking user and account activity across your app or site.
 
-Check or define key events
-Confirm the following events are tracked:
-'login'
-'created ml task'
-'invited team member'
-'exported report'
-'subscribed to premium plan'
-'viewed upgrade plan'
-'subscribed newsletter'
-'book demo'
-'product viewed'
+### Check or define key Events:
 
-Create additional events
-If any events are not readily available, create new events by defining conditions in the Events section.
+confirm the following are tracked- 'login', 'created ml task', 'invited team member', 'exported report', 'subscribed to premium plan', 'viewed upgrade plan', 'subscribed newsletter, book demo', 'product viewed'.
 
-These events capture activation, collaboration, reporting, and upgrade intent, all key indicators of expansion potential.
+![Check or define key events](/gp/article19/1-min.png)
 
-### Step 2: Segment users by behavior
+### Create additional events:
 
-Go to Segments and create real-time segments such as:
+If any events are not readily available, go to create event and set conditions to create the needed event.
 
-Basic plan power users
-Users who are subscribed to the basic plan, have viewed the product, logged in at least 10 times in the last month, and created an ML task at least 5 times in the last month.
+![Create additional events](/gp/article19/2-min.png)
 
-Upgrade curious
-Users who have viewed the upgrade plan at least once in the last 5 days, subscribed to the newsletter, and have not subscribed to the premium plan.
+These events help capture activation, collaboration, reporting, and upgrade intent — all key indicators of expansion potential.
 
-Low usage paid users
-Users who are subscribed to the premium plan, have not logged in in the last 10 days, and have not created an object in the last 10 days.
+## Step 2: Segment users by behavior
+
+Go to segments and create real-time segments like:
+
+"Basic plan power users": Users who have subscribed to basic plan, viewed product, logged in at least 10 times in the last 1 month and created ml task at 5 times in the last 1 month
+
+![Basic plan power users segment](/gp/article19/3-min.png)
+
+"Upgrade curious": Users who have viewed upgrade plan at least once in the last 5 days, subscribed newsletter and has not subscribed to premium plan.
+
+![Upgrade curious segment](/gp/article19/4-min.png)
+
+"Low usage paid users": Users who have subscribed to premium plan, have not logged in in the last 10 days and have not created object in the last 10 days
+
+![Low usage paid users segment](/gp/article19/5-min.png)
 
 These segments update dynamically based on real-time user behavior.
 
-### Step 3: Personalize CTAs across web and in-app
+## Step 3: Personalize CTAs across web and in-app
 
 In the Experiences module, create different experiences for each segment and target both your website and in-app product interface.
-Enable Personalization when configuring the experience.
 
-Example 1: Basic plan power users
-Target segment: Basic plan power users
+(Click the toggle to select Personalization)
 
-Web CTA
-"Upgrade to unlock team workflows and advanced reports"
-Location: Homepage banner
+![Personalize CTAs](/gp/article19/6-min.png)
 
-In-app banner
-"Ready for more? Unlock Premium Reports"
-Location: Sidebar module or dashboard panel
+### Example 1: Basic Plan Power Users
 
-Example 2: Upgrade curious
-Target segment: Upgrade curious
+**Target Segment:** "Basic plan power users"
 
-Web CTA
-"Still deciding? Try Premium free for 7 days"
+![Basic Plan Power Users target segment](/gp/article19/7-min.png)
+
+**CTA (Web):** "Upgrade to unlock team workflows and advanced reports".
+
+![CTA Web](/gp/article19/8-min.png)
+
+→ Location: Homepage banner
+
+**Banner (In-App):** Sidebar module or dashboard panel: "Ready for more? Unlock Premium Reports"
+
+Location: In-app sidebar
+
+### Example 2: Upgrade Curious
+
+**Target Segment:** "Upgrade curious"
+
+**CTA (Web):** "Still deciding? Try Premium free for 7 days"
+
 Location: Pricing page sticky footer
 
-In-app banner or popup
-"This feature is part of Premium — want early access?"
-Location: Feature-gated modal shown after using a limited feature
+**Banner or Popup (In-App):** Display after using a limited feature: "This feature is part of Premium — want early access?"
 
-Example 3: Low usage paid users
-Target segment: Low usage paid users
+Location: Feature-gated modal
 
-Web CTA
-"Not getting full value? Explore what you've missed"
-Location: Homepage banner or help center sidebar
+### Example 3: Low Usage Paid Users
 
-In-app banner
-"Still haven't tried automations? Here's a 2-minute setup."
-Location: Triggered by dashboard inactivity or feature hover
+**Target Segment:** "Low usage paid users"
 
-Good to know
+**CTA (Web):** "Not getting full value? Explore what you've missed"
 
-You can also personalize in-app navigation buttons, such as "Explore More Features" for upgrade-curious users, and in-product tours to restart onboarding or add contextual nudges for low-usage users.
+Location: Homepage banner or Help center sidebar
 
-### Step 4: Trigger real-time expansion journeys
+**Banner (In-App):** Tooltip: "Still haven't tried automations? Here's a 2-minute setup."
 
-Go to Journeys and create automated flows for each segment.
+Location: Triggered on dashboard inactivity or feature hover
 
-Journey 1: Encourage upgrade
-Trigger: Segment equals Basic plan power users
+### Good to know:
 
-Day 0: Email highlighting upgrade benefits
-Day 2: Reminder email showcasing premium features
+You can also personalize- In-App Nav Bar Buttons: e.g. "Explore More Features" for upgrade-curious users and In-Product Tours: Restart onboarding or add contextual nudges for low-usage users
+
+## Step 4: Trigger real-time expansion journeys
+
+Go to Journeys and trigger automated nudges for each segment.
+
+### Journey 1: Encourage Upgrade
+
+**Trigger:** Segment = "Basic plan power users"
+
+![Journey 1 trigger](/gp/article19/9-min.png)
+
+Day 0: Email with upgrade benefits
+
+![Day 0 email](/gp/article19/10-min.png)
+
+Day 2: Reminder email highlighting premium features
+
+![Day 2 email](/gp/article19/11-min.png)
+
 Day 5: Limited-time discount CTA
 
-Journey 2: Reactivate low usage paid users
-Trigger: Segment equals Low usage paid users
+![Day 5 CTA](/gp/article19/12-min.png)
 
-Day 0: Friendly check-in email — "Need help getting more out of Otto?"
+### Journey 2: Reactivate Low Usage Paid Users
+
+**Trigger:** Segment = "Low Usage Paid Users"
+
+Day 0: Friendly check-in email: "Need help getting more out of Otto?"
+
 Day 3: Video walkthrough of underused features
+
 Day 7: "Schedule a success session" CTA
 
-### Step 5: Track and optimize performance
+## Step 5: Track and optimize performance
 
-In Experience Analytics, monitor:
-CTA click conversion rate
-Lift versus control versions
-Top-performing copy by segment
+### Use Experience Analytics to monitor:
 
-Good to know
+* Conversion rate on CTA clicks
+* Lift vs control version
+* Top-performing copy per segment
 
-Add all campaign analytics to a single dashboard for a unified view.
+### Good to know:
 
-In Journey Analytics, monitor:
-Entry volume
-Message open and click rates
-Upgrade or reactivation conversions
+Add all the campaign analytics inside a dashboard for a unified view
+
+![Experience Analytics dashboard](/gp/article19/13-min.png)
+
+### In Journey Analytics, monitor:
+
+* Entry volume
+* Message open/click rates
+* Upgrade or reactivation conversions
+
+![Journey Analytics](/gp/article19/14-min.png)
 
 Iterate on copy, timing, and touchpoint logic based on segment-specific results.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -3275,158 +3701,172 @@ Iterate on copy, timing, and touchpoint logic based on segment-specific results.
 
 ## About the Growth Play
 
-In SaaS, pricing isn't set-and-forget. The wrong plan structure or messaging can slow down upgrades, confuse new buyers, or miss key market segments. Yet most teams still rely on gut instinct or static pricing tables, with no reliable way to measure what actually works.
+In SaaS, pricing isn't set-and-forget. The wrong plan structure or messaging can slow down upgrades, confuse new buyers, or miss key market segments. And yet, most teams rely on gut instinct or static pricing tables, with no way to measure what really works.
 
-This Growbook shows you how to use GrowthOS to test pricing page variants and upgrade prompts across different user segments. You'll segment users based on usage and plan type, then tailor CTAs, copy, and feature positioning to each group.
-
-The result is clear, data-backed pricing strategies that convert better and scale smarter.
+This Growbook shows you how to use GrowthOS to test pricing page variants and upgrade prompts across different user segments. You'll segment users based on usage and plan type, then tailor your CTAs, copy, and feature positioning to each group. The result? Clear, data-backed pricing strategies that convert better and scale smarter.
 
 We'll use Otto, a demo project management SaaS platform, as our example.
 
-Good to know
+### Good to know
 
-We use both personalization and experiments in this Growbook. Pricing optimization isn't just about changing tiers — it's about how pricing is communicated to different cohorts, and which version of that message performs best within each group.
+We will be using both personalization and experiment in this growbook because price testing isn't just about pricing tiers, it's about how you message pricing to different cohorts, and what version of that message works best within each cohort.
 
-TL;DR – Find Your Best-Performing Pricing Strategy
+## TL;DR – Find Your Best-Performing Pricing Strategy
 
 Set up pricing page variants using personalization to test different plans, bundles, or discounts.
-Use Experiments to A/B test pricing performance across audience segments or entry sources.
-Track conversions, clicks, and revenue impact for each pricing variant in real time.
-Apply filters like plan type, user intent, or geography to spot patterns and trends.
-Identify top-performing price configurations and iterate confidently without developer effort.
 
-Result
-A continuous, low-effort system for optimizing pricing and packaging across user types.
+Use Experiments to A/B test performance across audience segments or entry sources.
+
+Track conversions, clicks, and revenue impact for each pricing variant in real time.
+
+Combine test results with filters like plan type, user intent, or geography to spot trends.
+
+Identify top-performing price configurations and iterate with confidence — no developer lift needed.
+
+Result: A continuous, low-effort system for optimizing pricing and packaging across user types.
 
 ## Benefits
 
-* Learn what messaging drives upgrades
-Test headlines, layouts, and CTAs for specific audience segments.
+Learn what messaging drives upgrades: Test headlines, layouts, and CTAs for specific audience segments
 
-* Tailor plans for power users vs light users
-Show relevant features and pricing based on user maturity.
+Tailor plans for power users vs light users: Show the right features and pricing for each stage of user growth
 
-* Expand into new customer tiers
-Experiment with packaging and pricing for new audiences without a full relaunch.
+Expand into new customer tiers: Try packaging and plan variations for new audiences without committing to a full relaunch
 
-* Iterate with confidence
-Optimize pricing using real behavior data instead of assumptions.
+Iterate with confidence: Track conversion lift and optimize based on real behavior, not gut instinct
 
 ## How It Works
 
-### Step 1: Track product user engagement
+## Step 1: Track product user engagement
 
-Install Intempt's JavaScript SDK.
-Track plan upgrades and feature interactions so data flows into GrowthOS. This enables segmentation by current tier, feature usage, and upgrade history.
+### Install Intempt's JavaScript SDK:
 
-Check or define key events
-Confirm the following events are tracked:
-'subscribed to basic plan'
-'subscribed to premium plan'
-'viewed upgrade plan'
-'viewed pricing page'
-'create user'
-'subscribed newsletter'
-'book demo'
-'product viewed'
+Begin by tracking plan upgrades and feature interactions using Intempt's SDK. This ensures your data flows to GrowthOS. You can then segment users based on their current tier, feature usage, and upgrade history.
 
-Create additional events
-If any required events are missing, create them using event conditions.
-These events form the foundation for pricing and upgrade segmentation.
+![Install Intempt's JavaScript SDK](/gp/article20/1-min.png)
 
-### Step 2: Create key pricing segments
+### Check or define key Events:
 
-Navigate to Segments and define groups such as:
+Confirm the following are tracked- 'subscribed to basic plan', 'subscribed to premium plan', 'viewed upgrade plan', 'Viewed Pricing Page', 'Create user', 'subscribed newsletter' 'book demo', 'product viewed'.
 
-Ready to upgrade
-Users from companies with more than 500 employees who visited the pricing page and viewed the upgrade plan in the last 7 days, but have not subscribed to the premium plan.
+![Check or define key events](/gp/article20/2-min.png)
 
-Heavy basic users
-Users in the SaaS industry who are subscribed to the basic plan and have created a user, created an object, and created an ML task in the last 14 days.
+### Create additional events:
 
-Inactive pro users
-Users in the US who are subscribed to the premium plan but have created a user or created an object fewer than three times in the last 30 days. This helps identify paid users who are not actively using core features.
+If any events are not readily available, go to create event and set conditions to create the needed event.
 
-These segments allow you to personalize not just messaging, but complete pricing strategies based on intent and behavior.
+These events will form the foundation for segmenting users based on their pricing path.
 
-### Step 3: Create personalized pricing page variants
+## Step 2: Create key pricing segments
 
-In Experiences, create multiple pricing page versions tailored to each segment.
-Enable personalization when configuring the experience.
+Navigate to segments and define groups such as:
 
-Variant 1: Ready to upgrade users
-Emphasize immediate value.
+"Ready to upgrade": Users who belong to a company with more than 500 employees, visited pricing page and viewed upgrade plan in the last 7 days and not subscribed to premium plan.
+
+![Ready to upgrade segment](/gp/article20/3-min.png)
+
+"Heavy basic users": Users in SAAS industry who have subscribed to basic plan, created user, created object and created ml task in the last 14 days.
+
+![Heavy basic users segment](/gp/article20/4-min.png)
+
+"Inactive pro users": Users in the US who have subscribed to premium plan and created user OR created object less than 3 times in the past 30 days. (to categorize users who are not using key features of the product regularly)
+
+![Inactive pro users segment](/gp/article20/5-min.png)
+
+These segments let you personalize not just messaging — but entire pricing strategies — based on intent and behavior.
+
+## Step 3: Create personalized pricing page variants
+
+In Experiences, create multiple pricing page versions tailored to each segment:
+
+(Click the toggle option to select personalization)
+
+![Create personalized pricing page variants](/gp/article20/6-min.png)
+
+### Variant 1 – For ready to upgrade users
+
+Emphasize immediate value
+
 CTA: "Upgrade Now and Get a Bonus Feature"
-Highlight clear feature unlocks and plan comparisons.
-Surface enterprise plans for larger companies.
 
-Variant 2: Heavy basic plan users
-Focus on how current usage aligns with Pro benefits.
-CTA: "Looks like you're outgrowing the Basic Plan — here's what you unlock next"
-Add a time-sensitive promotion such as a 14-day Pro trial.
-Include testimonials from SaaS teams already on the premium plan.
+Highlight plan comparison with clear feature unlocks
 
-Variant 3: Inactive pro users
-Position the Pro plan around re-engagement.
+Highlight enterprise plans for larger companies
+
+![Variant 1 for ready to upgrade users](/gp/article20/7-min.png)
+
+### Variant 2 – For heavy basic plan users
+
+Focus on how current usage aligns with Pro benefits
+
+CTA: "Looks like you're outgrowing Basic Plan, here's what you unlock next"
+
+Add time-sensitive promotion (e.g., 14-day trial of Pro)
+
+Add testimonials from SAAS teams who have subscribed to premium plan
+
+![Variant 2 for heavy basic plan users](/gp/article20/8-min.png)
+
+### Variant 3 – For inactive pro users
+
+Position Pro plan with re-engagement incentives
+
 CTA: "How's the Premium plan? Here's what's new and what you might've missed"
-Include loyalty offers.
-Add a product tour button or video walkthrough explaining feature use cases.
+
+Include loyalty offers for regular users
+
+Add a product tour button or a video walkthrough explaining the use cases of the features
+
+![Variant 3 for inactive pro users](/gp/article20/9-min.png)
 
 Target each experience using segment logic and display it only on the pricing page.
 
-### Step 4: Run A/B tests across versions
+![Target experiences](/gp/article20/10-min.png)
 
-In Experiments, create A/B tests to compare pricing and messaging strategies.
-Enable experiments when configuring the experience.
+## Step 4: Run A/B tests across versions
 
-Target specific segments for testing.
+In Experiments, create A/B tests to compare different messaging strategies:
 
-Example A/B test
-Select the segment "Heavy basic users" so the experiment only runs for this group.
-Create variants with and without SaaS testimonials.
-Test versions with and without enterprise pricing or payment plans.
+(Click the toggle option to select experiment)
 
-Test variations such as:
-Headline: "Upgrade to Pro" vs "Unlock Your Team's Full Potential"
-CTA color, copy, and placement
-Pricing table layout: stacked features vs tier comparison
+![Run A/B tests](/gp/article20/11-min.png)
 
-Good to know
+Target particular segment for the A/B test
 
-Personalization determines who sees which pricing version, while experiments determine which version performs best for that group.
+### Example A/B test
 
-Monitor confidence levels, conversion lift, and post-upgrade behavior.
+Select the segment 'Heavy Basic Users' in targeting to just run the experiment for this segment
 
-### Step 5: Track outcomes and iterate
+In the visual editor make different variants with/without testimonials from SAAS teams who have subscribed to the premium plan and with without special SAAS enterprise payment plans
+
+![Visual editor variants](/gp/article20/12-min.png)
+
+Test headline: "Upgrade to Pro" vs "Unlock Your Team's Full Potential"
+
+![Test headline](/gp/article20/13-min.png)
+
+Test CTA color, copy, and placement
+
+Test full pricing table layout: stacked features vs tier comparison
+
+(good to know: we use personalization to show different variants to different people and experiment so see which version of the plan works best for this particular group)
+
+Monitor test confidence, conversion lift, and behavior post-upgrade.
+
+![Monitor test results](/gp/article20/14-min.png)
+
+## Step 5: Track outcomes and iterate
 
 In Analytics, create a dashboard to track:
 
-Click-through rate on upgrade CTAs
-Conversion rate from pricing page to plan upgrade
-Plan churn or downgrade trends
-Experiment lift versus control
+* Click-through rates on upgrade CTAs
+* Conversion rate from pricing page to plan upgrade
+* Plan churn or downgrade rate over time
+* Experiment lift vs control
 
-Use these insights to double down on winning pricing strategies and phase out underperforming ones.
+Use these metrics to double down on what's working and sunset underperforming pricing approaches.
 
 ## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
 
 `,
   },
@@ -3437,120 +3877,119 @@ Use these insights to double down on winning pricing strategies and phase out un
 
 ## About the Growth Play
 
-Most lead lists tell you who to contact. What reps actually need is when to reach out — and why now.
+Most lists tell you who to contact. What reps need is when and why now. This growbook shows how to use GrowthOS to turn product behavior and fit criteria into clear, living queues for outreach. You'll enrich just the fields you actually use, qualify leads with simple, transparent rules, and act on signals quickly without juggling tools.
 
-This Growbook shows how to use GrowthOS to turn product behavior and fit criteria into clear, living outreach queues. You'll enrich only the fields you actually use, qualify leads with simple and transparent rules, and act on signals quickly without juggling tools.
+We'll use Otto (a demo SaaS platform) to illustrate the approach.
 
-We'll use Otto, a demo SaaS platform, to illustrate the approach.
-
-TL;DR – GrowthOS for Sales Reps
+## TL;DR – GrowthOS for Sales Reps
 
 Import leads from your sources and enrich only what helps outreach (role, tech stack, company type).
-Use a Qualification Agent to score Sales Readiness using Fit and Activity.
-Build sales-ready segments (for example, High Fit + High Activity) that update in real time.
-Launch short outreach Journeys with sensible delays and behavior-based routing.
-Personalize messages with Smart Snippets that automatically pull in research fields.
-Alert reps on key actions like replies or meeting bookings and auto-create follow-up tasks.
+
+Use a Qualification Agent to score Sales Readiness with Fit + Activity.
+
+Build sales-ready segments (e.g., High Fit + High Activity) that update in real time.
+
+Launch a Journey for those segments: short sequences, sensible delays, and behavior-based routing.
+
+Personalize with Smart Snippets that pull from research fields automatically.
+
+Alert reps on key actions (reply, meeting booked) and auto-create Tasks for follow-through.
+
 Track replies, meetings, and pipeline impact in Journey Analytics and Dashboards.
 
-Result
-Fewer cold touches and more timely, relevant conversations.
+Result: Fewer cold touches, more timely conversations.
 
 ## Benefits
 
-* Prospect while intent is fresh
-Focus on accounts showing meaningful, recent behavior.
+Prospect where intent is fresh. Work the accounts showing meaningful, recent behavior.
 
-* One shared definition of "ready"
-Fit and intent live in one place, so Marketing and Sales operate with the same thresholds.
+One definition of "ready." Fit and intent live in one place, so Marketing and Sales share the same thresholds.
 
-* Arrive with context
-Recent actions and role information are attached directly to the record you're working.
+Arrive with context. Recent actions and role info are attached to the record you're working.
 
-* Reduce swivel-chair time
-Research, scoring, outreach, alerts, and measurement run in a single system.
+Reduce swivel-chair time. Research, scoring, outreach, alerts, and measurement run in one system.
 
-* Measure what moves deals
-See which signals correlate with meetings and wins, then refine the rules.
+Measure what moves deals. See which signals correlate with meetings and wins, then tune the rules.
 
 ## How It Works
 
-### Step 1: Define and track goal events
+## Step 1: Define and track Goal Events
 
-Check or define key events and confirm the following are tracked:
-'added to cart', 'clicked on product', and 'started checkout'.
+Check or define key Events to confirm the following are tracked: 'added to cart', 'clicked on product', 'started checkout' and create new events If any events are not readily available from 'create event'.
 
-If any events are missing, create them using the "Create Event" option.
+![Define and track Goal Events](/gp/article21/1-min.png)
 
-### Step 2: Bring in leads and add only useful context
+## Step 2: Bring in leads and add only useful context
 
-Import users or accounts from your lists or connected sources.
-Use a Research Agent to enrich only the fields that directly affect how you write or route outreach, such as role, seniority, tech stack, or industry.
+Import users/accounts from your list or connected sources. Use a Research Agent to enrich the few fields that change how you write or route (role, seniority, tech stack, industry). If contact details are missing, fill just what you need for the first touch.
 
-If contact details are missing, fill in just what's needed for the first touch.
+![Bring in leads and add only useful context](/gp/article21/2-min.png)
 
-### Step 3: Define "ready" with Fit and Activity
+## Step 3: Define "ready" with Fit + Activity
 
-Create a Qualification Agent that scores Sales Readiness using two inputs:
+Create a Qualification Agent that scores Sales Readiness using:
 
-Fit
-Firmographic and ICP traits like company size, industry, and stack compatibility.
+Fit: firmographics and ICP traits (company size, industry, stack match).
 
-Activity
-Recent, high-signal behaviors such as viewing pricing, inviting teammates, or hitting usage thresholds.
+Activity: recent, high-signal behavior (e.g., viewed pricing, invited teammates, hit usage thresholds).
 
-### Step 4: Build sales-ready segments
+![Define ready with Fit + Activity](/gp/article21/3-min.png)
 
-Create segments such as:
-High Fit + High Activity
-High Fit + Medium Activity
+## Step 4: Build sales-ready segments
 
-These segments update automatically as behavior changes.
+Create segments like 'High Fit + High Activity', 'High Fit + Medium Activity'.
 
-### Step 5: Turn signals into outreach with Journeys
+![Build sales-ready segments](/gp/article21/4-min.png)
 
-Launch a Journey for your top segment. Keep it short — two or three steps with natural spacing.
+## Step 5: Turn signals into outreach with Journeys
 
-Branch based on behavior. If a prospect engages, move them forward. If they don't, slow down or re-score.
-Use Smart Snippets to pull research fields into messages so they read like they were written manually.
-Notify the human. Send lightweight alerts when someone replies or books a meeting.
+Launch a Journey for your top segment. Keep it short: two or three steps with natural spacing.
 
-### Step 6: Measure and tighten the loop
+Branch on behavior: if they engage, move them forward; if they don't, slow down or re-score.
 
-In Journey Analytics and Dashboards, review:
-Replies
-Meetings created
-Sales cycle time
-Opportunities and wins by readiness level
+Use Smart Snippets: pull research fields into the message so it reads like you wrote it.
 
-Identify which signals most often appear before a meeting, then adjust Agent weights or segment rules accordingly.
+Notify the human: send a lightweight alert on replies or meeting bookings.
 
-Good to know
+## Step 6: Measure and tighten the loop
 
-Keep scoring simple. Clear readiness levels beat opaque formulas — reps should understand the "why" instantly.
-Fewer signals are stronger signals. Two or three reliable intent events usually outperform long lists.
-Auto-create tasks for reps when key actions occur, such as calls, emails, LinkedIn touches, or prep checklists.
-If Deals are enabled, automatically create or update them when meetings are booked or stages change.
+In Journey Analytics and Dashboards, look at: replies, meetings created, cycle time, and opportunities/wins by readiness level. Notice which signals show up most often before a meeting, and adjust your Agent weights or segment rules accordingly.
+
+![Measure and tighten the loop](/gp/article21/5-min.png)
+
+## Good to Know
+
+Keep the score simple. Clear levels beat opaque formulas; reps should know the "why" at a glance.
+
+Fewer signals, stronger signal. Two or three reliable intent events usually outperform long lists.
+
+Auto-create Tasks for reps when key actions fire: call, email, LinkedIn, or a quick prep checklist. If Deals are part of your workspace, create or update them when a meeting is booked or a stage changes.
 
 ## FAQs
 
 **How is Intempt different from traditional CRMs?**
 
+Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
 
 **What is the built-in Customer Data Platform (CDP) and why does it matter?**
 
+The built-in CDP unifies all your customer data across channels into a single profile. It resolves user identities by merging anonymous and known sessions, connects users to their companies, and combines behavioral, firmographic, and journey data. This gives your team a complete, real-time view of every customer.
 
 **How does AI-powered segmentation work in Intempt?**
 
+You can create customer segments simply by describing them in plain language. The AI analyzes lifecycle, qualification, and engagement data to build segments automatically. These segments update in real time as new data comes in, so your campaigns always target the right audience.
 
 **What data enrichment sources does Intempt use?**
 
+Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases. This fills in missing attributes on user and account records automatically, keeping your data complete and current.
 
 **Is Intempt compliant with GDPR and CCPA?**
 
+Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
 
 **What platforms does Intempt integrate with?**
 
+Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.
 
 `,
   },
@@ -4449,6 +4888,24 @@ export default async function GrowthPlayPage({
     return content
       .split("\n\n")
       .map((paragraph, index) => {
+        // Images (markdown image syntax: ![alt](path))
+        if (paragraph.startsWith("![") && paragraph.includes("](") && paragraph.endsWith(")")) {
+          const match = paragraph.match(/!\[([^\]]*)\]\(([^)]+)\)/);
+          if (match) {
+            const [, alt, src] = match;
+            return (
+              <div key={index} className="my-8">
+                <Image
+                  src={src}
+                  alt={alt || "Image"}
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            );
+          }
+        }
         // Headers
         if (paragraph.startsWith("## ")) {
           return (

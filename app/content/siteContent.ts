@@ -13,10 +13,10 @@ export const siteContent = {
           { label: "Blu: AI", href: "/blu-ai" },
           { label: "Experiment", href: "/experiment" },
           { label: "Analytics", href: "/analytics" },
-          { label: "Agents", href: "#agents" },
-          { label: "Personalisation", href: "#personalisation" },
-          { label: "Recommendations", href: "#recommendations" },
-          { label: "Privacy", href: "#privacy" },
+          { label: "Agents", href: "/agents" },
+          { label: "Personalisation", href: "/personalization" },
+          { label: "Recommendations", href: "/recommendations" },
+          { label: "User Privacy", href: "/privacy" },
         ]
       },
       { 
@@ -248,6 +248,7 @@ export const siteContent = {
             "San Francisco, CA 94104",
             "1101 W 34th St, #595",
             "Austin, TX 78705",
+            "United States",
           ],
         },
         {

@@ -5,7 +5,7 @@ import { Container } from "../components/Container";
 import { ButtonLink } from "../components/Button";
 import { AnimateIn } from "../components/AnimateIn";
 
-export default function PrivacyPage() {
+export default function RecommendationsPage() {
   return (
     <div className="bg-[#fffff3] text-black">
       <HeaderSection
@@ -24,13 +24,13 @@ export default function PrivacyPage() {
             <AnimateIn>
               <div className="mx-auto max-w-4xl text-center">
                 <div className="inline-flex items-center gap-2 rounded-full bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
-                  Privacy
+                  Recommendations
                 </div>
                 <h1 className="mt-6 text-5xl font-semibold tracking-tight text-black sm:text-6xl">
-                  User privacy, automated
+                  Boost revenue with AI-driven recommendations
                 </h1>
                 <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-black/70 sm:text-xl">
-                  Protect your customer data. Manage compliance with data privacy regulations and support the governance needs of your organization.
+                  GrowthOS transforms how you engage customers by combining advanced AI algorithms with smart customization and dynamic targeting. Effortlessly import your product data, apply sophisticated filters, and let GrowthOS adapt real-time recommendations based on user behavior.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
                   <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
@@ -43,16 +43,64 @@ export default function PrivacyPage() {
           </Container>
         </section>
 
-        {/* Ensure User Privacy compliance across the organization */}
+        {/* Delight your customers with recommendations they'll love 💙 */}
         <section className="py-24">
           <Container>
             <AnimateIn>
               <div className="mx-auto max-w-4xl text-center">
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
-                  Ensure User Privacy compliance across the organization
+                  Delight your customers with recommendations they&apos;ll love 💙
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
-                  Intempt automates compliance activities to help you seamlessly safeguard PII and honor consent across multiple sources
+                  Don&apos;t just take our word for it....
+                </p>
+              </div>
+            </AnimateIn>
+
+            <div className="mx-auto mt-16 max-w-6xl">
+              <div className="grid gap-8 md:grid-cols-3">
+                <AnimateIn delayMs={80}>
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-sm text-center">
+                    <div className="text-4xl font-bold text-[#0382ff]">+4.2%</div>
+                    <div className="mt-2 text-lg font-semibold text-black">ARPU from recommendations</div>
+                    <div className="mt-2 text-sm text-black/65">Clothing and Apparel</div>
+                  </div>
+                </AnimateIn>
+
+                <AnimateIn delayMs={120}>
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-sm text-center">
+                    <div className="text-4xl font-bold text-[#0382ff]">+14%</div>
+                    <div className="mt-2 text-lg font-semibold text-black">CTR from email recommendations</div>
+                    <div className="mt-2 text-sm text-black/65">Electronics</div>
+                  </div>
+                </AnimateIn>
+
+                <AnimateIn delayMs={160}>
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-sm text-center">
+                    <div className="text-4xl font-bold text-[#0382ff]">+62%</div>
+                    <div className="mt-2 text-lg font-semibold text-black">AOV from recommendations</div>
+                    <div className="mt-2 text-sm text-black/65">Toys & Hobbies</div>
+                  </div>
+                </AnimateIn>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Ingest product data quickly and easily */}
+        <section className="relative overflow-hidden py-24">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_0%_35%,rgba(3,130,255,0.08)_0%,rgba(3,130,255,0)_65%)]"
+          />
+          <Container>
+            <AnimateIn>
+              <div className="mx-auto max-w-4xl text-center">
+                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
+                  Ingest product data quickly and easily
+                </h2>
+                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                  Effortlessly connect your catalog to GrowthOS for real-time recommendations. GrowthOS provides a fast and simple way to import, map, and synchronize your product data across all channels.
                 </p>
               </div>
             </AnimateIn>
@@ -68,47 +116,35 @@ export default function PrivacyPage() {
                         className="h-6 w-6 text-[#0382ff]"
                       >
                         <path
-                          d="M9 12l2 2 4-4"
+                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
-                        <path
-                          d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3z"
+                        <polyline
+                          points="17 8 12 3 7 8"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
-                        <path
-                          d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3z"
+                        <line
+                          x1="12"
+                          y1="3"
+                          x2="12"
+                          y2="15"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M12 21c0-1-1-3-3-3s-3 2-3 3 1 3 3 3 3-2 3-3z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M12 3c0 1 1 3 3 3s3-2 3-3-1-3-3-3-3 2-3 3z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Streamline regulatory compliance
+                      Simple data import
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Accelerate compliance with GDPR and the CCPA regulations by unifying, cleansing, and deduplicating all your first-party customer data from disparate silos.
+                      Import product data in minutes using our XML and JSON wizard.
                     </p>
                   </div>
                 </AnimateIn>
@@ -123,7 +159,7 @@ export default function PrivacyPage() {
                       >
                         <rect
                           x="3"
-                          y="4"
+                          y="3"
                           width="18"
                           height="18"
                           rx="2"
@@ -131,13 +167,12 @@ export default function PrivacyPage() {
                           strokeWidth="2"
                         />
                         <path
-                          d="M16 2v4M8 2v4M3 10h18"
+                          d="M9 9h6v6H9z"
                           stroke="currentColor"
                           strokeWidth="2"
-                          strokeLinecap="round"
                         />
                         <path
-                          d="M12 2v4M12 18v4M2 12h4M18 12h4"
+                          d="M9 3v6M15 3v6M3 9h6M15 9h6M3 15h6M15 15h6M9 15v6M15 15v6"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
@@ -145,10 +180,10 @@ export default function PrivacyPage() {
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Comply across multiple channels
+                      One-click Shopify sync
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Resolve identities across multiple representations of the same customer – combining multiple emails, duplicative loyalty accounts, and more – ensuring compliance with regulations.
+                      Seamlessly sync your catalog with GrowthOS using our native Shopify integration.
                     </p>
                   </div>
                 </AnimateIn>
@@ -162,94 +197,14 @@ export default function PrivacyPage() {
                         className="h-6 w-6 text-[#0382ff]"
                       >
                         <path
-                          d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <circle
-                          cx="9"
-                          cy="7"
-                          r="4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                        <path
-                          d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M9 12l2 2 4-4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="mt-4 text-lg font-semibold text-black">
-                      Collect consents & user requests
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-black/65">
-                      Always work on data your visitors agree to share with you. In the case of refusal or no decision, trackers won&apos;t collect even a bit of personal information.
-                    </p>
-                  </div>
-                </AnimateIn>
-
-                <AnimateIn delayMs={200}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-6 w-6 text-[#0382ff]"
-                      >
-                        <path
-                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M9 12l2 2 4-4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="mt-4 text-lg font-semibold text-black">
-                      Fulfill requests on time
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-black/65">
-                      See a complete record of consents and data requests. With all information in one place, quickly respond to queries and meet regulatory deadlines.
-                    </p>
-                  </div>
-                </AnimateIn>
-
-                <AnimateIn delayMs={240}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-6 w-6 text-[#0382ff]"
-                      >
-                        <path
-                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                          d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
                         <polyline
-                          points="17 8 12 3 7 8"
+                          points="3.27 6.96 12 12.01 20.73 6.96"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
@@ -257,27 +212,20 @@ export default function PrivacyPage() {
                         />
                         <line
                           x1="12"
-                          y1="3"
+                          y1="22.08"
                           x2="12"
-                          y2="15"
+                          y2="12"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
-                        />
-                        <path
-                          d="M3 3v18h18M7 16l4-4 4 4 6-6"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
                         />
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Address deletion and portability requests
+                      Flexible attribute mapping
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      No need to mix extracts from multiple systems. Export the required information or initiate deletion from a single platform.
+                      Map product attributes to GrowthOS for complete control over which data points are processed and used in recommendations.
                     </p>
                   </div>
                 </AnimateIn>
@@ -286,111 +234,16 @@ export default function PrivacyPage() {
           </Container>
         </section>
 
-        {/* Manage risk exposure */}
-        <section className="relative overflow-hidden py-24">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_0%_35%,rgba(3,130,255,0.08)_0%,rgba(3,130,255,0)_65%)]"
-          />
-          <Container>
-            <AnimateIn>
-              <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
-                  Manage risk exposure
-                </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
-                  Set rules to automatically block restricted personal data from being collected.
-                </p>
-              </div>
-            </AnimateIn>
-
-            <div className="mx-auto mt-16 max-w-6xl">
-              <div className="grid gap-8 md:grid-cols-3">
-                <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-6 w-6 text-[#0382ff]"
-                      >
-                        <path
-                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M12 8v4M12 16h.01"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="mt-4 text-lg font-semibold text-black">
-                      PII protection
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-black/65">
-                      Ensure that only the necessary people have access to Personally Identifiable Information (PII) or business-sensitive information; hide PII from everyone else.
-                    </p>
-                  </div>
-                </AnimateIn>
-
-                <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        className="h-6 w-6 text-[#0382ff]"
-                      >
-                        <circle
-                          cx="12"
-                          cy="12"
-                          r="3"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                        <path
-                          d="M12 1v6M12 17v6M1 12h6M17 12h6"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                        />
-                        <path
-                          d="M3 3v18h18M7 16l4-4 4 4 6-6"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </div>
-                    <h3 className="mt-4 text-lg font-semibold text-black">
-                      Create your dynamic data inventory
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-black/65">
-                      Each data point is matched against common PII fields and assigned a risk-based classification of red, yellow, or green.
-                    </p>
-                  </div>
-                </AnimateIn>
-              </div>
-            </div>
-          </Container>
-        </section>
-
-        {/* Preferences center */}
+        {/* Leverage advanced AI for high-converting recommendations */}
         <section className="py-24">
           <Container>
             <AnimateIn>
               <div className="mx-auto max-w-4xl text-center">
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
-                  Preferences center
+                  Leverage advanced AI for high-converting recommendations
                 </h2>
                 <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
-                  Give customers control of their preferences
+                  Drive relevance and conversions with GrowthOS&apos;s diverse AI algorithms and robust configuration options. Tailor recommendations to your unique use case with advanced targeting and filtering capabilities.
                 </p>
               </div>
             </AnimateIn>
@@ -406,28 +259,7 @@ export default function PrivacyPage() {
                         className="h-6 w-6 text-[#0382ff]"
                       >
                         <path
-                          d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <circle
-                          cx="9"
-                          cy="7"
-                          r="4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
-                        <path
-                          d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <path
-                          d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                          d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
@@ -436,10 +268,10 @@ export default function PrivacyPage() {
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Track subscriber preferences
+                      Diverse recommendation algorithms
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Retain more engaged and satisfied subscribers by allowing them to personalize their marketing experience with your content and business.
+                      Choose from high-impact algorithms like Best-selling, Newest, Most popular, Viewed Together, Purchased Together, Category Affinity, and more.
                     </p>
                   </div>
                 </AnimateIn>
@@ -452,31 +284,8 @@ export default function PrivacyPage() {
                         fill="none"
                         className="h-6 w-6 text-[#0382ff]"
                       >
-                        <path
-                          d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <polyline
-                          points="17 8 12 3 7 8"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <line
-                          x1="12"
-                          y1="3"
-                          x2="12"
-                          y2="15"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                        />
-                        <path
-                          d="M9 12l2 2 4-4"
+                        <polygon
+                          points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
@@ -485,39 +294,15 @@ export default function PrivacyPage() {
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Stay GDPR & CCPA compliant
+                      Custom configuration
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Ensure you only message those customers that agree with to receive your messages. Give them more nuanced preference options rather than forcing an all-or-nothing experience.
+                      Apply advanced filters, inclusion rules, and exclusions to ensure recommendations meet your specific needs—whether it&apos;s highlighting sale items, focusing on in-stock products, or filtering by category.
                     </p>
                   </div>
                 </AnimateIn>
-              </div>
-            </div>
-          </Container>
-        </section>
 
-        {/* Take a proactive approach to User Privacy */}
-        <section className="relative overflow-hidden py-24">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_0%_35%,rgba(3,130,255,0.08)_0%,rgba(3,130,255,0)_65%)]"
-          />
-          <Container>
-            <AnimateIn>
-              <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
-                  Take a proactive approach to User Privacy
-                </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
-                  Get real-time visibility into what personal information you&apos;re collecting, where you&apos;re collecting it from, and where you&apos;re sending it
-                </p>
-              </div>
-            </AnimateIn>
-
-            <div className="mx-auto mt-16 max-w-6xl">
-              <div className="grid gap-8 md:grid-cols-3">
-                <AnimateIn delayMs={80}>
+                <AnimateIn delayMs={160}>
                   <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
@@ -533,7 +318,7 @@ export default function PrivacyPage() {
                           strokeWidth="2"
                         />
                         <path
-                          d="M12 6v6l4 2"
+                          d="M8 12h8M12 8v8"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
@@ -547,10 +332,81 @@ export default function PrivacyPage() {
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Consent management
+                      Smart fallback logic
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Obtain valid consents and adjust the data collection process – collected data will only be activated if users agree to their use.
+                      Ensure every widget is fully populated. If a primary feed doesn&apos;t fill all widget slots, GrowthOS automatically falls back to secondary algorithms with available results to maintain a seamless recommendation experience.
+                    </p>
+                  </div>
+                </AnimateIn>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Personalize recommendation placement for maximum impact */}
+        <section className="relative overflow-hidden py-24">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(45%_40%_at_0%_35%,rgba(3,130,255,0.08)_0%,rgba(3,130,255,0)_65%)]"
+          />
+          <Container>
+            <AnimateIn>
+              <div className="mx-auto max-w-4xl text-center">
+                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
+                  Personalize recommendation placement for maximum impact
+                </h2>
+                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                  Optimize recommendations by dynamically adjusting what each customer sees, based on AI insights and behavioral targeting. GrowthOS lets you tailor recommendation slots to each user segment.
+                </p>
+              </div>
+            </AnimateIn>
+
+            <div className="mx-auto mt-16 max-w-6xl">
+              <div className="grid gap-8 md:grid-cols-3">
+                <AnimateIn delayMs={80}>
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="h-6 w-6 text-[#0382ff]"
+                      >
+                        <path
+                          d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle
+                          cx="9"
+                          cy="7"
+                          r="4"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-black">
+                      Dynamic widget targeting
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-black/65">
+                      Display recommendation widgets based on customer segment, showing best-sellers for new users and affinity-based suggestions for returning customers.
                     </p>
                   </div>
                 </AnimateIn>
@@ -563,36 +419,91 @@ export default function PrivacyPage() {
                         fill="none"
                         className="h-6 w-6 text-[#0382ff]"
                       >
-                        <ellipse
-                          cx="12"
-                          cy="5"
-                          rx="9"
-                          ry="3"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                        />
                         <path
-                          d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"
+                          d="M3 3v18h18M7 16l4-4 4 4 6-6"
                           stroke="currentColor"
                           strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         />
-                        <path
-                          d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"
-                          stroke="currentColor"
-                          strokeWidth="2"
+                        <circle
+                          cx="18"
+                          cy="6"
+                          r="2"
+                          fill="currentColor"
                         />
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Data Subject Requests
+                      Leverage Audience AI for higher AOV
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Enable users to place requests about their data management. Keep track of the inquiries and respond to them on time.
+                      Fine-tune recommendation placements based on each user&apos;s likelihood to convert or their next-best action.
                     </p>
                   </div>
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="h-6 w-6 text-[#0382ff]"
+                      >
+                        <path
+                          d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-black">
+                      Two layers of AI-powered targeting
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-black/65">
+                      Benefit from both AI-driven recommendations and AI-based targeting in one comprehensive system. The recommendations are powered by AI algorithms and the placement is optimized through Audience AI, selecting the most effective widget type.
+                    </p>
+                  </div>
+                </AnimateIn>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        {/* Customize and deploy recommendations effortlessly */}
+        <section className="py-24">
+          <Container>
+            <AnimateIn>
+              <div className="mx-auto max-w-4xl text-center">
+                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
+                  Customize and deploy recommendations effortlessly
+                </h2>
+                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                  Place, style, and personalize recommendation widgets across all channels, ensuring a seamless brand experience everywhere your customers engage.
+                </p>
+              </div>
+            </AnimateIn>
+
+            <div className="mx-auto mt-16 max-w-6xl">
+              <div className="grid gap-8 md:grid-cols-3">
+                <AnimateIn delayMs={80}>
                   <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
@@ -602,7 +513,7 @@ export default function PrivacyPage() {
                       >
                         <rect
                           x="3"
-                          y="4"
+                          y="3"
                           width="18"
                           height="18"
                           rx="2"
@@ -610,13 +521,12 @@ export default function PrivacyPage() {
                           strokeWidth="2"
                         />
                         <path
-                          d="M16 2v4M8 2v4M3 10h18"
+                          d="M9 9h6v6H9z"
                           stroke="currentColor"
                           strokeWidth="2"
-                          strokeLinecap="round"
                         />
                         <path
-                          d="M4 4v5h4M20 4v5h-4M4 20v-5h4M20 20v-5h-4"
+                          d="M3 9h18M9 3v18"
                           stroke="currentColor"
                           strokeWidth="2"
                           strokeLinecap="round"
@@ -624,104 +534,89 @@ export default function PrivacyPage() {
                       </svg>
                     </div>
                     <h3 className="mt-4 text-lg font-semibold text-black">
-                      Preference center
+                      Multi-channel reach
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-black/65">
-                      Differentiate between the different types of messages to send, and allow your audience decide what kinds of journeys and messages they want to receive.
-                    </p>
-                  </div>
-                </AnimateIn>
-              </div>
-            </div>
-          </Container>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24">
-          <Container>
-            <AnimateIn>
-              <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
-                  You don&apos;t need an army of marketers.
-                </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
-                  You need GrowthOS and Blu, your AI Co-Marketer.
-                </p>
-                <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-                  <ButtonLink href="https://app.intempt.com/">Get started</ButtonLink>
-                  <ButtonLink variant="secondary" href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12">
-                    Book a demo
-                  </ButtonLink>
-                </div>
-              </div>
-            </AnimateIn>
-          </Container>
-        </section>
-
-        {/* FAQs */}
-        <section className="py-24">
-          <Container>
-            <AnimateIn>
-              <div className="mx-auto max-w-4xl text-center">
-                <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
-                  FAQs
-                </h2>
-              </div>
-            </AnimateIn>
-
-            <div className="mx-auto mt-16 max-w-4xl">
-              <div className="space-y-8">
-                <AnimateIn delayMs={80}>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black">
-                      How does Intempt handle consent collection before tracking begins?
-                    </h3>
-                    <p className="mt-2 text-base leading-7 text-black/65">
-                      Trackers only collect data your visitors explicitly agree to share. If a user refuses consent or hasn&apos;t made a decision yet, no personal information gets collected at all. The system respects consent status before any tracking activates, not after.
+                      Deploy recommendations on your website, app, and emails with both client-side and server-side options for complete customization.
                     </p>
                   </div>
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black">
-                      How does identity resolution help with compliance?
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="h-6 w-6 text-[#0382ff]"
+                      >
+                        <path
+                          d="M3 3v18h18M7 16l4-4 4 4 6-6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        />
+                        <path
+                          d="M12 1v6M12 17v6M1 12h6M17 12h6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-black">
+                      Easy widget styling
                     </h3>
-                    <p className="mt-2 text-base leading-7 text-black/65">
-                      When you have multiple representations of the same customer (different emails, duplicate loyalty accounts, variations of the same person across channels), compliance gets messy. Intempt resolves these identities into unified profiles so when someone submits a deletion request, you&apos;re deleting all instances of their data, not leaving fragments scattered across systems.
+                    <p className="mt-2 text-sm leading-6 text-black/65">
+                      Quickly match recommendation widgets to your brand&apos;s look and feel with our no-code editor. Adjust layouts, product counts, text styles, and more—no coding needed.
                     </p>
                   </div>
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black">
-                      How do I track and respond to Data Subject Requests on time?
+                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        className="h-6 w-6 text-[#0382ff]"
+                      >
+                        <path
+                          d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <polyline
+                          points="22,6 12,13 2,6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M3 3v18h18M7 16l4-4 4 4 6-6"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="mt-4 text-lg font-semibold text-black">
+                      Personalized email recommendations
                     </h3>
-                    <p className="mt-2 text-base leading-7 text-black/65">
-                      You get a complete record of all consents and data requests in one place. See the status of each request, track deadlines, and respond with the required information or action. No hunting through email threads or spreadsheets to figure out what&apos;s outstanding.
-                    </p>
-                  </div>
-                </AnimateIn>
-
-                <AnimateIn delayMs={200}>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black">
-                      Does Intempt help with both GDPR and CCPA compliance?
-                    </h3>
-                    <p className="mt-2 text-base leading-7 text-black/65">
-                      Yes. The platform addresses requirements for both regulations: consent management, data subject access requests, deletion rights, data portability, and preference management. Because your first-party data is unified, cleansed, and deduplicated in one place, compliance activities work the same way regardless of which regulation applies to a given user.
-                    </p>
-                  </div>
-                </AnimateIn>
-
-                <AnimateIn delayMs={240}>
-                  <div>
-                    <h3 className="text-lg font-semibold text-black">
-                      How do I get visibility into what personal data I&apos;m collecting and where it&apos;s going?
-                    </h3>
-                    <p className="mt-2 text-base leading-7 text-black/65">
-                      The platform gives you real-time visibility into what personal information you&apos;re collecting, which sources it comes from, and where it&apos;s being sent. You&apos;re not guessing about data flows. You can audit collection points, review destinations, and ensure nothing is happening that shouldn&apos;t be.
+                    <p className="mt-2 text-sm leading-6 text-black/65">
+                      Boost email engagement with tailored product suggestions built right into your campaigns. Use our drag-and-drop editor to create and save recommendation templates that drive conversions.
                     </p>
                   </div>
                 </AnimateIn>
@@ -739,3 +634,4 @@ export default function PrivacyPage() {
     </div>
   );
 }
+
