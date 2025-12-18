@@ -122,13 +122,13 @@ export function Footer({
               <div className="h-2 w-2 rounded-full bg-green-500"></div>
               <span>System status</span>
             </div>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/termsofservice" className="transition-colors hover:text-zinc-900">
               Terms of service
             </a>
-            <a href="/privacy" className="transition-colors hover:text-zinc-900">
+            <a href="/privacypolicy" className="transition-colors hover:text-zinc-900">
               Privacy policy
             </a>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/sla" className="transition-colors hover:text-zinc-900">
               SLA
             </a>
             <a href="#" className="transition-colors hover:text-zinc-900">

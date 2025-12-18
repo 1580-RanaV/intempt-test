@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { ButtonLink } from "../components/Button";
 
 export function AskInteractive({
@@ -11,8 +11,25 @@ export function AskInteractive({
   const defaultPrompt = prompts[0] ?? "How are my campaigns performing?";
   const [value, setValue] = useState(defaultPrompt);
   const [submitted, setSubmitted] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+  const scrollContainer1Ref = useRef<HTMLDivElement>(null);
+  const scrollContainer2Ref = useRef<HTMLDivElement>(null);
+  const scrollContainer3Ref = useRef<HTMLDivElement>(null);
 
-  const suggested = useMemo(() => prompts.slice(1, 6), [prompts]);
+  // Split prompts into 3 bands
+  const allPrompts = useMemo(() => prompts.slice(1), [prompts]);
+  const band1 = useMemo(() => {
+    const items = allPrompts.filter((_, i) => i % 3 === 0);
+    return [...items, ...items];
+  }, [allPrompts]);
+  const band2 = useMemo(() => {
+    const items = allPrompts.filter((_, i) => i % 3 === 1);
+    return [...items, ...items];
+  }, [allPrompts]);
+  const band3 = useMemo(() => {
+    const items = allPrompts.filter((_, i) => i % 3 === 2);
+    return [...items, ...items];
+  }, [allPrompts]);
 
   useEffect(() => {
     if (!submitted) return;
@@ -20,9 +37,67 @@ export function AskInteractive({
     return () => window.clearTimeout(timeout);
   }, [submitted]);
 
+  // Auto-scroll effect for all 3 bands
+  useEffect(() => {
+    const container1 = scrollContainer1Ref.current;
+    const container2 = scrollContainer2Ref.current;
+    const container3 = scrollContainer3Ref.current;
+    if (!container1 || !container2 || !container3 || isPaused) return;
+
+    let animationFrameId: number;
+    let scrollPosition1 = 0;
+    let scrollPosition2 = container2.scrollWidth / 2; // Start from middle for reverse effect
+    let scrollPosition3 = 0;
+    
+    const scrollSpeed1 = 0.6; // pixels per frame - moving right
+    const scrollSpeed2 = -0.8; // pixels per frame - moving left (faster)
+    const scrollSpeed3 = 0.5; // pixels per frame - moving right (slower)
+
+    const scroll = () => {
+      // Band 1: scroll left to right
+      scrollPosition1 += scrollSpeed1;
+      const maxScroll1 = container1.scrollWidth / 2;
+      if (scrollPosition1 >= maxScroll1) {
+        scrollPosition1 = 0;
+      }
+      container1.scrollLeft = scrollPosition1;
+
+      // Band 2: scroll right to left
+      scrollPosition2 += scrollSpeed2;
+      const maxScroll2 = container2.scrollWidth / 2;
+      if (scrollPosition2 <= 0) {
+        scrollPosition2 = maxScroll2;
+      }
+      container2.scrollLeft = scrollPosition2;
+
+      // Band 3: scroll left to right (different speed)
+      scrollPosition3 += scrollSpeed3;
+      const maxScroll3 = container3.scrollWidth / 2;
+      if (scrollPosition3 >= maxScroll3) {
+        scrollPosition3 = 0;
+      }
+      container3.scrollLeft = scrollPosition3;
+
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [isPaused]);
+
   const submit = () => {
     if (submitted) return;
     setSubmitted(true);
+  };
+
+  const handlePromptClick = (prompt: string) => {
+    setValue(prompt);
+    setIsPaused(true);
+    // Resume scrolling after 3 seconds
+    setTimeout(() => setIsPaused(false), 3000);
   };
 
   return (
@@ -71,26 +146,112 @@ export function AskInteractive({
             </button>
           </div>
 
-          <div className="mx-auto mt-7 flex max-w-4xl flex-wrap justify-center gap-3">
-            {suggested.map((prompt) => {
-              const isSelected = value === prompt;
-              return (
-              <button
-                key={prompt}
-                type="button"
-                onClick={() => setValue(prompt)}
-                className={[
-                  "rounded-sm px-4 py-3 text-sm font-semibold ring-1 ring-inset transition-all duration-200 ease-out",
-                  "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-sm",
-                  isSelected
-                    ? "bg-[#0382ff] text-white ring-[#0382ff]/30"
-                    : "bg-white/60 text-black/80 ring-black/10 hover:bg-white/80",
-                ].join(" ")}
+          {/* Auto-scrolling carousel with 3 bands and blur effects */}
+          <div className="mx-auto mt-7 max-w-4xl space-y-3">
+            {/* Band 1 - Scrolling right */}
+            <div className="relative">
+              {/* Left blur gradient */}
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              
+              {/* Right blur gradient */}
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              
+              {/* Scrolling container */}
+              <div
+                ref={scrollContainer1Ref}
+                className="flex gap-3 overflow-x-hidden no-scrollbar"
               >
-                {prompt}
-              </button>
-              );
-            })}
+                {band1.map((prompt, index) => {
+                  const isSelected = value === prompt;
+                  return (
+                    <button
+                      key={`band1-${prompt}-${index}`}
+                      type="button"
+                      onClick={() => handlePromptClick(prompt)}
+                      className={[
+                        "shrink-0 whitespace-nowrap rounded-sm px-4 py-3 text-sm font-semibold ring-1 ring-inset transition-all duration-200 ease-out",
+                        "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-sm",
+                        isSelected
+                          ? "bg-[#0382ff] text-white ring-[#0382ff]/30"
+                          : "bg-white/60 text-black/80 ring-black/10 hover:bg-white/80",
+                      ].join(" ")}
+                    >
+                      {prompt}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Band 2 - Scrolling left (opposite direction) */}
+            <div className="relative">
+              {/* Left blur gradient */}
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              
+              {/* Right blur gradient */}
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              
+              {/* Scrolling container */}
+              <div
+                ref={scrollContainer2Ref}
+                className="flex gap-3 overflow-x-hidden no-scrollbar"
+              >
+                {band2.map((prompt, index) => {
+                  const isSelected = value === prompt;
+                  return (
+                    <button
+                      key={`band2-${prompt}-${index}`}
+                      type="button"
+                      onClick={() => handlePromptClick(prompt)}
+                      className={[
+                        "shrink-0 whitespace-nowrap rounded-sm px-4 py-3 text-sm font-semibold ring-1 ring-inset transition-all duration-200 ease-out",
+                        "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-sm",
+                        isSelected
+                          ? "bg-[#0382ff] text-white ring-[#0382ff]/30"
+                          : "bg-white/60 text-black/80 ring-black/10 hover:bg-white/80",
+                      ].join(" ")}
+                    >
+                      {prompt}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Band 3 - Scrolling right (same direction as band 1, different speed) */}
+            <div className="relative">
+              {/* Left blur gradient */}
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              
+              {/* Right blur gradient */}
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              
+              {/* Scrolling container */}
+              <div
+                ref={scrollContainer3Ref}
+                className="flex gap-3 overflow-x-hidden no-scrollbar"
+              >
+                {band3.map((prompt, index) => {
+                  const isSelected = value === prompt;
+                  return (
+                    <button
+                      key={`band3-${prompt}-${index}`}
+                      type="button"
+                      onClick={() => handlePromptClick(prompt)}
+                      className={[
+                        "shrink-0 whitespace-nowrap rounded-sm px-4 py-3 text-sm font-semibold ring-1 ring-inset transition-all duration-200 ease-out",
+                        "motion-safe:hover:-translate-y-0.5 motion-safe:hover:shadow-sm",
+                        isSelected
+                          ? "bg-[#0382ff] text-white ring-[#0382ff]/30"
+                          : "bg-white/60 text-black/80 ring-black/10 hover:bg-white/80",
+                      ].join(" ")}
+                    >
+                      {prompt}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
 

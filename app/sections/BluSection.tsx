@@ -55,18 +55,16 @@ export function BluSection({
           </AnimateIn>
 
           <AnimateIn delayMs={180}>
-            <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden rounded-[32px] border border-black/10 bg-[#f5f5f5] shadow-sm">
-              <div className="relative p-3 sm:p-4">
-                <div className="relative aspect-[16/9] overflow-hidden rounded-[28px] ring-1 ring-inset ring-black/10">
-                  <Image
-                    src="/do.png"
-                    alt="Do section product screenshot"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 896px"
-                    className="object-cover"
-                    priority={false}
-                  />
-                </div>
+            <div className="mx-auto mt-10 max-w-9xl">
+              <div className="relative aspect-auto">
+                <Image
+                  src="/do-section-final.png"
+                  alt="Do section"
+                  width={1600}
+                  height={800}
+                  className="w-full h-auto"
+                  priority={false}
+                />
               </div>
             </div>
           </AnimateIn>
