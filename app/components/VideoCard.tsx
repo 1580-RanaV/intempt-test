@@ -52,18 +52,19 @@ export function VideoCard({
   img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;}
   .overlay{position:absolute;inset:0;background:rgba(0,0,0,.20);}
   .btn{position:absolute;inset:0;display:grid;place-items:center;}
-  .pill{display:inline-flex;align-items:center;gap:12px;border-radius:999px;padding:12px 18px;background:rgba(245,245,245,.92);color:#111;font:600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.12);}
-  .play{display:grid;place-items:center;height:36px;width:36px;border-radius:999px;background:#0382ff;color:#fff;font-weight:800;}
+  .pill{display:inline-flex;align-items:center;gap:12px;border-radius:2px;padding:12px 18px;background:rgba(245,245,245,.92);color:#111;font:600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.12);}
+  .play-btn{width:48px;height:48px;border-radius:50%;background:#0382ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(3,130,255,.4);}
+  .play-icon{width:0;height:0;border-left:14px solid white;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:2px;}
 </style></head><body>
 <a href="${safeEmbed}">
   <img src="${safeThumb}" alt="${safeLabel}" />
   <div class="overlay"></div>
-  <div class="btn"><div class="pill"><span class="play">▶</span>Play</div></div>
+  <div class="btn"><div class="pill"><div class="play-btn"><div class="play-icon"></div></div>Play</div></div>
 </a>
 </body></html>`;
 
   return (
-    <div className="mx-auto mt-10 max-w-4xl rounded-3xl border border-black/10 bg-[#f5f5f5]/80 p-6 text-left shadow-sm backdrop-blur">
+    <div className="mx-auto mt-10 max-w-4xl rounded-sm border border-black/10 bg-[white]/80 p-6 text-left shadow-sm backdrop-blur">
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold text-black">{label}</div>
@@ -75,13 +76,13 @@ export function VideoCard({
           href={youtubeUrl}
           target="_blank"
           rel="noreferrer"
-          className="shrink-0 rounded-full bg-[#0382ff]/10 px-3 py-1 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 transition-colors hover:bg-[#0382ff]/15"
+          className="shrink-0 rounded-sm bg-[#0382ff]/10 px-3 py-1 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 transition-colors hover:bg-[#0382ff]/15"
         >
           Open on YouTube
         </a>
       </div>
 
-      <div className="mt-4 overflow-hidden rounded-2xl ring-1 ring-inset ring-black/10">
+      <div className="mt-4 overflow-hidden rounded-sm ring-1 ring-inset ring-black/10">
         <div className="aspect-video bg-black">
           <iframe
             className="h-full w-full"

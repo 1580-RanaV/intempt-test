@@ -7,7 +7,7 @@ import { AnimateIn } from "../components/AnimateIn";
 
 export default function AnalyticsPLGSaaSPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -182,7 +182,7 @@ export default function AnalyticsPLGSaaSPage() {
             {/* Digital Team Visual */}
             <AnimateIn delayMs={100}>
               <div className="mx-auto mt-12 max-w-4xl">
-                <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-lg">
+                <div className="rounded-sm border border-black/10 bg-white/50 p-8 shadow-lg">
                   <div className="text-center mb-6">
                     <h3 className="text-lg font-semibold text-black mb-4">Digital Team</h3>
                     <div className="flex items-center justify-center gap-4">

@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function AnalyticsPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-white text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -196,7 +196,7 @@ export default function AnalyticsPage() {
 
             <AnimateIn delayMs={240}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/analytics/a-1.png"
@@ -321,7 +321,7 @@ export default function AnalyticsPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/analytics/a-2.png"
@@ -435,7 +435,7 @@ export default function AnalyticsPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/analytics/a-3.png"
@@ -560,7 +560,7 @@ export default function AnalyticsPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/analytics/a-4.png"
@@ -687,7 +687,7 @@ export default function AnalyticsPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/analytics/a-5.png"
@@ -905,7 +905,7 @@ export default function AnalyticsPage() {
                   <ButtonLink
                     href="#templates"
                     variant="secondary"
-                    className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95"
+                    className="bg-white text-black hover:bg-white"
                   >
                     View Templates
                     <svg

@@ -125,7 +125,7 @@ export function OnboardingModal() {
               alt="Intempt"
               width={32}
               height={32}
-              className="h-8 w-8 rounded-xl border border-white/30 bg-white/70 p-1"
+              className="h-8 w-8 rounded-sm border border-white/30 bg-white/70 p-1"
             />
             <div className="text-sm font-semibold text-white/80">Intempt — Onboarding</div>
           </div>
@@ -298,7 +298,7 @@ export function OnboardingModal() {
                   />
                   <div className="grid gap-2">
                     <label className="text-sm font-semibold text-black">Workspace slug</label>
-                    <div className="flex items-center rounded-2xl border border-black/10 bg-white/80 px-3 py-2 text-sm font-semibold text-black/70 shadow-sm focus-within:ring-2 focus-within:ring-[#0382ff]/50">
+                    <div className="flex items-center rounded-sm border border-black/10 bg-white/80 px-3 py-2 text-sm font-semibold text-black/70 shadow-sm focus-within:ring-2 focus-within:ring-[#0382ff]/50">
                       <span className="text-black/40">app.intempt.com/</span>
                       <input
                         value={workspaceSlug}
@@ -315,7 +315,7 @@ export function OnboardingModal() {
                   <div className="grid gap-3 sm:grid-cols-[1fr_200px] sm:items-end">
                     <div className="space-y-2">
                       <label className="text-sm font-semibold text-black">Workspace logo</label>
-                      <div className="flex items-center justify-between rounded-2xl border border-dashed border-black/15 bg-white/80 px-4 py-3 shadow-sm">
+                      <div className="flex items-center justify-between rounded-sm border border-dashed border-black/15 bg-white/80 px-4 py-3 shadow-sm">
                         <div>
                           <div className="text-sm font-semibold text-black/70">Upload image</div>
                           <p className="text-xs font-semibold text-black/45">
@@ -331,7 +331,7 @@ export function OnboardingModal() {
                       <label className="text-sm font-semibold text-black">
                         Primary contact number (optional)
                       </label>
-                      <div className="grid grid-cols-[110px_1fr] gap-2 rounded-2xl border border-black/10 bg-white/80 px-3 py-2 text-sm font-semibold text-black/70 shadow-sm focus-within:ring-2 focus-within:ring-[#0382ff]/50">
+                      <div className="grid grid-cols-[110px_1fr] gap-2 rounded-sm border border-black/10 bg-white/80 px-3 py-2 text-sm font-semibold text-black/70 shadow-sm focus-within:ring-2 focus-within:ring-[#0382ff]/50">
                         <input
                           value="+1"
                           readOnly
@@ -409,7 +409,7 @@ export function OnboardingModal() {
                   </p>
                 </div>
 
-                <div className="mt-4 rounded-2xl border border-black/10 bg-black/5 p-4">
+                <div className="mt-4 rounded-sm border border-black/10 bg-black/5 p-4">
                   <div className="flex items-center justify-between text-sm font-semibold text-black/65">
                     <span>Analyzing your website…</span>
                     <span>68%</span>
@@ -438,7 +438,7 @@ export function OnboardingModal() {
                           });
                         }}
                         className={[
-                          "flex items-center justify-between rounded-2xl border px-4 py-3 text-left shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+                          "flex items-center justify-between rounded-sm border px-4 py-3 text-left shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
                           isSelected
                             ? "border-[#0382ff] bg-[#0382ff]/10"
                             : "border-black/10 bg-white/80 hover:-translate-y-0.5 hover:shadow",
@@ -495,14 +495,14 @@ export function OnboardingModal() {
 
                 <div className="mt-6 grid gap-3 lg:grid-cols-2">
                   {selectedToolList.length === 0 ? (
-                    <div className="rounded-2xl border border-dashed border-black/15 bg-white/70 px-4 py-6 text-center text-sm font-semibold text-black/60">
+                    <div className="rounded-sm border border-dashed border-black/15 bg-white/70 px-4 py-6 text-center text-sm font-semibold text-black/60">
                       Select at least one tool to connect.
                     </div>
                   ) : (
                     selectedToolList.map((tool) => (
                       <div
                         key={tool}
-                        className="flex items-start justify-between gap-4 rounded-2xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm"
+                        className="flex items-start justify-between gap-4 rounded-sm border border-black/10 bg-white/80 px-4 py-3 shadow-sm"
                       >
                         <div className="space-y-1">
                           <div className="text-sm font-semibold text-black">
@@ -525,7 +525,7 @@ export function OnboardingModal() {
                   )}
                 </div>
 
-                <div className="mt-6 flex items-center gap-3 rounded-2xl border border-black/10 bg-black/5 px-4 py-3">
+                <div className="mt-6 flex items-center gap-3 rounded-sm border border-black/10 bg-black/5 px-4 py-3">
                   <LockIcon />
                   <div className="text-sm font-semibold text-black/70">
                     Your data is encrypted and secure. We never share your credentials with third
@@ -624,7 +624,7 @@ function RoleCard({
       type="button"
       onClick={onSelect}
       className={[
-        "flex h-full flex-col items-start gap-3 rounded-2xl border px-4 py-4 text-left shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+        "flex h-full flex-col items-start gap-3 rounded-sm border px-4 py-4 text-left shadow-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
         active
           ? "border-[#0382ff] bg-[#0382ff]/10"
           : "border-black/10 bg-white/80 hover:-translate-y-0.5 hover:shadow",

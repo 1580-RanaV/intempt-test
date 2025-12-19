@@ -5,7 +5,7 @@ import { Container } from "../components/Container";
 
 export default function TermsOfServicePage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -38,7 +38,7 @@ export default function TermsOfServicePage() {
           <Container>
             <div className="mx-auto max-w-4xl">
               <div className="prose prose-lg max-w-none">
-                <div className="mb-8 rounded-lg border border-black/10 bg-white/50 p-6">
+                <div className="mb-8 rounded-sm border border-black/10 bg-white/50 p-6">
                   <p className="text-base font-semibold text-black">
                     PLEASE READ THESE CUSTOMER TERMS OF SERVICE CAREFULLY.
                   </p>

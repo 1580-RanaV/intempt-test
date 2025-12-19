@@ -43,7 +43,7 @@ export default function AgenciesPage() {
   ];
 
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-white text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -327,7 +327,7 @@ export default function AgenciesPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -370,7 +370,7 @@ export default function AgenciesPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -412,7 +412,7 @@ export default function AgenciesPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -455,7 +455,7 @@ export default function AgenciesPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={200}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -505,7 +505,7 @@ export default function AgenciesPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={240}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -548,7 +548,7 @@ export default function AgenciesPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={280}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -688,7 +688,7 @@ export default function AgenciesPage() {
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <AnimateIn key={index} delayMs={index * 80}>
-                    <div className="rounded-2xl border border-black/10 bg-white/50 shadow-sm overflow-hidden">
+                    <div className="rounded-sm border border-black/10 bg-white/50 shadow-sm overflow-hidden">
                       <button
                         type="button"
                         onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -741,7 +741,7 @@ export default function AgenciesPage() {
                   Become our partner to learn cutting-edge strategies for acquiring, converting, and retaining Users via implementing Intempt on behalf of eCommerce, SaaS, and Apps companies.
                 </p>
                 <div className="mt-10">
-                  <ButtonLink href="#apply" variant="secondary" className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95">
+                  <ButtonLink href="#apply" variant="secondary" className="bg-white text-black hover:bg-white">
                     Apply now
                   </ButtonLink>
                 </div>

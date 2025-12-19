@@ -128,7 +128,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -160,7 +160,7 @@ export default function PricingPage() {
           <Container>
             <div className="mx-auto max-w-5xl">
               <AnimateIn>
-                <div className="rounded-2xl border border-black/10 bg-white p-6 sm:p-8 shadow-sm">
+                <div className="rounded-sm border border-black/10 bg-white p-6 sm:p-8 shadow-sm">
                   {/* MTU Selector */}
                   <div className="mb-8">
                     <label className="block text-sm font-semibold text-black mb-3">

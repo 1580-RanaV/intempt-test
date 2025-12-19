@@ -61,7 +61,7 @@ export const siteContent = {
         { label: "Pricing", href: "/pricing" },
     ] satisfies NavItem[],
     actions: [
-      { label: "Log in", href: "#login" },
+      { label: "Log in", href: "https://app.intempt.com/" },
       { label: "Book a demo", href: "https://calendly.com/sidchaudhary/meet-sid?month=2025-12" },
       { label: "Get started", href: "https://app.intempt.com/" },
     ] satisfies NavItem[],
@@ -244,7 +244,7 @@ export const siteContent = {
         title: "Growth Plays",
         description:
           "Browse ready-to-use plays tailored to every step of the customer journey.",
-        cta: { label: "View Growth Plays", href: "#growth-plays" },
+        cta: { label: "View Growth Plays", href: "/growthplays" },
       },
       {
         title: "Help & Support",

@@ -7,7 +7,7 @@ import { AnimateIn } from "../components/AnimateIn";
 
 export default function PersonalizationPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -192,7 +192,7 @@ export default function PersonalizationPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -226,7 +226,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -252,7 +252,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -285,7 +285,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={200}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -311,7 +311,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={240}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -343,7 +343,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={280}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -382,7 +382,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={320}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -436,7 +436,7 @@ export default function PersonalizationPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -476,7 +476,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -515,7 +515,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -571,7 +571,7 @@ export default function PersonalizationPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -603,7 +603,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -641,7 +641,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -698,7 +698,7 @@ export default function PersonalizationPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -739,7 +739,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -778,7 +778,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -812,7 +812,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={200}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -859,7 +859,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={240}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -898,7 +898,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={280}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -930,7 +930,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={320}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -962,7 +962,7 @@ export default function PersonalizationPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={360}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"

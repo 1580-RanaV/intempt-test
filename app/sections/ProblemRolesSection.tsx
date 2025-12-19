@@ -25,7 +25,7 @@ export function ProblemRolesSection({
       <Container>
         <AnimateIn>
           <div className="mx-auto max-w-2xl space-y-3 text-center sm:space-y-4">
-            <div className="text-xs font-semibold tracking-wide text-black/50">
+            <div className="inline-flex items-center gap-2 rounded-sm bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
               THE PROBLEM
             </div>
             <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-5xl">
@@ -54,9 +54,9 @@ export function ProblemRolesSection({
         <AnimateIn delayMs={160}>
           {/* THE FIX Section - Prominent Hero Style */}
           <div className="mx-auto mt-20 max-w-6xl">
-            <div className="relative rounded-2xl bg-[#f5f5f5] p-8 sm:p-12">
+            <div className="relative rounded-2xl bg-[white] p-8 sm:p-12">
               <div className="mx-auto max-w-4xl space-y-6 text-center">
-                <div className="inline-block rounded-full bg-black/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-black/60">
+                <div className="inline-block rounded-sm bg-[#0382ff]/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
                   THE FIX
                 </div>
                 <h3 className="text-4xl font-semibold tracking-tight text-black sm:text-6xl">

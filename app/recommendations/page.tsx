@@ -7,7 +7,7 @@ import { AnimateIn } from "../components/AnimateIn";
 
 export default function RecommendationsPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -60,7 +60,7 @@ export default function RecommendationsPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-sm text-center">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-8 shadow-sm text-center">
                     <div className="text-4xl font-bold text-[#0382ff]">+4.2%</div>
                     <div className="mt-2 text-lg font-semibold text-black">ARPU from recommendations</div>
                     <div className="mt-2 text-sm text-black/65">Clothing and Apparel</div>
@@ -68,7 +68,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-sm text-center">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-8 shadow-sm text-center">
                     <div className="text-4xl font-bold text-[#0382ff]">+14%</div>
                     <div className="mt-2 text-lg font-semibold text-black">CTR from email recommendations</div>
                     <div className="mt-2 text-sm text-black/65">Electronics</div>
@@ -76,7 +76,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-8 shadow-sm text-center">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-8 shadow-sm text-center">
                     <div className="text-4xl font-bold text-[#0382ff]">+62%</div>
                     <div className="mt-2 text-lg font-semibold text-black">AOV from recommendations</div>
                     <div className="mt-2 text-sm text-black/65">Toys & Hobbies</div>
@@ -108,7 +108,7 @@ export default function RecommendationsPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -150,7 +150,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -189,7 +189,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -251,7 +251,7 @@ export default function RecommendationsPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -277,7 +277,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -303,7 +303,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -365,7 +365,7 @@ export default function RecommendationsPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -412,7 +412,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -444,7 +444,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -504,7 +504,7 @@ export default function RecommendationsPage() {
             <div className="mx-auto mt-16 max-w-6xl">
               <div className="grid gap-8 md:grid-cols-3">
                 <AnimateIn delayMs={80}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -543,7 +543,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={120}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"
@@ -582,7 +582,7 @@ export default function RecommendationsPage() {
                 </AnimateIn>
 
                 <AnimateIn delayMs={160}>
-                  <div className="rounded-2xl border border-black/10 bg-white/50 p-6 shadow-sm">
+                  <div className="rounded-sm border border-black/10 bg-white/50 p-6 shadow-sm">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[#0382ff]/10 to-violet-500/5">
                       <svg
                         viewBox="0 0 24 24"

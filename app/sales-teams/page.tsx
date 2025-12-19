@@ -7,7 +7,7 @@ import { AnimateIn } from "../components/AnimateIn";
 
 export default function SalesTeamsPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -162,7 +162,7 @@ export default function SalesTeamsPage() {
             {/* Active Signals Interface */}
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-xl">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white shadow-xl">
                   <div className="border-b border-black/10 bg-gradient-to-r from-[#0382ff]/5 to-violet-500/5 px-6 py-4">
                     <div className="flex items-center justify-between">
                       <div>
@@ -176,7 +176,7 @@ export default function SalesTeamsPage() {
                     {/* Signal Cards */}
                     <div className="space-y-4">
                       {/* Signal 1 */}
-                      <div className="rounded-xl border border-black/10 bg-white p-4 hover:shadow-md transition-shadow">
+                      <div className="rounded-sm border border-black/10 bg-white p-4 hover:shadow-md transition-shadow">
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-4 flex-1">
                             <div className="flex-shrink-0">
@@ -208,7 +208,7 @@ export default function SalesTeamsPage() {
                       </div>
 
                       {/* Signal 2 */}
-                      <div className="rounded-xl border border-black/10 bg-white p-4 hover:shadow-md transition-shadow">
+                      <div className="rounded-sm border border-black/10 bg-white p-4 hover:shadow-md transition-shadow">
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-4 flex-1">
                             <div className="flex-shrink-0">
@@ -240,7 +240,7 @@ export default function SalesTeamsPage() {
                       </div>
 
                       {/* Signal 3 */}
-                      <div className="rounded-xl border border-black/10 bg-white p-4 hover:shadow-md transition-shadow">
+                      <div className="rounded-sm border border-black/10 bg-white p-4 hover:shadow-md transition-shadow">
                         <div className="flex items-start justify-between">
                           <div className="flex items-start gap-4 flex-1">
                             <div className="flex-shrink-0">

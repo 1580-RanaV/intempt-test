@@ -20,7 +20,7 @@ export function Footer({
   }>;
 }) {
   return (
-    <footer className="border-t border-black/10 bg-[#f5f5f5]">
+    <footer className="border-t border-black/10 bg-[white]">
       <Container className="py-14">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">

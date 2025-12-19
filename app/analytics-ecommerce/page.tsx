@@ -7,7 +7,7 @@ import { AnimateIn } from "../components/AnimateIn";
 
 export default function AnalyticsECommercePage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -369,7 +369,7 @@ export default function AnalyticsECommercePage() {
             {/* Cohort Retention Table */}
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white shadow-xl">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white shadow-xl">
                   <div className="border-b border-black/10 bg-gradient-to-r from-[#0382ff]/5 to-violet-500/5 px-6 py-4">
                     <div className="flex items-center gap-3">
                       <svg

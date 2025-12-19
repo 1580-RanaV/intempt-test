@@ -232,7 +232,7 @@ export default function BlogPage() {
                   <AnimateIn key={post.id} delayMs={index * 50}>
                     <Link
                       href={`/blog/${post.id}`}
-                      className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1"
+                      className="group flex flex-col h-full rounded-sm border border-black/10 bg-white overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1"
                     >
                       <div className="relative h-48 w-full overflow-hidden bg-black/5 shrink-0">
                         <Image

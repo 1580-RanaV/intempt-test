@@ -90,7 +90,7 @@ export default function CompanyPage() {
   ];
 
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -119,7 +119,7 @@ export default function CompanyPage() {
         <section className="py-16">
           <Container>
             <div className="mx-auto max-w-4xl">
-              <div className="flex flex-col items-center gap-8 rounded-2xl bg-[#f5f5f5] p-8 sm:flex-row sm:items-start">
+              <div className="flex flex-col items-center gap-8 rounded-2xl bg-[white] p-8 sm:flex-row sm:items-start">
                 <div className="relative h-48 w-48 flex-shrink-0 overflow-hidden rounded-full">
                   <Image
                     src="/founder-photo.jpg"
@@ -145,7 +145,7 @@ export default function CompanyPage() {
           <Container>
             <div className="mx-auto max-w-4xl">
               <h2 className="mb-6 text-3xl font-semibold text-black">Our Mission</h2>
-              <div className="rounded-2xl bg-[#f5f5f5] p-8">
+              <div className="rounded-2xl bg-[white] p-8">
                 <p className="text-lg leading-8 text-black">
                   &quot;Our mission is to transform your sprawling customer data into a connected workspace, enabling marketers to amplify LTV for every user. Through remarkable trust, insight, and ease of use, powered by our Audience AI, we aspire to fuel your growth and profitability.&quot;
                 </p>
@@ -206,7 +206,7 @@ export default function CompanyPage() {
                 {values.map((value, index) => (
                   <div
                     key={index}
-                    className="rounded-xl border border-black/10 bg-white/50 p-6 transition-shadow hover:shadow-lg"
+                    className="rounded-sm border border-black/10 bg-white/50 p-6 transition-shadow hover:shadow-lg"
                   >
                     <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[#0382ff]/10 text-[#0382ff]">
                       {value.icon}

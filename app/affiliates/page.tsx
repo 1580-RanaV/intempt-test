@@ -31,7 +31,7 @@ export default function AffiliatesPage() {
   ];
 
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-white text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -367,7 +367,7 @@ export default function AffiliatesPage() {
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
                   <AnimateIn key={index} delayMs={index * 80}>
-                    <div className="rounded-2xl border border-black/10 bg-white/50 shadow-sm overflow-hidden">
+                    <div className="rounded-sm border border-black/10 bg-white/50 shadow-sm overflow-hidden">
                       <button
                         type="button"
                         onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -417,7 +417,7 @@ export default function AffiliatesPage() {
                   Earn 20% recurring revenue on every referral purchase for the first year. Sharing the word about Intempt
                 </p>
                 <div className="mt-10">
-                  <ButtonLink href="#apply" variant="secondary" className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95">
+                  <ButtonLink href="#apply" variant="secondary" className="bg-white text-black hover:bg-white">
                     Apply now
                   </ButtonLink>
                 </div>

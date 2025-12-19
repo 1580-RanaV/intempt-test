@@ -101,7 +101,7 @@ export function AskInteractive({
   };
 
   return (
-    <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden bg-[#f5f5f5]">
+    <div className="relative mx-auto mt-10 max-w-4xl overflow-hidden bg-[white]">
       <div className="relative p-6 sm:p-8">
         <div
           className={[
@@ -142,7 +142,13 @@ export function AskInteractive({
               className="group grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-[#0382ff]/10 text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 transition-colors duration-200 ease-out hover:bg-[#0382ff]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0382ff]"
               aria-label="Ask Blu"
             >
-              <span className="text-lg leading-none inline-block group-hover:animate-[slideOut_1.5s_ease-in-out]">➤</span>
+              <svg 
+                className="h-4 w-4 inline-block group-hover:animate-[slideOut_1.5s_ease-in-out]" 
+                viewBox="0 0 24 24" 
+                fill="currentColor"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </button>
           </div>
 
@@ -151,10 +157,10 @@ export function AskInteractive({
             {/* Band 1 - Scrolling right */}
             <div className="relative">
               {/* Left blur gradient */}
-              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[white] via-[white]/80 to-transparent" />
               
               {/* Right blur gradient */}
-              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[white] via-[white]/80 to-transparent" />
               
               {/* Scrolling container */}
               <div
@@ -186,10 +192,10 @@ export function AskInteractive({
             {/* Band 2 - Scrolling left (opposite direction) */}
             <div className="relative">
               {/* Left blur gradient */}
-              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[white] via-[white]/80 to-transparent" />
               
               {/* Right blur gradient */}
-              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[white] via-[white]/80 to-transparent" />
               
               {/* Scrolling container */}
               <div
@@ -221,10 +227,10 @@ export function AskInteractive({
             {/* Band 3 - Scrolling right (same direction as band 1, different speed) */}
             <div className="relative">
               {/* Left blur gradient */}
-              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-[white] via-[white]/80 to-transparent" />
               
               {/* Right blur gradient */}
-              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[#f5f5f5] via-[#f5f5f5]/80 to-transparent" />
+              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-[white] via-[white]/80 to-transparent" />
               
               {/* Scrolling container */}
               <div

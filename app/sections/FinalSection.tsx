@@ -3,6 +3,7 @@ import { Container } from "../components/Container";
 import { AnimateIn } from "../components/AnimateIn";
 import { Footer } from "../components/Footer";
 import { siteContent } from "../content/siteContent";
+import Link from "next/link";
 
 export function FinalSection({
   brand,
@@ -19,7 +20,7 @@ export function FinalSection({
         <Container>
           <AnimateIn>
             <div className="mx-auto max-w-4xl text-center">
-              <div className="text-xs font-semibold tracking-wide text-white/60">
+              <div className="inline-flex items-center gap-2 rounded-sm bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white ring-1 ring-inset ring-white/20 mb-6">
                 FINAL PUSH
               </div>
               <div className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -37,7 +38,7 @@ export function FinalSection({
                 <ButtonLink
                   href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12"
                   variant="secondary"
-                  className="!bg-[#f5f5f5] !text-black hover:!bg-[#e5e5e5] hover:!text-black !ring-black/10"
+                  className="!bg-white !text-black hover:!bg-[#f5f5f5] hover:!text-black !ring-black/10"
                 >
                   Book a 15-min demo
                 </ButtonLink>
@@ -48,17 +49,26 @@ export function FinalSection({
           <div className="mx-auto mt-12 grid max-w-4xl gap-4 md:grid-cols-2">
             {finalCtas.items.map((c, idx) => (
               <AnimateIn key={c.title} delayMs={idx * 80}>
-                <div className="rounded-3xl bg-white/5 p-8 ring-1 ring-inset ring-[#0382ff]/25">
+                <div className="rounded-sm bg-white/5 p-8 ring-1 ring-inset ring-[#0382ff]/25">
                   <div className="text-lg font-semibold">{c.title}</div>
                   <div className="mt-3 text-base leading-7 text-white/80">
                     {c.description}
                   </div>
-                  <a
-                    href={c.cta.href}
-                    className="mt-6 inline-flex text-sm font-semibold text-[#7ab7ff] underline underline-offset-4 transition-colors hover:text-white"
-                  >
-                    {c.cta.label}
-                  </a>
+                  {c.cta.href.startsWith("/") ? (
+                    <Link
+                      href={c.cta.href}
+                      className="mt-6 inline-flex text-sm font-semibold text-[#7ab7ff] underline underline-offset-4 transition-colors hover:text-white"
+                    >
+                      {c.cta.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={c.cta.href}
+                      className="mt-6 inline-flex text-sm font-semibold text-[#7ab7ff] underline underline-offset-4 transition-colors hover:text-white"
+                    >
+                      {c.cta.label}
+                    </a>
+                  )}
                 </div>
               </AnimateIn>
             ))}

@@ -15,7 +15,7 @@ function StatCard({
   return (
     <div
       className={[
-        "rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-6 shadow-sm backdrop-blur",
+        "rounded-sm border border-black/10 bg-[white]/90 p-6 shadow-sm backdrop-blur",
         className,
       ]
         .filter(Boolean)
@@ -121,8 +121,8 @@ function CenterMark() {
                 "radial-gradient(transparent 55%, #000 56%), repeating-conic-gradient(#000 0 18deg, transparent 18deg 26deg)",
             }}
           />
-          <div className="absolute inset-10 rounded-full bg-[#f5f5f5] ring-1 ring-inset ring-black/10" />
-          <div className="relative grid h-24 w-24 place-items-center rounded-3xl bg-[#f5f5f5] ring-1 ring-inset ring-black/10 shadow-sm">
+          <div className="absolute inset-10 rounded-full bg-[white] ring-1 ring-inset ring-black/10" />
+          <div className="relative grid h-24 w-24 place-items-center rounded-3xl bg-[white] ring-1 ring-inset ring-black/10 shadow-sm">
             <Image
               src="/logo.png"
               alt="Intempt"
@@ -147,6 +147,9 @@ export function GrowSection({
       <Container>
         <AnimateIn>
           <div className="text-center">
+            <div className="inline-flex items-center gap-2 rounded-sm bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 mb-6">
+              Growth Metrics
+            </div>
             <div className="text-4xl font-semibold tracking-tight text-black sm:text-6xl">
               {grow.title}
             </div>
@@ -166,7 +169,7 @@ export function GrowSection({
                   <div className="text-6xl font-semibold tracking-tight text-black sm:text-7xl">
                     89.98
                   </div>
-                  <div className="rounded-full bg-[#0382ff]/10 px-3 py-1 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
+                  <div className="rounded-sm bg-[#0382ff]/10 px-3 py-1 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
                     Overall
                   </div>
                 </div>
@@ -189,7 +192,7 @@ export function GrowSection({
             </AnimateIn>
 
             <AnimateIn className="md:col-span-1" delayMs={160}>
-              <div className="grid h-full place-items-center rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-6 shadow-sm backdrop-blur">
+              <div className="grid h-full place-items-center rounded-sm border border-black/10 bg-[white]/90 p-6 shadow-sm backdrop-blur">
                 <CenterMark />
               </div>
             </AnimateIn>
@@ -230,7 +233,7 @@ export function GrowSection({
             </AnimateIn>
 
             <AnimateIn className="md:col-span-2" delayMs={220}>
-              <div className="rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-8 shadow-sm backdrop-blur">
+              <div className="rounded-sm border border-black/10 bg-[white]/90 p-8 shadow-sm backdrop-blur">
                 <div className="text-sm font-medium text-black">
                   Key metrics that compound growth
                 </div>
@@ -238,7 +241,7 @@ export function GrowSection({
                   {grow.metrics.map((m) => (
                     <span
                       key={m}
-                      className="rounded-full bg-[#0382ff]/5 px-3 py-1.5 text-xs font-semibold text-black/70 ring-1 ring-inset ring-[#0382ff]/15"
+                      className="rounded-sm bg-[#0382ff]/5 px-3 py-1.5 text-xs font-semibold text-black/70 ring-1 ring-inset ring-[#0382ff]/15"
                     >
                       {m}
                     </span>

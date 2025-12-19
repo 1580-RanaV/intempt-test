@@ -340,7 +340,7 @@ export function HeaderSection({
             {/* Dropdown menu */}
             {activeNavItem && activeItem?.subItems && dropdownPosition && (
               <div
-                className="fixed z-40 rounded-2xl backdrop-blur-xl border border-black/10 shadow-xl overflow-hidden transition-all duration-300 ease-out"
+                className="fixed z-40 rounded-sm backdrop-blur-xl border border-black/10 shadow-xl overflow-hidden transition-all duration-300 ease-out"
                 style={{
                   top: "73px",
                   left: `${dropdownPosition.left}px`,
@@ -370,7 +370,7 @@ export function HeaderSection({
                           setClickedNavItem(null);
                           setHoveredNavItem(null);
                         }}
-                        className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
+                        className="block px-4 py-2.5 rounded-sm text-sm font-medium text-black transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
                         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
                         {subItem.label}
@@ -381,7 +381,7 @@ export function HeaderSection({
               </div>
             )}
 
-            <div className="hidden items-center gap-2 lg:flex">
+            <div className="hidden items-center gap-7 lg:flex">
               <a
                 href={actions[0]?.href}
                 className="text-sm font-semibold text-black/60 transition-colors hover:text-black"
@@ -584,7 +584,7 @@ export function HeaderSection({
                                     key={subItem.label}
                                     href={subItem.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
+                                    className="block px-4 py-2.5 rounded-sm text-sm font-medium text-black transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
                                     {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                                   >
                                     {subItem.label}

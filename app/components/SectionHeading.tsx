@@ -10,7 +10,7 @@ export function SectionHeading({
   return (
     <div className="mx-auto max-w-2xl space-y-3 text-center sm:space-y-4">
       {eyebrow ? (
-        <div className="text-xs font-semibold tracking-wide text-black/50">
+        <div className="inline-flex items-center gap-2 rounded-sm bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
           {eyebrow}
         </div>
       ) : null}

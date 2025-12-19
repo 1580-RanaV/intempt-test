@@ -3,7 +3,7 @@ import { Container } from "../components/Container";
 import { AnimateIn } from "../components/AnimateIn";
 import { siteContent } from "../content/siteContent";
 import { VideoCard } from "../components/VideoCard";
-import SplitText from "../components/SplitText";
+import AnimatedText from "../components/AnimatedText";
 
 export function HeroSection({
   hero,
@@ -17,17 +17,15 @@ export function HeroSection({
       <Container>
         <AnimateIn>
           <div className="mx-auto max-w-4xl text-center">
-            <div className="inline-flex items-center gap-2 rounded-full bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
+            <div className="inline-flex items-center gap-2 rounded-sm bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20">
               GrowthOS™ + Blu (AI Co‑Marketer)
             </div>
 
-            <SplitText
+            <AnimatedText
               tag="h1"
               text={hero.headline}
-              splitType="words, chars"
               delay={18}
               duration={0.6}
-              ease="power3.out"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
               threshold={0.2}

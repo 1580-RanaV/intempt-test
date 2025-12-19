@@ -67,7 +67,7 @@ function FeatureItem({
             <h3 className="text-lg font-medium text-black transition-colors group-hover:text-[#0382ff]">
               {title}
             </h3>
-            <div className="mt-2 mx-auto max-w-md text-sm font-normal leading-6 text-black">
+            <div className="mt-2 mx-auto max-w-xs text-sm font-normal leading-6 text-black">
               {description}
             </div>
           </div>
@@ -93,6 +93,9 @@ export function PlatformSection({
           {/* Main Title */}
           <div className="text-center">
             <AnimateIn>
+              <div className="inline-flex items-center gap-2 rounded-sm bg-[#0382ff]/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#0382ff] ring-1 ring-inset ring-[#0382ff]/20 mb-6">
+                Platform
+              </div>
               <h2 className="mx-auto max-w-4xl text-3xl font-semibold tracking-tight text-black sm:text-5xl">
                 <AccentTitle title={platform.title} />
               </h2>

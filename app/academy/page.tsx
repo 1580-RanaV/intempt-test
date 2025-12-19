@@ -44,7 +44,7 @@ export default function AcademyPage() {
   }, []);
 
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -123,7 +123,7 @@ export default function AcademyPage() {
                       href={video.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex flex-col h-full rounded-2xl border border-black/10 bg-white overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1 hover:border-[#0382ff]/20"
+                      className="group flex flex-col h-full rounded-sm border border-black/10 bg-white overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1 hover:border-[#0382ff]/20"
                     >
                       <div className="relative h-48 w-full overflow-hidden bg-black/5 shrink-0">
                         <Image

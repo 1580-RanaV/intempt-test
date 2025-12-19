@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function JourneysPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-[white] text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -153,7 +153,7 @@ export default function JourneysPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/journeys/j-1.png"
@@ -278,7 +278,7 @@ export default function JourneysPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/journeys/j-2.png"
@@ -419,7 +419,7 @@ export default function JourneysPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/journeys/j-3.png"
@@ -540,7 +540,7 @@ export default function JourneysPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/journeys/j-4.png"
@@ -668,7 +668,7 @@ export default function JourneysPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/journeys/j-5.png"
@@ -799,7 +799,7 @@ export default function JourneysPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/journeys/j-6.png"

@@ -7,7 +7,7 @@ import { AnimateIn } from "../components/AnimateIn";
 
 export default function AOVeCommercePage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-white text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -376,7 +376,7 @@ export default function AOVeCommercePage() {
                   <ButtonLink
                     href="#growth-plays"
                     variant="secondary"
-                    className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95"
+                    className="bg-white text-black hover:bg-white"
                   >
                     View Growth Plays
                     <svg

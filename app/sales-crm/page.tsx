@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function SalesCRMPage() {
   return (
-    <div className="bg-[#f5f5f5] text-black">
+    <div className="bg-white text-black">
       <HeaderSection
         brand={siteContent.brand}
         navItems={siteContent.nav.items}
@@ -59,7 +59,7 @@ export default function SalesCRMPage() {
             </AnimateIn>
             <AnimateIn delayMs={80}>
               <div className="mx-auto mt-12 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/pic1.png"
@@ -184,7 +184,7 @@ export default function SalesCRMPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/pic2.png"
@@ -312,7 +312,7 @@ export default function SalesCRMPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/pic3.png"
@@ -436,7 +436,7 @@ export default function SalesCRMPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/pic4.png"
@@ -557,7 +557,7 @@ export default function SalesCRMPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/pic5.png"
@@ -682,7 +682,7 @@ export default function SalesCRMPage() {
 
             <AnimateIn delayMs={200}>
               <div className="mx-auto mt-16 max-w-5xl">
-                <div className="relative overflow-hidden rounded-3xl border border-black/10 bg-white/50 shadow-xl p-4">
+                <div className="relative overflow-hidden rounded-sm border border-black/10 bg-white/50 shadow-xl p-4">
                   <div className="relative w-full">
                     <Image
                       src="/pic6.png"
@@ -713,7 +713,7 @@ export default function SalesCRMPage() {
                   <ButtonLink
                     href="#templates"
                     variant="secondary"
-                    className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95"
+                    className="bg-white text-black hover:bg-white"
                   >
                     View Templates
                     <svg
