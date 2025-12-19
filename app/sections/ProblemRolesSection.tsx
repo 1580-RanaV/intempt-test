@@ -4,6 +4,7 @@ import { SectionHeading } from "../components/SectionHeading";
 import { siteContent } from "../content/siteContent";
 import { AnimatedToolStrike } from "../components/AnimatedToolStrike";
 import { AnimatedSubtitle } from "../components/AnimatedSubtitle";
+import Image from "next/image";
 
 export function ProblemRolesSection({
   why,
@@ -61,6 +62,18 @@ export function ProblemRolesSection({
                 <h3 className="text-4xl font-semibold tracking-tight text-black sm:text-6xl">
                   The fix?
                 </h3>
+                <div className="mx-auto mt-8 max-w-6xl">
+                  <div className="relative w-full">
+                    <Image
+                      src="/gr2.png"
+                      alt="The fix"
+                      width={1600}
+                      height={800}
+                      className="w-full h-auto rounded-2xl"
+                      priority={false}
+                    />
+                  </div>
+                </div>
                 <div className="mx-auto max-w-3xl">
                   <div className="text-3xl font-semibold tracking-tight sm:text-5xl">
                     <span className="bg-gradient-to-r from-[#0382ff] via-violet-500 to-[#0382ff] bg-clip-text text-transparent">
