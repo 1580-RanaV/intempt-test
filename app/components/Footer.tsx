@@ -32,17 +32,17 @@ export function Footer({
                 height={28}
                 className="h-7 w-7 rounded-md"
               />
-              <div className="text-base font-semibold text-zinc-900">
+              <div className="text-base font-semibold text-black">
                 {brand}
               </div>
             </div>
-            <div className="mt-6 text-sm font-medium text-zinc-900">
+            <div className="mt-6 text-sm font-medium text-black">
               {contact.title}
             </div>
             <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
               {contact.locations.map((loc) => (
-                <div key={loc.region} className="text-sm text-zinc-600">
-                  <div className="font-medium text-zinc-900">{loc.region}</div>
+                <div key={loc.region} className="text-sm font-normal text-black">
+                  <div className="font-medium text-black">{loc.region}</div>
                   <div className="mt-2 space-y-1">
                     {loc.lines.map((line) => (
                       <div key={line}>{line}</div>
@@ -56,10 +56,10 @@ export function Footer({
           <div className="grid gap-8 sm:grid-cols-2 lg:col-span-8 lg:grid-cols-3">
             {columns.map((col) => (
               <div key={col.title}>
-                <div className="text-sm font-medium text-zinc-900">
+                <div className="text-sm font-medium text-black">
                   {col.title}
                 </div>
-                <ul className="mt-3 space-y-2 text-sm text-zinc-600">
+                <ul className="mt-3 space-y-2 text-sm font-normal text-black">
                   {col.links.map((link) => {
                     let href = "#";
                     
@@ -101,7 +101,7 @@ export function Footer({
                     <li key={link}>
                       <a
                           href={href}
-                        className="transition-colors hover:text-zinc-900"
+                        className="transition-colors hover:text-black"
                           {...(href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
                         {link}
@@ -115,7 +115,7 @@ export function Footer({
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-black/10 pt-8 text-sm text-zinc-600 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-2 border-t border-black/10 pt-8 text-sm font-normal text-black sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} {brand}</div>
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center gap-2">
@@ -131,22 +131,22 @@ export function Footer({
             <a href="/sla" className="transition-colors hover:text-zinc-900">
               SLA
             </a>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/dpa" className="transition-colors hover:text-zinc-900">
               DPA
             </a>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/subprocessors" className="transition-colors hover:text-zinc-900">
               SubProcessors
             </a>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/aup" className="transition-colors hover:text-zinc-900">
               AUP
             </a>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="/security" className="transition-colors hover:text-zinc-900">
               Security
             </a>
             <a href="#" className="transition-colors hover:text-zinc-900">
               Trust portal
             </a>
-            <a href="/affiliates" className="transition-colors hover:text-zinc-900">
+            <a href="/affiliate-terms" className="transition-colors hover:text-zinc-900">
               Affiliate terms
             </a>
             <a href="/agencies" className="transition-colors hover:text-zinc-900">

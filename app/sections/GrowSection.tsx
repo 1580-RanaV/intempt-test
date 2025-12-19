@@ -21,7 +21,7 @@ function StatCard({
         .filter(Boolean)
         .join(" ")}
     >
-      <div className="text-sm font-semibold text-black/80">{title}</div>
+      <div className="text-sm font-medium text-black">{title}</div>
       <div className="mt-5">{children}</div>
     </div>
   );
@@ -68,7 +68,7 @@ function RetentionBars() {
     <div className="space-y-3">
       {rows.map((r) => (
         <div key={r.label} className="space-y-2">
-          <div className="flex items-center justify-between text-xs font-semibold text-black/55">
+          <div className="flex items-center justify-between text-xs font-normal text-black">
             <span>{r.label}</span>
             <span>{r.width}</span>
           </div>
@@ -150,7 +150,7 @@ export function GrowSection({
             <div className="text-4xl font-semibold tracking-tight text-black sm:text-6xl">
               {grow.title}
             </div>
-            <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-black/65 sm:text-xl">
+            <p className="mx-auto mt-4 max-w-3xl text-lg font-normal leading-8 text-black sm:text-xl">
               {grow.subtitle}
             </p>
           </div>
@@ -231,7 +231,7 @@ export function GrowSection({
 
             <AnimateIn className="md:col-span-2" delayMs={220}>
               <div className="rounded-3xl border border-black/10 bg-[#f5f5f5]/90 p-8 shadow-sm backdrop-blur">
-                <div className="text-sm font-semibold text-black/80">
+                <div className="text-sm font-medium text-black">
                   Key metrics that compound growth
                 </div>
                 <div className="mt-5 flex flex-wrap gap-2">
@@ -244,7 +244,7 @@ export function GrowSection({
                     </span>
                   ))}
                 </div>
-                <div className="mt-6 text-sm leading-7 text-black/65">
+                <div className="mt-6 text-sm font-normal leading-7 text-black">
                   Insights flow directly into journeys, experiments, and
                   personalizations—so every improvement becomes the next best
                   action.

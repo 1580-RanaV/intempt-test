@@ -44,7 +44,7 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <p className="mb-8 text-base leading-7 text-black/80">
+                <p className="mb-8 text-base font-normal leading-7 text-black">
                   These Customer Terms of Service (the &quot;Agreement&quot;) govern access to and use of Intempt&apos;s Services by the customer identified in an Order Form, online checkout, account record, or in-app purchase flow (&quot;Customer,&quot; &quot;you,&quot; &quot;your&quot;). This Agreement is entered into between Customer and Intempt Technologies LLC (&quot;Intempt,&quot; &quot;we,&quot; &quot;us,&quot; &quot;our&quot;).
                 </p>
 
@@ -52,11 +52,11 @@ export default function TermsOfServicePage() {
                   Structure of This Agreement
                 </h2>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   This Agreement consists of the following documents, which are incorporated by reference:
                 </p>
 
-                <ul className="mb-8 ml-6 list-disc space-y-2 text-base leading-7 text-black/80">
+                <ul className="mb-8 ml-6 list-disc space-y-2 text-base font-normal leading-7 text-black">
                   <li>General Terms (these terms)</li>
                   <li>Product-Specific Terms</li>
                   <li>Acceptable Use Policy (AUP): <a href="https://intempt.com/aup" className="text-[#0382ff] hover:underline">https://intempt.com/aup</a></li>
@@ -65,11 +65,11 @@ export default function TermsOfServicePage() {
                   <li>Any Order Form, Statement of Work (SOW), or other ordering document agreed by the parties (&quot;Order&quot;)</li>
                 </ul>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   Order of precedence in case of conflict:
                 </p>
 
-                <ol className="mb-8 ml-6 list-decimal space-y-2 text-base leading-7 text-black/80">
+                <ol className="mb-8 ml-6 list-decimal space-y-2 text-base font-normal leading-7 text-black">
                   <li>Order Form or SOW</li>
                   <li>DPA (for privacy and data issues)</li>
                   <li>Product-Specific Terms</li>
@@ -81,11 +81,11 @@ export default function TermsOfServicePage() {
                   GENERAL TERMS
                 </h2>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Definitions
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     <strong>Affiliate</strong> means any entity that directly or indirectly controls, is controlled by, or is under common control with a party, where control means ownership of more than 50% of voting interests.
                   </p>
@@ -118,11 +118,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Use of Services
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Intempt grants Customer a limited, non-exclusive, non-transferable right to access and use the Services during the Subscription Term for internal business purposes, subject to this Agreement and the applicable Order.
                   </p>
@@ -155,11 +155,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Orders, Fees, Taxes, and Payment
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Customer may purchase Services through self-serve checkout, Order Forms, or in-app purchases.
                   </p>
@@ -189,11 +189,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Term and Termination
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Subscription Terms are defined in the applicable Order.
                   </p>
@@ -211,11 +211,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Customer Data, Privacy, and Security
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Customer owns Customer Data. Customer grants Intempt a limited license to process Customer Data solely to provide and secure the Services, consistent with the DPA.
                   </p>
@@ -248,11 +248,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Intellectual Property
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Intempt retains all rights to the Services and Intempt Content. Customer receives no rights except as expressly granted.
                   </p>
@@ -270,11 +270,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Confidentiality
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Confidential Information includes non-public information, including Customer Data.
                   </p>
@@ -286,21 +286,21 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Publicity
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Intempt may list Customer as a customer reference. Customer may opt out by emailing <a href="mailto:hey@intempt.com" className="text-[#0382ff] hover:underline">hey@intempt.com</a>. Case studies require prior written approval.
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Indemnification
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Customer will indemnify Intempt for claims arising from Customer Data, misuse, compliance failures, or third-party products.
                   </p>
@@ -312,11 +312,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Warranties and Liability
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Intempt warrants Services will materially conform to Documentation. Remedies are limited to cure or refund.
                   </p>
@@ -331,11 +331,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Governing Law and Disputes
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Texas law governs. Venue is exclusively Texas courts.
                   </p>
@@ -344,11 +344,11 @@ export default function TermsOfServicePage() {
                   </p>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   Miscellaneous
                 </h3>
 
-                <div className="mb-8 space-y-4 text-base leading-7 text-black/80">
+                <div className="mb-8 space-y-4 text-base font-normal leading-7 text-black">
                   <p>
                     Notices, assignment rules, force majeure, severability, entire agreement, amendments, export controls, and anti-corruption obligations apply as stated.
                   </p>
@@ -358,19 +358,19 @@ export default function TermsOfServicePage() {
                   PRODUCT-SPECIFIC TERMS
                 </h2>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   <strong>Last Modified:</strong> October 10, 2025
                 </p>
 
-                <p className="mb-8 text-base leading-7 text-black/80">
+                <p className="mb-8 text-base font-normal leading-7 text-black">
                   These terms apply when Customer uses the relevant features.
                 </p>
 
-                <p className="mb-8 text-base leading-7 text-black/80">
+                <p className="mb-8 text-base font-normal leading-7 text-black">
                   They cover platform access and seats, usage limits and credits, email, SMS and WhatsApp messaging, push notifications, experimentation, personalization, enrichment, AI features, uptime goals, and professional services.
                 </p>
 
-                <p className="mb-8 text-base leading-7 text-black/80">
+                <p className="mb-8 text-base font-normal leading-7 text-black">
                   Appendices include DMCA takedown procedures and third-party connector disclaimers.
                 </p>
               </div>

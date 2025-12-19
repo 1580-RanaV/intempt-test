@@ -30,7 +30,7 @@ export default function ExperimentPage() {
                 <h1 className="mt-6 text-5xl font-semibold tracking-tight text-black sm:text-6xl">
                   AI handles the testing. You keep the credit.
                 </h1>
-                <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-black/70 sm:text-xl">
+                <p className="mx-auto mt-6 max-w-3xl text-lg font-normal leading-8 text-black sm:text-xl">
                   Create variations in seconds, target the right users, and track results with advanced analytics and statistics—all in one platform built for marketers.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">

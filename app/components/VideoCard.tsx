@@ -67,7 +67,7 @@ export function VideoCard({
       <div className="flex items-start justify-between gap-4">
         <div>
           <div className="text-sm font-semibold text-black">{label}</div>
-          <div className="mt-1 text-sm text-black/60">
+          <div className="mt-1 text-sm font-normal text-black">
             {caption ?? "Watch the explainer video."}
           </div>
         </div>

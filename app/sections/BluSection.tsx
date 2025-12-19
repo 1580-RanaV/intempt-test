@@ -31,7 +31,7 @@ export function BluSection({
                   />
                 </div>
               </div>
-              <div className="mx-auto max-w-3xl text-lg leading-8 text-black/65 sm:text-xl">
+              <div className="mx-auto max-w-3xl text-lg font-normal leading-8 text-black sm:text-xl">
                 {blu.ask.subtitle}
               </div>
             </div>
@@ -48,7 +48,7 @@ export function BluSection({
               <div className="text-4xl font-semibold tracking-tight text-black sm:text-6xl">
                 {blu.do.title}
               </div>
-              <div className="mx-auto max-w-3xl text-lg leading-8 text-black/65 sm:text-xl">
+              <div className="mx-auto max-w-3xl text-lg font-normal leading-8 text-black sm:text-xl">
                 {blu.do.subtitle}
               </div>
             </div>

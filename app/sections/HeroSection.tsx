@@ -35,7 +35,7 @@ export function HeroSection({
               textAlign="center"
               className="mt-6 text-5xl font-semibold tracking-tight text-black sm:text-7xl"
             />
-            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-black/70 sm:text-xl">
+            <p className="mx-auto mt-6 max-w-3xl text-lg font-normal leading-8 text-black sm:text-xl">
               {hero.subhead}
             </p>
 

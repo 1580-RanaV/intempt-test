@@ -37,7 +37,7 @@ export function FinalSection({
                 <ButtonLink
                   href="https://calendly.com/sidchaudhary/meet-sid?month=2025-12"
                   variant="secondary"
-                  className="bg-[#f5f5f5] text-black hover:bg-[#f5f5f5]/95"
+                  className="!bg-[#f5f5f5] !text-black hover:!bg-[#e5e5e5] hover:!text-black !ring-black/10"
                 >
                   Book a 15-min demo
                 </ButtonLink>

@@ -370,7 +370,7 @@ export function HeaderSection({
                           setClickedNavItem(null);
                           setHoveredNavItem(null);
                         }}
-                        className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black/70 transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
+                        className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
                         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       >
                         {subItem.label}
@@ -584,7 +584,7 @@ export function HeaderSection({
                                     key={subItem.label}
                                     href={subItem.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black/70 transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
+                                    className="block px-4 py-2.5 rounded-xl text-sm font-medium text-black transition-all duration-200 ease-out hover:bg-[#0382ff]/10 hover:text-[#0382ff]"
                                     {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                                   >
                                     {subItem.label}

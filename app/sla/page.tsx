@@ -46,7 +46,7 @@ export default function SLAPage() {
                   1. Service Commitment
                 </h2>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   Intempt will use commercially reasonable efforts to make the Covered Services available with a Monthly Uptime Percentage of at least 99.9% during each monthly billing cycle (the &quot;Service Commitment&quot;).
                 </p>
 
@@ -94,11 +94,11 @@ export default function SLAPage() {
                   3. Service Credits
                 </h2>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   3.1 Credit Schedule
                 </h3>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   If Intempt fails to meet the Service Commitment for a Covered Service, you will be eligible for a Service Credit calculated as a percentage of the monthly subscription fees attributable to the affected Covered Service(s), according to the following schedule:
                 </p>
 
@@ -143,7 +143,7 @@ export default function SLAPage() {
                   </table>
                 </div>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   3.2 Application; No Refunds
                 </h3>
 
@@ -151,11 +151,11 @@ export default function SLAPage() {
                   Service Credits will be applied only against future payments due for the Services. At Intempt&apos;s discretion, Intempt may instead issue the Service Credit to the payment method used for the billing cycle in which the Unavailability occurred. Service Credits are not refunds and do not entitle you to any other payment.
                 </p>
 
-                <h3 className="mt-8 mb-4 text-xl font-semibold text-black">
+                <h3 className="mt-8 mb-4 text-xl font-medium text-black">
                   3.3 Minimum Threshold; Cap
                 </h3>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   A Service Credit will be issued only if the total credit amount for the applicable monthly billing cycle is at least US$10. Service Credits may not be transferred or applied to any other account.
                 </p>
 
@@ -175,11 +175,11 @@ export default function SLAPage() {
                   5. Credit Request Procedure
                 </h2>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   To receive a Service Credit, you must submit a claim by emailing <a href="mailto:hey@intempt.com" className="text-[#0382ff] hover:underline">hey@intempt.com</a>.
                 </p>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   To be eligible, the request must be received by Intempt no later than the end of the second billing cycle after the incident occurred and must include:
                 </p>
 
@@ -198,7 +198,7 @@ export default function SLAPage() {
                   6. SLA Exclusions
                 </h2>
 
-                <p className="mb-6 text-base leading-7 text-black/80">
+                <p className="mb-6 text-base font-normal leading-7 text-black">
                   The Service Commitment does not apply to any Unavailability that:
                 </p>
 

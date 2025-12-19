@@ -191,7 +191,7 @@ export default function BlogPage() {
                 <h1 className="text-4xl font-semibold tracking-tight text-black sm:text-5xl">
                   The Full Stack Marketer Blog
                 </h1>
-                <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-black/70 sm:text-lg">
+                <p className="mx-auto mt-4 max-w-2xl text-base font-normal leading-7 text-black sm:text-lg">
                   Zero theory or mindset discussions here; just actionable
                   marketing tactics that will grow revenue today.
                 </p>
@@ -246,7 +246,7 @@ export default function BlogPage() {
                         <h2 className="text-xl font-semibold text-black mb-3 line-clamp-2 group-hover:text-[#0382ff] transition-colors">
                           {post.title}
                         </h2>
-                        <p className="text-sm text-black/70 line-clamp-3 grow">
+                        <p className="text-sm font-normal text-black line-clamp-3 grow">
                           {post.description}
                         </p>
                       </div>

@@ -18,7 +18,7 @@ export function SectionHeading({
         {title}
       </h2>
       {subtitle ? (
-        <p className="mx-auto max-w-2xl text-lg leading-8 text-black/65">
+        <p className="mx-auto max-w-2xl text-lg font-medium leading-8 text-black">
           {subtitle}
         </p>
       ) : null}

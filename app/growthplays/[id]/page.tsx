@@ -4947,7 +4947,7 @@ export default async function GrowthPlayPage({
           return (
             <ul key={index} className="mt-4 mb-4 space-y-2 list-disc list-inside">
               {items.map((item, itemIndex) => (
-                <li key={itemIndex} className="text-black/80">
+                <li key={itemIndex} className="font-normal text-black">
                   {item.split(/(\*\*.*?\*\*)/g).map((part, partIndex) => {
                     if (part.startsWith("**") && part.endsWith("**")) {
                       return (
@@ -4973,7 +4973,7 @@ export default async function GrowthPlayPage({
           return (
             <ol key={index} className="mt-4 mb-4 space-y-2 list-decimal list-inside">
               {items.map((item, itemIndex) => (
-                <li key={itemIndex} className="text-black/80">
+                <li key={itemIndex} className="font-normal text-black">
                   {item.split(/(\*\*.*?\*\*)/g).map((part, partIndex) => {
                     if (part.startsWith("**") && part.endsWith("**")) {
                       return (
@@ -4995,7 +4995,7 @@ export default async function GrowthPlayPage({
           return (
             <p
               key={index}
-              className="mt-4 mb-4 text-lg leading-8 text-black/80"
+              className="mt-4 mb-4 text-lg font-normal leading-8 text-black"
             >
               {paragraph.split(/(\*\*.*?\*\*)/g).map((part, partIndex) => {
                 if (part.startsWith("**") && part.endsWith("**")) {

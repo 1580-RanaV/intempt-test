@@ -132,7 +132,7 @@ export function AskInteractive({
                   if (e.key === "Enter") submit();
                 }}
                 placeholder={defaultPrompt}
-                className="w-full bg-transparent px-2 text-sm font-semibold text-black/70 outline-none placeholder:text-black/35"
+                className="w-full bg-transparent px-2 text-sm font-normal text-black outline-none placeholder:text-black/35"
               />
             </div>
 
@@ -265,7 +265,7 @@ export function AskInteractive({
           aria-hidden={!submitted}
         >
           <div className="mx-auto max-w-xl">
-            <div className="text-sm font-semibold text-black/60">
+            <div className="text-sm font-normal text-black">
               Nice prompt. Want Blu to do it for real?
             </div>
             <div className="mt-6 flex justify-center">

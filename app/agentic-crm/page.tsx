@@ -29,7 +29,7 @@ export default function AgenticCRMPage() {
                 <h1 className="mt-6 text-5xl font-semibold tracking-tight text-black sm:text-6xl">
                   360° user data to drive growth. Faster. Simpler.
                 </h1>
-                <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-black/70 sm:text-xl">
+                <p className="mx-auto mt-6 max-w-3xl text-lg font-normal leading-8 text-black sm:text-xl">
                   Bring together real-time user signals from product, marketing, and sales tools into a single, actionable, agentic CRM.
                 </p>
                 <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
@@ -51,7 +51,7 @@ export default function AgenticCRMPage() {
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
                   Better data. Better results.
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                <p className="mx-auto mt-4 max-w-2xl text-lg font-normal leading-8 text-black">
                   Trust you have clean, reliable data for better targeting, personalization and analytics
                 </p>
               </div>
@@ -71,7 +71,7 @@ export default function AgenticCRMPage() {
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
                   Customer data platform
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                <p className="mx-auto mt-4 max-w-2xl text-lg font-normal leading-8 text-black">
                   Unify your customer data
                 </p>
                 <p className="mx-auto mt-2 max-w-2xl text-base leading-7 text-black/60">
@@ -113,7 +113,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Resolve identities
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -139,7 +139,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Centralize user and account attributes
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -171,7 +171,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Create dynamic segments
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -192,7 +192,7 @@ export default function AgenticCRMPage() {
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
                   Autonomous CRM Workflows
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                <p className="mx-auto mt-4 max-w-2xl text-lg font-normal leading-8 text-black">
                   Automate your entire customer journey
                 </p>
                 <p className="mx-auto mt-2 max-w-2xl text-base leading-7 text-black/60">
@@ -220,7 +220,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Multi-platform orchestration
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -246,7 +246,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Smart trigger conditions
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -272,7 +272,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       AI-powered decision making
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -297,7 +297,7 @@ export default function AgenticCRMPage() {
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
                   Privacy
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                <p className="mx-auto mt-4 max-w-2xl text-lg font-normal leading-8 text-black">
                   Stay compliant and respect customer preferences
                 </p>
                 <p className="mx-auto mt-2 max-w-2xl text-base leading-7 text-black/60">
@@ -325,7 +325,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Manage consents
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -351,7 +351,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Streamline deletion and portability
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -377,7 +377,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Customize preference center
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -398,7 +398,7 @@ export default function AgenticCRMPage() {
                 <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
                   Integrations
                 </h2>
-                <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-black/65">
+                <p className="mx-auto mt-4 max-w-2xl text-lg font-normal leading-8 text-black">
                   Connect seamlessly with your tech stack
                 </p>
                 <p className="mx-auto mt-2 max-w-2xl text-base leading-7 text-black/60">
@@ -432,7 +432,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Enable real-time sync
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -458,7 +458,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Integrate with major platforms
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">
@@ -484,7 +484,7 @@ export default function AgenticCRMPage() {
                         />
                       </svg>
                     </div>
-                    <h3 className="mt-6 text-xl font-semibold text-black">
+                    <h3 className="mt-6 text-xl font-medium text-black">
                       Customize data flows
                     </h3>
                     <p className="mt-3 text-base leading-7 text-black/65">

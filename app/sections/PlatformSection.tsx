@@ -6,7 +6,7 @@ import { AnimateIn } from "../components/AnimateIn";
 import { siteContent } from "../content/siteContent";
 
 function AccentTitle({ title }: { title: string }) {
-  const token = "10×";
+  const token = "10X";
   const parts = title.split(token);
   if (parts.length === 1) return <>{title}</>;
 
@@ -64,10 +64,10 @@ function FeatureItem({
       <div className="group relative">
         <div className="text-center">
           <div className="inline-block">
-            <h3 className="text-lg font-semibold text-black transition-colors group-hover:text-[#0382ff]">
+            <h3 className="text-lg font-medium text-black transition-colors group-hover:text-[#0382ff]">
               {title}
             </h3>
-            <div className="mt-2 mx-auto max-w-md text-sm leading-6 text-black/60">
+            <div className="mt-2 mx-auto max-w-md text-sm font-normal leading-6 text-black">
               {description}
             </div>
           </div>

@@ -50,8 +50,15 @@ export const siteContent = {
           { label: "Agencies", href: "/agencies" },
         ]
       },
+      { 
+        label: "Docs", 
+        href: "#docs",
+        subItems: [
+          { label: "Help and support docs", href: "https://help.intempt.com" },
+          { label: "Developer docs", href: "https://docs.intempt.com" },
+        ]
+      },
         { label: "Pricing", href: "/pricing" },
-        { label: "Product Tour", href: "/product-tour" },
     ] satisfies NavItem[],
     actions: [
       { label: "Log in", href: "#login" },
@@ -201,7 +208,7 @@ export const siteContent = {
     ],
   },
   platform: {
-    title: "All-in-one GrowthOS to 10× your GTM",
+    title: "All-in-one GrowthOS to 10X your GTM",
     subtitle:
       "Replace fragmented tools with one unified platform — plus Blu, your AI co‑marketer.",
     highlights: [
@@ -243,7 +250,7 @@ export const siteContent = {
         title: "Help & Support",
         description:
           "Guides and documentation packed with practical tips to put growth into action.",
-        cta: { label: "Go to Docs", href: "#docs" },
+        cta: { label: "Go to Docs", href: "https://help.intempt.com" },
       },
     ],
   },

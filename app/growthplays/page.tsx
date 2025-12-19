@@ -233,7 +233,7 @@ export default function GrowthPlaysPage() {
                 <h1 className="text-4xl font-semibold tracking-tight text-black sm:text-5xl">
                   The Full Stack Marketer Growth Plays
                 </h1>
-                <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-black/70 sm:text-lg">
+                <p className="mx-auto mt-4 max-w-2xl text-base font-normal leading-7 text-black sm:text-lg">
                   Zero theory or mindset discussions here; just actionable
                   marketing tactics that will grow revenue today.
                 </p>
@@ -288,7 +288,7 @@ export default function GrowthPlaysPage() {
                         <h2 className="text-xl font-semibold text-black mb-3 line-clamp-2 group-hover:text-[#0382ff] transition-colors">
                           {play.title}
                         </h2>
-                        <p className="text-sm text-black/70 line-clamp-3 grow">
+                        <p className="text-sm font-normal text-black line-clamp-3 grow">
                           {play.description}
                         </p>
                       </div>
@@ -308,7 +308,7 @@ export default function GrowthPlaysPage() {
                 <h2 className="text-2xl font-semibold text-black mb-4">
                   Join The Full Stack Marketer
                 </h2>
-                <p className="text-black/70 mb-6">
+                <p className="font-normal text-black mb-6">
                   Zero theory or mindset discussions here; just actionable
                   marketing tactics that will grow revenue today.
                 </p>

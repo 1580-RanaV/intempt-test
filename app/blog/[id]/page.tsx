@@ -4548,7 +4548,7 @@ export default async function BlogPostPage({
           return (
             <h3
               key={index}
-              className="mt-8 mb-4 text-2xl font-semibold text-black"
+              className="mt-8 mb-4 text-2xl font-medium text-black"
             >
               {paragraph.replace("### ", "")}
             </h3>
@@ -4564,7 +4564,7 @@ export default async function BlogPostPage({
           return (
             <ul key={index} className="my-6 space-y-3 list-disc list-inside">
               {items.map((item, i) => (
-                <li key={i} className="text-black/70 leading-relaxed">
+                <li key={i} className="font-normal text-black leading-relaxed">
                   {item}
                 </li>
               ))}
@@ -4576,7 +4576,7 @@ export default async function BlogPostPage({
         if (paragraph.includes("**")) {
           const parts = paragraph.split("**");
           return (
-            <p key={index} className="mb-6 text-black/70 leading-relaxed">
+            <p key={index} className="mb-6 font-normal text-black leading-relaxed">
               {parts.map((part, i) =>
                 i % 2 === 1 ? (
                   <strong key={i} className="font-semibold text-black">
@@ -4593,7 +4593,7 @@ export default async function BlogPostPage({
         // Regular paragraphs
         if (paragraph.trim()) {
           return (
-            <p key={index} className="mb-6 text-black/70 leading-relaxed">
+            <p key={index} className="mb-6 font-normal text-black leading-relaxed">
               {paragraph}
             </p>
           );

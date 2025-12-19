@@ -57,7 +57,7 @@ export function ScaleSection({
                   <div className="text-5xl font-semibold tracking-tight text-black sm:text-6xl">
                     {m.value}
                   </div>
-                  <div className="mx-auto mt-3 max-w-[16ch] text-sm font-semibold leading-6 text-black/55">
+                  <div className="mx-auto mt-3 max-w-[16ch] text-sm font-normal leading-6 text-black">
                     {m.label}
                   </div>
                 </div>
@@ -82,7 +82,7 @@ export function ScaleSection({
                   node: (
                     <span className="inline-flex items-center gap-3 text-black/60">
                       <span className="text-[64px] leading-none">{l.node}</span>
-                      <span className="text-lg font-semibold text-black/70">
+                      <span className="text-lg font-normal text-black">
                         {l.title}
                       </span>
                     </span>
