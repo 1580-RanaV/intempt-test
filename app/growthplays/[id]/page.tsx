@@ -3996,877 +3996,861 @@ Intempt offers native integrations with popular platforms, including HubSpot, Sh
   "intent-to-action-ltv": {
     title: "How to turn intent into action and actions into lifetime value",
     image: "/growthplays/intent.jpg",
-    content: `Identify key user moments, automate targeted actions, and optimize every stage of the lifecycle — from activation to expansion.
+    content: `Identify key user moments, automate targeted actions, and optimize every stage of the lifecycle—from activation to expansion.
+intempt.com
 
 ## About the Growth Play
 
-Increasing Customer Lifetime Value (CLV) isn't about sending more messages. It's about sending the right message, at the right time, in the right place.
+Increasing Customer Lifetime Value (CLV) isn't about sending more messages, it's about sending the right message at the right time, in the right place. Most lifecycle marketing tools can segment and send, but they stop short of continuously adapting to a user's real-time journey. This Growbook shows you how to use GrowthOS to connect behavior tracking, lifecycle stage classification, and automated multi-channel journeys. You'll learn how to identify high-value moments, trigger the right interventions, and deliver personalized web/app experiences ensuring that no opportunity for retention or expansion slips through the cracks. We'll use Otto, a demo SaaS platform for project management, to illustrate the approach.
+intempt.com
 
-Most lifecycle marketing tools can segment users and send campaigns, but they stop short of continuously adapting to what users are actually doing in real time.
+## TL;DR – GrowthOS for Lifecycle Marketers
 
-This Growbook shows how to use GrowthOS to connect behavior tracking, lifecycle stage classification, and automated multi-channel journeys. You'll learn how to identify high-value moments, trigger the right interventions, and deliver personalized web and in-app experiences — ensuring no opportunity for retention or expansion slips through the cracks.
+Track meaningful Goal Events like feature activations, onboarding completion, or purchases.
 
-We'll use Otto, a demo SaaS platform for project management, to illustrate the approach.
+Use Lifecycle Agents to automatically classify users into real-time stages (Champion, Promising, At risk).
 
-TL;DR – GrowthOS for Lifecycle Marketers
+Launch multi-channel Journeys triggered by stage, behavior, and AI-generated logic.
 
-Track meaningful goal events such as feature activations, onboarding completion, or purchases.
-Use Lifecycle Agents to automatically classify users into real-time stages like Champion, Promising, or At Risk.
-Launch multi-channel journeys triggered by lifecycle stage, behavior, and AI-driven logic.
 Personalize email, push, SMS, and in-app experiences using Smart Snippets and Experiences.
+
 Adapt campaigns dynamically based on engagement, purchases, or inactivity.
+
 Track conversion, engagement, and retention impact directly in Journey and Experience Analytics.
 
-Result
-A living lifecycle system that improves retention, drives expansion, and maximizes customer lifetime value.
+Result: A living lifecycle system that improves retention, drives expansion, and maximizes CLV.
+intempt.com
 
 ## Benefits
 
-* Maximize retention and revenue
-Intervene at exactly the right moment based on real user behavior.
+Maximize retention and revenue: Intervene at exactly the right time based on real user behavior.
 
-* Automate lifecycle targeting
-Replace manual segmentation with AI-powered lifecycle classification.
+Automate lifecycle stage targeting: Eliminate manual segmentation with AI-powered classification.
 
-* Run smarter multi-channel campaigns
-Combine email, push, SMS, and in-app nudges into a single, coordinated flow.
+Run smarter multi-channel campaigns: Combine email, push, SMS, and in-app nudges in a single flow.
 
-* Personalize every touchpoint
-Deliver messages that automatically adapt to each user's lifecycle stage.
+Personalize every touchpoint: Deliver messages that adapt automatically to each user.
 
-* Measure and optimize in one place
-See campaign performance alongside product engagement metrics.
+Measure and optimize in one place: See campaign performance alongside product engagement metrics.
+intempt.com
 
 ## How It Works
+### Step 1: Define and track Goal Events
 
-### Step 1: Define and track goal events
-
-Check or define key events and confirm the following are tracked:
-'added to cart', 'activated feature', and 'completed onboarding'.
-
-If any events are missing, create them using the "Create Event" option.
+Check or define key Events to confirm the following are tracked: 'added to cart', 'activated feature', 'completed onboarding' and create new events if any events are not readily available from 'create event'.
+intempt.com
 
 ### Step 2: Launch a Lifecycle Agent
 
-In Agents, create a Lifecycle Agent to automatically classify users into dynamic stages such as:
-Champion
-Loyal
-Recent
-Needs Attention
-At Risk
-Inactive
-
-Stages update in real time, ensuring your targeting is always current.
+In Agents, create a Lifecycle Agent to auto-classify users into dynamic stages: 'Champion', 'Loyal', 'Recent', 'Needs Attention', 'At Risk', 'Inactive'. Stages update in real time, so your targeting is always current.
+intempt.com
 
 ### Step 3: Launch a Journey
 
-Create a new journey with branching logic.
+Create a new Journey with branching logic—Example:
 
-Example: At Risk User Recovery Flow
-Trigger: Lifecycle stage = "At Risk"
+At Risk User Recovery Flow with Trigger: Segment = 'At Risk'
 
-If the user re-engages, move them to the "Win" path.
-If there is no engagement, retry after a delay or send a Slack alert for manual follow-up.
+If the user re-engages → move to "Win" path.
 
-Good to know
+If no engagement → retry after delay or send Slack alert for manual follow-up.
+intempt.com
 
-You can also use AI Coach to create journeys by describing your goal in plain text, for example:
-"Re-engage at-risk users with a 7-day multi-channel campaign."
+Good to Know:
 
-AI Coach will generate the journey with triggers, segment logic, and message flow automatically.
+You can also use AI Coach to create the journey by describing your goal in plain text (e.g., "Re-engage at-risk users with a 7-day multi-channel campaign"). AI Coach will build the Journey with triggers, segment logic, and message flow.
 
-You can also:
-Assign tasks to internal teams when key events occur, such as a manual success check-in.
-Update user attributes as users move through journey stages.
+Assign tasks to internal teams when key events occur (e.g., manual success check-in).
+
+Update user attributes as they move through journey stages.
+intempt.com
 
 ### Step 4: Personalize site and in-app experiences
 
-In Experiences, create targeted on-site or in-app messages for specific lifecycle stages such as "At Risk" or "Needs Attention".
-
-Run A/B tests on variants to continuously optimize engagement and conversion.
+In Experiences, create targeted on-site or in-app messages for specific lifecycle stages—'At Risk Users' and 'Needs Attention'. Also run A/B tests on variants to optimize conversion.
+intempt.com
 
 ### Step 5: Track and optimize performance
 
-In Journey Analytics, track:
-Step completions
-Replies and clicks
-Conversions tied to the original goal
+In Journey Analytics, track Step completions, replies and clicks and conversion on original goal.
 
-In Experience Analytics, monitor:
-On-site engagement
-Lift compared to control versions
+In Experience Analytics, monitor on-site engagement and lift vs. control version.
 
 Iterate campaigns based on data, not guesswork.
+intempt.com
 
-## FAQs
+## FAQ Highlights 
 
-**How is Intempt different from traditional CRMs?**
+How is Intempt different from traditional CRMs?
+Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
+intempt.com
 
+What is the built-in Customer Data Platform (CDP) and why does it matter?
+The built-in CDP unifies all your customer data across channels into a single profile, resolving identities by merging anonymous and known sessions, connecting data in real time.
+intempt.com
 
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
+How does AI-powered segmentation work in Intempt?
+You can create customer segments by describing them in plain language. AI analyzes lifecycle, qualification, and engagement data to build segments automatically, and they update in real time as data changes.
+intempt.com
 
+What data enrichment sources does Intempt use?
+Intempt pulls live enrichment data from external sources like People Data Labs, DropContact, and other public databases to fill in missing attributes.
+intempt.com
 
-**How does AI-powered segmentation work in Intempt?**
+Is Intempt compliant with GDPR and CCPA?
+Yes—Intempt includes consent management tools for GDPR and CCPA compliance with features like right-to-be-forgotten and data portability support.
+intempt.com
 
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+What platforms does Intempt integrate with?
+Intempt offers native integrations with platforms including HubSpot, Shopify, Stripe, and more, with real-time data sync and customizable flows.
 `,
   },
   "product-complexity-personal-moments": {
     title: "How to turn product complexity into personal moments",
     image: "/growthplays/complexity.jpg",
     content: `Increase your customer's basket size and order volume with personalized recommendations.
+Intempt
 
 ## About the Growth Play
 
-Managing a catalog is one job. Making it feel personal everywhere is the real work.
+Managing a catalog is one job; making it feel personal everywhere is the real work. This Growth Play shows how to use GrowthOS to map your feed, generate the right recommendation logic for each page and message, and measure lift. You'll go from raw SKUs to tailored suggestions on homepage, category, product, cart, and post-purchase and reuse the same logic in email, SMS, and push. The goal is simple: more relevant products, less setup.
+Intempt
 
-This Growth Play shows how to use GrowthOS to map your product feed, apply the right recommendation logic for each surface, and measure impact. You'll move from raw SKUs to tailored product suggestions across homepage, category pages, product detail pages, cart, and post-purchase moments — and reuse the same logic in email, SMS, and push.
+## TL;DR – GrowthOS for Merchandisers
 
-The goal is simple: more relevant products, less setup.
+Upload your catalog and map key fields (category, inventory, brand, price, tags).
 
-TL;DR – GrowthOS for Merchandisers
+Generate Recommendations from a library: bestsellers, trending, visitor-based, similar items, purchased together.
 
-Upload your catalog and map key fields such as category, inventory, brand, price, and tags.
-Generate recommendations from a built-in library: bestsellers, trending items, visitor-based picks, similar items, and frequently purchased together.
-Match recommendation logic to context: homepage inspiration, category focus, product alternatives and bundles, cart cross-sell, and post-purchase upsell.
-Reuse the same recommendation blocks in Journeys (email, SMS, push) and Experiences (on-site or in-app).
-Personalize recommendations by audience or behavior without custom code.
-Test layouts and compare performance using campaign analytics.
+Match logic to context: homepage inspire, category focus, product alternatives/bundles, cart cross-sell, thank-you upsell.
 
-Result
-Higher relevance on every surface, with significantly less operational overhead.
+Reuse the same blocks in Journeys (email/SMS/push) and Experiences (on-site/in-app).
+
+Personalize by audience or behavior without custom code.
+
+Test layouts and compare performance in campaign analytics.
+Result: Higher relevance on every surface, with less shuffle.
+Intempt
 
 ## Benefits
 
-* Lift AOV and conversion
-Show products that make sense for the specific moment in the customer journey.
+Lift AOV and conversion: Show items that make sense for the moment.
 
-* One setup, many surfaces
-Use the same recommendation logic across your website and messaging channels.
+One setup, many surfaces: Website and messages share the same recommendation logic.
 
-* Move fast without developers
-Drag, drop, deploy, and iterate in minutes.
+Move fast without devs: Drag, drop, deploy; iterate in minutes.
 
-* Stay in control
-Apply include and exclude rules, inventory awareness, and margin-based filters.
+Stay in control: Include/exclude rules, inventory awareness, margin filters.
 
-* See real impact
-Track clicks, adds to cart, orders, and lift versus control.
+See real impact: Track clicks, adds, orders, and lift vs. control.
+Intempt
 
 ## How It Works
 
 ### Step 1: Upload and map your catalog
+Bring in SKUs with category, brand, price, tags, images, and inventory. Keep product IDs stable so tracking and bundles stay consistent.
+Intempt
 
-Import SKUs with key attributes such as category, brand, price, tags, images, and inventory. Keep product IDs consistent so tracking, recommendations, and bundles remain stable.
+### Step 2: Pick recommendation logic by context
 
-### Step 2: Choose recommendation logic by context
+Homepage: bestsellers, most popular, newest; switch to visitor-based if history exists.
 
-Homepage
-Use bestsellers, most popular, or newest items. Switch to visitor-based recommendations when user history is available.
+Category: top sellers and trending within the current category.
 
-Category pages
-Show top sellers and trending products within the current category.
+Product: similar items (style/color/price) and purchased together bundles.
 
-Product pages
-Recommend similar items based on style, color, or price, and show products frequently purchased together.
+Cart: cross-sell from what's already in basket; last-minute add-ons.
 
-Cart
-Cross-sell based on items already in the basket and surface last-minute add-ons.
+Thank-you: purchased-with sets or upsells guided by margin/loyalty.
+Intempt
 
-Thank-you and post-purchase
-Show purchased-with sets or upsells guided by margin, loyalty, or repeat intent.
+### Step 3: Activate in Journeys
+Drop product blocks into email, SMS, and push. Each message adapts per user so suggestions stay relevant.
+Intempt
 
-### Step 3: Activate recommendations in Journeys
-
-Add product blocks to email, SMS, and push messages. Each message adapts dynamically per user, keeping recommendations relevant at send time.
-
-### Step 4: Bring recommendations to the site with Experiences
-
-Place the same recommendation blocks on-site or in-app for key audiences such as returning shoppers, cart abandoners, or loyalty segments. Customize layouts and run A/B tests to optimize performance.
+### Step 4: Bring it to the site with Experiences
+Place the same recommendation blocks where they matter (returning shoppers, cart abandoners, loyalty cohorts). Customize layout; run A/Bs.
+Intempt
 
 ### Step 5: Measure and iterate
+Use campaign and experience analytics to compare variants and confirm lift. Keep what wins; queue the next tweak.
+Intempt
 
-Use campaign and experience analytics to compare variants and confirm lift. Keep what performs well and continue testing incremental improvements.
+## Good to Know
 
-Good to Know
+Keep fields clean and typed; refresh inventory on a reliable cadence.
 
-Keep catalog fields clean and consistently typed.
-Refresh inventory data on a reliable schedule.
-Set fallbacks for out-of-stock items and cold-start visitors.
-Cap repeat recommendations to avoid fatigue.
-Align rules with business goals such as margin, seasonality, or brand priorities.
-Use the same audiences across site and messaging to maintain consistency.
+Set fallbacks for out-of-stock and cold-start visitors.
 
-## FAQs
+Cap repeats to avoid "recommendation fatigue."
 
-**How is Intempt different from traditional CRMs?**
+Align rules with business goals (margin, seasonality, brand priorities).
 
+Use the same audiences across site and messages to stay consistent.
+Intempt
 
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
+## FAQs (excerpt)
 
+How is Intempt different from traditional CRMs?
+Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
+Intempt
 
-**How does AI-powered segmentation work in Intempt?**
+What is the built-in Customer Data Platform (CDP) and why does it matter?
+The built-in CDP unifies all your customer data across channels into a single profile, resolves user identities by merging anonymous and known sessions, and combines behavioral and firmographic data in real time.
+Intempt
 
+How does AI-powered segmentation work in Intempt?
+You create customer segments by describing them in plain language; AI builds and updates these segments in real time based on behavior and engagement data.
+Intempt
 
-**What data enrichment sources does Intempt use?**
+What data enrichment sources does Intempt use?
+Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases.
+Intempt
 
+Is Intempt compliant with GDPR and CCPA?
+Yes — Intempt includes consent-management tools for GDPR and CCPA compliance.
+Intempt
 
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+What platforms does Intempt integrate with?
+Intempt offers native integrations with platforms like HubSpot, Shopify, and Stripe with real-time sync and customizable flows.
 `,
   },
   "insight-to-impact": {
     title: "How to go from insight to impact without report sprawl",
     image: "/growthplays/insight.jpg",
-    content: `Turn analysis into action with profiles you trust, core reports, one dashboard, and fast journeys or experiences to fix issues and prove what worked.
+    content: `Turn analysis into action with profiles you trust, core reports, one dashboard, and quick journeys or experiences to fix issues and prove what worked.
+Intempt
 
 ## About the Growth Play
 
-Most tools can show charts. Product analysts need answers that actually change the product and the numbers.
+Most tools can show charts. Product Analysts need answers that change the product and the numbers. This Growth Play shows how to use GrowthOS to see Users and Accounts clearly, build the three core reports (Insights, Funnels, Retention), bring them together in a Dashboard, and then turn drop-offs or wins into action with Journeys and Experiences. The goal is a clean loop: understand → act → measure — without hopping across tools.
+Intempt
 
-This Growth Play shows how to use GrowthOS to clearly understand Users and Accounts, build the three core reports that matter (Insights, Funnels, and Retention), combine them into a single Dashboard, and turn findings into action using Journeys and Experiences. The goal is a clean loop: understand, act, and measure — without hopping across tools or drowning in reports.
+## TL;DR – GrowthOS for Product Analysts
 
-TL;DR – GrowthOS for Product Analysts
+One place to inspect Users and Accounts with events and activity history.
 
-Inspect Users and Accounts in one place, with full event and activity history.
-Build Insights reports to understand feature adoption and usage by cohort.
-Build Funnels from signup through onboarding, activation, and purchase.
-Build Retention reports to spot stickiness and churn patterns.
-Combine everything into a single Dashboard with filters and breakdowns.
-Turn insights into action by launching Journeys or Experiences directly from findings.
-Measure impact in report trends and Journey or Experience analytics.
+Build Insights for feature adoption and usage by cohort.
 
-Result
-Fewer reports, clearer decisions, and faster product improvements.
+Build Funnels from signup → onboarding → activation → purchase.
+
+Build Retention to spot stickiness and churn patterns.
+
+Combine reports in a Dashboard with filters and breakdowns.
+
+When you see a problem or opportunity, launch a Journey or an Experience.
+
+Track impact in report trends and Journey/Experience analytics.
+Result: Fewer reports, clearer decisions, faster product moves.
+Intempt
 
 ## Benefits
 
-* Clarity first
-See who's using what, when they're using it, and where they drop off.
+Clarity first: See who's using what, when, and where they fall off.
 
-* From charts to changes
-Move directly from a finding to a fix or experiment.
+From charts to changes: Move straight from a finding to a test.
 
-* Shared context
-Users roll up into Accounts, so Product, Marketing, and Sales work from the same story.
+Shared context: Users roll up to Accounts, so product and go-to-market see the same story.
 
-* Less tool juggling
-Analysis, execution, and measurement live in one system.
+Less tool juggling: Analysis, action, and measurement live together.
 
-* Proof of impact
-Tie changes directly to activation, retention, and revenue.
+Proof of impact: Tie changes to activation, retention, and revenue.
+Intempt
 
 ## How It Works
-
 ### Step 1: Anchor on Users and Accounts
 
-Open real user and account profiles. Confirm you can see key actions and meaningful attributes. This becomes your ground truth for understanding behavior.
+Open a few real profiles. Confirm you can see key actions and useful attributes. This is your ground truth for "who did what."
+Intempt
 
-### Step 2: Build an Insights report
+### Step 2: Build an Insights report in Analytics
 
-Track which features are being used, by whom, and when. Add simple breakdowns such as plan, lifecycle stage, or geography to surface patterns worth testing.
+Track which features are used, by whom, and when. Add simple breakdowns (plan, lifecycle stage, geography) to find patterns worth testing.
+Intempt
 
-### Step 3: Build a Funnels report
+### Step 3: Build a Funnels report in Analytics
 
-Map the journey from signup to onboarding, activation, and purchase. Compare drop-offs by device, plan, or campaign to find the highest-leverage opportunities.
+Map the steps from signup to onboarding to activation to purchase. Compare drop-offs by device, plan, or campaign to find the highest-leverage fix.
+Intempt
 
-### Step 4: Build a Retention report
+### Step 4: Build a Retention report in Analytics
 
-Measure how often users return over time. Identify which features correlate with repeat usage and which segments tend to fall off.
+Measure how often people return. See which features correlate with coming back and which segments fall off.
+Intempt
 
 ### Step 5: Assemble a Dashboard
 
-Pin your Insights, Funnel, and Retention reports together. Add Event, Segment, or Journey analytics as needed. This becomes your weekly product control room.
+Pin the Insight, Funnel, and Retention reports. Add any Event, Segment, or Journey analytics you need. This becomes your weekly control room.
+Intempt
 
-### Step 6: Act and measure
+### Step 6: Act and Measure
 
-When you spot a drop-off or opportunity, launch a small Journey or adjust an on-site Experience. Monitor the same reports for lift. Keep what works and roll back what doesn't.
+See a dip at a step?
 
-Good to Know
+Launch a small Journey or tweak an on-site Experience.
 
-Keep event names simple and consistent. You don't need many — just the right ones.
-Clearly mark Goal Events (success outcomes) and Intent Events (early signals).
-Favor recent time windows over permanent flags; freshness beats static lists.
-Start small with one feature, one funnel, and one cohort, then expand once signal is clear.
+Watch the same reports for lift.
 
-## FAQs
+Keep what works, roll back what doesn't.
+Intempt
 
-**How is Intempt different from traditional CRMs?**
+## Good to Know
 
+Keep event names simple and consistent; you don't need many, just the right ones.
 
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
+Mark Goal Events (success) and Intent Events (early signals) so reports and targeting stay aligned.
 
+Prefer recent windows over permanent flags; freshness beats static lists.
 
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+Start small: one feature, one funnel, one cohort, then expand when you see signal.
 `,
   },
   "experiment-personalize-dev-queue": {
     title: "How to experiment, find winners, and personalize without the dev queue",
     image: "/growthplays/experiment.jpg",
     content: `Deliver web and mobile experiences that learn fast and feel personal.
+Intempt
 
 ## About the Growth Play
 
-Conversion lifts don't come from adding more banners. They come from running clearer tests, choosing winners with confidence, and following up at the right moment.
+Conversion lifts don't come from more banners—they come from clearer tests and timely follow-ups. This Growth Play shows how to use GrowthOS to run Experiments on web or mobile, pick winners with a stats engine you can trust, turn those winners into targeted personalizations, and add a light activation layer with Journeys. The aim is a steady loop: try → learn → apply → follow up → measure.
+Intempt
 
-This Growth Play shows how to use GrowthOS to run experiments on web or mobile, rely on a trustworthy stats engine to identify winners, turn those winners into targeted personalizations, and layer in Journeys to activate or recover users. The goal is a continuous loop: try, learn, apply, follow up, and measure.
+## TL;DR – GrowthOS for CX Marketers
 
-TL;DR – GrowthOS for CX Marketers
+Create an Experience for Web or Mobile and set a target page or screen.
 
-Create Experiences for web or mobile and choose the page or screen to test.
-Run Experiments with multiple variants across layout, copy, offers, or URLs.
-Target by audience, such as returning users, campaign traffic, or high-intent segments.
-Rely on Sequential Testing, CUPED variance reduction, and confidence intervals to pick real winners.
-Apply winning variants and convert them into segment-based personalizations.
-Add Journeys to re-engage drop-offs across email, push, or SMS.
-Track lift in Experience Analytics and downstream impact in Journey Analytics.
+Start an Experiment with multiple variants (layout, copy, offers, URLs).
 
-Result
-Faster learning, clearer wins, and consistent follow-through without waiting on developers.
+Target by audience (returning users, campaign traffic, high-intent segments).
+
+Trust results with Sequential Testing, CUPED variance reduction, and confidence intervals.
+
+Apply the winning variant, then launch personalization for specific segments.
+
+Add a Journey to re-engage drop-offs across email, push, or SMS with simple branching.
+
+Track lift in Experience Analytics and campaign impact in Journey Analytics.
+Result: Faster learning, clearer wins, and consistent follow-through.
+Intempt
 
 ## Benefits
 
-* Learn faster
-Test ideas visually, ship small changes, and see impact quickly.
+Learn faster: Test ideas with a visual editor; ship small, see impact quickly.
 
-* Personalize with purpose
-Target segments that actually behave differently, not broad guesses.
+Personalize with purpose: Target segments that actually differ.
 
-* Stay coordinated
-Your site, app, and messaging all work from the same audiences.
+Stay coordinated: Site/app and messaging work from the same audiences.
 
-* Reduce handoffs
-Create, test, and apply changes without a long dev queue.
+Reduce handoffs: Create, test, and apply changes without a long dev queue.
 
-* Prove lift
-Use a stats engine designed to reduce noise and false positives.
+Prove lift: Use a stats engine designed to avoid false positives and noise.
+Intempt
 
 ## How It Works
+### Step 1: Create Segments to personalize the experiences
 
-### Step 1: Create segments for personalization
+Create segments for different users like those who are 'Ready for Upgrade' or 'Haven't logged in for more than 7 days'.
+Intempt
 
-Define segments such as "Ready for upgrade" or "Haven't logged in for more than 7 days." These segments will power both experiments and follow-up actions.
+### Step 2: Create an Experience (Web or Mobile)
 
-### Step 2: Create an Experience for web or mobile
+Choose the page or screen, open the visual editor, and outline the change you want to test (layout, copy, offer, or placement).
 
-Select the page or screen you want to change. Use the visual editor to modify layout, copy, offers, or placement. Create variants with their own display rules, targeting, and success goals.
+Add variants with their own display rules, targeting, and success goals. Target returning users, specific campaigns, or a high-intent segment.
+Intempt
 
 ### Step 3: Start an Experiment with clear targets
 
-Run the experiment across variants and target specific audiences, such as returning users, campaign-driven traffic, or high-intent segments.
+Add variants with their own display rules, targeting, and success goals — focused on the audiences you want to examine.
+Intempt
 
-### Step 4: Let the stats engine do the math
+### Step 4: Let the Stats Engine do the math
 
-Monitor results using Sequential Testing so you can safely check performance early. Use CUPED to reduce variance and rely on confidence intervals to focus on meaningful lift.
+Monitor results with Sequential Testing (safe peeking), speed them up with CUPED, and read confidence intervals to focus on meaningful lift.
+Intempt
 
 ### Step 5: Apply the winner and personalize by segment
 
-Once statistical significance is reached, apply the winning variant. Turn it into a personalization so the best version is shown to the segment that benefits most.
+End the test at significance, apply the winning variant, and create a personalization that shows the best version to the audience that benefits most.
+Intempt
 
 ### Step 6: Add the activation layer
 
-If the experiment surfaces drop-offs or hesitation, launch a Journey for that audience. Start with email, then follow up with push or SMS using simple delays and outcomes. Add Slack alerts when a human touch is helpful.
+If a variant reveals a drop-off, start a Journey for that audience:
+
+Email first, then push or SMS, with simple delays and outcomes.
+
+Add a Slack alert if a human touch helps.
+Intempt
 
 ### Step 7: Measure and iterate
 
-Review Experience Analytics to confirm lift and Journey Analytics to track engagement and conversions. Keep what works and line up the next test.
+Check Experience Analytics for lift and Journey Analytics for engagement and goal conversion. Keep what works; queue the next test.
+Intempt
 
-Good to Know
+## Good to Know
 
-Define one primary goal per experiment and keep variants focused so you know what caused the change.
-Use the same segments for testing and follow-up to stay consistent.
-Reuse copy blocks with Smart Snippets so updates stay synchronized.
-Run fewer, clearer experiments, ship winners quickly, and move on to the next question.
+Define one primary goal per test; keep variants small so you learn what changed.
 
-## FAQs
+Use the same Segments for targeting and follow-up to stay consistent.
 
-**How is Intempt different from traditional CRMs?**
+Keep copy blocks reusable with Smart Snippets so updates stay in sync.
 
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+Run fewer, clearer tests; ship winners quickly, then move on to the next question
 `,
   },
   "route-enrich-leads": {
     title: "How to Route and Enrich Inbound and Outbound Leads",
     image: "/growthplays/routing.jpg",
-    content: `Route leads faster, enrich them with the right context, and ensure every handoff feels intentional.
+    content: `This Growth Play explains why routing matters, how teams typically do it, and how to run a clean lead routing system in Intempt that balances speed, fairness, and relevance. For inbound leads, the focus is on protecting speed-to-lead; for outbound, the focus is on maintaining ownership continuity and clean handoffs to reps.
+Intempt
 
-## About the Growth Play
+## TL;DR
 
-Lead routing determines whether the first conversation happens at the right moment—or not at all. When a hand-raiser waits, intent fades. When the wrong rep responds, context breaks.
+Capture inbound and outbound leads.
 
-This Growth Play explains why routing matters, how teams usually approach it, and how to build a clean lead routing system in Intempt that balances speed, fairness, and relevance. You'll learn how to enrich leads in real time, qualify them with clear rules, and assign ownership using structured conditions. Inbound routing prioritizes speed-to-lead, while outbound routing respects ownership and ensures clean handoffs to reps.
+Enrich and qualify leads before any handoff.
 
-TL;DR
+Account-match first; prefer the current owner or pod.
 
-Capture inbound and outbound leads in one system.
-Enrich and qualify leads before any human touches them.
-Match leads to existing accounts and owners first.
-Apply routing rules by territory, segment, product, or language, then fall back to weighted round-robin.
+Apply rules based on territory/segment/product/language; otherwise use weighted round-robin.
+
 Notify reps instantly and create context-rich tasks.
-Track speed-to-lead, meeting rate, and close rate, then iterate.
+
+Track speed-to-lead, meeting rates, and close rates; iterate and refine your rules over time.
+Intempt
 
 ## Benefits
 
-* Faster first touch because routing and booking happen instantly.
-* Cleaner handoffs with persistent account ownership across channels.
-* Fair workload distribution that prevents cherry-picking.
-* Better decisions driven by analytics that show where time and deals are lost.
-* ABM-safe routing that keeps every contact under the right owner, improving show and close rates.
+Faster first touch: Routing and appointment booking can happen instantly.
+
+Cleaner handoffs: Accounts and owners persist across channels.
+
+Fair workload: Prevents cherry-picking and uneven distribution.
+
+Analytics-driven decisions: Track where time and deals are lost.
+
+ABM-safe handoffs: Keeps contacts under the right owner for better show/close rates.
+Intempt
 
 ## How It Works
+### Step 1: Connect sources and track events
 
-### Step 1: Connect sources and track intent events
+Connect your inbound and outbound lead sources—form captures, chat, ads, email sequences, CRM systems, etc.—so you can see lead activity in one place. For example, Intempt has a native HubSpot connection so CRM fields and ownership are visible automatically.
 
-Start by wiring all lead sources into Intempt so every team sees the same lead everywhere. Connect website forms, chat, ads, outbound sequences, and your CRM. If you use HubSpot, Intempt's native integration makes CRM fields and ownership visible directly inside the platform.
+Track intentful events like form submits, demo requests, pricing views, and lead replies. Keep critical fields clean and standardized: email, role, region, domain, industry, and employee count. The goal is a single pane of truth for each lead and its account.
+Intempt
 
-Track a small set of high-intent events such as form submitted, demo requested, pricing viewed, and lead replied. Keep key fields clean and consistent: email, role, and region for the person; domain, industry, and employee count for the account. The goal is a single place where you can inspect a lead, understand the account, and take action immediately.
+Best practice tip:
+Decide your "minimum viable data" for routing (e.g., firmographics). Normalize emails/domain, dedupe, and match leads to accounts early so ownership persists from the first touch.
+Intempt
 
-Best practice
+### Step 2: Enrich + qualify before routing
 
-Define your "minimum viable data" for routing upfront. If company size or industry drives routing, require those fields at capture or enrich them automatically. Normalize emails and domains, deduplicate aggressively, and match leads to accounts as soon as they enter the system so ownership persists from the first touch.
+Create a Journey triggered when a new lead is created. The first step should enrich the lead if key fields are missing.
 
-### Step 2: Enrich and qualify before routing
+Then use a Qualification Agent to calculate readiness using Fit + Activity—where Fit might include firmographic criteria and Activity might include product or site engagement. Only leads that score high on both get routed; the rest can loop into further nurture.
+Intempt
 
-Create a Journey that triggers whenever a new lead is created. The first step enriches missing fields using Intempt's enrichment capabilities.
-
-Next, run a Qualification Agent that scores leads using Fit plus Activity. Fit reflects how closely the lead matches your ICP, while Activity captures intent signals from your website and product. Only high-fit, high-activity leads move forward to routing. The rest are automatically routed into nurture flows.
-
-Best practice
-
-Keep qualification logic transparent. Reps should immediately understand why a lead is marked "Ready." Start with simple rules and refine them later using Analytics once you have real performance data.
+Best practice tip:
+Keep qualification transparent so reps understand why a lead is "Ready." Start simple; iterate with analytics.
+Intempt
 
 ### Step 3: Apply your routing strategy
 
-Apply routing rules in a clear, consistent order. Use a multi-channel branch and add a lead routing node to assign ownership.
+Define your routing rules in a logical order. Use a multi-channel branch and then a Lead Routing node to assign leads to reps based on your conditions. Common strategies include:
 
-Start with account continuity. If an account already has an owner or pod, route the lead there. If not, apply rules based on region, company size, product interest, use case specialization, or ABM tier. When no rule matches, fall back to a weighted round-robin pool.
+Account continuity: If there's a current owner or pod, keep them assigned.
 
-Respect PTO schedules and daily capacity limits. If a pool is unavailable or at capacity, automatically waterfall to the next eligible queue.
+Segment / territory / product routing: Route based on region, company size, product interest, or specialist reps.
 
-Handoffs across the funnel
+Round-robin pools: If no rule matches, send to a weighted round-robin pool.
 
-Use the same routing logic for SDR to AE, AE to CSM, product activity to sales or success, and product-led upgrades. In every case, preserve account ownership, respect capacity, and surface the assigned rep's calendar so prospects book with the person who already owns the relationship.
+Capacity & PTO: Respect off-hours and caps; waterfall to the next queue if needed.
+Intempt
 
-### Step 4: Notify reps and assign work with context
+For multiple funnel stages (SDR → AE, AE → CSM, etc.), reuse the same router logic: maintain continuity, respect capacity constraints, and include calendar options for booking directly with the assigned rep.
+Intempt
 
-As soon as a lead is assigned, notify the rep via Slack or email. Include essential context such as source, recent activity, qualification score, enriched fields, and any existing account owner. Automatically create a task with a clear next step, such as a call or personalized outreach.
+### Step 4: Notify humans and assign work with context
 
-You can also attach a Research Agent to provide additional background so reps don't need to context-switch before reaching out.
+Once a lead is assigned:
 
-Best practice
+Send a Slack or email notification with essential details: source, activity score, filled fields, and account owner.
 
-Put scheduling where intent happens. Show the assigned rep's calendar on the thank-you or confirmation page so booking is one click. Automate reminders, handle reschedules, update CRM status for booked or no-show meetings, and re-queue leads only if they go untouched within your freshness window.
+Create a task with the next clear action (call, email, or reach-out).
+
+Add a Research agent to automatically gather contextual details about the lead.
+Intempt
+
+Best practice tip:
+Offer instant scheduling (e.g., the rep's calendar) at the lead capture or thank-you page to capture intent immediately. Auto-remind and reschedule, and re-queue leads if untouched within your freshness window.
+Intempt
 
 ### Step 5: Measure and tighten the loop
 
-Review task and journey analytics regularly. Track speed-to-lead, meeting rates, lead sources, distribution fairness, reassignment rates, and conversion from MQL to SQL to closed deals.
+Review analytics for tasks and journeys:
 
-If leads stall or cluster with a few reps, adjust rule order, pool weights, or capacity caps. Run a monthly audit on account ownership after conversion to ensure new contacts consistently land under the correct accounts.
+Speed-to-lead
 
-## FAQs
+Meeting rates
 
-**How is Intempt different from traditional CRMs?**
+Source breakdowns
 
+Distribution fairness
 
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
+Reassignment rates
 
+Conversion paths from MQL → SQL → closed deals
 
-**How does AI-powered segmentation work in Intempt?**
+If leads aren't being worked or are misaligned, adjust rule order, pool weights, or capacity caps. Regularly verify ownership continuity so contacts remain under the right accounts throughout the lifecycle.
+Intempt
 
+## FAQs (summary)
 
-**What data enrichment sources does Intempt use?**
+How is Intempt different from traditional CRMs?
+Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping pipelines dynamic rather than static.
+Intempt
 
+What is the built-in CDP, and why does it matter?
+It unifies customer data from all channels into a real-time profile, connecting users to accounts and combining behavioral and firmographic data.
+Intempt
 
-**Is Intempt compliant with GDPR and CCPA?**
+How does AI segmentation work?
+You can define segments in plain language; AI builds and updates them automatically based on behavior and engagement.
+Intempt
 
+What enrichment sources are used?
+Intempt pulls data from external enrichment sources like People Data Labs and DropContact to fill missing attributes.
+Intempt
 
-**What platforms does Intempt integrate with?**
+Is Intempt compliant with GDPR/CCPA?
+Yes — it has built-in consent management tools supporting data privacy requirements.
+Intempt
 
-
+What platforms does Intempt integrate with?
+It offers native integrations with tools like HubSpot, Shopify, Stripe, and more with real-time sync and customizable workflows.
 `,
   },
   "reddit-agent-find-customers": {
     title: "How to Build a Reddit Agent That Finds Customers for You",
     image: "/growthplays/reddit.jpg",
-    content: `Listen to the right conversations, respond in the right voice, and turn Reddit into a long-tail customer acquisition channel.
+    content: `This Growth Play shows how to use Intempt to listen for the right conversations, generate on-voice drafts, keep a human in the loop, and turn Reddit coverage into durable AI-SEO benefits that bring ideal customer profile (ICP) traffic long after the day you post.
+Intempt
 
-## About the Growth Play
-
-Reddit is a compounding channel. Helpful answers earn trust inside a subreddit, then continue to drive value as those threads surface in Google search results, LLM answers (like ChatGPT), and other AI discovery layers. That's why showing up early, with the right tone, matters more than posting often.
-
-This Growth Play shows how to use Intempt to listen for the right Reddit conversations, enrich them with context, generate on-voice reply drafts, keep humans in the loop, and turn Reddit participation into durable AI-SEO benefits that bring ICP traffic long after the day you post.
-
-TL;DR
+## TL;DR
 
 Connect a Reddit social-listening source and stream posts into Intempt.
+Intempt
+
 Enrich each post with a Research Agent and score reply priority.
-Generate two to three reply angles and one short draft in your persona.
-Notify your team with full context so a human can post quickly.
-Track traffic and signups using UTMs and source analytics, then iterate on angles and keywords.
+Intempt
+
+Generate 2–3 reply angles and one short draft in your persona.
+Intempt
+
+Notify your team with the draft and context for a quick human post.
+Intempt
+
+Track traffic and signups with UTM links and source analytics, then iterate on angles and keywords.
+Intempt
 
 ## Benefits
 
-* Show up where your ICP is actively asking questions and capture intent early.
-* Earn compounding SEO and AI-SEO value as Reddit threads rank and feed LLM answers.
-* Drive qualified traffic that converts better than generic social channels.
-* Save hours by automating listening, research, and drafting while keeping humans in control.
+Show up where your ICP asks questions and capture intent early.
+Intempt
+
+Earn compounding SEO/AI-SEO: Reddit threads can rank and feed Google/LLM answers.
+Intempt
+
+Drive qualified traffic that converts better than generic social.
+Intempt
+
+Save hours: listening, research, and draft creation automate the grind; you just approve and post.
+Intempt
 
 ## How It Works
-
 ### Step 1: Connect sources and track events
 
-Start by integrating a social-listening tool that monitors Reddit mentions. Configure keywords, competitor names, brand terms, negative keywords, and the subreddits you care about. You can use tools like OG or Octolens for this.
+Integrate a social-listening tool that monitors Reddit mentions. Configure your keywords, competitor names, brand terms, negative keywords, and the subreddits you care about. Intempt uses tools like OG tool or Octolens for this.
+Intempt
 
-Connect the listener's webhook to Intempt so every qualified Reddit post arrives with basic details such as the URL, title, subreddit, author, and engagement signals. Once connected, Intempt will receive an event each time a relevant Reddit mention happens.
+Connect the webhook from the listener to Intempt so every qualified post arrives with basic details such as URL, title, subreddit, author, and engagement. Once connected, posts generate events in Intempt for each Reddit mention.
+Intempt
 
-### Step 2: Enrich each post with a Research Agent
+### Step 2: Create a Research Agent to enrich
 
-Create a Research Agent in Intempt to analyze incoming Reddit posts and authors. Inputs typically include the post URL, title, and username.
+Set up a Research Agent in Intempt to analyze each incoming Reddit post and author. Inputs include the post URL, title, and username. The agent can then produce a research brief with:
 
-Prompt the agent to produce a short research brief covering what the author is asking, their pain points and desired outcomes, any buying or usage triggers, inferred role or company size, a topic category, and two or three reply angles that would feel native to that subreddit.
+What the author is asking.
+Intempt
 
-The Research Agent uses an LLM to read the full thread, extract intent, infer context, and suggest reply angles that match subreddit norms.
+The author's pains and desired outcomes.
+Intempt
 
-Best practice
+Any triggers, inferred role/company size, and topic category (e.g., lead routing, CRM, analytics).
+Intempt
 
-Treat every subreddit as its own market. Tone, culture, and rules vary widely, so never reuse the same messaging across subreddits like r/SaaS and r/Entrepreneur. Warm up accounts by earning baseline karma before mentioning your product. Pace activity naturally and avoid anything that looks automated.
+Two or three reply angles that would feel native in that subreddit.
+Intempt
 
-How you frame a reply matters as much as the insight itself. Lead with experience, examples, or numbers. Avoid strong CTAs. Mention your product only when it genuinely clarifies the solution.
+The Research Agent uses an LLM to read the thread, extract these insights, infer author context, and propose subreddit-native angles.
+Intempt
 
-### Step 3: Generate replies in your persona with Snippets
+Best practice: Treat each subreddit as its own market — culture, tone, and rules differ. Avoid reusing the same messaging across subreddits. Warm up accounts by earning some baseline karma before posting, and avoid automated behaviors that look unnatural.
+Intempt
 
-Create a Snippet in Intempt that takes the Research Brief and generates a Reddit-ready reply in your persona. You can do this using a custom prompt or by applying your Brand Kit.
+### Step 3: Create a snippet to generate a reply in your persona
 
-The Snippet turns the brief into a short, human-sounding reply that fits Reddit norms and avoids promotional language.
+Create a Snippet in Intempt that takes the Research Brief and generates a short Reddit-ready reply in your persona. Use the Brand Kit or a prompt to add your brand voice. The Snippet uses an LLM to turn the brief into a Reddit-native reply voiced in your brand style.
+Intempt
 
-Aim for two or three short paragraphs with one or two practical steps, a soft contrast in how you approach the problem, and a light offer to share a checklist or resource if helpful. Keep links off by default and add disclosure only when appropriate. Angles that perform well tend to be experience-first, checklist-style, or neutral comparisons.
+Tip: Aim for two or three short paragraphs with a practical step, a light contrast on how you approach the problem, and a soft offer to share a checklist if it's useful. Keep links off by default and enable a disclosure line when appropriate.
+Intempt
 
 ### Step 4: Notify humans and post with context
 
-Create a Journey that triggers whenever a Reddit mention event comes in. Run the Research Agent, then the Snippet, and send a Slack message or email to your team with everything needed to act quickly: the post title, author, subreddit, link, research brief, suggested angles, and the recommended reply draft.
+Build a Journey that triggers when each Reddit mention arrives. In that Journey:
 
-Optionally create a task so someone owns the reply and monitors follow-up comments or questions.
+Run the Research Agent.
+Intempt
+
+Run the Snippet to generate the draft reply.
+Intempt
+
+Send a Slack message or email containing the thread title, author, link, research brief, reply angles, and recommended draft.
+Intempt
+
+You can also create a small task so that someone owns posting and monitoring replies.
+Intempt
 
 ### Step 5: Measure and tighten the loop
 
-For replies without links, analyze traffic and signups inside Intempt using source attribution. Pair this with native Reddit engagement metrics like upvotes, comments, and saves. Maintain a lightweight tracker of threads that start ranking in Google or appearing in AI answers.
+Evaluate performance by analyzing traffic (with Intempt, Google Analytics, or UTM tracking). Also track engagement on Reddit (upvotes, comments, saves). Maintain a lightweight tracker of threads that start ranking in Google or appear in LLM answer results. Promote high-performing angles and subreddits; retire those that don't deliver. Refresh your subreddit map and keyword list quarterly as patterns shift.
+Intempt
 
-Double down on subreddits and angles that consistently drive qualified traffic and signups. Retire those that don't. Refresh your subreddit map and keyword list quarterly as audience behavior shifts.
+## Bonus: Reddit Promotion Checklist for SaaS
 
-Bonus: Reddit Promotion Checklist for SaaS
+Warm up your account by earning at least 10 karma with genuinely helpful comments — avoid self-promotion at first.
+Intempt
 
-Warm up your account by earning at least ten karma through genuinely helpful comments before any self-promotion.
-Choose subreddits carefully by using curated lists and checking where competitors are already discussed.
-Prioritize recent, high-engagement threads and skip anything spammy or overtly promotional.
-Comment to add value first, mention your product only when it naturally fits, and avoid links unless asked.
-Track results in focused three-day sprints, compare subreddit performance by visits and signups, and scale what works.
+Find the right subreddits using curated lists and by checking where competitors are already mentioned.
+Intempt
 
-## FAQs
+Spot relevant posts by prioritizing recent, high-engagement threads — skip spammy, low-quality, or obvious competitor promos.
+Intempt
 
-**How is Intempt different from traditional CRMs?**
+Comment the right way: add value first, mention your product only when it naturally fits, keep links out unless asked, and balance product mentions with pure advice.
+Intempt
 
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+Track results with focused short sprints (e.g., three days), pause to isolate impact, and compare subreddits — double down on what works.
 `,
   },
   "customer-qualification-scoring": {
     title: "Customer qualification scoring",
     image: "/growthplays/qualification.jpg",
-    content: `Build custom Fit and Activity scores using any data point to prioritize leads, focus teams, and improve conversion outcomes.
+    content: `Build custom Fit & Activity scores using any data point to provide foundational insights on potential customer engagement and conversion likelihood.
+Intempt
 
 ## About the Growth Play
 
-Customer qualification scoring helps you focus on the leads most likely to convert by combining who a customer is (Fit) with what they do (Activity). Instead of relying on static lead lists or gut feel, you create transparent, data-backed scores that reflect real engagement and relevance.
-
-This Growth Play shows how to use Intempt to build custom Fit and Activity scores, normalize them automatically, and apply those scores across segmentation, journeys, and analytics. The result is clearer prioritization, better alignment between marketing and sales, and more efficient use of time and resources.
+Customer qualification scoring helps you to prioritize leads and identify high-potential customers by assessing their fit and activity levels. By leveraging custom Fit & Activity scores, you can gain insights into potential customer engagement and conversion likelihood. This use case is crucial for optimizing marketing and sales efforts, ensuring that resources are focused on the most promising leads, and enhancing customer segmentation through Fit & Activity analysis.
+Intempt
 
 ## Benefits
 
-* Improved lead prioritization
-Focus sales and marketing effort on leads with the highest likelihood of conversion.
+Improved lead prioritization: Focus on leads with the highest potential for conversion.
+Intempt
 
-* Targeted marketing campaigns
-Segment customers by Fit and Activity to deliver more relevant, personalized experiences.
+Targeted marketing campaigns: Segment customers based on behavior and fit for personalized interactions.
+Intempt
 
-* Better customer insight
-Understand engagement strength and conversion potential at a glance.
+Enhanced customer insights: Understand customer engagement and conversion likelihood through detailed scoring.
+Intempt
 
-* Efficient resource allocation
-Direct human effort to leads that deserve it most and automate nurture for the rest.
+Efficient resource allocation: Allocate sales and marketing resources to leads with the highest scores.
+Intempt
 
-* Data-driven decisions
-Refine qualification logic using real performance data instead of assumptions.
+Informed decision-making: Utilize data-driven insights to refine marketing and sales strategies.
+Intempt
 
-* Higher conversion rates
-Align outreach, timing, and messaging with verified intent and relevance.
+Increased conversion rates: Implement strategies that align with top leads' identified needs and behaviors.
+Intempt
 
-## How It Works
-
+## How it works
 ### Step 1: Create a Qualification Agent
 
-Navigate to the Agents section and create a new Qualification Agent. Start by defining Fit criteria using attributes that matter for your business, such as company size, industry, job title, or region. Assign weights based on how strongly each attribute signals conversion potential.
+Start by navigating to the Agents section and select Create Agent. Next, choose Qualification Agent, define the fit criteria by identifying key customer attributes such as company size or job title, and assign weights to each based on how strongly they indicate conversion potential.
+Intempt
 
-Add at least three Fit categories using the "Add category" option. Each category should represent a meaningful level of fit, with its own conditions and relative weight. This keeps scoring structured and easy to understand.
+Enhance the agent's robustness by adding at least three fit categories using the Add category option, each with its own set of conditions and corresponding weight.
+Intempt
 
-### Step 2: Define Activity criteria
+### Step 2: Define the activity criteria
 
-Next, define Activity scoring by selecting key engagement events such as signups, logins, feature usage, demo requests, or purchases. Prioritize events that indicate genuine buying or adoption intent for your audience.
+Build an effective activity-based qualification agent by selecting key activity events such as logins, signups, or purchases that signal engagement. Prioritize these actions based on their relevance to different buyer personas.
+Intempt
 
-Assign weights to each event based on importance. Enable decay so older activity gradually loses influence unless repeated. This ensures scores reflect current interest rather than historical behavior.
+Assign weights to each event to reflect its importance in evaluating lead quality. Incorporate a decay factor so that the impact of an activity decreases over time unless repeated—ensuring the agent reflects current engagement rather than outdated behavior.
+Intempt
 
 ### Step 3: Normalize and calculate scores
 
-Intempt automatically normalizes all weights, so you don't need to force totals to equal 100 percent. Based on your Fit and Activity rules, each lead receives a combined score and is categorized into clear qualification levels such as low, medium, or high.
+Intempt automatically normalizes the assigned weights, so there's no need to ensure they add up to 100% — the system adjusts them proportionally. Based on the defined fit and activity criteria, the platform calculates a score for each lead and categorizes them into "low", "medium", or "high" qualification levels, providing a clear view of lead quality.
+Intempt
 
-This gives you a consistent, comparable view of lead quality across your entire funnel.
+### Step 4: Utilize scores for segmentation and engagement
 
-### Step 4: Use scores for segmentation and engagement
+Segment customers: Use the calculated Fit & Activity scores to create customer segments. For example, group customers into segments like High Fit & High Activity for targeted marketing campaigns.
+Intempt
 
-Segment customers
-Create dynamic segments such as "High Fit and High Activity" or "High Fit and Low Activity" using qualification scores.
+Implement targeted strategies: Develop personalized engagement strategies based on the segments. For instance, high-fit and high-activity leads can receive premium offers, while lower scores might receive nurturing campaigns to increase engagement.
+Intempt
 
-Apply targeted strategies
-Design engagement strategies for each segment. High-scoring leads might receive direct sales outreach or premium offers, while lower-scoring leads enter nurture flows focused on education and activation.
+### Step 5: Track and refine
 
-Track and refine
-Monitor how each segment performs in terms of engagement, meetings, and conversions. Adjust scoring logic as you learn which attributes and behaviors truly predict success.
+Continuously monitor the effectiveness of your segments and engagement strategies. Adjust the fit and activity criteria to improve lead qualification and conversion rates.
+Intempt
 
-### Step 5: Use scores in Journeys
+### Step 6: Use the scores in journeys
 
-Create Journeys triggered by qualification scores. For example, start a sales-assist or demo follow-up journey for high-activity leads, or a reactivation flow for high-fit but low-activity accounts.
+To build a personalized engagement flow:
 
-Add conditional logic inside the Journey so actions align with score levels. High-scoring leads can receive time-sensitive offers or direct rep contact, while lower-scoring leads receive content, onboarding, or product education.
+Create a journey in the Journeys section.
+Intempt
 
-Review Journey performance regularly and refine both scoring rules and messaging based on what drives the best outcomes.
+Set triggers based on Qualification scores—for example, use a high activity score to initiate a nurturing sequence.
+Intempt
 
-## FAQs
+Define conditions within the journey (e.g., send targeted emails to leads with high fit but low activity).
+Intempt
 
-**How is Intempt different from traditional CRMs?**
+Align actions with score levels: high-scoring leads might receive special offers, while lower-scoring ones get educational content.
+Intempt
 
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+Regularly monitor the journey's performance and refine strategy based on what drives the best engagement.
 `,
   },
   "segment-customers-lifecycle": {
     title: "Segment Customers by Lifecycle Stage",
     image: "/growthplays/segmentation.jpg",
-    content: `Use Recency, Frequency, and Monetary (RFM) analysis to segment customers by lifecycle stage and target them with the right experience at the right time.
+    content: `Automatically group customers based on Recency, Frequency, and Monetary values to better personalize engagement and grow lifetime value.
+Intempt
 
 ## About the Growth Play
 
-Lifecycle segmentation groups customers automatically based on how recently they purchased, how often they purchase, and how much they spend. Using dynamic RFM scores, you can understand where each customer sits in their lifecycle and respond with the most relevant messaging, journeys, and on-site experiences.
-
-This Growth Play shows how to build a Lifecycle Agent in Intempt, turn lifecycle scores into actionable segments, and activate those segments across journeys and personalizations to maximize retention and lifetime value.
+Lifecycle segmentation lets you automatically bucket customers into meaningful groups based on purchase behavior and activity patterns. With these segments, you can build targeted Journeys and Experiences that match each group's real-time needs — maximizing retention, re-engagement, and overall customer value.
+Intempt
 
 ## Benefits
 
-* Automated segmentation
-Customers are automatically grouped based on real purchase behavior using the Lifecycle Agent.
+Automated segmentation: Customers are grouped automatically based on behavior using a Lifecycle agent.
+Intempt
 
-* Real-time updates
-Lifecycle segments update in real time as customers interact or make purchases.
+Real-time updates: Segments update instantly as new interactions and purchases happen.
+Intempt
 
-* Better targeting
-Run highly relevant campaigns tailored to each lifecycle stage.
+Enhanced targeting: Tailor marketing campaigns based on where customers are in their lifecycle.
+help.intempt.com
 
-* Improved retention
-Identify customers who are drifting away and re-engage them before they churn.
+Better retention: Identify and re-engage at-risk customers before they churn.
+help.intempt.com
 
-* Higher lifetime value
-Focus effort on high-value customers and growth-ready segments.
+Higher lifetime value: Focus your efforts on high-value customers for repeat business.
+Intempt
 
 ## How It Works
-
 ### Step 1: Define and create events
 
-Set up conversion events
-Identify your core conversion event, such as "Purchase," and ensure it is tracked correctly in your data layer. Include the right properties, such as purchase date and total price, so recency, frequency, and monetary calculations are accurate.
+Identify and set up key conversion events (e.g., Purchase).
+
+Ensure events include meaningful properties such as total price and purchase date so you get accurate behavioral data.
+Intempt
 
 ### Step 2: Build the Lifecycle Agent
 
-Go to the Agents section
-Navigate to the Agents section in Intempt and select "Create Agent."
+Go to the Agents section and choose Create agent.
 
-Select recency and frequency events
-Choose the event that represents conversion, typically "Purchase." This event is used to calculate both recency and frequency. The same flow applies to both models.
+Select recency, frequency, and monetary events that represent customer buying behavior.
 
-Select the monetary event and value
-Choose the same conversion event and define the property that represents monetary value, such as "Total price."
+Define any exclusions (e.g., anonymous users).
 
-Define agent targeting
-Exclude users who should not be evaluated, such as anonymous visitors or users who have never signed up, to keep lifecycle scoring accurate.
+Set a rolling timeframe (e.g., 30–90 days) to keep scores current.
+Intempt
 
-Define the timeframe
-Set a rolling timeframe for analysis. A 30–90 day window is recommended to avoid skewing scores with long-inactive users.
+### Step 3: Create segments based on lifecycle scores
 
-### Step 3: Create segments and journeys based on lifecycle scores
+Go to Segments and create a new segment.
 
-Create lifecycle segments
-Go to the Segments section and create new segments using the attribute generated by the Lifecycle Agent.
+Use the Lifecycle agent's segment attribute to define conditions.
 
-Example segment configuration
-Segment name: Champions
-Condition: Attribute segment equals Champions
+Example segments:
+Champions: Recent buyers who order often and spend the most.
+Regulars: Consistent purchasers.
+Promising: Lower spend but regular or recent purchase behavior.
+Needs Attention: Historically valuable customers who haven't purchased recently.
+At Risk: Infrequent smaller buyers who haven't purchased in a long time.
+Intempt
 
-Common RFM segment definitions
-Champions: Bought recently, buy often, and spend the most
-Regulars: Purchase consistently
-Promising: Buy regularly for smaller amounts or recently made a high-value purchase
-Needs Attention: Previously high spenders who have stopped purchasing
-At Risk: Infrequent, low spenders who have not purchased in a long time
+You can refine segments by combining conditions (e.g., segment = Champions and total spending > $500).
+Intempt
 
-Refine segments with additional conditions
-You can combine lifecycle stages with other attributes for precision. For example:
-High-value Champions: Segment equals Champions and total spending > $500
-New Promising Customers: Segment equals Promising and sign-up date < 30 days
+### Step 4: Create personalized Journeys
 
-Create journeys for each segment
-Go to the Journeys section and create a new journey for each lifecycle segment.
+Go to Journeys and make a new journey.
 
-Define journey triggers
-Trigger journeys when a user enters a lifecycle segment, such as entering the Champions segment.
+Set the trigger based on a segment (e.g., user enters "Champions").
 
-Example journey for Champions
-Start with a welcome email featuring exclusive access or early previews.
-Follow with a VIP rewards message offering perks like free shipping or early access.
-Send personalized product recommendations based on past purchases.
-Encourage advocacy or user-generated content with a reward or discount.
+Add actions to nurture or reward that group:
 
-Add decision points
-Use engagement-based decisions to branch the journey. For example, send VIP rewards only if the user clicks the welcome email, or send a reminder if they do not engage.
+Personalized emails
 
-Activate journeys
-Review each journey and activate it. Create separate journeys for Champions, Regulars, Promising, Needs Attention, and At Risk segments.
+Reward offers
 
-### Step 4: Deploy personalizations
+Re-engagement messaging
+help.intempt.com
 
-Create a personalization campaign
-Navigate to the Personalizations section and create a new campaign.
+### Step 5: Deploy Personalizations (Experiences)
 
-Create experiences for each lifecycle segment
-Build a separate experience for each RFM segment within the same campaign.
+Go to Experiences and launch a personalization campaign.
 
-Examples of segment-specific experiences
+Create separate experiences for each lifecycle segment:
 
-Champions
-Show exclusive homepage banners, VIP top bars, premium product recommendations, and special offers.
+Champions: VIP banners and exclusive offers.
 
-Regulars
-Highlight loyalty programs, rewards points, and frequently purchased products.
+Regulars: Loyalty program highlights.
 
-Promising
-Offer welcome discounts, best-sellers, and confidence-building social proof.
+Promising: Welcome offer incentives.
 
-Needs Attention
-Use re-engagement messaging, personalized recommendations, and limited-time discounts.
+Needs Attention: Re-engagement deals.
 
-At Risk
-Display "We miss you" messaging, stronger incentives, and discounted or clearance items.
+At Risk: "We miss you" discounts.
+Intempt
 
-Set targeting rules
-Ensure each experience is shown only to users in the corresponding lifecycle segment.
+Set targeting rules so each experience only shows for its intended segment.
+help.intempt.com
 
-Activate the personalization campaign
-Review setup and activate to start delivering personalized experiences in real time.
+### Step 6: Monitor and Optimize
 
-### Step 5: Monitor and optimize
+Use analytics to track how journeys and personalizations perform:
 
-Track journey performance
-Use Journey Analytics to monitor triggered users, conversions, conversion rates, and average days to convert. Adjust timing, messaging, or branching when performance drops.
+Journey Analytics — trigger counts, conversions, conversion rate, time to convert.
 
-Track personalization performance
-Use Personalization Analytics to evaluate control vs personalized experiences, conversion rates, conversion value, and lift. Strong lift indicates effective personalization; weak results signal a need to refine content or targeting.
+Experience Analytics — views, conversions, lift vs control.
 
-Continuously optimize
-Review lifecycle definitions, journey performance, and personalization results regularly to keep segmentation aligned with changing customer behavior.
+Refine campaigns based on these insights (e.g., adjust content, timing, segmentation rules).
+Intempt
 
-## FAQs
+## Tips for Success
 
-**How is Intempt different from traditional CRMs?**
+Use RFM segment values as living attributes that update with every new purchase.
+help.intempt.com
 
+Combine lifecycle segments with other attributes (e.g., spend, tenure) for deeper targeting.
+help.intempt.com
 
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
+Build dedicated journeys and experiences for each core segment to maximize impact
 `,
   },
 };

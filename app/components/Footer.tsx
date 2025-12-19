@@ -87,12 +87,20 @@ export function Footer({
                       // Learn
                       "Growth Plays": "/growthplays",
                       "Blog": "/blog",
-                      "Product Tour": "/product-tour",
+                      "Developer docs": "https://docs.intempt.com",
                       "Help & Support": "https://help.intempt.com",
                       "Help and Support": "https://help.intempt.com",
                       // Partners
                       "Affiliates": "/affiliates",
                       "Agencies": "/agencies",
+                      // Company
+                      "About us": "/company",
+                      "Employee Handbook": "https://workplace.intempt.com/",
+                      "Jobs": "https://workplace.intempt.com/jobs-at-intempt-15",
+                      // Socials
+                      "YouTube": "https://www.youtube.com/@intempttechnologies",
+                      "Twitter(X)": "https://x.com/intempt",
+                      "LinkedIn": "https://www.linkedin.com/company/intempt/",
                     };
                     
                     href = linkMap[link] || href;
@@ -118,10 +126,10 @@ export function Footer({
         <div className="mt-12 flex flex-col gap-2 border-t border-black/10 pt-8 text-sm font-normal text-black sm:flex-row sm:items-center sm:justify-between">
           <div>© {new Date().getFullYear()} {brand}</div>
           <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-2">
+            <a href="https://status.intempt.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 transition-colors hover:text-zinc-900">
               <div className="h-2 w-2 rounded-full bg-green-500"></div>
               <span>System status</span>
-            </div>
+            </a>
             <a href="/termsofservice" className="transition-colors hover:text-zinc-900">
               Terms of service
             </a>
@@ -143,7 +151,7 @@ export function Footer({
             <a href="/security" className="transition-colors hover:text-zinc-900">
               Security
             </a>
-            <a href="#" className="transition-colors hover:text-zinc-900">
+            <a href="https://intempt.trustshare.com" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-zinc-900">
               Trust portal
             </a>
             <a href="/affiliate-terms" className="transition-colors hover:text-zinc-900">

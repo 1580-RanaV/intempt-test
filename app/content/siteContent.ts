@@ -313,9 +313,7 @@ export const siteContent = {
         links: [
           "Growth Plays",
           "Blog",
-          "Product Tour",
-          "Growth Grader",
-          "Calculate ROI",
+          "Developer docs",
           "Help & Support",
         ],
       },
@@ -325,7 +323,7 @@ export const siteContent = {
         title: "Socials",
         links: [
           "YouTube",
-          "Twitter",
+          "Twitter(X)",
           "LinkedIn",
           "Slack",
           "Instagram",
