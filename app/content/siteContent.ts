@@ -61,6 +61,7 @@ export const siteContent = {
         { label: "Pricing", href: "/pricing" },
     ] satisfies NavItem[],
     actions: [
+      { label: "Product Tour", href: "/product-tour" },
       { label: "Log in", href: "https://app.intempt.com/" },
       { label: "Book a demo", href: "https://calendly.com/sidchaudhary/meet-sid?month=2025-12" },
       { label: "Get started", href: "https://app.intempt.com/" },

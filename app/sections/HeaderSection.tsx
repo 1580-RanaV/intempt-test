@@ -132,7 +132,8 @@ export function HeaderSection({
   const allLinks = useMemo(() => {
     return [
       ...navItems,
-      { label: actions[0]?.label ?? "Log in", href: actions[0]?.href ?? "#login" },
+      { label: actions[0]?.label ?? "Product Tour", href: actions[0]?.href ?? "#product-tour" },
+      { label: actions[1]?.label ?? "Log in", href: actions[1]?.href ?? "#login" },
     ].filter((x): x is NavItem => Boolean(x?.label && x?.href));
   }, [actions, navItems]);
 
@@ -270,16 +271,13 @@ export function HeaderSection({
           <nav className="flex items-center justify-between gap-6">
             <a href="/" className="flex items-center gap-3">
               <Image
-                src="/logo.png"
+                src="/logo-name.svg"
                 alt="Intempt logo"
-                width={28}
-                height={28}
+                width={120}
+                height={29}
                 priority
-                className="h-7 w-7 rounded-md"
+                className="h-7 w-auto"
               />
-              <span className="text-sm font-semibold tracking-tight text-black">
-                {brand}
-              </span>
             </a>
 
             <div 
@@ -388,11 +386,17 @@ export function HeaderSection({
               >
                 {actions[0]?.label}
               </a>
-              <ButtonLink variant="secondary" href={actions[1]?.href}>
+              <a
+                href={actions[1]?.href}
+                className="text-sm font-semibold text-black/60 transition-colors hover:text-black"
+              >
                 {actions[1]?.label}
-              </ButtonLink>
-              <ButtonLink href={actions[2]?.href}>
+              </a>
+              <ButtonLink variant="secondary" href={actions[2]?.href}>
                 {actions[2]?.label}
+              </ButtonLink>
+              <ButtonLink href={actions[3]?.href}>
+                {actions[3]?.label}
               </ButtonLink>
             </div>
 
@@ -624,18 +628,18 @@ export function HeaderSection({
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 <ButtonLink
                   variant="secondary"
-                  href={actions[1]?.href}
-                  onClick={() => setIsOpen(false)}
-                  className="w-full"
-                >
-                  {actions[1]?.label}
-                </ButtonLink>
-                <ButtonLink
                   href={actions[2]?.href}
                   onClick={() => setIsOpen(false)}
                   className="w-full"
                 >
                   {actions[2]?.label}
+                </ButtonLink>
+                <ButtonLink
+                  href={actions[3]?.href}
+                  onClick={() => setIsOpen(false)}
+                  className="w-full"
+                >
+                  {actions[3]?.label}
                 </ButtonLink>
               </div>
 

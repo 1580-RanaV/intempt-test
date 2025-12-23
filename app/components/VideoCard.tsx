@@ -52,14 +52,13 @@ export function VideoCard({
   img{position:absolute;inset:0;height:100%;width:100%;object-fit:cover;}
   .overlay{position:absolute;inset:0;background:rgba(0,0,0,.20);}
   .btn{position:absolute;inset:0;display:grid;place-items:center;}
-  .pill{display:inline-flex;align-items:center;gap:12px;border-radius:2px;padding:12px 18px;background:rgba(245,245,245,.92);color:#111;font:600 14px/1.1 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.18);border:1px solid rgba(0,0,0,.12);}
   .play-btn{width:48px;height:48px;border-radius:50%;background:#0382ff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(3,130,255,.4);}
   .play-icon{width:0;height:0;border-left:14px solid white;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:2px;}
 </style></head><body>
 <a href="${safeEmbed}">
   <img src="${safeThumb}" alt="${safeLabel}" />
   <div class="overlay"></div>
-  <div class="btn"><div class="pill"><div class="play-btn"><div class="play-icon"></div></div>Play</div></div>
+  <div class="btn"><div class="play-btn"><div class="play-icon"></div></div></div>
 </a>
 </body></html>`;
 

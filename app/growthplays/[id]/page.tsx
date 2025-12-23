@@ -3,9 +3,15 @@ import { HeaderSection } from "../../sections/HeaderSection";
 import { Footer } from "../../components/Footer";
 import { Container } from "../../components/Container";
 import { AnimateIn } from "../../components/AnimateIn";
+import { FAQAccordion } from "../../components/FAQAccordion";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
 
 const growthPlays: Record<
   string,
@@ -13,6 +19,7 @@ const growthPlays: Record<
     title: string;
     content: string;
     image: string;
+    faqs?: FAQ[];
   }
 > = {
   "churn-risk-prevention": {
@@ -208,33 +215,41 @@ Regularly review the effectiveness of your retention campaigns using Intempt's j
 
 Track user responses and adjust strategies based on the analytics data.
 
-Continuously retrain your model with new data to maintain accuracy and relevance.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-The built-in CDP unifies all your customer data across channels into a single profile. It resolves user identities by merging anonymous and known sessions, connects users to their companies, and combines behavioral, firmographic, and journey data. This gives your team a complete, real-time view of every customer.
-
-**How does AI-powered segmentation work in Intempt?**
-
-You can create customer segments simply by describing them in plain language. The AI analyzes lifecycle, qualification, and engagement data to build segments automatically. These segments update in real time as new data comes in, so your campaigns always target the right audience.
-
-**What data enrichment sources does Intempt use?**
-
-Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases. This fills in missing attributes on user and account records automatically, keeping your data complete and current.
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
-
-**What platforms does Intempt integrate with?**
-
-Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.`,
+Continuously retrain your model with new data to maintain accuracy and relevance.`,
+    faqs: [
+      {
+        question: "How much data do I need before I can start predicting churn?",
+        answer: "You'll need at least 21 days of data collection with a minimum of 10,000 daily events. The goal event (like churn) should have at least 200 true and 200 false occurrences over 30 days. This gives the model enough signal to make accurate predictions.",
+      },
+      {
+        question: 'What counts as a "churn event" that the model can predict?',
+        answer: 'It depends on your business, but common examples include: user cancels subscription, user hasn\'t logged in for 30 days, usage drops significantly (fewer logins, fewer features used), or user submits negative feedback or a support ticket showing dissatisfaction. You define what churn means for you.',
+      },
+      {
+        question: "How does the lifecycle agent categorize users?",
+        answer: "Once trained, the model segments users into groups like Champion, Regulars, Promising, Needs Attention, and At Risk. These categories are based on predicted churn likelihood, so you can treat each group differently instead of blasting everyone with the same message.",
+      },
+      {
+        question: "Can I filter out certain users before the model runs predictions?",
+        answer: "Yes. When configuring the agent, you can filter out users based on things like login date, feature usage frequency, subscription status, or support ticket history. This keeps your predictions focused on the users who actually matter for retention.",
+      },
+      {
+        question: "What kind of retention campaigns can I run for high-risk users?",
+        answer: "You've got options. Send personalized re-engagement emails with discounts or special offers, trigger SMS or webhook notifications to alert your customer success team to make follow-up calls, or display personalized messages on their dashboard when they log in. The idea is to reach them before they're fully gone.",
+      },
+      {
+        question: "How do I handle users who don't respond to the first outreach?",
+        answer: "You can add conditions in your journey to check email engagement and whether they open it. Click anything? If not, send a follow-up email after a few days. If they're still unresponsive after a call attempt, you can escalate to a higher support tier. The journey adapts based on what they do (or don't do).",
+      },
+      {
+        question: "Can I show personalized messages on the dashboard based on churn risk?",
+        answer: 'Yes. You can create personalizations that display different messages depending on the user\'s risk level. High-risk users might see a "We miss you, here\'s 20% off" message when they log in, while low-risk users see tips about advanced features. Same dashboard, different experience.',
+      },
+      {
+        question: "How do I know if my retention strategies are actually working?",
+        answer: "Use Intempt's journey analytics to track user responses, opens, clicks, conversions, drop-offs at each step. Review regularly, adjust your strategies based on what the data shows, and keep retraining your model with new data so it stays accurate as user behavior evolves.",
+      },
+    ],
   },
   "purchase-propensity-abandonment": {
     title: "Purchase propensity & abandonment",
@@ -392,33 +407,33 @@ Optimize strategies:
 
 Based on the performance data, make adjustments to your journeys and personalizations.
 
-Continuously test and refine your strategies to maximize effectiveness.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-The built-in CDP unifies all your customer data across channels into a single profile. It resolves user identities by merging anonymous and known sessions, connects users to their companies, and combines behavioral, firmographic, and journey data. This gives your team a complete, real-time view of every customer.
-
-**How does AI-powered segmentation work in Intempt?**
-
-You can create customer segments simply by describing them in plain language. The AI analyzes lifecycle, qualification, and engagement data to build segments automatically. These segments update in real time as new data comes in, so your campaigns always target the right audience.
-
-**What data enrichment sources does Intempt use?**
-
-Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases. This fills in missing attributes on user and account records automatically, keeping your data complete and current.
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
-
-**What platforms does Intempt integrate with?**
-
-Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.`,
+Continuously test and refine your strategies to maximize effectiveness.`,
+    faqs: [
+      {
+        question: "What behaviors does the model look at to predict purchase likelihood?",
+        answer: "It tracks things like frequent product views, adding items to cart, and longer browsing sessions, the signals that indicate someone is seriously considering a purchase. You implement tracking for these events using the JavaScript SDK or iOS SDK, and the model takes it from there.",
+      },
+      {
+        question: "Can I exclude certain users from the model?",
+        answer: "Yes. When setting up the agent, you can filter out users you don't want included, like inactive users or those with incomplete profiles. This keeps the model focused on the audience that actually matters for your purchase predictions.",
+      },
+      {
+        question: "How do I handle users who are at risk of abandoning their cart?",
+        answer: 'Set up a journey triggered by "Cart Abandoned" that targets your at-risk segment. Send reminder emails letting them know they left something behind, and sweeten the deal with a limited-time discount. Urgency plus incentive is a solid combo for recovering abandoned carts.',
+      },
+      {
+        question: "Can I show personalized on-site experiences based on propensity scores?",
+        answer: 'Absolutely. For high-propensity users, you might show a homepage banner like "Welcome back! Check out our new arrivals just for you" or a product page sidebar with related items. For at-risk users, display a cart page pop-up reminding them to complete their purchase with a discount code. Same site, different experience based on who\'s browsing.',
+      },
+      {
+        question: "Where can I display these personalized experiences?",
+        answer: "You set display rules to show personalized content on specific pages, the home page, the product page, the cart page, the checkout page, wherever makes sense. The content only appears to users in the relevant segments, so high-propensity shoppers and abandonment risks each see what's most likely to convert them.",
+      },
+      {
+        question: "Does the propensity scoring happen in real time, or is there a delay?",
+        answer: "Real-time. The model updates constantly as new data comes in, so if someone suddenly starts adding items to their cart, their score reflects that immediately. You're not waiting for batch processing; you can act on current behavior.",
+      },
+    ],
   },
   "in-session-recommender": {
     title: "In-session recommender",
@@ -581,33 +596,37 @@ Based on the analysis, tweak the segments and experiences to optimize recommenda
 
 Implement A/B tests to compare different approaches. For example, test different messaging for promoting Task Management features.
 
-Continuously refine the NBA model and personalizations based on user feedback and performance data.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-The built-in CDP unifies all your customer data across channels into a single profile. It resolves user identities by merging anonymous and known sessions, connects users to their companies, and combines behavioral, firmographic, and journey data. This gives your team a complete, real-time view of every customer.
-
-**How does AI-powered segmentation work in Intempt?**
-
-You can create customer segments simply by describing them in plain language. The AI analyzes lifecycle, qualification, and engagement data to build segments automatically. These segments update in real time as new data comes in, so your campaigns always target the right audience.
-
-**What data enrichment sources does Intempt use?**
-
-Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases. This fills in missing attributes on user and account records automatically, keeping your data complete and current.
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
-
-**What platforms does Intempt integrate with?**
-
-Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.`,
+Continuously refine the NBA model and personalizations based on user feedback and performance data.`,
+    faqs: [
+      {
+        question: "What does the in-session recommender actually do?",
+        answer: "It predicts which product feature to highlight for each user as they browse, based on their adoption patterns and preferences. Instead of showing everyone the same generic prompts, each user sees recommendations for the feature they're most likely to adopt next. It's real-time personalization that helps users reach their next product milestone faster.",
+      },
+      {
+        question: "How much data do I need before I can use this?",
+        answer: "You'll need at least 21 days of data collection with a minimum of 10,000 average daily events. Your goal event (like \"Feature Adoption\") should have at least 200 true and 200 false users daily over 30 days. This gives the model enough signal to make accurate predictions about what each user should do next.",
+      },
+      {
+        question: "What kind of events should I be tracking?",
+        answer: "Track events related to feature usage. For example, if your product has Task Management, Time Tracking, and Team Collaboration features, you'd track things like \"Tasks Created,\" \"Time Entries Logged,\" and \"Messages Sent.\" These are the actions the model uses to understand adoption patterns and predict next best actions.",
+      },
+      {
+        question: "Can I filter out certain users from the model training?",
+        answer: "Yes. You can filter out users that would skew the results, like people who haven't logged in for the last 30 days. This keeps the model focused on active users whose behavior actually reflects meaningful adoption patterns.",
+      },
+      {
+        question: "How do I create segments based on the model's predictions?",
+        answer: 'Once the model is running, you create segments based on the NBA attribute value. For example, one segment for users where NBA equals "task_created," another where NBA equals "time_entry_logged," and so on. Each segment groups users by the feature they\'re most likely to adopt next.',
+      },
+      {
+        question: "What kind of personalized experiences can I show to each segment?",
+        answer: 'You can get creative here. For users predicted to adopt Task Management, show a banner highlighting advanced task features with a "Learn More" button. For Time Tracking users, display a pop-up modal about calendar integrations. For Team Collaboration users, add a sidebar notification about real-time document editing.',
+      },
+      {
+        question: "Can I A/B test different recommendation approaches?",
+        answer: "Yes. You can run A/B tests to compare different messaging, designs, or targeting strategies. For example, test two different ways of promoting Task Management features and see which one drives more adoption. Use the results to continuously refine your experiences and get better over time.",
+      },
+    ],
   },
   "drive-revenue-upsells": {
     title: "Drive more revenue with tailored upsells",
@@ -904,33 +923,37 @@ Use this metrics to assess the effectiveness of your personalized content. For i
 
 3. Refine the model:
 
-Regularly update and refine the next best action model based on new data to improve its accuracy and effectiveness.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-The built-in CDP unifies all your customer data across channels into a single profile. It resolves user identities by merging anonymous and known sessions, connects users to their companies, and combines behavioral, firmographic, and journey data. This gives your team a complete, real-time view of every customer.
-
-**How does AI-powered segmentation work in Intempt?**
-
-You can create customer segments simply by describing them in plain language. The AI analyzes lifecycle, qualification, and engagement data to build segments automatically. These segments update in real time as new data comes in, so your campaigns always target the right audience.
-
-**What data enrichment sources does Intempt use?**
-
-Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases. This fills in missing attributes on user and account records automatically, keeping your data complete and current.
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
-
-**What platforms does Intempt integrate with?**
-
-Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.`,
+Regularly update and refine the next best action model based on new data to improve its accuracy and effectiveness.`,
+    faqs: [
+      {
+        question: "How does Intempt predict which product category to upsell to each user?",
+        answer: "The lifecycle agent analyzes each user's previous purchases and current browsing behavior to identify patterns. It then predicts which category visit is most likely to lead to a purchase for that specific user. So instead of guessing, you're showing each person the category they're actually most likely to buy from.",
+      },
+      {
+        question: "What events do I need to track for this to work?",
+        answer: "You'll need to create category-specific events for each product category you want to track. For example, \"Visited dresses category,\" \"Visited shoes category,\" \"Visited accessories category.\" These are typically page view events that track when users browse URLs containing specific category paths like /category/dresses or /category/shoes.",
+      },
+      {
+        question: "How does the model output which category to recommend?",
+        answer: "Once trained, the model outputs an attribute for each user with a value reflecting the category most likely to lead to a purchase. For example, if the model predicts a user is most likely to buy shoes, it outputs something like \"shoes_category\" as their next best action. You use this attribute to personalize their experience.",
+      },
+      {
+        question: "Can I filter which users the model trains on?",
+        answer: "Yes. You can exclude users who don't fit your criteria, like people who haven't purchased in the last year. This keeps the model focused on relevant customer behavior and makes the predictions more accurate for the audience you actually care about.",
+      },
+      {
+        question: "How do I create segments based on the model's predictions?",
+        answer: "You create segments using the next best action attribute. For example, a segment called \"High likelihood to purchase shoes\" would include users where next_best_action equals shoes_category. You can also combine this with other conditions, like users who've been active in the last 30 days or users with an average order value above $100.",
+      },
+      {
+        question: "Can I create separate journeys for each category?",
+        answer: "Yes. Each category gets its own journey with its own trigger and email sequence. If you have 30 categories, you'd set up 30 journey triggers with corresponding actions. It sounds like a lot, but once you've built one, the others follow the same structure with different content.",
+      },
+      {
+        question: "What kind of on-site personalization can I show based on predicted categories?",
+        answer: "You can personalize multiple elements: homepage banners featuring the predicted category, sticky top bars with personalized messages like \"Check out our newest shoe arrivals, [Name]!\", recommended product sections showing items from that category, and special offer sections with category-specific discounts. Each user sees a site tailored to what they're most likely to buy.",
+      },
+    ],
   },
   "personalized-in-app-offers": {
     title: "Personalized in-app offers",
@@ -1092,31 +1115,33 @@ Lift: Improvement in conversion rate compared to the control group.
 
 Based on the analytics data, make adjustments to the experiences to improve performance. For instance, if the conversion rate for the Listened to 5 songs but not liked segment is low; consider refining the content or targeting criteria.
 
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-Unlike traditional CRMs that rely on manual data entry and static records, Intempt uses AI agents to research, segment, qualify, and enrich leads continuously, keeping your pipeline moving without constant human intervention.
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-The built-in CDP unifies all your customer data across channels into a single profile. It resolves user identities by merging anonymous and known sessions, connects users to their companies, and combines behavioral, firmographic, and journey data. This gives your team a complete, real-time view of every customer.
-
-**How does AI-powered segmentation work in Intempt?**
-
-You can create customer segments simply by describing them in plain language. The AI analyzes lifecycle, qualification, and engagement data to build segments automatically. These segments update in real time as new data comes in, so your campaigns always target the right audience.
-
-**What data enrichment sources does Intempt use?**
-
-Intempt pulls live enrichment data from external sources, including People Data Labs, DropContact, and other public databases. This fills in missing attributes on user and account records automatically, keeping your data complete and current.
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
-
-**What platforms does Intempt integrate with?**
-
-Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.`,
+`,
+    faqs: [
+      {
+        question: "What kind of in-app offers can I personalize with Intempt?",
+        answer: "You can personalize feature adoption prompts, subscription offers, trial promotions, and pretty much any in-app message or pop-up. The idea is to show each user the offer most relevant to their behavior, whether that's encouraging them to try a feature they haven't used or nudging them toward a subscription they've been considering.",
+      },
+      {
+        question: "How do I start tracking user behavior in my mobile app?",
+        answer: "You'll need to integrate Intempt's iOS SDK into your app. Once that's set up, you configure the events you want to track in the dashboard, things like \"played_song,\" \"liked_song,\" \"shared_song,\" or \"visited_subscription_page.\" These events become the foundation for your segments and personalizations.",
+      },
+      {
+        question: "What kind of segments should I create for in-app personalization?",
+        answer: "Think about user behavior patterns that signal opportunity. For example: users who played 5 songs but never liked one (opportunity to promote the Like feature), users who played 10 songs but never shared (opportunity to promote sharing), or users who visited the subscription page multiple times but haven't converted (opportunity for a trial offer).",
+      },
+      {
+        question: "Can you give an example of a feature adoption prompt?",
+        answer: "Sure. For users who've listened to several songs but never used the Like feature, you might show an in-app message like: \"Can't stop listening to your favorite beat? Tap the heart to save it to your library and never lose track of the songs you love!\" It's a gentle nudge to try a feature they're clearly not aware of or haven't explored yet.",
+      },
+      {
+        question: "How do I control when and how often these offers appear?",
+        answer: "You set display rules for each experience. You can specify conditions like \"show when the user plays a song\" or \"show when the user opens the app.\" You also set display frequency so users aren't bombarded with the same message over and over. The goal is consistent visibility without being annoying.",
+      },
+      {
+        question: "Does this work for both feature adoption and revenue goals?",
+        answer: "Yes. You can use the same approach to drive feature adoption (getting users to try new functionality) and revenue (converting free users to paid plans). The mechanics are the same: track behavior, create segments, build personalized experiences, and measure results. You just tailor the content to match the goal.",
+      },
+    ],
   },
   "website-navigation-content": {
     title: "Website navigation & content display",
@@ -1366,29 +1391,37 @@ Lift: Improvement in conversion rate compared to the control group.
 
 Adjust and optimize:
 
-Based on the analytics data, make adjustments to the experiences to improve performance. For instance, if the conversion rate for the Interested in Industry A segment is low; consider refining the content or targeting criteria.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
-`,
+Based on the analytics data, make adjustments to the experiences to improve performance. For instance, if the conversion rate for the Interested in Industry A segment is low; consider refining the content or targeting criteria.`,
+    faqs: [
+      {
+        question: "What do I need to set up before I can start personalizing?",
+        answer: "First, embed Intempt's JavaScript SDK on your website to start tracking user activities. Then configure the events you want to capture, like viewing specific industry pages, visiting the pricing page, or booking a demo. Once you're tracking those events, you can create segments and build personalized experiences based on real behavior.",
+      },
+      {
+        question: "What kind of segments can I create for website personalization?",
+        answer: "You can segment by almost anything you're tracking. Common examples include industry interest (users who viewed Industry A vs. Industry B pages), company size (enterprise, mid-market, SMB), and funnel stage (demo booked vs. no demo booked). The more behavioral data you gather, the more precisely you can segment and personalize.",
+      },
+      {
+        question: "What parts of my website can I personalize?",
+        answer: "Pretty much everything is visible. You can change the homepage hero section (image, title, subtext), customize feature pages with industry-specific case studies and testimonials, adjust pricing pages to highlight different plans, and swap out navigation CTA buttons based on where users are in their journey. Each section can have its own personalization rules.",
+      },
+      {
+        question: "Can I personalize the pricing page based on company size?",
+        answer: 'Yes. For enterprise visitors (say, companies with 500+ employees), you can highlight your Premium plan with messaging like "Our Premium Plan is designed to meet the needs of large enterprises." For smaller companies, highlight your Entry plan with messaging about affordability and essential features. Each visitor sees the plan that makes the most sense for them.',
+      },
+      {
+        question: "How do I change the navigation CTA based on funnel stage?",
+        answer: 'Create two experiences: one for users who haven\'t booked a demo yet (show a prominent "Book a Demo" button) and one for users who have already booked (swap it to a "Sign Up" button). The nav bar adapts to where each user is in their journey, so you\'re always pushing them toward the next logical step.',
+      },
+      {
+        question: "How do I control where and when personalized content appears?",
+        answer: "You set display rules for each experience. Specify which pages the personalization applies to (homepage, feature pages, pricing page) and set display frequency so the content shows consistently to targeted users. You can get as specific as you need about when and where each experience appears.",
+      },
+      {
+        question: "What if a segment isn't converting well even with personalization?",
+        answer: "That's a signal to optimize. Look at the content first: maybe the messaging isn't resonating, or the offer isn't compelling enough. Then check your targeting criteria: maybe the segment definition is too broad, or you're catching users at the wrong moment. Small refinements to content or targeting often make a noticeable difference in conversion rates.",
+      },
+    ],
   },
   "in-app-onboarding": {
     title: "In-app onboarding",
@@ -1568,29 +1601,37 @@ Lift: Improvement in conversion rate compared to the control group.
 
 Adjust and optimize:
 
-Based on the analytics data, make necessary adjustments to the experiences to improve performance. For instance, if the conversion rate for the Created Project segment is low, consider refining the content or targeting criteria.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
-`,
+Based on the analytics data, make necessary adjustments to the experiences to improve performance. For instance, if the conversion rate for the Created Project segment is low, consider refining the content or targeting criteria.`,
+    faqs: [
+      {
+        question: "What events should I track for onboarding personalization?",
+        answer: 'Track the key actions that represent progress through your onboarding flow. For a project management app, that might be "created_project," "created_task," "invited_team_member," "created_ai_prediction," and "viewed_dashboard." Each event marks a milestone, and you\'ll use these to determine what guidance each user needs next.',
+      },
+      {
+        question: "How do I create segments based on onboarding progress?",
+        answer: 'Create segments for each stage of your onboarding flow. For example: "New User" (just signed up, hasn\'t done anything yet), "Created Project" (completed step one but not step two), "Created Task" (completed steps one and two but not three), and so on. Each segment represents users who need guidance on the next step.',
+      },
+      {
+        question: "How does the personalized onboarding flow work in practice?",
+        answer: 'When a new user signs up, they see a message guiding them to create their first project. Once they do that, they move to a different segment and see a message about creating their first task. After that, they\'re prompted to invite a team member. Each step is triggered by their actual progress, not a fixed timeline.',
+      },
+      {
+        question: "What kind of in-app messages can I show during onboarding?",
+        answer: 'You can show popups, tooltips, banners, or any custom in-app message you design. Each message includes a title, body text, and a call-to-action button that directs users to take the next step. For example: "Welcome to Otto! Start by creating your first project to organize your tasks and collaborate with your team," with a "Create Project" button.',
+      },
+      {
+        question: "How do I make sure users don't see onboarding steps they've already completed?",
+        answer: "Set your targeting conditions so each experience only targets users who haven't completed that step yet. Make the segments mutually exclusive. If a user has already created a project, they won't see the \"create your first project\" message. They'll only see the message for the step they're currently on.",
+      },
+      {
+        question: "Can I control when and how often these onboarding messages appear?",
+        answer: 'Yes. You set display rules for each experience, specifying conditions like "show when user logs in" or "show after user completes previous step." You also control display frequency so users aren\'t bombarded with the same message repeatedly. The goal is helpful guidance, not annoying interruptions.',
+      },
+      {
+        question: "How do I set this up technically?",
+        answer: "Create a server-side personalization campaign in Intempt. Within that campaign, add multiple experiences, one for each onboarding step. Use the code editor to define the message content (title, body, CTA) for each experience. Then set the targeting conditions to match the relevant segments you created.",
+      },
+    ],
   },
   "personalize-landing-pages": {
     title: "Personalize landing pages at scale",
@@ -1759,29 +1800,37 @@ Start the personalization campaign: Once all experiences are set up and configur
 
 Monitor performance: Use Intempt's Personalization Analytics to track the performance of each experience. Key metrics to monitor include: Unique views, Conversion, Conversion %, and Lift.
 
-Adjust and optimize: Based on the analytics data, adjust the experiences to improve performance.
-
-## FAQs
-
-**How is Intempt different from traditional CRMs?**
-
-
-**What is the built-in Customer Data Platform (CDP) and why does it matter?**
-
-
-**How does AI-powered segmentation work in Intempt?**
-
-
-**What data enrichment sources does Intempt use?**
-
-
-**Is Intempt compliant with GDPR and CCPA?**
-
-
-**What platforms does Intempt integrate with?**
-
-
-`,
+Adjust and optimize: Based on the analytics data, adjust the experiences to improve performance.`,
+    faqs: [
+      {
+        question: "Do I really need to build separate landing pages for each ad campaign?",
+        answer: "Nope, that's the whole point. Instead of creating hundreds of separate landing pages, you use Intempt to personalize any existing page on your website based on where the visitor came from. One page, many variations, all managed from a single campaign. It saves a ton of time and keeps everything organized.",
+      },
+      {
+        question: "How do I know which ad campaign a visitor came from?",
+        answer: "Intempt reads the UTM parameters in the URL. When someone clicks your ad, the URL includes parameters like utm_source=google or utm_source=facebook. Intempt uses these to determine which experience to show. You set up targeting conditions based on what the URL contains, and the right content appears automatically.",
+      },
+      {
+        question: "What parts of the landing page can I personalize based on the ad source?",
+        answer: "Pretty much everything is visible. You can change the headline, subtext, call-to-action button text, images, videos, testimonials, and any other content blocks. The goal is to match the landing page copy to the messaging in your ad so visitors see a consistent experience from click to conversion.",
+      },
+      {
+        question: "How do I set up the targeting conditions for each ad source?",
+        answer: 'When creating each experience, you set the targeting condition based on URL parameters. For Google Ads, set "URL contains utm_source=google." For Facebook, set "URL contains utm_source=facebook." And so on for Twitter, LinkedIn, or any other source you\'re running campaigns on. Each experience only shows to visitors who match that condition.',
+      },
+      {
+        question: "Do I need to know code to customize the landing page content?",
+        answer: "No. You use the visual editor to make changes. Just select the experience you want to edit, open the visual editor, and click on the elements you want to change. Edit headlines, swap images, update button text, and add videos. It's all point-and-click, no coding required.",
+      },
+      {
+        question: "How should I tailor messaging for different platforms?",
+        answer: "Think about the audience on each platform. Google Ads visitors are often high-intent searchers, so focus on features and benefits with a clear trial offer. Facebook visitors respond well to community and visual content like carousels and videos. LinkedIn visitors are professionals, so emphasize business value, case studies, and thought leadership.",
+      },
+      {
+        question: "Can I add platform-specific content like videos or testimonials?",
+        answer: "Yes. For each experience, you can add whatever content makes sense for that audience. Embed a demo video for Facebook visitors, include customer testimonials for Google visitors, or add case studies and whitepapers for LinkedIn visitors. Each variation can have completely different supporting content.",
+      },
+    ],
   },
   "dynamic-testimonials": {
     title: "Dynamic testimonials",
@@ -1953,11 +2002,33 @@ Use Intempt's Personalization Analytics to track key metrics:
 
 ### Adjust and optimize:
 
-Based on analytics, refine experiences, adjust targeting criteria, or test different testimonials to improve performance.
-
-## FAQs
-
-`,
+Based on analytics, refine experiences, adjust targeting criteria, or test different testimonials to improve performance.`,
+    faqs: [
+      {
+        question: "How will I know what industry a visitor is in?",
+        answer: 'Intempt captures it through user interactions. For example, when someone fills out a "Book a Demo" form with an industry dropdown, you track that selection as a user attribute. Once Intempt knows their industry, it can show them the matching testimonial experience on any page they visit.',
+      },
+      {
+        question: "Do I need to create separate pages for each industry's testimonials?",
+        answer: "No, that's the beauty of it. You create one page and set up multiple experiences within a single personalization campaign. Each experience targets a different industry and swaps in the relevant testimonial content. One page, many variations, all managed dynamically without building separate static pages.",
+      },
+      {
+        question: "What kind of testimonial content can I personalize?",
+        answer: 'You can change the headline, the quote itself, the customer name and title, the company name, logos, and any supporting visuals. For example, SaaS visitors might see "Trusted by Leading SaaS Companies" with a quote about real-time collaboration, while retail visitors see "Empowering Retail Teams" with a quote about inventory management.',
+      },
+      {
+        question: "How do I set up the targeting for each industry?",
+        answer: 'When creating each experience, you set the targeting condition based on the industry attribute. For SaaS, set "industry equals SaaS." For retail, set "industry equals Retail." For financial services, set "industry equals Financial services." Each experience only displays to users matching that condition.',
+      },
+      {
+        question: "Do I need to write code to track the industry attribute?",
+        answer: "You'll need a small bit of code to capture the industry selection from your form and send it to Intempt as a user attribute. Once that's set up, everything else happens in the visual editor. If you already have an industry field on your forms, you just need to make sure it's being tracked properly.",
+      },
+      {
+        question: "Can I test different testimonials for the same industry?",
+        answer: "You can run A/B tests within your experiences. Try two different quotes or two different customer stories for the same industry segment and see which one drives more conversions. Let the data tell you which testimonial resonates best with that audience.",
+      },
+    ],
   },
   "reverse-trials-paywalls": {
     title: "Reverse trials & paywalls",
@@ -2137,11 +2208,37 @@ Use Intempt's Personalization Analytics to track the performance of each experie
 
 ### Adjust and optimize:
 
-Based on the analytics data, make necessary adjustments to the experiences to improve performance. For example: refine targeting criteria, test different trial durations (e.g., 7-day trial), enhance trial features, run A/B tests, or add personalized follow-ups.
-
-## FAQs
-
-`,
+Based on the analytics data, make necessary adjustments to the experiences to improve performance. For example: refine targeting criteria, test different trial durations (e.g., 7-day trial), enhance trial features, run A/B tests, or add personalized follow-ups.`,
+    faqs: [
+      {
+        question: "What exactly is a reverse trial?",
+        answer: "A reverse trial gives users access to premium features for a limited time, then reverts them to the free plan if they don't upgrade. Instead of starting on free and hoping they upgrade, you let them experience the full product first. Once they've built habits around premium features, they're more motivated to pay to keep them.",
+      },
+      {
+        question: "How do I identify which users should get a premium trial offer?",
+        answer: "You create segments based on behavior that signals high engagement. For example, \"Power Users\" might be users who signed up in the last 7 days, listened to more than 100 songs, and visited the subscription page multiple times. These are people who are clearly getting value from your product and showing interest in the premium.",
+      },
+      {
+        question: "What kind of segments should I create for this?",
+        answer: "Think about engagement level plus purchase intent. For example: \"Power Users - High Interest\" could be users who signed up recently, have high usage (100+ songs listened), AND visited the subscription page frequently. \"Power Users - Moderate Interest\" would have the same usage but fewer subscription page visits. Different intent levels get different offers.",
+      },
+      {
+        question: "How do I set up the personalized trial offers in Intempt?",
+        answer: "Create a mobile personalization campaign and add experiences for each segment. Use the code editor to define the content as a JSON payload with the title and feature list. Set the targeting conditions to match each segment, and configure display rules so the offer shows once per session rather than repeatedly annoying users.",
+      },
+      {
+        question: "How do I control when and how often the trial offer appears?",
+        answer: "You set display rules for each experience. For trial offers, showing once per session usually works best. You don't want to bombard users with the same pop-up every time they open the app. One well-timed offer is more effective than constant interruptions.",
+      },
+      {
+        question: "How do I measure whether the reverse trial strategy is working?",
+        answer: "Track the key metrics in personalization analytics: unique views (how many users saw the offer), conversions (how many subscribed to premium), conversion percentage, and lift compared to a control group. Compare conversion rates between your high-interest and moderate-interest segments to see which trial length performs better.",
+      },
+      {
+        question: "How do I optimize trial offers over time?",
+        answer: "Test different trial durations to find what works best for each segment. Maybe 7 days converts better than 5 for moderate-interest users. A/B test different messaging and feature highlights. Collect feedback from users who tried premium but didn't convert to understand what's holding them back. Keep refining based on what the data tells you.",
+      },
+    ],
   },
   "automated-outbound-apollo-clay": {
     title: "Automated Outbound with Apollo, Clay & Intempt",
@@ -2309,11 +2406,37 @@ Monitor campaign performance with Intempt's journey analytics. Track:
 
 ![Funnel Drop-Offs](/gp/article11/15.png)
 
-Use insights to improve targeting and email content.
-
-## FAQs
-
-`,
+Use insights to improve targeting and email content.`,
+    faqs: [
+      {
+        question: "How do Apollo, Clay, and Intempt work together for outbound?",
+        answer: "Each tool handles a different part of the workflow. Apollo sources your lead list based on ICP criteria. Clay enriches that data with contact details, job titles, and company info. Intempt automates the actual email outreach with personalized journeys. Together, they create a seamless pipeline from lead sourcing to nurturing without manual handoffs.",
+      },
+      {
+        question: "What criteria should I use when building my lead list in Apollo?",
+        answer: "Focus on filters that match your Ideal Customer Profile. Effective combinations include industry plus job title (like SaaS + VP of Sales), revenue plus employee count (targeting the 50-200 employee sweet spot), funding stage (Series A or B companies ready to scale), or technologies used (companies already using tools your product integrates with). The more specific your filters, the higher quality your leads.",
+      },
+      {
+        question: "What does Clay add that Apollo doesn't already provide?",
+        answer: "Clay enriches your lead data with additional details that make outreach more effective. You can find verified email addresses, LinkedIn profiles, and deeper company information like recent funding or headcount changes. This extra context helps you personalize your emails and reach the right decision-makers with accurate contact info.",
+      },
+      {
+        question: "How do I get my enriched leads from Clay into Intempt?",
+        answer: "Export your enriched data from Clay as a CSV file. Then in Intempt, go to the Source section and create a new data source using the CSV import feature. Map the fields like first name, email, company, industry, and role. Once imported, these leads can trigger your email journeys automatically.",
+      },
+      {
+        question: "How do I set up an automated email sequence in Intempt?",
+        answer: 'Create a journey and set the trigger based on your imported CSV list. Add "Send Email" actions for each message in your sequence. Use "Delay" controls between emails to space them out appropriately (like waiting 1-2 days between follow-ups). Before launching, set a conversion goal such as getting a reply or booking a meeting.',
+      },
+      {
+        question: "What happens when a lead replies to my email?",
+        answer: "You can enable automatic unenrollment, so leads are removed from the sequence once they respond. This prevents awkward situations where someone who just scheduled a demo keeps getting \"Did you see my last email?\" follow-ups. Your sales team can then take over with personalized 1:1 conversations while the automation continues for non-responders.",
+      },
+      {
+        question: "How should I space out my follow-up emails?",
+        answer: "Use the Delay control to set appropriate intervals between messages. A common approach is to wait 1-2 days between the initial email and first follow-up, then 3-4 days before the next one. You don't want to spam people, but you also don't want too much time to pass. Test different cadences to see what works for your audience.",
+      },
+    ],
   },
   "welcome-feature-adoption": {
     title: "Welcome & feature adoption",
@@ -2562,11 +2685,33 @@ Use Intempt's Journey Analytics to track key metrics such as triggered journeys,
 
 ### Adjust and optimize:
 
-Based on analytics, refine email content, test timing, personalize messages, analyze feedback, and monitor engagement to improve performance.
-
-## FAQs
-
-`,
+Based on analytics, refine email content, test timing, personalize messages, analyze feedback, and monitor engagement to improve performance.`,
+    faqs: [
+      {
+        question: "What events should I track to power this journey?",
+        answer: 'Track the key actions that represent meaningful engagement: user_signup, feature_used, create_project, create_task, invite_team_member, and any other milestone events in your product. Make sure you\'re also capturing the user\'s email attribute so you can actually send them messages. These events become the conditions that determine what each user receives.',
+      },
+      {
+        question: "What segments do I need for a welcome and adoption journey?",
+        answer: 'At minimum, create a "New Users" segment (people who just signed up) and an "Activated Users" segment (people who\'ve completed all key onboarding actions). The journey triggers when someone enters New Users and ends when they reach Activated Users. You can add more granular segments if you want to branch the journey based on specific behaviors.',
+      },
+      {
+        question: "How do I make sure users only get emails for features they haven't tried yet?",
+        answer: "Use conditions in your journey to check whether the user has performed specific actions. Before sending the \"Create your first project\" email, check if they've already created a project. If yes, skip that email and move to the next step. This keeps the experience relevant and prevents annoying users with prompts for things they've already done.",
+      },
+      {
+        question: "How do I set a conversion goal for the journey?",
+        answer: "Before launching, define what \"success\" means for this journey. Typically, it's users entering the Activated Users segment, meaning they've completed all key onboarding actions. Set this as your conversion goal so you can measure how effective the journey is at driving adoption. You can also set exit criteria so users stop receiving emails once they've converted.",
+      },
+      {
+        question: "What metrics should I track to know if the journey is working?",
+        answer: "Focus on triggered count (how many entered), conversion rate (how many reached the goal), and average days to convert (how long it takes). Also watch delivered rates, in-progress counts (where users might be stuck), and failed actions (technical issues). If the conversion rate is low or the days to convert are too long, something in your sequence needs adjusting.",
+      },
+      {
+        question: "How do I improve a welcome journey that isn't converting well?",
+        answer: "Start with the basics. If open rates are low, test different subject lines. If click rates are low, make your calls-to-action more compelling. If users are getting stuck at a particular step, examine that email and the action you're asking them to take. Test different timings between emails. Add more personalization. Collect user feedback to understand what's missing or confusing.",
+      },
+    ],
   },
   "abandonment-recovery": {
     title: "Abandonment recovery",
@@ -2797,9 +2942,37 @@ Delivered: The number of successful deliveries of communications like emails or 
 
 Refine email content, test timing, personalize messages, and monitor engagement to improve performance.
 
-## FAQs
-
 `,
+    faqs: [
+      {
+        question: "What events do I need to track for abandonment recovery?",
+        answer: "At minimum, track page_view, add_to_cart, checkout_start, and purchase. These let you identify who added items but didn't complete checkout. Make sure you're also capturing the user's email attribute, either through newsletter signup or by requiring email before checkout. Without an email, you can't send recovery messages.",
+      },
+      {
+        question: 'How do I define when someone has "abandoned" their cart?',
+        answer: "Create a segment for users who triggered add_to_cart but didn't complete a purchase within a set timeframe, typically 1 hour. This gives them enough time to finish naturally but catches them while the intent is still fresh. You can adjust the window based on your typical checkout behavior.",
+      },
+      {
+        question: "How many emails should be in an abandonment recovery sequence?",
+        answer: "A typical flow has 3 emails: a friendly reminder first, then a special offer if they don't convert, then a last-chance urgency message. You can add more if needed, but don't overdo it. Each email should have a clear purpose and an escalating incentive to give users a reason to act.",
+      },
+      {
+        question: "Can I offer different discounts to different users?",
+        answer: "Yes, and this is where Intempt gets powerful. You can give bigger discounts to users who are less likely to convert (they need more incentive) and smaller discounts or no discount at all to high-intent users (they might complete without one). Use conditions to check if someone is a frequent browser or use the lifecycle agent's purchase prediction to segment by likelihood.",
+      },
+      {
+        question: "What is the lifecycle agent, and how does it improve abandonment recovery?",
+        answer: "The lifecycle agent predicts how likely each user is to complete a purchase based on their behavior. You can then branch your journey based on high, medium, or low likelihood. High-likelihood users might just need a reminder. Medium-likelihood users get a moderate discount. Low-likelihood users get your biggest offer. This way, you're not giving away margin unnecessarily.",
+      },
+      {
+        question: "How do I stop sending emails once someone completes their purchase?",
+        answer: 'Add conditions throughout your journey to check if the user has completed the purchase event. If yes, end the journey immediately. Also set "Purchase" as your exit criteria so users are automatically removed from the flow the moment they convert. Nobody wants recovery emails after they\'ve already bought.',
+      },
+      {
+        question: "What metrics should I track to measure recovery success?",
+        answer: "Focus on triggered count (how many entered the flow), conversion rate (how many completed a purchase), and revenue recovered. Also, monitor days to convert to understand pacing, in-progress counts to see where people get stuck, and delivered rates to catch technical issues. Compare performance across your likelihood segments to see which approach works best.",
+      },
+    ],
   },
   "proactive-churn-prevention": {
     title: "Proactive Churn Prevention",
@@ -2935,11 +3108,41 @@ Use Branch Conditions in GrowthOS Journeys to dynamically adjust flows based on 
 
 Open your journey and monitor the following metrics — Entered: Users who qualified and entered journey, Messaged: How many received the message, In Progress: Users still progressing through steps, Completed: Finished full journey, Exited Early: Dropped out before completion, Converted: Took desired action (Subscribed to basic/ premium plan, sign up, invite team members)
 
-![Track and optimize metrics](/gp/article14/10-min.png)
-
-## FAQs
-
-`,
+![Track and optimize metrics](/gp/article14/10-min.png)`,
+    faqs: [
+      {
+        question: "What's the difference between proactive and reactive churn prevention?",
+        answer: "Reactive churn prevention waits until users have already left or gone completely cold, then tries to win them back. Proactive prevention catches early warning signs like missed logins, declining usage, or slowing engagement and intervenes before users fully disengage. It's much easier to keep someone engaged than to resurrect someone who's already mentally checked out.",
+      },
+      {
+        question: "What early signals should I track to detect churn risk?",
+        answer: "Track behaviors that indicate declining engagement: login frequency, session duration, feature usage, completed tasks, and missed milestones. When someone who used to log in daily starts logging in once a week, that's a signal. When they stop using core features they previously relied on, that's a signal. The SDK captures all of this automatically once installed.",
+      },
+      {
+        question: "What is a Qualification Agent, and how does it help with churn?",
+        answer: "A Qualification Agent scores users based on two dimensions: Fit (how well they match your ideal customer profile) and Activity (how engaged they are based on behavior). Someone with high Fit but low Activity is a great customer who's going cold. Someone with high Activity but low Fit might be exploring, but not a long-term match. These scores help you prioritize and personalize your retention efforts.",
+      },
+      {
+        question: "How do Fit Score and Activity Score work together in Intempt?",
+        answer: "Fit Score reflects static attributes like company size, industry, or role. Activity Score reflects dynamic behavior like logins, feature usage, and task completion. A user with high Fit and high Activity is your ideal engaged customer. High Fit and low Activity means a good match who's disengaging. Low Fit and high Activity means they're curious but might not convert. Each combination gets a different retention approach.",
+      },
+      {
+        question: 'What does "decay" mean in the context of Activity Score?',
+        answer: "Decay reduces the value of an action over time. A login from today is more meaningful than a login from three weeks ago. By applying decay, you ensure the Activity Score reflects recent engagement, not historical engagement. Someone who was active months ago but hasn't done anything recently will have a lower score, which is what you want for churn detection.",
+      },
+      {
+        question: "What segments should I create for churn prevention?",
+        answer: 'For pre-monetization users, create "At Risk" (high Fit, low Activity), "High Potential" (high Fit, high Activity), and "Curious Visitors" (low Fit, high Activity). For post-monetization users, create a "Slipping Users" segment based on actual behavioral signals like login frequency dropping or feature usage declining. These segments update automatically as user behavior changes.',
+      },
+      {
+        question: 'How do I define a "Slipping Users" segment for existing customers?',
+        answer: "Use behavioral conditions that indicate declining engagement. For example: completed onboarding, created tasks more than twice in the past 14 days, but only logged in once in the past 10 days. This catches users who were engaged but are now pulling back. Adjust the thresholds based on what's normal for your product.",
+      },
+      {
+        question: "What metrics should I track to know if my churn prevention is working?",
+        answer: "Monitor how many users entered each journey, how many received messages, how many are still in progress, how many completed the full journey, and most importantly, how many converted (took the desired action like upgrading or increasing usage). Also watch \"exited early\" to see where people drop off. If at-risk users are converting back to active engagement, your prevention strategy is working.",
+      },
+    ],
   },
   "checkout-flow-optimization": {
     title: "Checkout flow optimization",
@@ -3064,11 +3267,33 @@ Open your journey and monitor the following metrics- Entered: Users who qualifie
 
 ![Track and optimize metrics](/gp/article15/6-min.png)
 
-Test and iterate on timing, incentives vs. education, multi-step vs. single-page performance, and messaging channels like email, SMS, and push notifications.
-
-## FAQs
-
-`,
+Test and iterate on timing, incentives vs. education, multi-step vs. single-page performance, and messaging channels like email, SMS, and push notifications.`,
+    faqs: [
+      {
+        question: "What events do I need to track for checkout optimization?",
+        answer: "Track the full funnel: page_view, add_to_cart, checkout_start, and purchase. But you'll also want custom events for specific checkout steps like \"Reached payment page\" or \"Completed shipping info.\" This granularity lets you see exactly where users drop off, not just that they dropped off somewhere in checkout.",
+      },
+      {
+        question: "What segments can I create based on checkout behavior?",
+        answer: 'Create segments for each major drop-off point. "Cart Abandoners" added items but never started checkout. "Checkout Drop-offs" started checkout but didn\'t finish. "Payment Incomplete" got all the way to payment but didn\'t complete. You can also create step-specific segments like "Completed 1st step but not 2nd" for more targeted interventions.',
+      },
+      {
+        question: "How do I set up an A/B test for different checkout flows?",
+        answer: "Go to Experiences, create a new experience, and toggle on the experiment setting. Create two variants: one with your single-page checkout and one with your multi-step checkout. Target users using segments or behavioral attributes, then use the Visual Editor to modify the layout for each variant. Track step completion rates across both versions to see which performs better.",
+      },
+      {
+        question: "Can I send different recovery messages based on where users dropped off?",
+        answer: "Absolutely. Someone who abandoned their cart needs a different message than someone who made it to payment and stopped. Cart abandoners might need a simple reminder. Checkout drop-offs might have concerns about security or return policies. Payment-incomplete users are so close, they might just need a nudge or reassurance. Tailor the message to the friction point.",
+      },
+      {
+        question: "How do branch conditions make recovery journeys smarter?",
+        answer: "Branch conditions let the journey adapt based on what users actually do. Did they open your email but not click? Try a different channel like SMS. Did they click but not convert? Show an on-site banner when they return. Did they visit the FAQ? They might have questions, so offer direct support. The journey responds to behavior instead of blindly following the same sequence for everyone.",
+      },
+      {
+        question: "What should I test and iterate on after launching?",
+        answer: "Keep experimenting with time delays between messages, incentives vs. educational content, and which channels work best (email, SMS, push). Compare conversion rates between your single-page and multi-step checkout variants. Track which recovery journeys perform best for each segment. Use the journey metrics to spot where people drop off and refine your approach over time.",
+      },
+    ],
   },
   "keep-loyal-customers-engaged": {
     title: "Keep Loyal Customers Engaged and Renewing",
@@ -3217,11 +3442,33 @@ Add branches for different renewal plans (monthly vs annual).
 
 Expand VIP criteria to include product usage depth or NPS.
 
-Layer in A/B tests to optimize message timing, copy, and offer type.
-
-## FAQs
-
-`,
+Layer in A/B tests to optimize message timing, copy, and offer type.`,
+    faqs: [
+      {
+        question: "What events should I track to power renewal and retention flows?",
+        answer: "Track meaningful engagement signals: login frequency, core feature usage (like creating objects or tasks), team invites, and subscription events. These tell you who's actively getting value, who's slipping away, and who's due for renewal. The combination of subscription timing and engagement behavior is what makes your segments smart.",
+      },
+      {
+        question: 'How do I define a "Renewal Approaching" segment?',
+        answer: "Base it on subscription timing. For example, users who subscribed to a basic plan in the last 27 days but haven't upgraded to premium in the last 5 days. Adjust the timeframe based on your billing cycle. The goal is to catch users before their renewal date so you have time to nudge them, not after they've already lapsed.",
+      },
+      {
+        question: 'What makes someone a "Slipping User"?',
+        answer: "Look for declining engagement signals. For example, users who haven't logged in for 14 days and haven't performed key actions like creating tasks in the last 10 days. These are people who were active but are now pulling back. Catching them early gives you a chance to re-engage before they fully disengage.",
+      },
+      {
+        question: "What should a renewal journey look like?",
+        answer: "Start with a reminder email that includes a clear renewal CTA. A couple of days later, send a value recap highlighting features they've used or benefits they've received. If they still haven't renewed, send a personalized offer or incentive. Add a branch condition to trigger an extra discount if there's no response to earlier messages.",
+      },
+      {
+        question: "How can I personalize on-site experiences for different segments?",
+        answer: 'Create Experiences targeted to each segment. For VIPs, show a welcome message acknowledging their status, highlight premium features, and display loyalty badges on their dashboard. For slipping users, show a banner inviting them back, suggest underused features, and add shortcuts to help or restart onboarding. Same site, different experience based on who\'s visiting.',
+      },
+      {
+        question: "How do I measure whether these strategies are working?",
+        answer: "Use Journey Analytics to track entered, messaged, converted (renewal completed, feature used, VIP invite accepted), and exited. Use Experience Analytics to track conversion rate and lift for your personalized content. Build a unified dashboard combining journey and experience metrics so you can see the full picture and optimize over time.",
+      },
+    ],
   },
   "discover-feature-adoption-cohorts": {
     title: "Discover Feature Adoption Cohorts for Your Product",
@@ -3350,11 +3597,41 @@ Continue tracking feature usage over time using updated Insights Reports.
 
 Compare adoption before and after journeys are launched.
 
-Identify which cohorts respond best and evolve your strategy based on what actually works.
-
-## FAQs
-
-`,
+Identify which cohorts respond best and evolve your strategy based on what actually works.`,
+    faqs: [
+      {
+        question: "What feature events should I be tracking for adoption analysis?",
+        answer: "Track the core actions that represent meaningful engagement in your product. For a project management tool, that might be creating tasks, inviting team members, visiting the dashboard, or exporting reports. You can also define custom events like \"scheduled sprint\" or \"joined workspace\" if those matter for your product.",
+      },
+      {
+        question: "How do I build an Insights report to analyze feature adoption?",
+        answer: 'Go to Analytics, then Insights, and create a new report. Choose a feature usage event to analyze (like "visited dashboard"). Select a metric such as the count of users who triggered the event, average frequency per user, or the percentage of active users acting. This gives you a baseline view of how that feature is being adopted.',
+      },
+      {
+        question: "What kind of behavioral patterns typically emerge from this analysis?",
+        answer: "You might discover that smaller teams rely heavily on the invite feature while larger teams don't. Or that healthcare companies engage early with advanced features while retail companies focus on basics first. Or that users who visit the dashboard in week one have 3x higher retention. These patterns tell you which features correlate with success.",
+      },
+      {
+        question: "How do I define segments based on feature adoption behavior?",
+        answer: 'Create segments using event conditions and timeframes. "Dashboard Adopters" might be users who visited the dashboard 3+ times in their first 7 days. "High Value Onboarders" triggered 3+ core features in week one. "Inactive Users" signed up but never performed a key action like exporting a report. These segments update automatically as behavior changes.',
+      },
+      {
+        question: "What's the difference between cohort-based segments and attribute-based segments?",
+        answer: "Attribute-based segments group users by who they are (industry, company size, plan). Cohort-based segments group users by what they actually do (adopted feature X, completed Y actions in first week). Behavior-based cohorts are often more predictive because they reflect real engagement patterns, not just demographics.",
+      },
+      {
+        question: "Can I compare adoption rates before and after launching journeys?",
+        answer: "Yes. Keep tracking feature usage with updated Insights reports and compare adoption metrics before and after your journeys go live. You can filter by segment to see whether users who received nudges adopted features at higher rates than those who didn't. This tells you which cohorts respond best to which interventions.",
+      },
+      {
+        question: "How granular can I get with adoption analysis?",
+        answer: "Pretty granular. You can look at feature adoption by week, by user cohort (signup week), by plan, by region, or any combination. You can also drill into sequences, like \"users who did X then Y within 3 days.\" The more specific your analysis, the more actionable your insights become for personalizing onboarding.",
+      },
+      {
+        question: "How do I use adoption data to inform product decisions beyond marketing?",
+        answer: "Share Insights reports across teams. Product can see which features correlate with retention and which are underused. Successful teams can identify at-risk accounts based on declining feature usage. Marketing can target campaigns based on actual behavior. Everyone works from the same source of truth instead of guessing what users want.",
+      },
+    ],
   },
   "fix-dropoffs-cart-purchase": {
     title: "Fix Dropoffs Between Cart and Purchase",
@@ -3499,11 +3776,37 @@ Monitor Journey performance: entry rate, message delivery, and conversion lift.
 
 ![Monitor Journey performance](/gp/article18/8-min.png)
 
-Iterate on copy, timing, and touchpoint logic based on segment-specific results.
-
-## FAQs
-
-`,
+Iterate on copy, timing, and touchpoint logic based on segment-specific results.`,
+    faqs: [
+      {
+        question: "What events do I need to track for checkout funnel analysis?",
+        answer: "You need events for each step of your checkout flow: viewed product page, added to cart, started checkout, entered shipping info, entered payment info, and placed order. These become the steps in your funnel report. If your checkout has additional steps like account creation or promo code entry, create events for those too.",
+      },
+      {
+        question: "How do I set up a funnel report in Intempt?",
+        answer: "Go to Analytics, then Funnels, and create a new report. Add your events in sequence (added to cart → started checkout → shipping info → payment info → placed order). Set your conversion window based on your typical purchase cycle. For most e-commerce sites, 30 minutes to 24 hours works well.",
+      },
+      {
+        question: "What breakdowns are most useful for identifying checkout friction?",
+        answer: "Break down by device type (desktop vs. mobile) to spot UX issues specific to one platform. Break down by country or region to catch localization or payment method problems. You can also filter by user attributes like new vs. returning, acquisition channel, or users who viewed multiple products before checkout.",
+      },
+      {
+        question: "How do I interpret drop-off data to find the real problem?",
+        answer: "Look at where the biggest percentage drops occur. A 20% drop at the payment step means 1 in 5 potential buyers never complete the purchase. Then ask why: Is the shipping form too long? Are there trust issues with payment? Are certain payment methods missing? Combine the data with qualitative insights to diagnose the root cause.",
+      },
+      {
+        question: "How do I create segments for users who dropped off at specific steps?",
+        answer: 'Build segments using event conditions with timeframes. For "Dropped at Shipping Info," target users where "entered shipping info" was NOT triggered within 15 minutes of "started checkout." For "Dropped at Payment," target users where "entered payment info" was NOT triggered within 10 minutes of entering shipping info. Adjust the timing based on your typical checkout speed.',
+      },
+      {
+        question: "How can I personalize the site experience when drop-off users return?",
+        answer: 'Create Experiences targeting your dropoff segments. Show a homepage banner like "Still interested? Finish your order and get 10% off" for payment dropoff users. Add urgency badges or modified CTAs on product pages for returning abandoners. The goal is to acknowledge where they left off and make it easy to pick back up.',
+      },
+      {
+        question: "How do I compare funnel performance before and after making changes?",
+        answer: "Use the date filter in Funnel Analytics to compare time periods. Look at conversion rates at each step before you launch recovery journeys or make UX changes, then compare to the same metrics afterward. Also, check Journey analytics for entry rate, message delivery, and conversion lift to see which interventions are driving improvement.",
+      },
+    ],
   },
   "encourage-upgrades-user-behavior": {
     title: "Encourage Upgrades Based on What Users Do",
@@ -3688,11 +3991,41 @@ Add all the campaign analytics inside a dashboard for a unified view
 
 ![Journey Analytics](/gp/article19/14-min.png)
 
-Iterate on copy, timing, and touchpoint logic based on segment-specific results.
-
-## FAQs
-
-`,
+Iterate on copy, timing, and touchpoint logic based on segment-specific results.`,
+    faqs: [
+      {
+        question: 'How do I define a "Basic Plan Power User" segment?',
+        answer: "Combine plan status with engagement signals. For example: users subscribed to the basic plan, logged in at least 10 times in the last month, and used a core feature (like creating tasks) at least 5 times in the last month. These are users getting real value from your product who are likely candidates for expansion.",
+      },
+      {
+        question: "How do I identify paid users who aren't getting value from the product?",
+        answer: 'Create a "Low Usage Paid Users" segment. For example: subscribed to the premium plan, hasn\'t logged in for 10+ days, and hasn\'t used core features in the last 10 days. These users are paying but not engaged, which puts them at churn risk. They need reactivation before they cancel.',
+      },
+      {
+        question: "Can I show different CTAs on my website based on user segment?",
+        answer: 'Yes. Create Experiences targeting each segment. For power users on basic plans, show a homepage banner like "Upgrade to unlock team workflows and advanced reports." For users who\'ve viewed the pricing page multiple times but haven\'t upgraded, show a sticky footer with "Still deciding? Try Premium free for 7 days." Match the CTA to where that user is in their decision process.',
+      },
+      {
+        question: "What in-app elements can I personalize beyond banners?",
+        answer: 'You can target sidebar modules, dashboard panels, nav bar buttons, tooltips, and feature-gated modals. For power users, add a sidebar module saying "Ready for more? Unlock Premium Reports." When someone hits a feature limit, show a modal: "This feature is part of Premium — want early access?" You can also restart onboarding flows or add contextual nudges for specific features.',
+      },
+      {
+        question: "How do I structure an upgrade journey for power users on basic plans?",
+        answer: "Start with an email highlighting specific upgrade benefits relevant to their usage patterns. Follow up a couple days later with a reminder featuring premium features they'd actually use. If they still haven't converted after a few more days, offer a limited-time discount or extended trial. Each step escalates the incentive while staying relevant to their behavior.",
+      },
+      {
+        question: "Can I trigger different journeys and experiences for the same user simultaneously?",
+        answer: "Yes, but be thoughtful about overlap. A user could technically qualify for multiple segments. Use segment priority or exclusion rules to avoid conflicting messages. For example, if someone is both a power user and upgrade-curious, decide which journey takes precedence based on which behavior is most recent or most indicative of intent.",
+      },
+      {
+        question: "How granular can I get with in-app personalization triggers?",
+        answer: "Pretty granular. You can trigger experiences based on feature hover, time on page, scroll depth, button clicks, or specific sequences of actions. For low-usage users, you might trigger a tooltip when they hover over a feature they've never used. For upgrade-curious users, you might show a modal after they've viewed premium features three times in one session.",
+      },
+      {
+        question: "How do I measure lift from personalized CTAs compared to generic ones?",
+        answer: "Set up your Experience with a control group that sees your default CTA. Intempt tracks conversion rate for both the personalized version and the control. The lift metric shows you the percentage improvement from personalization. Compare across segments to see where personalized CTAs make the biggest difference versus where generic messaging works fine.",
+      },
+    ],
   },
   "best-performing-pricing-strategy": {
     title: "Find Your Best-Performing Pricing Strategy",
@@ -3864,11 +4197,37 @@ In Analytics, create a dashboard to track:
 * Plan churn or downgrade rate over time
 * Experiment lift vs control
 
-Use these metrics to double down on what's working and sunset underperforming pricing approaches.
-
-## FAQs
-
-`,
+Use these metrics to double down on what's working and sunset underperforming pricing approaches.`,
+    faqs: [
+      {
+        question: 'How do I define a "Ready to Upgrade" segment for pricing tests?',
+        answer: "Combine firm data with behavioral signals. For example, users from companies with 500+ employees who visited the pricing page and viewed upgrade options in the last 7 days but haven't subscribed to premium yet. These users are actively evaluating, so they need conversion-focused messaging, not awareness content.",
+      },
+      {
+        question: "How do I identify heavy users on basic plans who might be ready for premium?",
+        answer: "Look at feature usage intensity. For example, users in your target industry (like SaaS) who subscribed to the basic plan and have created users, objects, and tasks multiple times in the last 14 days. High usage on a lower tier signals they're getting value and may be hitting limits soon.",
+      },
+      {
+        question: "How do I spot paid users who aren't using what they're paying for?",
+        answer: "Create a segment for users who subscribed to premium but have low feature usage. For example, premium subscribers who created key objects less than 3 times in the past 30 days. These users need re-engagement, not upselling. Show them what they're missing before they downgrade or churn.",
+      },
+      {
+        question: "What's the difference between using personalization and experiments for pricing tests?",
+        answer: "Personalization shows different pricing page variants to different segments (ready-to-upgrade users see one version, heavy basic users see another). Experiments A/B test variations within a single segment to find which specific messaging converts best. Use personalization to tailor by audience, then layer experiments to optimize within each audience.",
+      },
+      {
+        question: "What elements can I A/B test on pricing pages?",
+        answer: 'Test headlines ("Upgrade to Pro" vs. "Unlock Your Team\'s Full Potential"), CTA copy and button colors, pricing table layouts (stacked features vs. tier comparison), presence of testimonials, and promotional offers. Run these tests within specific segments, so you learn what works for each audience, not just overall averages.',
+      },
+      {
+        question: "Can I run A/B tests for just one segment while showing personalized variants to others?",
+        answer: 'Yes. Select a specific segment in your experiment targeting. For example, run an A/B test only for "Heavy Basic Users" comparing versions with and without industry-specific testimonials. Other segments continue seeing their personalized variants while you optimize messaging for this particular group.',
+      },
+      {
+        question: "What metrics should I track to evaluate pricing strategy performance?",
+        answer: "Track click-through rates on upgrade CTAs, conversion rate from pricing page to actual plan upgrade, and experiment lift compared to control. Also, monitor downstream metrics like plan churn rate and downgrade frequency over time. High conversion but high churn means your pricing page converts, but the plan doesn't deliver on the promise.",
+      },
+    ],
   },
   "signals-to-pipeline": {
     title: "How to get from signals to pipeline without the scramble",
@@ -3987,11 +4346,37 @@ Intempt pulls live enrichment data from external sources, including People Data 
 
 Yes. Intempt includes built-in consent management tools for GDPR and CCPA compliance. You can collect and track user permissions, handle right-to-be-forgotten and data portability requests with one click, and offer customers a customizable preference center.
 
-**What platforms does Intempt integrate with?**
-
-Intempt offers native integrations with popular platforms, including HubSpot, Shopify, Stripe, and more. It provides real-time data sync across your CRM, marketing, and eCommerce tools, with customizable triggers, field mappings, and data flows to fit your specific workflows.
-
 `,
+    faqs: [
+      {
+        question: "What fields should I actually enrich for sales outreach?",
+        answer: "Only enrich fields that change how you write or route the lead. Role, seniority, tech stack, and industry are usually enough. If contact details are missing, fill just what you need for the first touch. Over-enriching wastes time and clutters records with data nobody uses.",
+      },
+      {
+        question: "How does the Qualification Agent score sales readiness?",
+        answer: "It combines two dimensions: Fit (firmographics and ICP traits like company size, industry, and tech stack match) and Activity (recent high-signal behavior like viewing pricing, inviting teammates, or hitting usage thresholds). The combination tells you not just who matches your ICP, but who's showing intent right now.",
+      },
+      {
+        question: "What's the benefit of combining Fit and Activity into one score?",
+        answer: 'It creates a single definition of "ready" that Marketing and Sales can share. No more arguing about lead quality or handoff timing. High Fit plus High Activity means the account matches your ICP and is actively engaged. Everyone works from the same thresholds.',
+      },
+      {
+        question: "What segments can I create for sales prioritization?",
+        answer: 'Start with "High Fit + High Activity" as your top priority queue. Add "High Fit + Medium Activity" for accounts worth nurturing. You can also create segments for "High Activity + Low Fit" if you want to explore adjacent markets. These segments update in real time as behavior changes.',
+      },
+      {
+        question: "How should I branch journeys based on prospect behavior?",
+        answer: "If they engage (open, click, reply), move them to the next step or alert a rep for direct follow-up. If they don't engage, slow the cadence or route them back for re-scoring. Don't keep hammering unresponsive leads with the same sequence. Behavior should dictate the path.",
+      },
+      {
+        question: "How do I alert reps when something important happens?",
+        answer: "Set up notifications for key actions like replies or meeting bookings. You can also auto-create Tasks for reps when signals fire: call follow-up, LinkedIn connection, or a quick prep checklist before a meeting. If you're using Deals, create or update them automatically when meetings are booked or stages change.",
+      },
+      {
+        question: "How many intent signals should I include in scoring?",
+        answer: "Fewer signals, stronger signal. Two or three reliable intent events usually outperform long lists of weak indicators. Pricing page views, teammate invites, and usage thresholds are often more predictive than dozens of minor interactions. Keep the score simple, so reps understand the \"why\" at a glance.",
+      },
+    ],
   },
   "intent-to-action-ltv": {
     title: "How to turn intent into action and actions into lifetime value",
@@ -4038,12 +4423,14 @@ intempt.com
 ### Step 1: Define and track Goal Events
 
 Check or define key Events to confirm the following are tracked: 'added to cart', 'activated feature', 'completed onboarding' and create new events if any events are not readily available from 'create event'.
-intempt.com
+
+![Step 1](/gp/how-to-turn-intent-into-action-and-actions-into-lifetime-value/1-min.png)
 
 ### Step 2: Launch a Lifecycle Agent
 
 In Agents, create a Lifecycle Agent to auto-classify users into dynamic stages: 'Champion', 'Loyal', 'Recent', 'Needs Attention', 'At Risk', 'Inactive'. Stages update in real time, so your targeting is always current.
-intempt.com
+
+![Step 2](/gp/how-to-turn-intent-into-action-and-actions-into-lifetime-value/2-min.png)
 
 ### Step 3: Launch a Journey
 
@@ -4054,7 +4441,8 @@ At Risk User Recovery Flow with Trigger: Segment = 'At Risk'
 If the user re-engages → move to "Win" path.
 
 If no engagement → retry after delay or send Slack alert for manual follow-up.
-intempt.com
+
+![Step 3](/gp/how-to-turn-intent-into-action-and-actions-into-lifetime-value/3-min.png)
 
 Good to Know:
 
@@ -4068,16 +4456,20 @@ intempt.com
 ### Step 4: Personalize site and in-app experiences
 
 In Experiences, create targeted on-site or in-app messages for specific lifecycle stages—'At Risk Users' and 'Needs Attention'. Also run A/B tests on variants to optimize conversion.
-intempt.com
+
+![Step 4](/gp/how-to-turn-intent-into-action-and-actions-into-lifetime-value/4-min.png)
 
 ### Step 5: Track and optimize performance
 
 In Journey Analytics, track Step completions, replies and clicks and conversion on original goal.
 
+![Step 5](/gp/how-to-turn-intent-into-action-and-actions-into-lifetime-value/5-min.png)
+
 In Experience Analytics, monitor on-site engagement and lift vs. control version.
 
 Iterate campaigns based on data, not guesswork.
-intempt.com
+
+![Step 6](/gp/how-to-turn-intent-into-action-and-actions-into-lifetime-value/6-min.png)
 
 ## FAQ Highlights 
 
@@ -4101,9 +4493,37 @@ Is Intempt compliant with GDPR and CCPA?
 Yes—Intempt includes consent management tools for GDPR and CCPA compliance with features like right-to-be-forgotten and data portability support.
 intempt.com
 
-What platforms does Intempt integrate with?
-Intempt offers native integrations with platforms including HubSpot, Shopify, Stripe, and more, with real-time data sync and customizable flows.
 `,
+    faqs: [
+      {
+        question: "What lifecycle stages does the Lifecycle Agent classify users into?",
+        answer: "The agent auto-classifies users into stages like Champion, Loyal, Recent, Needs Attention, At Risk, and Inactive. These stages update in real time based on behavior, so your targeting is always current. You don't need to manually move users between segments as their engagement changes.",
+      },
+      {
+        question: "Can I use AI Coach to build lifecycle journeys instead of setting them up manually?",
+        answer: 'Yes. Describe your goal in plain text (like "Re-engage at-risk users with a 7-day multi-channel campaign") and AI Coach builds the journey with triggers, segment logic, message flow, and delays. You can then refine the output if needed. It\'s a fast way to get a working journey without starting from scratch.',
+      },
+      {
+        question: "Can I trigger internal tasks for my team as part of a journey?",
+        answer: "Yes. You can assign tasks to internal teams when key events occur. For example, if an at-risk user doesn't respond to automated outreach, create a task for a success manager to do a manual check-in. You can also update user attributes as they move through journey stages to keep records current.",
+      },
+      {
+        question: "What channels can I combine in a single lifecycle journey?",
+        answer: "Email, push notifications, SMS, and in-app messages all work within one journey. You might start with an email, follow up with a push notification if they don't open, then show an in-app message when they return. The journey orchestrates timing and channel selection based on behavior.",
+      },
+      {
+        question: "How do Smart Snippets personalize messages across channels?",
+        answer: "Smart Snippets pull user attributes, lifecycle stage, recent activity, and enrichment data directly into your message templates. The same snippet works across email, SMS, and push. Each message feels personal because it includes their actual context without you manually customizing each send.",
+      },
+      {
+        question: "How do I handle users who re-engage mid-journey?",
+        answer: "Use branch conditions to detect re-engagement (like a login or feature usage) and route them to a different path. You might move them out of the recovery flow entirely, or shift them to a \"welcome back\" message instead of continued nudges. The journey should adapt to what they do, not blindly follow the original sequence.",
+      },
+      {
+        question: "What metrics should I track to measure lifecycle campaign impact on CLV?",
+        answer: "In Journey Analytics, track step completions, replies, clicks, and conversions on your original goal. In Experience Analytics, monitor on-site engagement and lift versus control. Also, look at downstream metrics like retention rate by lifecycle stage, expansion revenue from recovered users, and churn rate changes over time.",
+      },
+    ],
   },
   "product-complexity-personal-moments": {
     title: "How to turn product complexity into personal moments",
@@ -4149,7 +4569,8 @@ Intempt
 
 ### Step 1: Upload and map your catalog
 Bring in SKUs with category, brand, price, tags, images, and inventory. Keep product IDs stable so tracking and bundles stay consistent.
-Intempt
+
+![Step 1](/gp/how-to-turn-product-complexity-into-personal-moments/1-min.png)
 
 ### Step 2: Pick recommendation logic by context
 
@@ -4162,19 +4583,23 @@ Product: similar items (style/color/price) and purchased together bundles.
 Cart: cross-sell from what's already in basket; last-minute add-ons.
 
 Thank-you: purchased-with sets or upsells guided by margin/loyalty.
-Intempt
+
+![Step 2](/gp/how-to-turn-product-complexity-into-personal-moments/2-min.png)
 
 ### Step 3: Activate in Journeys
 Drop product blocks into email, SMS, and push. Each message adapts per user so suggestions stay relevant.
-Intempt
+
+![Step 3](/gp/how-to-turn-product-complexity-into-personal-moments/3-min.png)
 
 ### Step 4: Bring it to the site with Experiences
 Place the same recommendation blocks where they matter (returning shoppers, cart abandoners, loyalty cohorts). Customize layout; run A/Bs.
-Intempt
+
+![Step 4](/gp/how-to-turn-product-complexity-into-personal-moments/4-min.png)
 
 ### Step 5: Measure and iterate
 Use campaign and experience analytics to compare variants and confirm lift. Keep what wins; queue the next tweak.
-Intempt
+
+![Step 5](/gp/how-to-turn-product-complexity-into-personal-moments/5-min.png)
 
 ## Good to Know
 
@@ -4211,9 +4636,37 @@ Is Intempt compliant with GDPR and CCPA?
 Yes — Intempt includes consent-management tools for GDPR and CCPA compliance.
 Intempt
 
-What platforms does Intempt integrate with?
-Intempt offers native integrations with platforms like HubSpot, Shopify, and Stripe with real-time sync and customizable flows.
 `,
+    faqs: [
+      {
+        question: "What catalog fields do I need to map for recommendations to work properly?",
+        answer: "You can map: product ID, category, brand, price, tags, images, and inventory status. Keep product IDs stable over time so tracking and bundle logic don't break when you update your feed. The cleaner your field typing and the more consistent your refresh cadence, the better your recommendations will perform.",
+      },
+      {
+        question: "What recommendation logic works best for each page type?",
+        answer: "Homepage: bestsellers, most popular, or newest to inspire browsing (switch to visitor-based if they have history). Category pages: top sellers and trending within that category. Product pages: similar items by style, color, or price, plus purchased-together bundles. Cart: cross-sells based on what's already in the basket. Thank-you page: purchased-with sets or margin-guided upsells.",
+      },
+      {
+        question: "Can I use the same recommendation blocks in emails that I use on my website?",
+        answer: "Yes. Once you set up recommendation logic, you can drop the same product blocks into email, SMS, and push through Journeys. Each message adapts per user, so suggestions stay relevant without you rebuilding logic for each channel. One setup, many surfaces.",
+      },
+      {
+        question: "How do I prevent showing the same products over and over?",
+        answer: "Cap repeats to avoid recommendation fatigue. Set rules that limit how often the same item appears across sessions or across different recommendation blocks on the same page. Fresh suggestions keep users engaged instead of making them feel like they're seeing the same products everywhere.",
+      },
+      {
+        question: "Can I filter recommendations by business priorities like margin or brand?",
+        answer: "Yes. You can apply include/exclude rules, margin filters, and brand priorities to any recommendation logic. Want to push higher-margin items in cart cross-sells? Filter for margin threshold. Running a seasonal campaign? Prioritize specific categories or tags. The rules align recommendations with what matters to the business, not just what the algorithm suggests.",
+      },
+      {
+        question: "How do I place recommendation blocks on my site without developer help?",
+        answer: "Use Experiences to drag and drop recommendation blocks onto your pages. Target them to specific audiences (returning shoppers, cart abandoners, loyalty cohorts) and customize the layout. Run A/B tests on different placements or designs. No code required, iterate in minutes.",
+      },
+      {
+        question: "How do I test which recommendation layouts or logic perform better?",
+        answer: "Set up A/B tests in Experiences comparing different variants. Test layout changes (grid vs. carousel), different recommendation algorithms (similar items vs. purchased together), or placement on the page. Campaign analytics show clicks, adds to cart, orders, and lift versus control so you can see what actually drives results.",
+      },
+    ],
   },
   "insight-to-impact": {
     title: "How to go from insight to impact without report sprawl",
@@ -4261,27 +4714,32 @@ Intempt
 ### Step 1: Anchor on Users and Accounts
 
 Open a few real profiles. Confirm you can see key actions and useful attributes. This is your ground truth for "who did what."
-Intempt
+
+![Step 1](/gp/how-to-go-from-insight-to-impact-without-report-sprawl/1-min.png)
 
 ### Step 2: Build an Insights report in Analytics
 
 Track which features are used, by whom, and when. Add simple breakdowns (plan, lifecycle stage, geography) to find patterns worth testing.
-Intempt
+
+![Step 2](/gp/how-to-go-from-insight-to-impact-without-report-sprawl/2-min.png)
 
 ### Step 3: Build a Funnels report in Analytics
 
 Map the steps from signup to onboarding to activation to purchase. Compare drop-offs by device, plan, or campaign to find the highest-leverage fix.
-Intempt
+
+![Step 3](/gp/how-to-go-from-insight-to-impact-without-report-sprawl/3-min.png)
 
 ### Step 4: Build a Retention report in Analytics
 
 Measure how often people return. See which features correlate with coming back and which segments fall off.
-Intempt
+
+![Step 4](/gp/how-to-go-from-insight-to-impact-without-report-sprawl/4-min.png)
 
 ### Step 5: Assemble a Dashboard
 
 Pin the Insight, Funnel, and Retention reports. Add any Event, Segment, or Journey analytics you need. This becomes your weekly control room.
-Intempt
+
+![Step 5](/gp/how-to-go-from-insight-to-impact-without-report-sprawl/5-min.png)
 
 ### Step 6: Act and Measure
 
@@ -4292,7 +4750,8 @@ Launch a small Journey or tweak an on-site Experience.
 Watch the same reports for lift.
 
 Keep what works, roll back what doesn't.
-Intempt
+
+![Step 6](/gp/how-to-go-from-insight-to-impact-without-report-sprawl/6-min.png)
 
 ## Good to Know
 
@@ -4302,8 +4761,33 @@ Mark Goal Events (success) and Intent Events (early signals) so reports and targ
 
 Prefer recent windows over permanent flags; freshness beats static lists.
 
-Start small: one feature, one funnel, one cohort, then expand when you see signal.
-`,
+Start small: one feature, one funnel, one cohort, then expand when you see signal.`,
+    faqs: [
+      {
+        question: "How do Users and Accounts relate in the analytics view?",
+        answer: "Users roll up to Accounts, so you can analyze individual behavior and see how it aggregates at the company level. This gives product and go-to-market teams the same story. You can drill into a specific user's actions or zoom out to see account-wide engagement patterns.",
+      },
+      {
+        question: "What breakdowns are most useful in an Insights report?",
+        answer: "Some of the mose useful breakdowns are, Plan type, lifecycle stage, and geography are good starting points. These help you spot patterns like \"premium users adopt this feature 3x more\" or \"users in this region engage differently.\" The goal is finding segments worth testing or investigating further, not just looking at aggregate numbers.",
+      },
+      {
+        question: "How should I structure my Funnels report for maximum insight?",
+        answer: "Map the steps that matter for your business: signup to onboarding completion to activation to purchase (or whatever your key milestones are). Then compare drop-offs by device, plan, campaign source, or user segment. The comparison reveals where the highest-leverage fixes are hiding.",
+      },
+      {
+        question: "How do I combine these reports into a useful dashboard?",
+        answer: "Pin your Insights, Funnels, and Retention reports to a single dashboard. Add any Event trends, Segment counts, or Journey analytics you check regularly. Apply shared filters so everything updates together. This becomes your weekly control room instead of bouncing between separate reports.",
+      },
+      {
+        question: "How do I prove that a Journey or Experience actually improved the metric?",
+        answer: "Track the same reports before and after launching. Check Journey analytics for completion and conversion rates. Check Experience analytics for lift versus control. If your funnel drop-off shrinks or retention improves after the intervention, you've got your proof. Tie the change directly to the metric you were trying to move.",
+      },
+      {
+        question: "How many events do I actually need to track for solid analytics?",
+        answer: "Fewer than you think. Keep event names simple and consistent. Track Goal Events (success milestones like activation or purchase) and Intent Events (early signals like pricing page views or feature exploration). You don't need dozens of events. You need the right ones that answer your actual questions.",
+      },
+    ],
   },
   "experiment-personalize-dev-queue": {
     title: "How to experiment, find winners, and personalize without the dev queue",
@@ -4351,29 +4835,34 @@ Intempt
 ### Step 1: Create Segments to personalize the experiences
 
 Create segments for different users like those who are 'Ready for Upgrade' or 'Haven't logged in for more than 7 days'.
-Intempt
+
+![Step 1](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/1-min.png)
 
 ### Step 2: Create an Experience (Web or Mobile)
 
 Choose the page or screen, open the visual editor, and outline the change you want to test (layout, copy, offer, or placement).
 
 Add variants with their own display rules, targeting, and success goals. Target returning users, specific campaigns, or a high-intent segment.
-Intempt
+
+![Step 2](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/2-min.png)
 
 ### Step 3: Start an Experiment with clear targets
 
 Add variants with their own display rules, targeting, and success goals — focused on the audiences you want to examine.
-Intempt
+
+![Step 3](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/3-min.png)
 
 ### Step 4: Let the Stats Engine do the math
 
 Monitor results with Sequential Testing (safe peeking), speed them up with CUPED, and read confidence intervals to focus on meaningful lift.
-Intempt
+
+![Step 4](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/4-min.png)
 
 ### Step 5: Apply the winner and personalize by segment
 
 End the test at significance, apply the winning variant, and create a personalization that shows the best version to the audience that benefits most.
-Intempt
+
+![Step 5](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/5-min.png)
 
 ### Step 6: Add the activation layer
 
@@ -4382,12 +4871,14 @@ If a variant reveals a drop-off, start a Journey for that audience:
 Email first, then push or SMS, with simple delays and outcomes.
 
 Add a Slack alert if a human touch helps.
-Intempt
+
+![Step 6](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/6-min.png)
 
 ### Step 7: Measure and iterate
 
 Check Experience Analytics for lift and Journey Analytics for engagement and goal conversion. Keep what works; queue the next test.
-Intempt
+
+![Step 7](/gp/how-to-experiment-find-winners-and-personalize-without-the-dev-queue/7-min.png)
 
 ## Good to Know
 
@@ -4397,8 +4888,33 @@ Use the same Segments for targeting and follow-up to stay consistent.
 
 Keep copy blocks reusable with Smart Snippets so updates stay in sync.
 
-Run fewer, clearer tests; ship winners quickly, then move on to the next question
-`,
+Run fewer, clearer tests; ship winners quickly, then move on to the next question`,
+    faqs: [
+      {
+        question: "How do I set up an experiment without involving developers?",
+        answer: "Create an Experience, choose the page or screen you want to test, and open the visual editor. Make your changes directly (layout, copy, offer, placement) and add variants. Set targeting rules, define your success goal, and launch. The whole flow happens in the platform without writing code or submitting dev tickets.",
+      },
+      {
+        question: "How does Sequential Testing let me check results without inflating false positives?",
+        answer: "Traditional A/B tests penalize you for peeking at results early. Sequential Testing is designed for safe monitoring. You can check progress as data comes in without compromising statistical validity. When confidence thresholds are met, you know it's real, not a false positive from checking too often.",
+      },
+      {
+        question: "What does CUPED do and when should I use it?",
+        answer: "CUPED (Controlled-experiment Using Pre-Experiment Data) uses historical user data to reduce variance in your test results. This means you reach statistical significance faster with smaller sample sizes. Use it when you have good historical data and want to speed up test cycles without sacrificing confidence.",
+      },
+      {
+        question: "How do I read confidence intervals to decide if a result is meaningful?",
+        answer: "Confidence intervals show the range where the true lift likely falls. If the interval doesn't cross zero and the range is tight, you have a meaningful result. If it's wide or crosses zero, you need more data or the effect isn't strong enough to act on. Focus on intervals, not just point estimates.",
+      },
+      {
+        question: "What should I do if an experiment reveals a drop-off point?",
+        answer: "Start a Journey targeting users who dropped off at that point. Send an email first, then follow up with push or SMS if they don't engage. Add simple delays between steps and outcome-based branching. If it's a high-value segment, include a Slack alert so someone can reach out personally.",
+      },
+      {
+        question: "How do Smart Snippets help keep experiments and personalizations in sync?",
+        answer: "Smart Snippets let you create reusable content blocks that update everywhere they're used. If you change a headline or offer in the snippet, it updates across all experiments and personalizations referencing it. This keeps messaging consistent and saves you from manually updating the same copy in multiple places.",
+      },
+    ],
   },
   "route-enrich-leads": {
     title: "How to Route and Enrich Inbound and Outbound Leads",
@@ -4439,8 +4955,11 @@ Intempt
 
 Connect your inbound and outbound lead sources—form captures, chat, ads, email sequences, CRM systems, etc.—so you can see lead activity in one place. For example, Intempt has a native HubSpot connection so CRM fields and ownership are visible automatically.
 
+![Step 1](/gp/route-and-enrich-inbound-and-outbound-leads/1-min.png)
+
 Track intentful events like form submits, demo requests, pricing views, and lead replies. Keep critical fields clean and standardized: email, role, region, domain, industry, and employee count. The goal is a single pane of truth for each lead and its account.
-Intempt
+
+![Step 2](/gp/route-and-enrich-inbound-and-outbound-leads/2-min.png)
 
 Best practice tip:
 Decide your "minimum viable data" for routing (e.g., firmographics). Normalize emails/domain, dedupe, and match leads to accounts early so ownership persists from the first touch.
@@ -4450,8 +4969,11 @@ Intempt
 
 Create a Journey triggered when a new lead is created. The first step should enrich the lead if key fields are missing.
 
+![Step 3](/gp/route-and-enrich-inbound-and-outbound-leads/3-min.png)
+
 Then use a Qualification Agent to calculate readiness using Fit + Activity—where Fit might include firmographic criteria and Activity might include product or site engagement. Only leads that score high on both get routed; the rest can loop into further nurture.
-Intempt
+
+![Step 4](/gp/route-and-enrich-inbound-and-outbound-leads/4-min.png)
 
 Best practice tip:
 Keep qualification transparent so reps understand why a lead is "Ready." Start simple; iterate with analytics.
@@ -4468,7 +4990,8 @@ Segment / territory / product routing: Route based on region, company size, prod
 Round-robin pools: If no rule matches, send to a weighted round-robin pool.
 
 Capacity & PTO: Respect off-hours and caps; waterfall to the next queue if needed.
-Intempt
+
+![Step 5](/gp/route-and-enrich-inbound-and-outbound-leads/5-min.png)
 
 For multiple funnel stages (SDR → AE, AE → CSM, etc.), reuse the same router logic: maintain continuity, respect capacity constraints, and include calendar options for booking directly with the assigned rep.
 Intempt
@@ -4482,7 +5005,8 @@ Send a Slack or email notification with essential details: source, activity scor
 Create a task with the next clear action (call, email, or reach-out).
 
 Add a Research agent to automatically gather contextual details about the lead.
-Intempt
+
+![Step 6](/gp/route-and-enrich-inbound-and-outbound-leads/6-min.png)
 
 Best practice tip:
 Offer instant scheduling (e.g., the rep's calendar) at the lead capture or thank-you page to capture intent immediately. Auto-remind and reschedule, and re-queue leads if untouched within your freshness window.
@@ -4505,7 +5029,8 @@ Reassignment rates
 Conversion paths from MQL → SQL → closed deals
 
 If leads aren't being worked or are misaligned, adjust rule order, pool weights, or capacity caps. Regularly verify ownership continuity so contacts remain under the right accounts throughout the lifecycle.
-Intempt
+
+![Step 7](/gp/route-and-enrich-inbound-and-outbound-leads/7-min.png)
 
 ## FAQs (summary)
 
@@ -4529,9 +5054,37 @@ Is Intempt compliant with GDPR/CCPA?
 Yes — it has built-in consent management tools supporting data privacy requirements.
 Intempt
 
-What platforms does Intempt integrate with?
-It offers native integrations with tools like HubSpot, Shopify, Stripe, and more with real-time sync and customizable workflows.
 `,
+    faqs: [
+      {
+        question: "What's the right order for applying routing rules?",
+        answer: "Start with account continuity: if an existing owner or pod already works that account, route there first. Then apply your specific rules (region, company size, product interest, ABM tier). If nothing matches, fall back to weighted round-robin. This order protects relationships while ensuring fair distribution when no ownership exists.",
+      },
+      {
+        question: "How does account matching prevent handoff confusion?",
+        answer: "When a new lead comes in, Intempt matches them to existing accounts by domain. If that account already has an owner, the lead routes to them automatically. This means every contact from the same company lands under the same rep, preventing the mess of multiple reps working the same account without knowing it.",
+      },
+      {
+        question: "How does the Qualification Agent determine which leads are ready for sales?",
+        answer: "It scores leads on two dimensions: Fit (firmographics matching your ICP like company size, industry, tech stack) and Activity (behavioral signals like pricing page views, demo requests, product engagement). High fit plus high activity routes to sales. Everything else loops back to nurture until signals improve.",
+      },
+      {
+        question: "How do I handle routing for different funnel stages like SDR to AE or AE to CSM?",
+        answer: "Use the same routing logic across handoffs. Keep account continuity (same owner or pod), respect PTO and capacity, and surface the assigned rep's calendar so prospects book with someone who already knows them. Whether it's SDR→AE, AE→CSM, or product activity→sales, the principles stay consistent.",
+      },
+      {
+        question: "What should be included in the rep notification when a lead is assigned?",
+        answer: "Give them everything they need to act fast: lead source, recent activity, qualification score, key fields (role, company, size), and the account owner if one exists. Create a task with a clear next action (call, email, or general outreach). If you're using a Research Agent, include that context too so reps don't have to dig.",
+      },
+      {
+        question: "What metrics should I track to know if lead routing is working?",
+        answer: "Watch speed-to-lead (time from submission to first touch), meeting rate, distribution fairness across reps, reassignment rate, and the path from MQL to SQL to closed deal. If leads sit unworked or pile up with certain reps, adjust rule order, pool weights, or capacity caps. Run monthly checks on ownership continuity to catch misalignments.",
+      },
+      {
+        question: 'What\'s "minimum viable data" for routing and why does it matter?',
+        answer: "Decide upfront which fields you absolutely need to route correctly. If company size or industry drives your rules, require them on capture or enrich them automatically. Missing firmographics are a common reason good leads never move. Normalize emails and domains, dedupe aggressively, and match leads to accounts immediately so ownership works from the first touch.",
+      },
+    ],
   },
   "reddit-agent-find-customers": {
     title: "How to Build a Reddit Agent That Finds Customers for You",
@@ -4577,7 +5130,8 @@ Integrate a social-listening tool that monitors Reddit mentions. Configure your 
 Intempt
 
 Connect the webhook from the listener to Intempt so every qualified post arrives with basic details such as URL, title, subreddit, author, and engagement. Once connected, posts generate events in Intempt for each Reddit mention.
-Intempt
+
+![Step 1](/gp/reddit-agent-that-finds-customers-for-you/1-min.png)
 
 ### Step 2: Create a Research Agent to enrich
 
@@ -4596,7 +5150,8 @@ Two or three reply angles that would feel native in that subreddit.
 Intempt
 
 The Research Agent uses an LLM to read the thread, extract these insights, infer author context, and propose subreddit-native angles.
-Intempt
+
+![Step 2](/gp/reddit-agent-that-finds-customers-for-you/2-min.png)
 
 Best practice: Treat each subreddit as its own market — culture, tone, and rules differ. Avoid reusing the same messaging across subreddits. Warm up accounts by earning some baseline karma before posting, and avoid automated behaviors that look unnatural.
 Intempt
@@ -4604,7 +5159,8 @@ Intempt
 ### Step 3: Create a snippet to generate a reply in your persona
 
 Create a Snippet in Intempt that takes the Research Brief and generates a short Reddit-ready reply in your persona. Use the Brand Kit or a prompt to add your brand voice. The Snippet uses an LLM to turn the brief into a Reddit-native reply voiced in your brand style.
-Intempt
+
+![Step 3](/gp/reddit-agent-that-finds-customers-for-you/3-min.png)
 
 Tip: Aim for two or three short paragraphs with a practical step, a light contrast on how you approach the problem, and a soft offer to share a checklist if it's useful. Keep links off by default and enable a disclosure line when appropriate.
 Intempt
@@ -4620,7 +5176,10 @@ Run the Snippet to generate the draft reply.
 Intempt
 
 Send a Slack message or email containing the thread title, author, link, research brief, reply angles, and recommended draft.
-Intempt
+
+![Step 4](/gp/reddit-agent-that-finds-customers-for-you/4-min.png)
+
+![Step 4 continued](/gp/reddit-agent-that-finds-customers-for-you/5-min.png)
 
 You can also create a small task so that someone owns posting and monitoring replies.
 Intempt
@@ -4644,8 +5203,33 @@ Intempt
 Comment the right way: add value first, mention your product only when it naturally fits, keep links out unless asked, and balance product mentions with pure advice.
 Intempt
 
-Track results with focused short sprints (e.g., three days), pause to isolate impact, and compare subreddits — double down on what works.
-`,
+Track results with focused short sprints (e.g., three days), pause to isolate impact, and compare subreddits — double down on what works.`,
+    faqs: [
+      {
+        question: "How do I connect Reddit mentions to Intempt?",
+        answer: "Use a social listening tool like OG or Octolens to monitor Reddit for your keywords, competitor names, and target subreddits. Configure the tool to send a webhook to Intempt whenever a qualified post appears. Each event arrives with the URL, title, subreddit, author, and engagement data so you can act on it.",
+      },
+      {
+        question: "What should the Research Agent analyze for each Reddit post?",
+        answer: "Configure the agent to read the thread and extract what the author is asking, their pains and desired outcomes, any triggers mentioned, inferred role or company size, and a topic category. Have it also output two or three reply angles that would feel native in that specific subreddit. This gives you context without manually reading every thread.",
+      },
+      {
+        question: "How do I generate replies that sound human and fit the subreddit culture?",
+        answer: "Create a Snippet that takes the Research Brief and writes a Reddit-ready reply in your persona. Use your Brand Kit or a custom prompt to define your voice. Aim for two or three short paragraphs with practical steps, a soft contrast on how you approach the problem, and maybe a light offer to share more if useful. Keep it conversational, not salesy.",
+      },
+      {
+        question: "How do I handle different subreddit cultures with the same product?",
+        answer: "Treat each subreddit as its own market. Culture, tone, and rules differ significantly between communities like r/SaaS and r/Entrepreneur. Never reuse the same messaging across subreddits. Have your Research Agent flag the subreddit and adjust your Snippet prompts or reply angles accordingly. What works in one community might get you banned in another.",
+      },
+      {
+        question: "Can I automate the actual posting to Reddit?",
+        answer: "Keep a human in the loop for the actual post. Automating replies violates Reddit's terms of service and communities are quick to spot bot behavior. Intempt handles the listening, research, draft generation, and notification. A real person reviews the draft, adjusts if needed, and posts manually. This protects your accounts and keeps replies authentic.",
+      },
+      {
+        question: "How do I measure whether my Reddit activity is driving results?",
+        answer: "For replies without links, analyze traffic sources in Intempt to see if Reddit referrals increase. Track engagement metrics inside Reddit (upvotes, saves, comments) and maintain a lightweight tracker of threads that start ranking in Google or appearing in AI answers. Compare subreddits by visits and signups to double down on what works.",
+      },
+    ],
   },
   "customer-qualification-scoring": {
     title: "Customer qualification scoring",
@@ -4685,7 +5269,10 @@ Start by navigating to the Agents section and select Create Agent. Next, choose 
 Intempt
 
 Enhance the agent's robustness by adding at least three fit categories using the Add category option, each with its own set of conditions and corresponding weight.
-Intempt
+
+Example Fit Agent for Marketing Qualified Leads(MQL)
+
+![Example Fit Agent](/gp/customer-qualification-scoring/1-min.png)
 
 ### Step 2: Define the activity criteria
 
@@ -4693,20 +5280,26 @@ Build an effective activity-based qualification agent by selecting key activity 
 Intempt
 
 Assign weights to each event to reflect its importance in evaluating lead quality. Incorporate a decay factor so that the impact of an activity decreases over time unless repeated—ensuring the agent reflects current engagement rather than outdated behavior.
-Intempt
+
+Example Activity Agent for MQL
+
+![Example Activity Agent](/gp/customer-qualification-scoring/2-min.png)
 
 ### Step 3: Normalize and calculate scores
 
 Intempt automatically normalizes the assigned weights, so there's no need to ensure they add up to 100% — the system adjusts them proportionally. Based on the defined fit and activity criteria, the platform calculates a score for each lead and categorizes them into "low", "medium", or "high" qualification levels, providing a clear view of lead quality.
-Intempt
+
+![Normalize and calculate scores](/gp/customer-qualification-scoring/3-min.png)
 
 ### Step 4: Utilize scores for segmentation and engagement
 
 Segment customers: Use the calculated Fit & Activity scores to create customer segments. For example, group customers into segments like High Fit & High Activity for targeted marketing campaigns.
-Intempt
+
+![Segment customers](/gp/customer-qualification-scoring/4-min.png)
 
 Implement targeted strategies: Develop personalized engagement strategies based on the segments. For instance, high-fit and high-activity leads can receive premium offers, while lower scores might receive nurturing campaigns to increase engagement.
-Intempt
+
+![Implement targeted strategies](/gp/customer-qualification-scoring/5-min.png)
 
 ### Step 5: Track and refine
 
@@ -4729,8 +5322,33 @@ Intempt
 Align actions with score levels: high-scoring leads might receive special offers, while lower-scoring ones get educational content.
 Intempt
 
-Regularly monitor the journey's performance and refine strategy based on what drives the best engagement.
-`,
+Regularly monitor the journey's performance and refine strategy based on what drives the best engagement.`,
+    faqs: [
+      {
+        question: "What's the difference between Fit Score and Activity Score?",
+        answer: "Fit Score measures how well a lead matches your ideal customer profile based on static attributes like company size, industry, job title, or tech stack. Activity Score measures engagement based on behavioral events like logins, signups, page views, or purchases. Together they tell you not just who looks like a good customer, but who's actually showing interest right now.",
+      },
+      {
+        question: "What attributes work best for defining Fit criteria?",
+        answer: "Focus on attributes that correlate with your best customers. Company size, industry, job title, revenue range, and tech stack are common starting points. Look at your closed-won deals and identify what those accounts had in common. Those patterns become your Fit criteria. Add at least three fit categories with their own conditions and weights for a robust model.",
+      },
+      {
+        question: "What is decay and why does it matter for Activity Scores?",
+        answer: "Decay reduces the impact of an activity over time unless the action is repeated. A login from today matters more than a login from three weeks ago. Without decay, a lead who was active six months ago but has gone silent would still show a high Activity Score. Decay keeps your scoring current so you're acting on recent intent, not stale history.",
+      },
+      {
+        question: "How does Intempt categorize leads after scoring?",
+        answer: "Based on your Fit and Activity criteria, Intempt calculates a score for each lead and categorizes them into low, medium, or high qualification levels. You can then combine these into segments like \"High Fit + High Activity\" or \"High Fit + Low Activity\" for different treatment. The categorization gives you a clear view of lead quality at a glance.",
+      },
+      {
+        question: "How do I use qualification scores to trigger journeys?",
+        answer: 'Set journey triggers based on score thresholds or score changes. For example, trigger a sales outreach journey when a lead reaches "High Fit + High Activity." Trigger a nurture sequence when Fit is high but Activity is low. You can also trigger re-engagement journeys when a previously active lead\'s Activity Score drops, catching churn risk early.',
+      },
+      {
+        question: "How often should I review and adjust my scoring criteria?",
+        answer: "Review quarterly at minimum, or whenever you notice scoring doesn't match reality. If high-scoring leads aren't converting or low-scoring leads are closing deals, your criteria need adjustment. Analyze closed-won and closed-lost patterns. Add new fit attributes or activity events as your product and market evolve. The model should improve as you learn what actually predicts conversion.",
+      },
+    ],
   },
   "segment-customers-lifecycle": {
     title: "Segment Customers by Lifecycle Stage",
@@ -4806,14 +5424,35 @@ Add actions to nurture or reward that group:
 
 Personalized emails
 
+![VIP Rewards Email Example](/gp/segment-customers-by-lifecycle-stage/1-min.png)
+
 Reward offers
 
+![Personalized Selection Example](/gp/segment-customers-by-lifecycle-stage/2-min.png)
+
 Re-engagement messaging
+
+![Customer Story Example](/gp/segment-customers-by-lifecycle-stage/3-min.png)
+
+Multiple journeys for different segments:
+For each RFM segment, create a separate journey. For example:
+- Champions RFM campaign
+- Regulars RFM campaign
+- Promising RFM campaign
+- Needs attention RFM campaign
+- At risk RFM campaign
+
+![Multiple Journeys for Segments](/gp/segment-customers-by-lifecycle-stage/4-min.png)
 help.intempt.com
 
 ### Step 5: Deploy Personalizations (Experiences)
 
 Go to Experiences and launch a personalization campaign.
+
+Create a new personalization campaign:
+Navigate to the Personalizations section in Intempt and create a new personalization.
+
+![Create Personalization Campaign](/gp/segment-customers-by-lifecycle-stage/5-min.jpg)
 
 Create separate experiences for each lifecycle segment:
 
@@ -4826,6 +5465,8 @@ Promising: Welcome offer incentives.
 Needs Attention: Re-engagement deals.
 
 At Risk: "We miss you" discounts.
+
+![At Risk Targeting Example](/gp/segment-customers-by-lifecycle-stage/6-min.png)
 Intempt
 
 Set targeting rules so each experience only shows for its intended segment.
@@ -4839,6 +5480,10 @@ Journey Analytics — trigger counts, conversions, conversion rate, time to conv
 
 Experience Analytics — views, conversions, lift vs control.
 
+![Analytics and Metrics](/gp/segment-customers-by-lifecycle-stage/7-min.png)
+
+Use these metrics to assess the effectiveness of your personalized content. For instance, if the lift is significant, it indicates that the personalized content is performing well compared to the control group. Conversely, if the conversion rate is low, you may need to refine your personalization strategy or content.
+
 Refine campaigns based on these insights (e.g., adjust content, timing, segmentation rules).
 Intempt
 
@@ -4850,8 +5495,37 @@ help.intempt.com
 Combine lifecycle segments with other attributes (e.g., spend, tenure) for deeper targeting.
 help.intempt.com
 
-Build dedicated journeys and experiences for each core segment to maximize impact
-`,
+Build dedicated journeys and experiences for each core segment to maximize impact`,
+    faqs: [
+      {
+        question: "What does RFM stand for and how does the Lifecycle Agent use it?",
+        answer: "RFM stands for Recency, Frequency, and Monetary value. The Lifecycle Agent analyzes how recently a customer purchased, how often they purchase, and how much they spend to automatically segment them into lifecycle stages. These three dimensions together give you a clear picture of customer value and engagement patterns.",
+      },
+      {
+        question: "What lifecycle segments does the agent create?",
+        answer: "The agent categorizes customers into segments like Champions (bought recently, order often, spend the most), Regulars (order consistently), Promising (recent big purchase or regular small purchases), Needs Attention (used to buy frequently for large sums but stopped), and At Risk (infrequent small purchases, long time since last order). Each segment represents a different relationship with your brand.",
+      },
+      {
+        question: "Should I exclude certain users from the Lifecycle Agent?",
+        answer: "Yes. Exclude users who would skew results, like anonymous visitors or accounts that haven't signed up yet. You want the agent analyzing actual customers with purchase history, not noise from people who never converted. This improves accuracy and makes your segments more actionable.",
+      },
+      {
+        question: "Can I add additional conditions to lifecycle segments?",
+        answer: "Absolutely. You can refine segments by combining lifecycle stage with other attributes. For example, create \"High-value Champions\" by adding a condition for total spending over $500. Or \"New Promising Customers\" by requiring sign-up date within the last 30 days. These refined segments let you get more targeted with messaging.",
+      },
+      {
+        question: "Do segments update automatically as customer behavior changes?",
+        answer: "Yes. Segments update in real time with each new interaction or purchase. If a Needs Attention customer makes a big purchase, they'll move to a different segment automatically. You don't need to manually reassign anyone. The lifecycle agent continuously recalculates based on current behavior within your defined timeframe.",
+      },
+      {
+        question: "Can I create separate journeys for each lifecycle segment in Intempt?",
+        answer: "Yes. Each segment has different needs and responds to different messaging. Champions don't need discounts to buy again. At Risk customers might need a 25% discount to come back. Build separate journeys (Champions campaign, Regulars campaign, Promising campaign, Needs Attention campaign, At Risk campaign) with messaging and offers tailored to each group's relationship with your brand.",
+      },
+      {
+        question: "How do I measure whether my lifecycle campaigns are working?",
+        answer: "Track journey analytics for triggered count, conversions, conversion rate, and average days to convert. Track personalization analytics for unique views, conversions, and lift versus control. Compare performance across segments. If your At Risk re-engagement journey shows low conversion, adjust the discount or messaging. If Champions convert without discounts, you know you don't need to offer them.",
+      },
+    ],
   },
 };
 
@@ -4867,9 +5541,17 @@ export default async function GrowthPlayPage({
     notFound();
   }
 
+  // Extract content before FAQs section
+  const getContentWithoutFAQs = (content: string): string => {
+    const faqIndex = content.indexOf("## FAQs");
+    if (faqIndex === -1) return content;
+    return content.substring(0, faqIndex).trim();
+  };
+
   // Convert markdown-style content to HTML
   const formatContent = (content: string) => {
-    return content
+    const contentWithoutFAQs = getContentWithoutFAQs(content);
+    return contentWithoutFAQs
       .split("\n\n")
       .map((paragraph, index) => {
         // Images (markdown image syntax: ![alt](path))
@@ -5099,6 +5781,25 @@ export default async function GrowthPlayPage({
             </div>
           </Container>
         </article>
+
+        {/* FAQ Section */}
+        {play.faqs && play.faqs.length > 0 && (
+          <section className="py-24 border-t border-black/10">
+            <Container>
+              <AnimateIn>
+                <div className="mx-auto max-w-4xl text-center">
+                  <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl">
+                    Frequently asked questions. Answered.
+                  </h2>
+                </div>
+              </AnimateIn>
+
+              <div className="mx-auto mt-16 max-w-3xl">
+                <FAQAccordion faqs={play.faqs} />
+              </div>
+            </Container>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-12 bg-gradient-to-b from-black/5 to-transparent">

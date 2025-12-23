@@ -3,6 +3,7 @@ import { HeaderSection } from "../../sections/HeaderSection";
 import { Footer } from "../../components/Footer";
 import { Container } from "../../components/Container";
 import { AnimateIn } from "../../components/AnimateIn";
+import { FAQAccordion } from "../../components/FAQAccordion";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -54,6 +55,10 @@ Instead of paying separately for a CDP, analytics tool, experimentation platform
 
 At a high level, both Intempt and Customer.io let you build journeys. But they take completely different approaches.
 
+![Intempt](/blog-photos/intempt-vs-customer-io-2025-in-depth-comparison/1-min.png)
+
+![Customer.io](/blog-photos/intempt-vs-customer-io-2025-in-depth-comparison/2-min.png)
+
 ### Intempt
 
 Intempt is built for marketers and growth teams who want their automation to think ahead. With Intempt, Journeys are powered by behavioral analytics, AI predictions, revenue attribution, and personalized experiments.
@@ -91,6 +96,10 @@ The system is powerful, but the marketer carries the operational load.
 ## In-Depth Comparison: Intempt vs Customer.io
 
 Below is a marketer-friendly breakdown of how both platforms compare across journey building, AI intelligence, personalization, analytics, revenue attribution, experimentation, and segmentation.
+
+![Comparison](/blog-photos/intempt-vs-customer-io-2025-in-depth-comparison/3-min.png)
+
+![Comparison Details](/blog-photos/intempt-vs-customer-io-2025-in-depth-comparison/4-min.png)
 
 ### Journeys
 
@@ -181,6 +190,8 @@ Customer.io: a messaging automation engine built for teams that want detailed co
 
 Intempt: intelligent orchestration for teams that want adaptive growth loops, not just automated messages. From onboarding to re-engagement, design and launch adaptive campaigns that personalize in real time and drive conversions. If your growth strategy depends on full lifecycle personalization, predictive AI, and real-time decisioning, Intempt is the smarter choice.
 
+![Intempt GrowthOS](/blog-photos/intempt-vs-customer-io-2025-in-depth-comparison/5-min.png)
+
 ## TL;DR
 
 - **Journeys**: Customer.io automates messages with rule-based flows; Intempt orchestrates adaptive journeys that update themselves using real-time behavior, predictive signals, and revenue attribution.
@@ -266,6 +277,10 @@ When you compare Intempt and Clerk.io through a 2025 lens, the biggest differenc
 Because recommendations are the core battleground in this comparison, let's break down exactly how each platform handles the most widely used models in modern ecommerce.
 
 ### Recommendations
+
+![Recommendations Comparison 1](/blog-photos/intempt-vs-clerk-io-2025-in-depth-comparison/1-min.png)
+
+![Recommendations Comparison 2](/blog-photos/intempt-vs-clerk-io-2025-in-depth-comparison/2-min.png)
 
 #### Best Sellers
 
@@ -373,11 +388,15 @@ To see how deeply the two platforms diverge, let's explore the core systems that
 
 ### Journeys
 
+![Journeys Comparison](/blog-photos/intempt-vs-clerk-io-2025-in-depth-comparison/3-min.png)
+
 Journeys are where Intempt breaks out of the traditional e-commerce mold entirely. Intempt doesn't just deliver recommendations; it orchestrates when, where, and why those recommendations appear. Journeys adapt in real time as predictive scores shift, user intent changes, or behavior indicates movement into a new lifecycle stage. A user showing high purchase intent might be served a personalized experiment or a tailored recommendation across email, in-app, and web at the exact moment it matters.
 
 Clerk.io also offers email in its journey builder, making it possible to trigger follow-ups based on browsing and purchase activity. However, there is no AI branching and no multi-channel orchestration. Clerk.io informs immediate browsing, while Intempt orchestrates long-term behavior.
 
 ### Analytics
+
+![Analytics Comparison](/blog-photos/intempt-vs-clerk-io-2025-in-depth-comparison/4-min.png)
 
 Intempt integrates analytics and revenue attribution into every layer of its GrowthOS. This means funnels, cohorts, session analysis, and predictive insights are not just charts; they directly influence journeys, audiences, and recommendation logic. If funnel drop-offs spike or a specific segment shows declining purchase intent, the AI co-marketer inside Intempt adapts the experience automatically. Every metric becomes actionable.
 
@@ -436,6 +455,8 @@ Clerk.io: a merchandising engine built for ecommerce brands focused on optimizin
 - You want a platform that scales with your actual customer base rather than message volume, making it significantly more cost-efficient as you grow and engage users across multiple channels.
 
 Intempt: intelligent orchestration for brands that want adaptive growth loops, not just smarter product blocks. If your growth strategy depends on full lifecycle personalization and real-time AI decisioning, Intempt is the clear winner.
+
+![Intempt Platform](/blog-photos/intempt-vs-clerk-io-2025-in-depth-comparison/5-min.png)
 
 ## TL;DR
 
@@ -501,6 +522,8 @@ At first glance, both Intempt and Klaviyo let you create automated journeys. But
 
 ### Intempt
 
+![Intempt Platform](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/1-min.png)
+
 Intempt is built for growth teams that want their automation to think, not just execute, and for marketers who prefer a streamlined, intuitive interface. It's your AI co-marketer that understands intent, predicts what users will do next, and orchestrates personalized experiences automatically. The UI is designed to make building, visualizing, and tweaking journeys easy: fewer nested menus, easier experimentation setup, and clearer revenue attribution dashboards.
 
 The Journeys feature inside Intempt goes beyond flowcharts. It combines behavioral analytics, CRM data, intent-scoring, and predictive modeling to dynamically recalibrate each user's path.
@@ -513,6 +536,8 @@ If a user shows high purchase intent but doesn't convert, Intempt's AI will inst
 It's not "set it and forget it" automation. It's "set it and let AI + your interface work together to learn and adapt."
 
 ### Klaviyo
+
+![Klaviyo Platform](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/2-min.png)
 
 Klaviyo has evolved from being an email automation platform to a powerful AI-assisted omnichannel engine. It provides features like AI content generation for email, SMS, and WhatsApp, predictive analytics, and flows.
 
@@ -527,6 +552,10 @@ Automation alone doesn't build loyalty unless it connects to personalization, an
 Both platforms empower marketers to engage customers across channels, but the way they handle journey intelligence, personalization depth, orchestration flexibility, and UI/UX simplicity differs significantly.
 
 Below, we've compared both platforms feature-by-feature across journeys, personalization, orchestration, AI capabilities, analytics, integrations, pricing, and more.
+
+![Comparison Overview 1](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/3-min.png)
+
+![Comparison Overview 2](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/4-min.png)
 
 ### Journeys
 
@@ -570,6 +599,8 @@ Klaviyo's AI improves execution; Intempt's AI improves strategy.
 
 ### Personalization
 
+![Personalization Comparison](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/5-min.png)
+
 Both platforms personalize experiences, but at different depths.
 
 **Intempt** personalizes the entire customer lifecycle. Recommendations, experiments, content blocks, and journey paths all adapt dynamically based on behavior, predictive insights, and revenue signals. Personalization applies across web, app, email, SMS, push, and CRM, creating truly omnichannel experiences.
@@ -587,6 +618,8 @@ Analytics aren't just reports; they're decision-making tools that feed back into
 **Klaviyo** provides strong messaging analytics: opens, clicks, conversions, and campaign performance. It offers revenue reporting and customer lifetime value metrics. However, analytics exist separately from journey orchestration, and there's no built-in revenue attribution system that directly influences journey logic.
 
 ### Experiments
+
+![Experiments Comparison](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/6-min.png)
 
 **Intempt** embeds experiments directly into journeys. Marketers can test journey branches, recommendation strategies, personalization variations, and multi-surface experiences. The AI can propose tests, allocate traffic intelligently, and optimize results automatically.
 
@@ -642,6 +675,8 @@ Klaviyo: a messaging automation engine built for e-commerce teams that want deta
 - You want a modern UI designed for speed and clarity, with fewer nested menus, cleaner visualization, and a workflow that lets marketers iterate fast.
 
 Intempt: intelligent orchestration for teams that want adaptive growth loops, not just automated messages. From onboarding to re-engagement, design and launch adaptive campaigns that personalize in real time and drive conversions. If your growth strategy depends on full lifecycle personalization, predictive AI, and real-time decisioning, Intempt is the smarter choice.
+
+![Intempt GrowthOS Platform](/blog-photos/intempt-vs-klaviyo-2025-in-depth-comparison/8-min.png)
 
 ## TL;DR
 
@@ -722,6 +757,8 @@ At first glance, both Intempt and VWO help you improve user experiences and conv
 
 ### Intempt
 
+![Intempt Platform](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/1-min.png)
+
 Intempt is designed for teams that want to move from static A/B testing to AI-powered orchestration. It's built to understand behavior, predict intent, and automatically adapt experiences across channels, empowering cross-channel growth.
 
 With Intempt's GrowthOS, teams can run experiments, personalize user journeys, and track revenue impact, all from one unified place. The platform connects analytics, personalization, and CRM data to ensure every experiment leads to measurable growth.
@@ -731,6 +768,8 @@ Intempt's experimentation tools allow you to run quick UI changes or deep logic 
 Intempt's AI doesn't just measure outcomes; it guides the next orchestration, ensuring every user sees the most relevant message, product, or offer in real time.
 
 ### VWO
+
+![VWO Platform](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/2-min.png)
 
 VWO (Visual Website Optimizer) is one of the most established experimentation platforms on the market. It offers robust A/B testing, multivariate testing, and split URL testing, with a visual editor that makes test setup simple for marketers.
 
@@ -746,6 +785,10 @@ Both platforms help you optimize user experiences, but the way they handle exper
 Below, we have compared both platforms feature by feature across experimentation, personalization, orchestration, experience insights, integrations, pricing, and more.
 
 ## Experiences ( Experiment + Personalization )
+
+![Experiences Overview 1](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/3-min.png)
+
+![Experiences Overview 2](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/4-min.png)
 
 ### Experimentation
 
@@ -773,6 +816,8 @@ It also supports integration with data platforms for broader segmentation, makin
 
 ### Orchestration
 
+![Orchestration Comparison](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/5-min.png)
+
 **Intempt** 
 This is where Intempt truly separates itself. The platform doesn't just test and personalize; it orchestrates entire customer journeys across channels. Experiments and personalization connect to journeys, analytics, and revenue attribution, creating a unified growth system.
 
@@ -782,6 +827,8 @@ When a user shows high intent, Intempt can automatically trigger a personalized 
 VWO focuses on website optimization and testing. While it offers personalization, it doesn't orchestrate multi-channel journeys or connect experiences to lifecycle automation. Teams typically use VWO alongside other tools for email, CRM, or app personalization, creating fragmented experiences that don't adapt together.
 
 ### Analytics + Revenue Attribution
+
+![Analytics Comparison](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/6-min.png)
 
 **Intempt** 
 Intempt integrates behavioral analytics and revenue attribution directly into its experimentation and personalization engine. Every test, every personalization, and every journey step connects to revenue outcomes. Marketers can see which experiments drive activation, which personalizations increase AOV, and how each touchpoint contributes to lifetime value.
@@ -833,6 +880,8 @@ VWO: a website optimization engine built for CRO teams that want detailed contro
 - You want an AI co-marketer that recommends experiments, identifies friction points, and optimizes outcomes automatically.
 
 Intempt: intelligent orchestration for teams that want adaptive growth loops, not just website tests. If your growth strategy depends on full lifecycle personalization, predictive AI, and real-time decisioning, Intempt is the smarter choice.
+
+![Intempt GrowthOS Platform](/blog-photos/intempt-vs-vwo-2025-in-depth-comparison/7-min.png)
 
 ## TL;DR
 
@@ -904,6 +953,8 @@ At first glance, both Intempt and Mixpanel promise to help you understand your u
 
 ### Intempt
 
+![Intempt Platform](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/1-min.png)
+
 Intempt is built for teams that want to do more than just analyze data. It's designed for marketers who wish to have an AI co-marketer by their side, someone that doesn't just tell you what happened, but what to do next. 
 
 Intempt is designed for marketers, growth teams, and product operators who want a unified system that blends analytics, activation, and experimentation. It serves teams that need to understand user behavior, personalize journeys, run experiments, and tie everything directly to revenue without switching tools. It's ideal for SaaS, PLG, lifecycle marketing, and teams that want an AI co-marketer guiding decisions instead of managing multiple disconnected platforms.
@@ -911,6 +962,8 @@ Intempt is designed for marketers, growth teams, and product operators who want 
 Instead of static reports, Intempt's AI surfaces anomalies, highlights opportunities, and guides your next action. It's not just analytics, it's analytics that thinks with you.
 
 ### Mixpanel
+
+![Mixpanel Platform](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/2-min.png)
 
 Mixpanel, meanwhile, has long been the go-to name for product and user behavior analytics. It excels at helping teams understand what users do inside their apps, offering powerful funnel, retention, and cohort reports, alongside clean, visual dashboards.
 
@@ -929,6 +982,8 @@ Below, we have compared both platforms feature by feature across analytics, orch
 ## Analytics
 
 Both Intempt and Mixpanel help analyze user behavior, but Intempt gives you detailed revenue attribution that connects engagement data to business outcomes. This means marketers don't just see what users did, they understand why it drove revenue.
+
+![Analytics Comparison](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/3-min.png)
 
 ### Event Tracking
 
@@ -1050,17 +1105,23 @@ Beyond analytics, integrations, and pricing, Intempt GrowthOS provides a complet
 
 ### Sales CRM
 
+![Sales CRM](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/4-min.png)
+
 Intempt's Sales CRM unifies behavioral, transactional, and revenue data from platforms like HubSpot, Shopify, and Stripe into a single customer record. This creates a 360° customer view, every click, purchase, and email engagement mapped into one profile.
 
 It helps you to create, assign, and progress tasks or deals based on customer fit, activity, and journey stage, and use enrichment and research agents to fill in missing attributes using real-time data pulled from public sources. Teams can track deals, revenue impact, and lifecycle stages (lead, MQL, SQL, customer, churn risk) in real time. Its AI intent scoring automatically highlights the highest-converting opportunities, while predictive signals help sales teams prioritize outreach. Unlike traditional CRMs, Intempt doesn't just store data; it connects it to analytics, orchestration, and personalization flows, turning the CRM into a live growth engine.
 
 ### Personalization
 
+![Personalization](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/5-min.png)
+
 The AI-based personalization engine inside Intempt continuously adapts user experiences across email, web, and product interfaces. Using real-time behavioral tracking and predictive segmentation, it understands what users are likely to do next and serves them the right message or offer automatically.
 
 Content blocks, product recommendations, and CTAs change dynamically based on user intent. Marketers can build these experiences visually, without code, and link them to experiments or campaigns instantly. This significantly reduces the dependency of marketers on developers for various activities. Personalization in Intempt transforms from static audience targeting into an autonomous co-marketer that optimizes every touchpoint. In short, create and manage every personalized flow in one place, build with AI without code, run campaigns with precision, and reach the right audience, every time.
 
 ### Experiment
+
+![Experiment](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/6-min.png)
 
 Experimentation is built directly into Intempt's GrowthOS; no integrations or extra tools required.
 
@@ -1072,6 +1133,8 @@ It helps you to cut through the noise; the CUPED variance reduction taps into yo
 
 ### Recommendations
 
+![Recommendations](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/7-min.png)
+
 Intempt's AI recommendation system predicts and delivers the next best content, offer, or product for every user. It draws on real-time behavioral, purchase, and engagement data to surface personalized suggestions, whether it's the right plan to upgrade to, a blog to read, or a product to purchase.
 
 Recommendations integrate directly into journeys, campaigns, and web pages, ensuring every user interaction feels individually tailored.
@@ -1081,6 +1144,8 @@ Intempt GrowthOS transforms how you engage customers by combining advanced AI al
 Over time, the model learns which patterns drive conversion, refining itself automatically to improve performance and relevance.
 
 ### Journeys
+
+![Journeys](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/8-min.png)
 
 Intempt's no-code journey builder lets teams design automated, multi-channel workflows visually.
 
@@ -1131,6 +1196,8 @@ Pick Intempt if:
 - You want a platform that scales with your actual customer base rather than message volume, making it significantly more cost-efficient as you grow and engage users across multiple channels.
 
 Intempt: connected intelligence for teams who want more than visibility. If your growth model thrives on real-time behavior signals, multi-surface engagement, predictive analytics, and AI-driven orchestration, Intempt is the smarter future-proof choice.
+
+![Intempt GrowthOS Platform](/blog-photos/intempt-vs-mixpanel-2025-in-depth-comparison/9-min.png)
 
 ## TL;DR
 
@@ -1239,9 +1306,13 @@ Event tracking is the foundation of personalization, optimization, and growth.
 
 If you are running a little low on time, here's a comparison chart for you to review all the tools and choose the one that suits you best.
 
+![Comparison Chart](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/1-min.png)
+
 ## The Top Picks
 
 ### 1) Intempt
+
+![Intempt](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/2-min.png)
 
 Intempt is a unified platform that brings together event tracking, analytics, and activation, all powered by AI. It captures every event from your web, app, and backend systems, helping you transform behavioral data into personalized experiments that increase engagement and revenue.
 
@@ -1266,6 +1337,8 @@ With seamless integrations with HubSpot, Shopify, and Stripe, Intempt is purpose
 
 ### 2) Userpilot
 
+![Userpilot](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/3-min.png)
+
 Userpilot is built for product-led growth teams who want to track in-app behavior and trigger contextual experiences. It helps you create personalized walkthroughs, tooltips, and checklists, all based on real-time events, without needing code. It's one of its best features.
 
 **Strengths**
@@ -1285,6 +1358,8 @@ Userpilot is built for product-led growth teams who want to track in-app behavio
 **Pricing**: Starts at $299/month.
 
 ### 3) Amplitude
+
+![Amplitude](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/4-min.png)
 
 Amplitude is the gold standard in behavioral analytics. It helps teams understand why users engage or churn by turning event data into visual funnels, retention charts, and predictive insights.
 
@@ -1308,6 +1383,8 @@ Amplitude's powerful machine learning models can forecast user churn and convers
 
 ### 5) PostHog
 
+![PostHog](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/5-min.png)
+
 PostHog is an open-source analytics suite that lets you track, replay, and experiment, all while keeping your data private. Unlike hosted tools, it can be self-deployed, giving full control over user data.
 
 It combines event tracking, feature flags, and experimentation, making it powerful for developers and privacy-conscious teams.
@@ -1328,6 +1405,8 @@ It combines event tracking, feature flags, and experimentation, making it powerf
 **Pricing**: Free for self-hosted; paid cloud plans available.
 
 ### 6) FullStory
+
+![FullStory](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/6-min.png)
 
 FullStory offers a visual-first approach to event tracking. It automatically records every user session so you can replay exactly what happened on your website or app.
 
@@ -1351,6 +1430,8 @@ Instead of just reporting numbers, FullStory helps you see the user's experience
 
 ### 8) Google Analytics 4
 
+![Google Analytics 4](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/7-min.png)
+
 GA4 uses a modern event-based tracking model that captures both web and app activity in one platform. It's perfect for understanding user journeys across devices and channels, especially for ad-driven teams.
 
 With machine learning baked in, GA4 offers predictive metrics like purchase probability, churn likelihood, and revenue forecasts.
@@ -1373,6 +1454,8 @@ With machine learning baked in, GA4 offers predictive metrics like purchase prob
 
 ### 9) Mixpanel
 
+![Mixpanel](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/8-min.png)
+
 Mixpanel remains a favorite among growth teams for real-time event analytics and retention tracking. Its clean interface and drag-and-drop reports make it easy to measure funnels, cohorts, and user journeys without writing SQL.
 
 **Strengths**
@@ -1392,6 +1475,8 @@ Mixpanel remains a favorite among growth teams for real-time event analytics and
 **Pricing**: Starts at $140/month (1.5M events).
 
 ### 10) Heap
+
+![Heap](/blog-photos/best-tools-to-capture-user-events-across-web-and-mobile-platforms/9-min.png)
 
 Heap captures every interaction automatically, so you never miss an event. It's ideal for non-technical teams who want instant insights without spending hours on event tagging.
 
@@ -1526,9 +1611,13 @@ In short, real-time segmentation lets you group users based on what truly matter
 
 If you are running a little low on time, here's a comparison chart for you to review all the tools and choose the one that suits you best.
 
+![Comparison Chart](/blog-photos/best-real-time-customer-segmentation-tools-in-2025/1-min.png)
+
 ## The Top Picks
 
 ### 1) Intempt
+
+![Intempt](/blog-photos/best-real-time-customer-segmentation-tools-in-2025/2-min.png)
 
 Intempt brings together customer data, analytics, and activation into one unified platform designed for real-time, data-driven growth. It helps SaaS and eCommerce teams connect data from multiple sources like web, app, and CRM, to build AI-powered audiences and launch personalized experiments across journeys. With its real-time segmentation, marketers can instantly react to user behavior, while analytics connects customer actions directly to business outcomes.
 
@@ -1552,6 +1641,8 @@ Intempt does an excellent job by integrating with Hubspot, Shopify, and Stripe, 
 
 ### 2) Amplitude
 
+![Amplitude](/blog-photos/best-real-time-customer-segmentation-tools-in-2025/3-min.png)
+
 Amplitude is a leading product analytics and segmentation tool that helps you deeply understand user behavior, track conversions, and predict engagement trends. Its Audiences feature lets you create behavioral cohorts and activate them in real time across channels. With journey analytics, retention reports, and predictive churn models, teams can make every interaction count. The tool integrates seamlessly with marketing platforms, allowing data-driven activation without switching contexts.
 
 **Strengths:**
@@ -1571,6 +1662,8 @@ Amplitude is a leading product analytics and segmentation tool that helps you de
 **Pricing**: Starts at $61/month, with a free plan for small teams.
 
 ### 3) Mixpanel
+
+![Mixpanel](/blog-photos/best-real-time-customer-segmentation-tools-in-2025/4-min.png)
 
 Mixpanel is an established analytics platform for event-based tracking, segmentation, and cohort analysis. It helps teams uncover insights about user engagement, retention, and growth through real-time data visualization and no-code dashboards. Its strength lies in instant, query-based analysis and easy data slicing for non-technical teams. Integrations with CRMs and CDPs make it an analytics hub for many organizations.
 
@@ -1592,6 +1685,8 @@ Mixpanel is an established analytics platform for event-based tracking, segmenta
 
 ### 4) Heap
 
+![Heap](/blog-photos/best-real-time-customer-segmentation-tools-in-2025/5-min.png)
+
 Heap takes the pain out of tracking by automatically capturing every user action, clicks, scrolls, taps, and pageviews—so you never miss an event. Its retroactive analysis allows teams to build user journeys and behavior segments even after the fact. Heap's no-code tools make it simple for marketers and designers to find friction points and optimize conversions without developer setup.
 
 **Strengths:**
@@ -1611,6 +1706,8 @@ Heap takes the pain out of tracking by automatically capturing every user action
 **Pricing**: Custom pricing based on usage, with a free plan available.
 
 ### 5) Segment (Twilio)
+
+![Segment (Twilio)](/blog-photos/best-real-time-customer-segmentation-tools-in-2025/6-min.png)
 
 Segment is the go-to Customer Data Platform (CDP) for companies that want a single source of truth for their customer data. It collects, standardizes, and routes data across marketing, analytics, and warehouse tools in real time. Its power lies in simplifying complex data flows, unifying user identities, and ensuring every destination tool receives clean, consistent data. With 400+ integrations, Segment acts as the connective tissue for your entire growth stack.
 
@@ -1709,9 +1806,15 @@ When comparing Mixpanel alternatives, we focused on:
 - **Coverage & Compliance**: Ability to handle multi-region data and privacy laws (GDPR, CCPA).
 - **Integrations & UX**: Fit with CRMs, marketing tools, and workflows.
 
+## Best Mixpanel Alternatives in 2025 (TL;DR Table)
+
+![Best Mixpanel Alternatives Comparison](/blog-photos/best-mixpanel-alternatives-in-2025/1-min.png)
+
 ## Top Picks For You
 
 ### 1) Intempt
+
+![Intempt](/blog-photos/best-mixpanel-alternatives-in-2025/2-min.png)
 
 Intempt is a unified GrowthOS that helps SaaS and eCommerce teams understand how users interact across their web and mobile applications, and then act on those insights instantly. Unlike point analytics tools that just report, Intempt blends event tracking, segmentation, and revenue analytics into one platform. It goes beyond visibility to activation, enabling you to design personalized experiments that directly drive conversions and retention.
 
@@ -1741,6 +1844,8 @@ Intempt is a unified GrowthOS that helps SaaS and eCommerce teams understand how
 
 ### 2) Amplitude
 
+![Amplitude](/blog-photos/best-mixpanel-alternatives-in-2025/3-min.png)
+
 Amplitude is for teams that want to deeply understand user behavior across web and mobile. It offers advanced cohorting, journey analytics, and predictive insights that help product teams identify what drives retention and conversion. While setup requires some technical involvement, the long-term analytical depth it provides is commendable.
 
 **Key features:**
@@ -1767,6 +1872,8 @@ Amplitude is for teams that want to deeply understand user behavior across web a
 **Ideal fit**: Mid-market and enterprise PLG companies focused on retention and product optimization.
 
 ### 3) Heap
+
+![Heap](/blog-photos/best-mixpanel-alternatives-in-2025/4-min.png)
 
 Heap simplifies analytics by automatically capturing every user interaction; no need to predefine events. This makes it easy for teams to explore data retroactively and uncover insights without heavy engineering support. It's particularly useful for fast-moving teams that value agility and quick decision-making.
 
@@ -1795,6 +1902,8 @@ Heap simplifies analytics by automatically capturing every user interaction; no 
 
 ### 4) PostHog
 
+![PostHog](/blog-photos/best-mixpanel-alternatives-in-2025/5-min.png)
+
 PostHog appeals to technical teams that value flexibility, transparency, and data ownership. As an open-source platform, it can be fully self-hosted, giving businesses complete control over their analytics stack. While it requires more setup and maintenance than hosted tools, PostHog offers customization and privacy for data-conscious organizations.
 
 **Key features:**
@@ -1822,6 +1931,8 @@ PostHog appeals to technical teams that value flexibility, transparency, and dat
 
 ### 5) Pendo
 
+![Pendo](/blog-photos/best-mixpanel-alternatives-in-2025/6-min.png)
+
 Pendo blends product analytics with in-app engagement tools, helping companies understand user behavior and guide users toward key actions. It's especially effective for improving onboarding, feature discovery, and adoption within SaaS products. The tradeoff is that Pendo's analytics depth is more adoption-focused than exploratory.
 
 **Key features:**
@@ -1848,6 +1959,8 @@ Pendo blends product analytics with in-app engagement tools, helping companies u
 **Ideal fit**: Mid-market to enterprise teams focused on product adoption and user retention.
 
 ## Decision Cheatsheet
+
+![Decision Cheatsheet](/blog-photos/best-mixpanel-alternatives-in-2025/7-min.png)
 
 ## Conclusion
 
@@ -1931,7 +2044,11 @@ A SaaS analytics tool helps you capture, visualize, and interpret user data from
 
 If you are running a little low on time, here's a comparison chart for you to review all the tools and choose the one that suits you best.
 
+![Comparison Chart](/blog-photos/5-best-analytics-tools-for-saas-in-2025/1-min.png)
+
 ## 1) Intempt
+
+![Intempt](/blog-photos/5-best-analytics-tools-for-saas-in-2025/2-min.png)
 
 Intempt GrowthOS is built for SaaS and eCommerce teams that want to turn user events into growth-driving insights. It captures every interaction, across web, app, and CRM, and transforms them into real-time segments that power personalized experiments, customer journeys, and revenue analytics.
 
@@ -1966,6 +2083,8 @@ Free trial available for 14 days. Paid plans start from just $52/month.
 
 ## 2) Amplitude
 
+![Amplitude](/blog-photos/5-best-analytics-tools-for-saas-in-2025/3-min.png)
+
 Amplitude is an advanced product analytics platform built for digital-first SaaS companies. It helps you understand user behavior, retention patterns, and growth drivers by mapping how customers interact across every step of your product journey.
 
 Amplitude gives data and growth teams visibility into activation funnels, engagement loops, and retention cohorts. Its dashboards and path analysis reveal exactly what drives long-term usage and what leads to churn.
@@ -1991,6 +2110,8 @@ Product and growth teams at scale looking to understand behavior at depth.
 Free tier available; paid plans start from $61/month.
 
 ## 3) Mixpanel
+
+![Mixpanel](/blog-photos/5-best-analytics-tools-for-saas-in-2025/4-min.png)
 
 Mixpanel is a widely adopted product analytics platform for SaaS teams looking for real-time insights into user engagement, conversion, and retention. It's designed for speed and accessibility, giving product, marketing, and growth teams the power to query and visualize data instantly, without relying on engineers.
 
@@ -2018,6 +2139,8 @@ Free tier available up to 1M events, for events up to 1.5M, paid plan starts fro
 
 ## 4) Heap
 
+![Heap](/blog-photos/5-best-analytics-tools-for-saas-in-2025/5-min.png)
+
 Heap takes a different approach to analytics by automatically capturing every user interaction. Click, tap, swipe, or scroll, without requiring manual event tracking. It's ideal for teams that want full behavioral visibility and the flexibility to analyze user flows retroactively.
 
 **Strengths**
@@ -2041,6 +2164,8 @@ Product and UX teams that want no-code behavioral analytics, journey mapping, an
 Free plan available; contact sales for enterprise pricing.
 
 ## 5) Pendo
+
+![Pendo](/blog-photos/5-best-analytics-tools-for-saas-in-2025/6-min.png)
 
 Pendo combines product analytics with in-app feedback and onboarding tools, helping SaaS teams not just measure what users do, but improve how they adopt features. It's built for product-led organizations that value both quantitative and qualitative insights.
 
@@ -2160,7 +2285,13 @@ Score each tool 1-5 on the following. Pick the top two and trial them:
 - **Measurement you trust**: Per-step delivery, failure, and progression metrics; holdouts; goal tracking; experiment readouts - not just opens/clicks.
 - **Pricing fit**: Contact-based vs send-volume pricing matters. Model it against your growth plan before you migrate.
 
+## Here's a quick, text-only comparison table (Intempt first), with concise notes about pricing vs Klaviyo, trials, best-fit, and key features. I've added light, authoritative hyperlinks where helpful.
+
+![Comparison Table](/blog-photos/best-klaviyo-alternatives-in-2025/1-min.png)
+
 ## 1) Intempt
+
+![Intempt](/blog-photos/best-klaviyo-alternatives-in-2025/2-min.png)
 
 **Best for**: Teams that want an integrated engine - segmentation + journeys + personalized experiments + recommendations + analytics, without stitching five tools.
 
@@ -2180,6 +2311,8 @@ Choose Intempt if you're an SMB or lean team needing one platform for CRM, multi
 
 ## 2) Brevo (Formerly Sendinblue)
 
+![Brevo](/blog-photos/best-klaviyo-alternatives-in-2025/3-min.png)
+
 **Best for**: Budget-sensitive teams that prefer send-volume pricing over contact-based pricing, plus simple automation and transactional email.
 
 **Why it stands out**
@@ -2198,6 +2331,8 @@ You're an SMB or lean team needing dependable campaigns, basic automations, and 
 
 ## 3) Mailchimp
 
+![Mailchimp](/blog-photos/best-klaviyo-alternatives-in-2025/4-min.png)
+
 **Best for**: Marketers who want a broad ecosystem, templates, and a familiar UI with quick campaign execution.
 
 **Why it stands out**
@@ -2215,6 +2350,8 @@ You want fast time-to-first-send, broad ecommerce/CMS integrations, and decent a
 
 ## 4) ActiveCampaign
 
+![ActiveCampaign](/blog-photos/best-klaviyo-alternatives-in-2025/5-min.png)
+
 **Best for**: Companies that want powerful automations with integrated CRM/Sales automations alongside marketing journeys.
 
 **Why it stands out**
@@ -2231,6 +2368,8 @@ Expect more configuration to align marketing + sales objects; confirm deliverabi
 You need sophisticated, branching automations across lifecycle stages (marketing + sales handoffs) and robust testing/segmentation.
 
 ## 5) Omnisend
+
+![Omnisend](/blog-photos/best-klaviyo-alternatives-in-2025/6-min.png)
 
 **Best for**: Ecommerce brands that need email + SMS built for storefronts and promos with strong template flows.
 
@@ -2250,6 +2389,8 @@ Your store needs revenue-driven flows (welcome, abandon, post-purchase) with com
 
 ## 6) Constant Contact
 
+![Constant Contact](/blog-photos/best-klaviyo-alternatives-in-2025/7-min.png)
+
 **Best for**: Small businesses and nonprofits that want straightforward email campaigns, simple automations, and events/donations tooling.
 
 **Why it stands out**
@@ -2266,6 +2407,8 @@ Automation and experimentation are intentionally simpler; evaluate if you'll nee
 You want reliable basic campaigns, lists, and light automation with a minimal learning curve for community groups/SMBs.
 
 ## 7) Moosend
+
+![Moosend](/blog-photos/best-klaviyo-alternatives-in-2025/8-min.png)
 
 **Best for**: Teams needing an affordable, easy starter with essential automations and a simple UI.
 
@@ -2408,6 +2551,10 @@ Have your Product catalog and user events (page_view, product_view, add_to_cart,
 
 Connect your catalog (btw we're Shopify native), website, and app data to Intempt so we see all of your products and user events inside one platform.
 
+![Data Foundation 1](/blog-photos/product-recommendations-that-drive-first-purchase/1-min.png)
+
+![Data Foundation 2](/blog-photos/product-recommendations-that-drive-first-purchase/2-min.png)
+
 ### Step 2: Pick algorithms that work without history
 
 For first-time visitors, avoid relying solely on collaborative filtering (it needs user history). Use a hybrid approach:
@@ -2422,15 +2569,27 @@ Use Intempt's built-in recommendations logic or create your own product feeds.
 
 - **Homepage (new or anonymous)**: "Trending Now," "Bestsellers," "New In" (fast discovery without choice overload).
 
+![Homepage Recommendations](/blog-photos/product-recommendations-that-drive-first-purchase/3-min.png)
+
 - **PDP**: "Similar items," "Complete the look/Pair well with," "Frequently bought together," and "Top rated in this category". These follow Amazon's collaborative filtering playbook - recommending based on co-views and co-purchases that signal buying intent.
+
+![PDP Recommendations](/blog-photos/product-recommendations-that-drive-first-purchase/4-min.png)
 
 - **Cart/Checkout**: Low-AOV accessories, on-sale complements, and "Add ₹X for free shipping" nudges. Avoid recommending near-duplicates that risk choice paralysis.
 
+![Cart/Checkout Recommendations](/blog-photos/product-recommendations-that-drive-first-purchase/5-min.png)
+
 - **Category**: top sellers and trending within the current category.
+
+![Category Recommendations](/blog-photos/product-recommendations-that-drive-first-purchase/6-min.png)
 
 **Collaborative filtering (the Amazon classic)**: When a visitor has a few interactions, switch on item-to-item collaborative filtering. Instead of finding "similar users," you compute "similar items" based on co-views and co-purchases and recommend near neighbors of the item they're viewing or added to cart. Keep your hybrid: start with content/popularity for cold start, then blend in item-to-item as signal density grows. (This is how Amazon scaled relevance with low latency.)
 
+![Collaborative Filtering](/blog-photos/product-recommendations-that-drive-first-purchase/7-min.png)
+
 Start Personalization campaign inside Intempt and edit your web/app recommendations logic with our Visual editor. Place the recommendation blocks where they matter. Customize layout and run A/B tests.
+
+![Personalization Campaign](/blog-photos/product-recommendations-that-drive-first-purchase/8-min.png)
 
 ### Step 4: Real-time triggers across channels
 
@@ -2438,7 +2597,11 @@ Turn onsite behaviors into instant nudges: "Size M is in stock - pair it with…
 
 When someone views PDPs but doesn't add to cart, send a quick browse-abandon email within 2-4 hours that mirrors onsite carousels: "Because you viewed [Product], here are top-rated/FBT picks." Personalize the hero by last-viewed item; keep 4-6 recs max; add a trust nudge (delivery/returns). This pattern is widely used in retail and consistently outperforms generic reminders.
 
+![Browse Abandon Email](/blog-photos/product-recommendations-that-drive-first-purchase/9-min.png)
+
 Create to email/SMS/Push notifications inside Intempt with the same logic - just ensure frequency caps and opt-in compliance.
+
+![Multi-Channel Notifications](/blog-photos/product-recommendations-that-drive-first-purchase/10-min.png)
 
 ### Step 5: Test for incrementality, not just CTR
 
@@ -2447,6 +2610,8 @@ Use campaign and experience analytics to compare variants and confirm lift. Keep
 - Measure CTR, Add-to-Cart rate, Checkout start rate, or First-order conversion rates.
 - Revenue per session/visitor (RPV) and attach rate for FBT/looks
 - Run controlled A/Bs (or bandits) with clean holdouts and don't judge success on clicks alone. You can check out our in-depth growth play on how to set up recommendations inside Intempt here.
+
+![A/B Testing](/blog-photos/product-recommendations-that-drive-first-purchase/11-min.png)
 
 ## Two quick plays you can ship this week
 
@@ -2528,15 +2693,23 @@ Slack's answer was not "more education." It was less friction and timely nudges 
 
 A single email field (or Google sign-in) gets you in. Passwords/verifications are deferred until they're truly needed. The goal: minutes to first message, not minutes in a form.
 
+![Friction-lite sign-up](/blog-photos/how-slack-nails-user-onboarding/1-min.png)
+
 **Takeaway**: Ask only for what unlocks value now; everything else can wait. If you don't need something in the user's first session, then don't ask. TTV is very critical.
 
 ### 2) Personalization in the First 60 Seconds
 
 Slack asks two or three intent questions, then reflects the answers back immediately: your workspace name and a pre-named first channel.
 
+![Personalization in First 60 Seconds](/blog-photos/how-slack-nails-user-onboarding/2-min.png)
+
 Slack asks to invite your team members in their onboarding, which gets them more user signups and gets the users one step closer towards the activation point.
 
+![Team Invitation](/blog-photos/how-slack-nails-user-onboarding/3-min.png)
+
 Slack gives users a sense of what happens if someone subscribes to their paid plan and a cheeky offer to lure them towards subscribing
+
+![Paid Plan Offer](/blog-photos/how-slack-nails-user-onboarding/4-min.png)
 
 **Takeaway**: Mirror user inputs in the UI immediately - names, defaults, sample content. Ask questions that help you take the user one step closer to the value of the product.
 
@@ -2544,17 +2717,23 @@ Slack gives users a sense of what happens if someone subscribes to their paid pl
 
 Instead of a 12-step tour, Slack puts focus in the message box with a hint. Hit enter, get a small celebration, move forward.
 
+![Action Over Exposition](/blog-photos/how-slack-nails-user-onboarding/5-min.png)
+
 **Takeaway**: Make the next action the default focus. Celebrate the click that matters.
 
 ### 4) Empty States That Teaches
 
 Blank surfaces explain "what this space is for" and suggest a single next step. No walls of text and no lecture.
 
+![Empty States That Teach](/blog-photos/how-slack-nails-user-onboarding/6-min.png)
+
 **Takeaway**: Every empty state/screen should answer: Why am I here? What should I do now?
 
 ### 5) Teaching With Onboarding
 
 Onboarding inside Slack is super easy with tool tips, templates, and nudges they provide. This beats some detached docs, which pop up with a long paragraph every time.
+
+![Teaching With Onboarding](/blog-photos/how-slack-nails-user-onboarding/7-min.png)
 
 **Takeaway**: Teach in the product, in context, with the same UI users will use tomorrow.
 
@@ -2574,6 +2753,8 @@ Identify what that activation point is, or what's the point when the user will g
 
 Use Intempt to track key user events with your product or even with your website.
 
+![Track User Events](/blog-photos/how-slack-nails-user-onboarding/8-min.png)
+
 ### Step 2: Build a next-best-action map
 
 For users to get the best out of the product, you should map out key actions they should take to reach that aha moment fast. Lay out these user journeys and make proper segments inside of users inside Intempt who have done the action to guide them to the next step.
@@ -2585,9 +2766,13 @@ Intempt updates these segments in real time, so after a user does an event, they
 - Created Task: Users who have created and edited their first task.
 - Invited Team Member: Users who have invited their first team member.
 
+![User Segments](/blog-photos/how-slack-nails-user-onboarding/9-min.png)
+
 ### Step 3: Render server-side personalizations
 
 First sessions collapse when the UI feels generic or jumpy. Intempt Server-side personalizations rendering avoids "flicker" and makes guidance feel native.
+
+![Server-side Personalizations](/blog-photos/how-slack-nails-user-onboarding/10-min.png)
 
 Some personalized user onboarding you can do:
 
@@ -2608,6 +2793,8 @@ After you try core actions, Slack follows up with timely reminders (and only whe
 - Push/SMS (if opted in): "Two clicks to connect Calendar and post your next meeting in #general."
 - Sales/CS alert for high-value accounts that stall at "invite teammates."
 
+![Multi-channel Nudges](/blog-photos/how-slack-nails-user-onboarding/11-min.png)
+
 ### Step 5: Test for incrementality
 
 Clicks can lie; only lift tells you if onboarding actually shortens time-to-value and drives activation. Iterate relentlessly - shipping small changes, measuring downstream behavior, keeping what compounds habit formation.
@@ -2615,6 +2802,8 @@ Clicks can lie; only lift tells you if onboarding actually shortens time-to-valu
 - Run account-level holdouts (10-20%).
 - Primary metrics: Time to value, Day/week activation, multiplayer %, attach rate.
 - Secondary: nudge dismissals, time-in-session, and subsequent retention.
+
+![Test Metrics](/blog-photos/how-slack-nails-user-onboarding/12-min.png)
 
 Ship 1–2 changes/week, keep a public changelog, sunset what doesn't move the metric.
 
@@ -2646,25 +2835,25 @@ Slack's onboarding isn't only "clever copy + great design" It's a system: fewer 
 
 **Impact you can expect**: Teams that copy this pattern typically see faster TTV, higher Day-1 activation, and more team activations.
 
-## FAQ
+## FAQs
 
-**Q1: Won't friction-lite sign-up clash with security?**
+**1) Won't friction-lite sign-up clash with security?**
 
 Split paths. Let end-users start with SSO/lite entry while admins complete SSO/SCIM later. Don't block the first message behind the enterprise setup.
 
-**Q2: How do we avoid annoying nudges?**
+**2) How do we avoid annoying nudges?**
 
 Use behavior triggers (not timers), add skip to every prompt, cap frequency, and measure dismissals. If a nudge causes immediate exits or muted behavior, retire or retarget it.
 
-**Q3. How do we measure onboarding success beyond signups?**
+**3) How do we measure onboarding success beyond signups?**
 
 Track Activation Rate, Time-to-Value (TTV), step-by-step drop-offs, Day-1/7/30 retention, and RPV for new users.
 
-**Q4. How many steps should onboarding have?**
+**4) How many steps should onboarding have?**
 
 As few as needed to reach the first meaningful action; use progressive disclosure for everything else.
 
-**Q5. How do we keep advanced users from feeling constrained?**
+**5) How do we keep advanced users from feeling constrained?**
 
 Make everything skippable, let users revisit guides later, and adapt prompts based on experience or role.`,
   },
@@ -2696,6 +2885,8 @@ An A/B tool lets you show two (or more) versions of a page, screen, or feature t
 
 If you are running a little low on time, here's a comparison chart for you to skim through all the tools and choose the one.
 
+![Comparison Chart](/blog-photos/7-best-a-b-testing-tools/1-min.png)
+
 ## 1) Intempt
 
 Intempt unifies A/B testing, real-time personalization, and product recommendations (for eCommerce) across your Website and App on a single data model - so Marketing, product, and engineering can run experiments, deliver tailored experiences, and measure lift without Franken-stack glue.
@@ -2721,6 +2912,8 @@ PLG SaaS and ecommerce teams that want experimentation + personalization + recom
 
 Starts at $52 for 1k MTUs with unlimited team members
 
+![Intempt](/blog-photos/7-best-a-b-testing-tools/2-min.png)
+
 ## 2) VWO
 
 A mature experimentation suite for web and server-side testing with a broad UX toolkit (heatmaps, surveys, session recordings) and program-management features.
@@ -2744,6 +2937,8 @@ Growth teams wanting one vendor for testing plus UX research tools.
 **Pricing**
 
 Public plans and trial; details vary by module/traffic.
+
+![VWO](/blog-photos/7-best-a-b-testing-tools/3-min.png)
 
 ## 3) Optimizely
 
@@ -2770,6 +2965,8 @@ Enterprises needing web + full server-side experimentation/flags with strong gov
 
 Contact sales; Web offers a 30-day trial.
 
+![Optimizely](/blog-photos/7-best-a-b-testing-tools/4-min.png)
+
 ## 4) Convert
 
 A privacy-forward experimentation platform popular with agencies and CRO teams; supports client- and server-side tests with generous SLAs and transparent pricing.
@@ -2795,6 +2992,8 @@ Agencies/CRO teams wanting transparent pricing and privacy-minded testing.
 
 From $499/mo (Essentials), billed annually; 15-day free trial.
 
+![Convert](/blog-photos/7-best-a-b-testing-tools/5-min.png)
+
 ## 5) Statsig
 
 A modern experimentation and feature flag platform with free tier, strong statistical methods (e.g., CUPED), and product analytics features (pulse, holdouts).
@@ -2818,6 +3017,8 @@ Product/engineering teams launching feature-level experiments with robust stats.
 **Pricing**
 
 Free tier; Pro from $100/mo; usage-based at scale.
+
+![Statsig](/blog-photos/7-best-a-b-testing-tools/6-min.png)
 
 ## 6) AB Tasty
 
@@ -2844,6 +3045,8 @@ Digital teams wanting testing + personalization with enterprise-grade support.
 
 Contact sales for a tailored plan.
 
+![AB Tasty](/blog-photos/7-best-a-b-testing-tools/7-min.png)
+
 ## 7) Kameleoon
 
 Client- and server-side testing with feature flags and predictive targeting; known for privacy and regulated-industry support.
@@ -2867,6 +3070,8 @@ Regulated industries and teams needing predictive targeting & compliance.
 **Pricing**
 
 Contact sales; 14-day trial advertised.
+
+![Kameleoon](/blog-photos/7-best-a-b-testing-tools/8-min.png)
 
 ## How to choose (fast)
 
@@ -3142,6 +3347,8 @@ You should focus on activation rate, time-to-value, early retention and conversi
 
 When channels don't talk, customers walk. Imagine a customer who has a tailored experience on your site, but then receives a completely unrelated email offer -jarring, right? Consistency is key. Brands that connect the dots between web, email, and SMS enjoy big benefits. For instance, companies with strong cross-channel marketing strategies achieve 89% customer retention on average (versus only 33% for weaker multichannel efforts).
 
+![Cross-Channel Customer Retention](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/1-min.png)
+
 When every channel reflects what the customer just did or is likely to do next, the experience feels natural - like one continuous conversation.
 
 - Website → Email/SMS: Recommendations and messages reflect browsing or purchase behavior.
@@ -3186,9 +3393,15 @@ Your website (or mobile app) is where the journey typically starts. Here's how s
 
 - **Personalized Content & Layout**: Depending on the visitor, you might change hero banners, headlines, and even calls-to-action with the help of AI. Example: Sephora's site might greet a logged-in Beauty Insider loyalty member with a "Welcome back, [Name]! Your 500 points can get you a free gift 🎁" message, whereas a first-time visitor sees a standard welcome or a sign-up offer. If you know a user's favorite category is "fragrance," the homepage could prominently feature a perfume promotion for them.
 
+![Personalized Content & Layout](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/2-min.png)
+
 - **Product Recommendations on Key Pages**: Strategic recommendation widgets on the homepage, product detail pages, cart page, etc., keep the customer discovering relevant items. On the homepage, a "Just For You" carousel might blend affinity picks and trending items. On a product page, a "Pair With It" section might show items often bought together -for Sephora, viewing a foundation might show the matching primer and setting powder commonly bought with it. In the cart, a "Don't forget these" suggestion could upsell accessories (e.g., makeup brushes) that others added before checkout.
 
+![Product Recommendations](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/3-min.png)
+
 - **Real-Time Relevance**: As the user browses, you can update content in real-time. If they show interest in a certain brand or category in that session, the site can respond. If Jane clicks on several K-beauty products today, the site might instantly feature a K-beauty recommendations widget in the next page she visits. The goal is to seize on in-the-moment intent.
+
+![Real-Time Relevance](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/4-min.png)
 
 This level of relevance has a big impact. When customers feel like the site "gets" them, they explore more and buy more. And it's not only about product pitches -it can be informational too. Sephora, for instance, knows whether you are a skincare enthusiast or a makeup newbie and can tailor educational content accordingly (such as linking to a skincare routine guide versus a makeup tutorial on the homepage). Everything aligns with the shopper's profile.
 
@@ -3252,11 +3465,15 @@ Connect website, app, and catalog data inside Intempt's GrowthOS CDP.
 
 It consolidates data from your website, app, and eCommerce store into a single customer profile, giving you real-time insights and ensuring consistent personalization across channels.
 
+![Unify Customer Data](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/5-min.png)
+
 ### Step 2: Build Predictive Segments
 
 Use AI-based segmentation (RFM, lifecycle stages, predicted churn/purchase).
 
 Segments auto-refresh in real time, powering instant personalization rules. Customize, test, and adapt recommendations to align with your business goals, such as promoting high-inventory items or popular products.
+
+![Build Predictive Segments](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/6-min.png)
 
 ### Step 3: Activate Recommendations Onsite
 
@@ -3266,6 +3483,8 @@ Insert recommendation widgets across key pages:
 - PDP: "Pair With It" (collaborative filtering).
 - Cart: "Don't forget these" (FBT + low-AOV upsells).
 - Dynamic banners: Real-time responses to browsing (e.g., user views 3 K-beauty items → show "K-beauty trending now").
+
+![Dynamic Banners](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/7-min.png)
 
 ### Step 4: Extend personalization to email & SMS
 
@@ -3286,6 +3505,8 @@ Use deep links from email/SMS → personalized pages.
 Maintain consistent offers, product sets, and creative themes across all channels.
 
 For example, you could automatically trigger a personalized email when a customer becomes inactive, followed by an SMS reminder, enhancing customer engagement effortlessly. You can define with AI to make your work more easier.
+
+![Multi-Channel Automation](/blog-photos/omnichannel-personalization-in-ecommerce-unifying-website-catalog-email-sms/8-min.png)
 
 ## Conclusion: One Journey, One Customer (Make It Count)
 
@@ -3384,19 +3605,27 @@ For instance, if a user's session length decreases or if they stop engaging with
 
 Instead of a one-size-fits-all discount coupon sent too late, companies can trigger a custom in-app message that speaks directly to a user's recent activity. This might be a helpful prompt reminding them of a feature they've stopped using or an offer tailored to their usage patterns. The result? Users feel seen and valued, increasing the likelihood that they'll continue to engage.
 
+![AI-Powered Custom In-App Messages](/blog-photos/ultimate-guide-to-reducing-churn-with-ai-powered-user-retention-strategies/1-min.png)
+
 ## How to Implement AI-Powered Retention with Intempt?
 
 ### Step 1: Create a Qualification to Predict Churn
 
 Build an AI-based Qualification agent that learns from historical user behavior (cancellations, feature use, session drop-offs). Platforms like Intempt's GrowthOS integrate directly with CRMs (e.g., HubSpot) to connect data sources and automatically assign churn risk scores.
 
+![Create Qualification to Predict Churn](/blog-photos/ultimate-guide-to-reducing-churn-with-ai-powered-user-retention-strategies/2-min.png)
+
 ### Step 2: Create Targeted Segments
 
 Segment users into high, medium, and low churn risk tiers. Use these segments to tailor engagement campaigns - relevant content for each user type, timed to their behavior.
 
+![Create Targeted Segments](/blog-photos/ultimate-guide-to-reducing-churn-with-ai-powered-user-retention-strategies/3-min.png)
+
 ### Step 3: Launch Re-Engagement Journeys
 
 Once AI identifies high-churn users, it's time to start engaging them. Re-engagement strategies should include:
+
+![Launch Re-Engagement Journeys](/blog-photos/ultimate-guide-to-reducing-churn-with-ai-powered-user-retention-strategies/4-min.png)
 
 **Personalized Re-Engagement Campaigns**
 
@@ -3442,6 +3671,8 @@ Spotlight User Contributions: Recognize user contributions and celebrate success
 
 So, we created journeys to tackle churn. What's next? To maximize your churn prevention strategy, you must go a step further and create personalized in-app experiences targeting users' specific needs, motivations, and pain points using AI. Here are some actionable strategies to effectively personalize the in-app experience and prevent churn:
 
+![Deploy Real-Time In-App Personalization](/blog-photos/ultimate-guide-to-reducing-churn-with-ai-powered-user-retention-strategies/5-min.png)
+
 **Dynamic Personalized Content for Immediate Value**
 
 Custom Feature Reminders: Highlight features that the user has previously enjoyed but not used recently. For instance, if the user is often engaged with a fitness feature like guided running workouts but hasn't used it for some time, create a pop-up or banner that suggests, "Ready for your next run? We've added new workouts just for you!"
@@ -3477,6 +3708,8 @@ Showcase Newly Added Features in Context: Introduce new features by integrating 
 Monitor your campaigns, measure impact, and iterate based on data.
 
 Refine thresholds for churn risk and personalize interventions more accurately over time.
+
+![Continuous Testing & Optimization](/blog-photos/ultimate-guide-to-reducing-churn-with-ai-powered-user-retention-strategies/6-min.png)
 
 ## Benefits of a Proactive AI Retention Strategy
 
@@ -3571,6 +3804,8 @@ Traditionally, businesses have relied on post-abandonment emails or SMS to recap
 - **Limited Reach**: You can only send recovery emails to customers who provide their email address, which many don't do before abandoning their cart.
 - **Poor Engagement**: Let's do the math: If 100 people abandon their carts, maybe 10 leave their email. Of those, perhaps 1 or 2 actually open your recovery email. That's a tiny fraction of potential recoveries.
 
+![Poor Engagement in Cart Recovery](/blog-photos/how-ai-can-stop-cart-abandonment-before-it-happens/1-min.png)
+
 These shortcomings underline a critical point: waiting until after the cart is abandoned means you're missing the chance to intervene while the customer is still engaged.
 
 ## Why Shoppers Abandon Before Buying?
@@ -3605,6 +3840,8 @@ Once AI identifies a potential cart abandonment, you can deploy timely, personal
 - **No-Shipping Charge Offer**: As soon as a customer begins entering shipping details, a prompt might appear offering free shipping. This directly addresses a common pain point.
 - **Localized Social Proof**: A banner can show testimonials or real-time notifications - like "Maria from New York just purchased these sneakers" - to reassure the shopper and build trust.
 
+![Localized Social Proof](/blog-photos/how-ai-can-stop-cart-abandonment-before-it-happens/2-min.png)
+
 This proactive approach means you intervene before the customer even thinks about leaving, preserving the momentum of their shopping journey.
 
 ## How to Implement Proactive Cart Abandonment Prevention?
@@ -3619,6 +3856,8 @@ Platforms like Intempt let you build AI Agent that flag at-risk users in real ti
 
 Example: A shopper reviews shipping details twice without advancing → model score increases → trigger on-site prompt.
 
+![Build a Lifecycle Agent](/blog-photos/how-ai-can-stop-cart-abandonment-before-it-happens/3-min.png)
+
 ### Step 2: Segment and Map Customer Journeys
 
 Not every user hesitates for the same reason. Segment visitors based on behavior:
@@ -3628,6 +3867,8 @@ Not every user hesitates for the same reason. Segment visitors based on behavior
 - Trust seekers (review returns/shipping pages multiple times)
 
 Use Intempt's segmentation tools to map journeys for each group. This ensures every intervention feels human -not robotic.
+
+![Segment and Map Customer Journeys](/blog-photos/how-ai-can-stop-cart-abandonment-before-it-happens/4-min.png)
 
 ### Step 3: Deploy Personalized On-Site Interventions
 
@@ -3641,6 +3882,8 @@ Trigger real-time interventions when AI detects hesitation:
 
 These moments of micro-engagement keep the buyer's attention and neutralize friction before it kills intent.
 
+![Personalized On-Site Interventions](/blog-photos/how-ai-can-stop-cart-abandonment-before-it-happens/5-min.png)
+
 ### Step 4: Review, Measure, and Optimize
 
 Once your interventions go live, track performance across:
@@ -3650,6 +3893,8 @@ Once your interventions go live, track performance across:
 - Revenue per visitor (RPV)
 
 Run A/B or multivariate tests on timing, message type, and offer strength. Use analytics to double down on what converts -and phase out what doesn't.
+
+![Review, Measure, and Optimize](/blog-photos/how-ai-can-stop-cart-abandonment-before-it-happens/6-min.png)
 
 ## Benefits of a Proactive AI Approach
 
@@ -3808,6 +4053,8 @@ Identify the parts of your landing page that directly influence your visitors' d
 
 Now here are some elements that you can personalize for your landing page:
 
+![Elements to Personalize](/blog-photos/personalized-landing-pages/1-min.png)
+
 - Headlines and subheadings
 - Hero images and visuals
 - Call-to-action buttons
@@ -3867,15 +4114,21 @@ Build personalization campaigns based on audience segments (e.g., SaaS vs. eComm
 
 Each ad campaign can send traffic to the same landing page but display tailored messaging.
 
+![Segment-Specific Campaigns](/blog-photos/personalized-landing-pages/2-min.png)
+
 ### Step 2: Set UTM Parameters
 
 Tag your URLs (e.g., utm_campaign=pricing+saas) to signal which segment a visitor belongs to.
 
 These UTM parameters tell your website which version of the page the visitor should see.
 
+![Set UTM Parameters](/blog-photos/personalized-landing-pages/3-min.png)
+
 ### Step 3: Create Personalized Landing Pages
 
 **Create a Personalization Experience**: Set up a new personalization experience inside your personalization campaign dashboard. For each user segment, create an individual experience with specific URL targeting criteria. Define the audience based on their UTM campaign parameters or other behavioral data points, ensuring each segment sees personalized content that matches their unique needs.
+
+![Create Personalization Experience](/blog-photos/personalized-landing-pages/4-min.png)
 
 **Set Up Your Personalized Page**: Use Intempt's Visual Editor to create different versions of your page. No engineering required - simply tweak headlines, images, and content to speak directly to each audience segment.
 
@@ -3912,6 +4165,8 @@ Launch two separate Google Ads campaigns - one targeting SaaS companies and the 
 **Launch and Monitor:**
 
 Once the personalized versions are live, use your analytics dashboard to track how each segment interacts with its tailored landing page.
+
+![Launch and Monitor](/blog-photos/personalized-landing-pages/5-min.png)
 
 **Outcome:**
 
@@ -3997,6 +4252,8 @@ This approach aligns Sales, Marketing, and Product around one truth: the best le
 
 ## Understanding PQLs and EQLs: Your New Qualification Pillars
 
+![PQLs and EQLs Overview](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/1-min.png)
+
 ### Product Qualified Leads (PQLs)
 
 A Product Qualified Lead is someone who has demonstrated real value from your product through actual usage. Instead of guessing whether someone might be interested based on marketing activities, PQLs show us who's already getting value.
@@ -4016,6 +4273,8 @@ These actions show they're actually experiencing the value your product provides
 - **Better Conversion Rates**: Since these users have firsthand experience, they are more likely to convert.
 - **Data-Driven Insights**: Their product usage provides rich insights that can inform further engagement strategies.
 
+![PQL Benefits](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/2-min.png)
+
 ### Expansion Qualified Leads (EQLs)
 
 EQLs take this a step further. These are existing customers showing signs they could benefit from additional features or higher-tier plans. They're particularly valuable in SaaS, where expansion revenue often drives growth.
@@ -4032,6 +4291,8 @@ Signs of an EQL might include:
 - **Identifying Growth Potential**: They help pinpoint existing customers who are ready to expand their usage.
 - **Tailored Engagement**: By understanding user behavior, companies can craft personalized strategies for retention and expansion.
 - **Revenue Boost**: Focusing on EQLs can lead to significant revenue growth without the acquisition costs associated with new leads.
+
+![EQL Benefits](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/3-min.png)
 
 ## Why Single Score Methods Don't Work Anymore?
 
@@ -4100,9 +4361,13 @@ Instead of juggling everything manually, let AI-based marketing automation tools
 
 This AI tool automatically segments users based on your predefined ICP criteria. As soon as a new user comes in, their data is evaluated against your target profile.
 
+![Automated Fit Scoring](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/4-min.png)
+
 **Real-Time Activity Tracking:**
 
 The platform continuously monitors user interactions - whether it's feature usage, session duration, or login frequency - to keep the activity score up to date.
+
+![Real-Time Activity Tracking](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/5-min.png)
 
 **Instant Dual Scoring:**
 
@@ -4112,11 +4377,25 @@ By merging the fit and activity scores, the tool immediately identifies which us
 
 With automation, you can set up workflows that automatically route high-scoring leads to your sales or customer success teams, ensuring timely and personalized follow-up.
 
+![Actionable Workflows](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/6-min.png)
+
 The key advantage of this automated approach is that your team can focus on engaging with qualified leads rather than spending time identifying them.
 
 ### Fit & Activity Scoring with Intempt
 
 Using Intempt, you can evaluate your leads through custom Fit & Activity scoring. It's all about creating a matrix that uses fit attributes (like job title and industry) and activity events (like signups and logins). Leads are scored as "Low," "Medium," or "High," ensuring you always have actionable insights. Qualifying leads early on is crucial to avoid wasted resources and improve sales success.
+
+**Example: PQL Model**
+
+![PQL Model Example 1](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/7-min.png)
+
+![PQL Model Example 2](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/8-min.png)
+
+**Example: EQL Model**
+
+![EQL Model Example 1](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/9-min.png)
+
+![EQL Model Example 2](/blog-photos/understanding-pqls-eqls-and-the-power-of-dual-scoring-in-lead-qualification/10-min.png)
 
 Fit Criteria include things like company size, role, and budget authority. The goal is to make sure this lead could be a good long-term customer.
 
@@ -4177,12 +4456,42 @@ You can use Intempt to automatically refresh Fit and Activity scores as users in
     image: "/blog/music-app.jpg",
     content: `A Comprehensive Approach to Boosting User Acquisition, Retention, and Monetization Through AI-Driven Insights and Personalized Marketing
 
-Let's take an example of a music streaming app on the iOS App marketplace. The app is free to download and offers three paid tiers: Starter, Professional, and Premium. While free users generate ad revenue, subscribers can also purchase exclusive in-app content. Despite multiple revenue streams, the app faces challenges such as low conversion rates, high churn, low ad revenue from free users, and limited upsells.`,
+![Music App Growth Strategy](/blog-photos/music-app-road-to-profitability-key-lessons-from-the-journey/1-min.png)
+
+Let's take an example of a music streaming app on the iOS App marketplace. The app is free to download and offers three paid tiers: Starter, Professional, and Premium. While free users generate ad revenue, subscribers can also purchase exclusive in-app content. Despite multiple revenue streams, the app faces challenges such as low conversion rates, high churn, low ad revenue from free users, and limited upsells.
+
+## FAQs
+
+**1) What key metrics should I track to measure app growth and profitability?**
+
+Track CAC (Customer Acquisition Cost), churn rate, free-to-paid conversion rate, DAU/MAU, and LTV.
+
+**2) How do I reduce churn and keep free users engaged longer?**
+
+Identify high-risk users early and send personalized re-engagement messages based on behaviour and usage.
+
+**3) How can I better monetise free users while increasing paid subscribers?**
+
+Increase engagement (stickiness) of free users to boost ad revenue while offering targeted in-app purchases and upsells to paid users.
+
+**4) What's a good approach to acquisition without eroding profitability?**
+
+Focus on user quality over volume and use interactive/upgraded prompts rather than just discounts.
+
+**5) What are common mistakes to avoid when pursuing growth for an app?**
+
+Don't focus only on acquisition, avoid generic messaging, and don't treat acquisition, retention & monetisation as separate silos.
+
+**6) How do I set up meaningful experiments and measure their impact?**
+
+Define clear metrics (e.g., time-to-value), use holdout groups (10-20 %), and ship small incremental changes.`,
   },
   "saas-growth-journey": {
     title: "SaaS Growth Journey: Key Takeaways from a Scaling Success Story",
     image: "/blog/saas-growth.jpg",
     content: `Discover how Otto - a SaaS company offering banking software uses product-led growth and AI-driven marketing to improve customer acquisition, retention, and expansion.
+
+![Otto SaaS Growth Strategy](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/1-min.png)
 
 ## How Otto Scaled Smarter with Product-Led Growth and AI-Driven Insights?
 
@@ -4211,6 +4520,8 @@ With 80% of deals marketing-sourced and 20% sales-sourced, Otto's funnel metrics
 They needed a more efficient, data-connected system to improve conversions, retain users, and increase expansion revenue, all while keeping costs in check.
 
 Overall, Otto's median Monthly Recurring Revenue (MRR) is $833. The company operates a hybrid go-to-market motion (product-led + sales-expanded) and has 3 tiers - Free, Professional, and Enterprise.
+
+![Otto Business Model](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/2-min.png)
 
 ## Key Metrics and Revenue Fundamentals
 
@@ -4263,6 +4574,8 @@ The primary goal for acquisition is to reduce the Customer Acquisition Cost (CAC
   - Running A/B tests to optimize messaging and user experience.
   - Personalizing the onboarding journey to improve conversion rates.
 
+![Personalized Onboarding](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/3-min.png)
+
 ### Retention & Monetization
 
 Retaining customers and growing revenue from them were equally important. The focus was on:
@@ -4278,6 +4591,8 @@ Retaining customers and growing revenue from them were equally important. The fo
 
 Both reducing churn and increasing expansion revenue are essential for long-term profitability.
 
+![Retention & Monetization Strategy](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/4-min.png)
+
 ## Implementation: Inside Otto's Growth Flywheel
 
 ### Step 1: Discover Audiences
@@ -4285,7 +4600,12 @@ Both reducing churn and increasing expansion revenue are essential for long-term
 Otto began by connecting all their customer data sources into a single view using GrowthOS's data integrations and identity resolution. This gave them a unified customer profile, allowing them to:
 
 - **Discover**: Unify customer data from all channels and analyze it to build target audiences.
+
+![Discover Audiences](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/5-min.png)
+
 - **Predict**: Use machine learning to predict user intent in real-time.
+
+![Predict User Intent](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/6-min.png)
 
 This unified view helped the sales team know exactly when to step in for conversion, reducing manual guesswork and improving lead quality.
 
@@ -4296,7 +4616,12 @@ Once they had clear insights into user intent, Otto moved to personalize the jou
 They focused on:
 
 - **Personalization**: Personalize interactions across web, mobile, and customer journeys.
+
+![Personalization Strategy](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/7-min.png)
+
 - **Engage**: Set up automated triggers to engage customers when they show signs of inactivity or when their lifecycle stage changes.
+
+![Engage Customers](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/8-min.png)
 
 This ensured that customers received the right message at the right time, improving both satisfaction and conversion velocity.
 
@@ -4305,6 +4630,9 @@ This ensured that customers received the right message at the right time, improv
 Otto didn't stop at engagement; they used GrowthOS to experiment, measure, and iterate continuously.
 
 - **Experiments**: Experiment with different approaches on your digital platforms.
+
+![Experimentation Platform](/blog-photos/saas-growth-journey-key-takeaways-from-a-scaling-success-story/9-min.png)
+
 - **Analytics**: Use real-time data to refine and improve customer interactions.
 
 This ongoing process helped Otto identify what worked, scale it fast, and sunset what didn't, making growth an iterative, data-backed process.
@@ -4380,6 +4708,8 @@ Let's break down the numbers for the store:
 - **Customer Acquisition Cost (CAC)**: It costs about $41.67 to acquire a new customer.
 - **Profit Runway per New Customer**: After covering the acquisition cost, the store has about $12.33 left as profit or promotion budget for the first sale.
 
+![Profit Runway Analysis](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/1-min.png)
+
 ## What the Store Did Differently?
 
 ### Smarter Cross & Up-Selling
@@ -4388,6 +4718,8 @@ Instead of random "frequently bought together" bundles, the team used AI to segm
 
 **Takeaway**: Personalize offers using data signals, not assumptions.
 
+![Personalized Recommendations](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/2-min.png)
+
 ### Retargeting Ads:
 
 With the help of AI, it showed ads to visitors who didn't convert in the first time.
@@ -4395,6 +4727,8 @@ With the help of AI, it showed ads to visitors who didn't convert in the first t
 However, with a standard conversion rate of about 3%, you may need around 30 clicks (roughly $30) to make one conversion. This number is higher than the $12.33 profit margin available, so careful management of ad spend is critical.
 
 **Takeaway**: Precision beats volume. Retarget where purchase intent is highest.
+
+![Smart Retargeting Strategy](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/3-min.png)
 
 ### Increasing Conversion Rates:
 
@@ -4423,6 +4757,8 @@ To achieve a CAC: LTV ratio of 1:3 or better, encouraging a repeat purchase is e
 - Upselling: Offer complementary products or upgrades after the initial sale.
 - Personalized Offers: Engage customers with targeted offers that keep them connected to your brand and encourage repeat business.
 
+![Personalized Post-Purchase Offers](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/4-min.png)
+
 ## Enter Intempt GrowthOS: The AI-Driven Solution
 
 Intempt GrowthOS unified customer data, predicted buying intent, and automated personalization with its AI-powered tools. Instead of managing separate tools, the brand managed its full lifecycle in a single unified system.
@@ -4433,9 +4769,13 @@ Intempt GrowthOS unified customer data, predicted buying intent, and automated p
 
 Unified customer data from multiple sources to build complete profiles and deliver consistent experiences.
 
+![Data Integrations & Identity Resolution](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/5-min.png)
+
 ### Timely Marketing Experiences
 
 Automated behavior-triggered campaigns, delivering the right message at the exact moment users were most likely to engage.
+
+![Timely Marketing Experiences](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/6-min.png)
 
 ## Growth Methodology For Profit Scaling
 
@@ -4445,6 +4785,8 @@ Unify and analyze customer data from all channels and use machine learning to pr
 
 **Discover**: Identify, Build, and Analyze: Gather customer data from all your sources, combine it to form a complete picture, and use it to pinpoint your target leads and accounts.
 
+![Discover Audiences](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/7-min.png)
+
 **Predict**: Use machine learning to understand and forecast what your customers are likely to do next with real-time insights.
 
 ### Engage Customers
@@ -4453,6 +4795,8 @@ Personalize every interaction with automated triggers like emails or SMS based o
 
 **Personalization**: Tailor every communication across web, mobile, and email to suit individual customer needs and preferences.
 
+![Personalization Strategy](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/8-min.png)
+
 **Journeys**: Based on real-time behavior, send timely emails or SMS when customers hit a new stage or show a drop in activity.
 
 ### Optimize Experiences
@@ -4460,6 +4804,8 @@ Personalize every interaction with automated triggers like emails or SMS based o
 Experiment with different strategies and use insights to continually improve customer engagement.
 
 **Experiment**: Test different strategies on your website or app with confidence and minimal risk to find what works best.
+
+![Experimentation Platform](/blog-photos/post-holiday-sales-challenge-turning-one-time-buyers-into-repeat-customers/9-min.png)
 
 **Analyze**: Review the results of your experiments to gain clear, actionable insights that drive continuous improvement.
 
@@ -4483,27 +4829,27 @@ Stores adopting this data-driven, AI-assisted approach typically achieve:
 
 ## FAQs
 
-**Q1: How can eCommerce brands retain customers after the holidays?**
+**1) How can eCommerce brands retain customers after the holidays?**
 
 Use personalized post-purchase offers and timely reactivation campaigns.
 
-**Q2: How can AI improve customer retention?**
+**2) How can AI improve customer retention?**
 
 AI predicts churn, personalizes experiences, and automates engagement at scale.
 
-**Q3: Should I increase discounts during slow months?**
+**3) Should I increase discounts during slow months?**
 
 Only if paired with smart targeting, broad discounts hurt the margins.
 
-**Q4: How can I unify customer data from multiple sources?**
+**4) How can I unify customer data from multiple sources?**
 
 You can use Intempt's Identity Resolution feature that connects data from web, app, and CRM channels to create a single customer profile, ensuring accurate personalization and reporting.
 
-**Q5: What role does AI play in improving customer retention?**
+**5) What role does AI play in improving customer retention?**
 
 AI analyzes user behavior and predicts churn or repeat purchase intent. Intempt's predictive models automate re-engagement with personalized offers at just the right moment.
 
-**Q6: What's the first metric to track for retention success?**
+**6) What's the first metric to track for retention success?**
 
 Repeat purchase rate (RPR) within 30 - 60 days of first order.`,
   },
@@ -4512,7 +4858,35 @@ Repeat purchase rate (RPR) within 30 - 60 days of first order.`,
     image: "/blog/product-led-sales.jpg",
     content: `The B2B SaaS landscape is experiencing a fundamental shift in how companies sell and grow. Gone are the days when aggressive sales teams alone could drive sustainable growth. Today's buyers want to experience products firsthand before making purchasing decisions.
 
-A majority of B2B SaaS companies have already deployed a product-led growth motion, with 91% planning to increase their investment in PLG initiatives. In this guide, we will explore why you should consider adopting PLS as your preferred go-to-market (GTM) strategy and the opportunities as well as challenges associated with implementing it.`,
+![Product-Led Sales Overview](/blog-photos/guide-to-product-led-sales/1-min.png)
+
+A majority of B2B SaaS companies have already deployed a product-led growth motion, with 91% planning to increase their investment in PLG initiatives. In this guide, we will explore why you should consider adopting PLS as your preferred go-to-market (GTM) strategy and the opportunities as well as challenges associated with implementing it.
+
+## FAQs
+
+**1) What exactly is Product-Led Sales (PLS)?**
+
+It's a GTM approach where the product generates leads through usage insights, and sales teams engage only when users show buying intent.
+
+**2) How is PLS different from PLG?**
+
+PLG focuses on self-serve adoption; PLS adds a human layer by using product data to guide strategic sales conversations.
+
+**3) When should a SaaS company adopt PLS?**
+
+Once you have steady user engagement data and can define Product-Qualified Leads (PQLs) with measurable intent signals.
+
+**4) What are the main benefits of PLS?**
+
+Lower CAC, faster sales cycles, higher conversion rates, and stronger product–sales alignment.
+
+**5) What tools do I need to implement PLS?**
+
+Platforms like Intempt unify product, CRM, and marketing data to track engagement and automate workflows.
+
+**6) What metrics define PLS success?**
+
+PQL-to-SQL conversion, time-to-upgrade, retention, and expansion revenue are key benchmarks.`,
   },
 };
 
@@ -4528,11 +4902,57 @@ export default async function BlogPostPage({
     notFound();
   }
 
+  // Extract FAQs from content
+  const extractFAQs = (content: string): { faqs: Array<{ question: string; answer: string }>, contentWithoutFAQs: string } => {
+    const faqSectionMatch = content.match(/## FAQs\n\n([\s\S]*?)(?=\n\n##|$)/);
+    
+    if (!faqSectionMatch) {
+      return { faqs: [], contentWithoutFAQs: content };
+    }
+
+    const faqContent = faqSectionMatch[1];
+    const contentWithoutFAQs = content.replace(/## FAQs\n\n[\s\S]*?(?=\n\n##|$)/, '').trim();
+    
+    // Parse FAQs - questions start with **N) and answers follow
+    const faqBlocks = faqContent.split(/\*\*\d+\)\s+/).filter(Boolean);
+    
+    const faqs = faqBlocks.map(block => {
+      const lines = block.trim().split('\n\n');
+      const question = lines[0].replace(/\*\*$/, '').trim();
+      const answer = lines.slice(1).join('\n\n').trim();
+      return { question, answer };
+    });
+
+    return { faqs, contentWithoutFAQs };
+  };
+
+  const { faqs, contentWithoutFAQs } = extractFAQs(post.content);
+
   // Convert markdown-style content to HTML
   const formatContent = (content: string) => {
     return content
       .split("\n\n")
       .map((paragraph, index) => {
+        // Images
+        if (paragraph.startsWith("![")) {
+          const match = paragraph.match(/!\[(.*?)\]\((.*?)\)/);
+          if (match) {
+            const altText = match[1];
+            const imagePath = match[2];
+            return (
+              <div key={index} className="my-8">
+                <Image
+                  src={imagePath}
+                  alt={altText}
+                  width={1200}
+                  height={600}
+                  className="w-full h-auto rounded-lg"
+                />
+              </div>
+            );
+          }
+        }
+
         // Headers
         if (paragraph.startsWith("## ")) {
           return (
@@ -4698,11 +5118,30 @@ export default async function BlogPostPage({
           <Container>
             <div className="mx-auto max-w-3xl">
               <div className="prose prose-lg max-w-none">
-                {formatContent(post.content)}
+                {formatContent(contentWithoutFAQs)}
               </div>
             </div>
           </Container>
         </article>
+
+        {/* FAQ Section */}
+        {faqs.length > 0 && (
+          <section className="py-16 border-t border-black/10">
+            <Container>
+              <AnimateIn>
+                <div className="mx-auto max-w-4xl text-center">
+                  <h2 className="text-3xl font-semibold tracking-tight text-black sm:text-4xl mb-4">
+                    Frequently asked questions. Answered.
+                  </h2>
+                </div>
+              </AnimateIn>
+
+              <div className="mx-auto mt-16 max-w-3xl">
+                <FAQAccordion faqs={faqs} />
+              </div>
+            </Container>
+          </section>
+        )}
 
         {/* CTA Section */}
         <section className="py-12 bg-gradient-to-b from-black/5 to-transparent">
