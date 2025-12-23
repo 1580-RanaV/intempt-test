@@ -8,7 +8,7 @@ export function Container({
   className?: string;
 }) {
   return (
-    <div className={["mx-auto w-full max-w-6xl px-5", className].join(" ")}>
+    <div className={["mx-auto w-full max-w-7xl px-5", className].join(" ")}>
       {children}
     </div>
   );
